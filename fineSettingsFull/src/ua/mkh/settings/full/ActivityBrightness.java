@@ -73,10 +73,10 @@ public class ActivityBrightness extends Activity implements OnClickListener, Sim
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brightness);
-        String roman = "fonts/Regular.ttf";
+        String roman = "fonts/Regular.otf";
 		String medium = "fonts/Medium.otf";
-		String thin = "fonts/Thin.ttf";
-		String bold = "fonts/Bold.ttf";
+		String thin = "fonts/Thin.otf";
+		String bold = "fonts/Bold.otf";
 		typefaceRoman = Typeface.createFromAsset(getAssets(), roman);
 		typefaceMedium = Typeface.createFromAsset(getAssets(), medium);
 		Typeface typefaceThin = Typeface.createFromAsset(getAssets(), thin);

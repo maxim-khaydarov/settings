@@ -46,7 +46,7 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apps_osnova);
         
-        String roman = "fonts/Regular.ttf";
+        String roman = "fonts/Regular.otf";
 		String medium = "fonts/Medium.otf";
 		Typeface typefaceRoman = Typeface.createFromAsset(getAssets(), roman);
 		Typeface typefaceMedium = Typeface.createFromAsset(getAssets(), medium);

@@ -55,7 +55,7 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
  
         ApplicationInfo data = appsList.get(position);
         if (null != data) {
-        	String roman = "fonts/Regular.ttf";
+        	String roman = "fonts/Regular.otf";
         	Typeface typefaceRoman = Typeface.createFromAsset(mCtx.getAssets(), roman);
         	
             TextView appName = (TextView) view.findViewById(R.id.app_name);

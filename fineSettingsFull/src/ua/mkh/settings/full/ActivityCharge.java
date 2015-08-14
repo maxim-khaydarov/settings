@@ -16,7 +16,7 @@ public class ActivityCharge extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_charge);
-		String roman = "fonts/Regular.ttf";
+		String roman = "fonts/Regular.otf";
 
 		Typeface typefaceRoman = Typeface.createFromAsset(getAssets(), roman);
 		

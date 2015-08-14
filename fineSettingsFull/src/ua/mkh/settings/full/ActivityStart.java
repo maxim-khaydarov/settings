@@ -39,8 +39,8 @@ public class ActivityStart extends Activity implements OnClickListener {
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.activity_start);
-		String roman = "fonts/Regular.ttf";
-		String ultra = "fonts/Ultralight.ttf";
+		String roman = "fonts/Regular.otf";
+		String ultra = "fonts/Ultralight.otf";
 		Typeface typefaceRoman = Typeface.createFromAsset(getAssets(), roman);
 		Typeface typefaceUltra = Typeface.createFromAsset(getAssets(), ultra);
 		

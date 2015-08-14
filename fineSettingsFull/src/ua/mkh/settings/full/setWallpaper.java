@@ -93,11 +93,11 @@ public class setWallpaper extends Activity implements SimpleGestureListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_setwall);
 		
-		String roman = "fonts/Regular.ttf";
+		String roman = "fonts/Regular.otf";
 		String medium = "fonts/Medium.otf";
-		String bold =  "fonts/Bold.ttf";
-		String thin = "fonts/Thin.ttf";
-		String ultraLight = "fonts/Ultralight.ttf";
+		String bold =  "fonts/Bold.otf";
+		String thin = "fonts/Thin.otf";
+		String ultraLight = "fonts/Ultralight.otf";
 		typefaceRoman = Typeface.createFromAsset(getAssets(), roman);
 		typefaceMedium = Typeface.createFromAsset(getAssets(), medium);
 		typefaceBold = Typeface.createFromAsset(getAssets(), bold);
@@ -196,7 +196,8 @@ public class setWallpaper extends Activity implements SimpleGestureListener{
 	            R.drawable.pic_3s, R.drawable.pic_4s,
 	            R.drawable.pic_5s, R.drawable.pic_6s,
 	            R.drawable.pic_7s, R.drawable.pic_8s,
-	            R.drawable.pic_9s
+	            R.drawable.pic_9s, R.drawable.pic_10s,
+	            R.drawable.pic_11s, R.drawable.pic_12s
 	    };
 	 
 	    // Constructor
@@ -370,6 +371,18 @@ public void wall(final int promp){
     else if (promp == 8){
     	background.setTag(R.drawable.pic_9);
     	background.setImageResource(R.drawable.pic_9);
+    }
+    else if (promp == 9){
+    	background.setTag(R.drawable.pic_10);
+    	background.setImageResource(R.drawable.pic_10);
+    }
+    else if (promp == 10){
+    	background.setTag(R.drawable.pic_11);
+    	background.setImageResource(R.drawable.pic_11);
+    }
+    else if (promp == 11){
+    	background.setTag(R.drawable.pic_12);
+    	background.setImageResource(R.drawable.pic_12);
     }
     TextView time = (TextView)dialog.getWindow().findViewById(R.id.time);
     TextView data = (TextView)dialog.getWindow().findViewById(R.id.data);

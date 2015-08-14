@@ -49,9 +49,9 @@ public class ActivityGeo extends Activity implements OnClickListener, SimpleGest
 	    public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.activity_geo);
-	        String roman = "fonts/Regular.ttf";
+	        String roman = "fonts/Regular.otf";
 			String medium = "fonts/Medium.otf";
-			String bold =  "fonts/Bold.ttf";
+			String bold =  "fonts/Bold.otf";
 			typefaceRoman = Typeface.createFromAsset(getAssets(), roman);
 			typefaceMedium = Typeface.createFromAsset(getAssets(), medium);
 			typefaceBold = Typeface.createFromAsset(getAssets(), bold);

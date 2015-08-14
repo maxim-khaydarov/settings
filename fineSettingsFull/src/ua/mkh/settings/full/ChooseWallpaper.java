@@ -57,9 +57,9 @@ public class ChooseWallpaper extends Activity implements OnClickListener, Simple
 	   public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.activity_choose_oboi);
-	        String roman = "fonts/Regular.ttf";
+	        String roman = "fonts/Regular.otf";
 			String medium = "fonts/Medium.otf";
-			String bold =  "fonts/Bold.ttf";
+			String bold =  "fonts/Bold.otf";
 			typefaceRoman = Typeface.createFromAsset(getAssets(), roman);
 			typefaceMedium = Typeface.createFromAsset(getAssets(), medium);
 			typefaceBold = Typeface.createFromAsset(getAssets(), bold);
@@ -195,7 +195,7 @@ public class ChooseWallpaper extends Activity implements OnClickListener, Simple
 	      super.onPostExecute(result);
 	      ImageView myImageCamera = (ImageView) findViewById(R.id.imageView1);
 	      try{
-	      myImageCamera.setImageBitmap(RotateBitmap(scaledBitmapCamera, 90));
+	      myImageCamera.setImageBitmap(scaledBitmapCamera);
 	      }
 	      catch(Exception s){
 	    	  myImageCamera.setBackgroundResource(R.drawable.oboi);

@@ -46,10 +46,10 @@ public class ActivityTimeout extends Activity implements OnClickListener, Simple
 	   protected void onCreate(Bundle savedInstanceState) {
 		     super.onCreate(savedInstanceState);
 		     setContentView(R.layout.activity_timeout);
-		     String roman = "fonts/Regular.ttf";
+		     String roman = "fonts/Regular.otf";
 				String medium = "fonts/Medium.otf";
-				String bold =  "fonts/Bold.ttf";
-				String thin = "fonts/Thin.ttf";
+				String bold =  "fonts/Bold.otf";
+				String thin = "fonts/Thin.otf";
 				typefaceRoman = Typeface.createFromAsset(getAssets(), roman);
 				typefaceMedium = Typeface.createFromAsset(getAssets(), medium);
 				typefaceBold = Typeface.createFromAsset(getAssets(), bold);

@@ -53,10 +53,10 @@ public class ActivityStorage extends Activity implements SimpleGestureListener{
 	    super.onCreate(b);
 	    setContentView(R.layout.activity_storage);
 	    
-	    String roman = "fonts/Regular.ttf";
+	    String roman = "fonts/Regular.otf";
 		String medium = "fonts/Medium.otf";
-		String bold =  "fonts/Bold.ttf";
-		String thin = "fonts/Thin.ttf";
+		String bold =  "fonts/Bold.otf";
+		String thin = "fonts/Thin.otf";
 		typefaceThin = Typeface.createFromAsset(getAssets(), thin);
 		typefaceRoman = Typeface.createFromAsset(getAssets(), roman);
 		typefaceMedium = Typeface.createFromAsset(getAssets(), medium);

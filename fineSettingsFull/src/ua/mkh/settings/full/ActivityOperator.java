@@ -58,9 +58,9 @@ public class ActivityOperator extends Activity implements OnClickListener, Simpl
 	 public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.activity_operator);
-	        String roman = "fonts/Regular.ttf";
+	        String roman = "fonts/Regular.otf";
 			String medium = "fonts/Medium.otf";
-			String thin = "fonts/Thin.ttf";
+			String thin = "fonts/Thin.otf";
 			typefaceRoman = Typeface.createFromAsset(getAssets(), roman);
 			typefaceMedium = Typeface.createFromAsset(getAssets(), medium);
 			btn_back = (Button) findViewById(R.id.buttonBack);

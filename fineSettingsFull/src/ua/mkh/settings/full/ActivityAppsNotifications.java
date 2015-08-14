@@ -44,7 +44,7 @@ public class ActivityAppsNotifications extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apps);
         
-        String roman = "fonts/Regular.ttf";
+        String roman = "fonts/Regular.otf";
 		String medium = "fonts/Medium.otf";
 		Typeface typefaceRoman = Typeface.createFromAsset(getAssets(), roman);
 		Typeface typefaceMedium = Typeface.createFromAsset(getAssets(), medium);
