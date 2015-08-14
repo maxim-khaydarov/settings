@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="left"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/returnzz"
             android:ellipsize="end"
             android:maxLines="1"
@@ -80,7 +80,8 @@
                 android:onClick="SaveClick"
                 android:paddingRight="10dp"
                 android:text="@string/save"
-                android:textColor="#FF0071ED" />
+                android:textColor="#FF0071ED"
+                android:textSize="15sp" />
             
         </RelativeLayout>
 

@@ -13,6 +13,7 @@ import kankan.wheel.widget.OnWheelScrollListener;
 import kankan.wheel.widget.WheelView;
 import kankan.wheel.widget.adapters.NumericWheelAdapter;
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -22,6 +23,7 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -443,6 +445,24 @@ timePicker2.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
 
 		overridePendingTransition(center_to_right, center_to_right2);
    	 }
+	@Override
+    public boolean onKeyDown(int keycode, KeyEvent e) {
+        switch(keycode) {
+            case KeyEvent.KEYCODE_MENU:
+            	
+                return true;
+            case KeyEvent.KEYCODE_BACK:
+            	Intent intent18 = new Intent(this, ActivityDisturb.class);
+   	       	 startActivity(intent18);
+        		overridePendingTransition(center_to_right, center_to_right2);
+                return true;
+            
+        }
+        return super.onKeyDown(keycode, e);
+   }
+    
+
+   
 	
 	public void SaveClick(View v)  
     {  

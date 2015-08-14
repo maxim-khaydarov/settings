@@ -603,6 +603,15 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 		btn_new4.setTypeface(typefaceRoman);
 		btn_vpn.setTypeface(typefaceRoman);
 		btn_display.setTypeface(typefaceRoman);
+		btn_maps.setTypeface(typefaceRoman);
+		btn_vk.setTypeface(typefaceRoman);
+		btn_viber.setTypeface(typefaceRoman);
+		btn_ok.setTypeface(typefaceRoman);
+		btn_skype.setTypeface(typefaceRoman);
+		btn_whatsapp.setTypeface(typefaceRoman);
+		btn_twitter.setTypeface(typefaceRoman);
+		btn_facebook.setTypeface(typefaceRoman);
+		btn_instagram.setTypeface(typefaceRoman);
 		
 		
 		btn_iCloud.setTypeface(typefaceRoman);
@@ -1616,6 +1625,15 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 					textView2.setTypeface(typefaceBold);
 					textView3.setTypeface(typefaceBold);
 					textVPN.setTypeface(typefaceBold);
+					btn_maps.setTypeface(typefaceBold);
+					btn_vk.setTypeface(typefaceBold);
+					btn_viber.setTypeface(typefaceBold);
+					btn_ok.setTypeface(typefaceBold);
+					btn_skype.setTypeface(typefaceBold);
+					btn_whatsapp.setTypeface(typefaceBold);
+					btn_twitter.setTypeface(typefaceBold);
+					btn_facebook.setTypeface(typefaceBold);
+					btn_instagram.setTypeface(typefaceBold);
 					
 				}
 	        }
@@ -1693,6 +1711,16 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 					textView2.setTextSize(9);
 					textView3.setTextSize(12);
 					textVPN.setTextSize(14);
+					btn_maps.setTextSize(14);
+					btn_vk.setTextSize(14);
+					btn_viber.setTextSize(14);
+					btn_ok.setTextSize(14);
+					btn_skype.setTextSize(14);
+					btn_whatsapp.setTextSize(14);
+					btn_twitter.setTextSize(14);
+					btn_facebook.setTextSize(14);
+					btn_instagram.setTextSize(14);
+					
 
 				}
 				if (size .contains( "Normal")){
@@ -1738,6 +1766,15 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 					textView2.setTextSize(11);
 					textView3.setTextSize(14);
 					textVPN.setTextSize(16);
+					btn_maps.setTextSize(16);
+					btn_vk.setTextSize(16);
+					btn_viber.setTextSize(16);
+					btn_ok.setTextSize(16);
+					btn_skype.setTextSize(16);
+					btn_whatsapp.setTextSize(16);
+					btn_twitter.setTextSize(16);
+					btn_facebook.setTextSize(16);
+					btn_instagram.setTextSize(16);
 
 				}
 				if (size .contains("Large")){
@@ -1783,6 +1820,15 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 					textView2.setTextSize(14);
 					textView3.setTextSize(17);
 					textVPN.setTextSize(19);
+					btn_maps.setTextSize(19);
+					btn_vk.setTextSize(19);
+					btn_viber.setTextSize(19);
+					btn_ok.setTextSize(19);
+					btn_skype.setTextSize(19);
+					btn_whatsapp.setTextSize(19);
+					btn_twitter.setTextSize(19);
+					btn_facebook.setTextSize(19);
+					btn_instagram.setTextSize(19);
 
 				}
 				if (size .contains("xLarge")){
@@ -1828,6 +1874,15 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 					textView2.setTextSize(16);
 					textView3.setTextSize(19);
 					textVPN.setTextSize(21);
+					btn_maps.setTextSize(21);
+					btn_vk.setTextSize(21);
+					btn_viber.setTextSize(21);
+					btn_ok.setTextSize(21);
+					btn_skype.setTextSize(21);
+					btn_whatsapp.setTextSize(21);
+					btn_twitter.setTextSize(21);
+					btn_facebook.setTextSize(21);
+					btn_instagram.setTextSize(21);
 
 
 				}
