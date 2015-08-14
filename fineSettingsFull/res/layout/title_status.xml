@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/background_title"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/textOk"
+            android:layout_weight="2"
+            android:background="@drawable/returnzz"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:maxLines="1"
+            android:onClick="BackClick"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:text="@string/back"
+            android:textColor="#FF0071ED"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textOk"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignBaseline="@+id/buttonBack"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="500"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/line_cray" />
+
+</RelativeLayout>

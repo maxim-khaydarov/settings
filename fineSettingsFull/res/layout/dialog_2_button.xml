@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bgdialog"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_settings_custom"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/ImageView01"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_weight="1"
+            android:ems="10"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_cray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/dialogButtonCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:padding="5dp"
+                android:text="@string/cancel"
+                android:textColor="#FF007AFF"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/ImageView02"
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:ems="10"
+                android:scaleType="fitXY"
+                android:src="@drawable/line_cray" />
+
+            <Button
+                android:id="@+id/dialogButtonOK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:padding="5dp"
+                android:text="@string/ok"
+                android:textColor="#FF007AFF"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

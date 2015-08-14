@@ -1,0 +1,48 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    
+   <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item> 
+    </style>
+	
+	
+    
+    <color name="background_fon">#eeeef3</color>
+    <color name="background_title">#99f9f9f9</color>
+    <color name="white">#ffffff</color>
+	<color name="transparent">@android:color/transparent </color>
+	<color name="black">#000000 </color>
+	<color name="hint_text">#808080</color>
+	<color name="default_edgeeffect_color">@android:color/transparent</color>
+	<color name="press_button">#FFDEDEDE</color>
+	<color name="blue">#FF0071ED</color>
+	
+	
+	
+	<style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/anim_up</item>
+        <item name="android:windowExitAnimation">@anim/anim_down</item>
+    </style>
+
+	
+	 <style name="Theme.Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+	
+</resources>

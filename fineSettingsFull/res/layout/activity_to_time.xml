@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_fon"
+    android:orientation="vertical"
+    tools:context=".ActivityToTime" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        layout="@layout/title_status" />
+
+    <ua.mkh.settings.full.EdgeEffectScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:overScrollMode="always"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+            
+           <LinearLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="40dp"
+               android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/ImageView01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/line_cray" />
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <kankan.wheel.widget.WheelView
+                        android:id="@+id/hour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <kankan.wheel.widget.WheelView
+                        android:id="@+id/mins"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ImageView03"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/line_cray" />
+
+                <ImageView
+                    android:id="@+id/ImageView04"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-69dp"
+                    android:ems="10"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/line_cray" />
+
+                <ImageView
+                    android:id="@+id/ImageView02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-31dp"
+                    android:ems="10"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/line_cray" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical" >
+
+                <TimePicker
+                    android:id="@+id/timePicker2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:overScrollMode="always" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:overScrollMode="always" >
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/transparent"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="@string/save"
+                        android:textColor="#026bee"
+                        android:textSize="19sp" />
+
+                    <ImageView
+                        android:id="@+id/ImageView06"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:ems="10"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/line_cray" />
+
+                    <ImageView
+                        android:id="@+id/ImageView061"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:ems="10"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/line_cray" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <DatePicker
+                android:id="@+id/pickerdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ua.mkh.settings.full.EdgeEffectScrollView>
+
+</LinearLayout>

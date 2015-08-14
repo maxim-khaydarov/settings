@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tableLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp"
+        android:text="@string/new_update"
+        android:textColor="@color/hint_text"
+        android:textSize="30sp" />
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/u1" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/update_1"
+                android:textColor="@color/hint_text" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <ImageView
+                android:id="@+id/ImageView01"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/u2" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/update_2"
+                android:textColor="@color/hint_text" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow01"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp" >
+
+            <ImageView
+                android:id="@+id/ImageView02"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/u3" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/update_3"
+                android:textColor="@color/hint_text" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tableLayout1"
+        android:layout_marginTop="50dp"
+        android:background="@color/transparent"
+        android:onClick="onClick"
+        android:text="@string/button_start_next"
+        android:textColor="@color/blue"
+        android:textSize="20sp" />
+
+</RelativeLayout>

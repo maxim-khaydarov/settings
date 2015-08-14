@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    android:background="@color/background_title"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/returnzz"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:onClick="BackClick"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:text="@string/back"
+            android:textColor="#FF0071ED"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/textOk"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/line_cray" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+            
+            <Button
+                android:id="@+id/buttonDel"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:onClick="DelClick"
+                android:paddingRight="5dp"
+                android:text="@string/delete"
+                android:textColor="#FF0071ED" />
+
+            <Button
+                android:id="@+id/buttonCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:onClick="CancelClick"
+                android:paddingRight="5dp"
+                android:text="@string/cancel"
+                android:textColor="#FF0071ED" />
+            
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

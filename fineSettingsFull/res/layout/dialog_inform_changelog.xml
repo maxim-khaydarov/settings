@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bgdialog"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button_settings_custom"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <ScrollView
+            android:id="@+id/aboutscrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textver"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:text="v2.0:changes..."
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/what_news_text3"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/ImageView01"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_weight="1"
+            android:ems="10"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_cray" />
+
+        <Button
+            android:id="@+id/dialogButtonOK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:padding="10dp"
+            android:text="OK"
+            android:textColor="#FF007AFF"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:installLocation="auto" 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ua.mkh.settings.full"
+    android:versionCode="36"
+    android:versionName="4.1.13" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="24" />
+<uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+	<uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+     <uses-permission android:name="android.permission.UPDATE_DEVICE_STAT"/>
+     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+      <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+   	 <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+   	 <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+ <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+ <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+ <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+ <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+ <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+ <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/> 
+ <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+ <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+ <uses-permission android:name="android.permission.BATTERY_STATS" />
+ 
+ <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+ 
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name_orig"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="ua.mkh.settings.full.MainActivity" 
+            android:label="@string/app_name_desk">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+				
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity  android:name="ua.mkh.settings.full.ActivityWifi" />
+             <activity  android:name="ua.mkh.settings.full.ActivityBth"/>
+             <activity  android:name="ua.mkh.settings.full.ActivitySota"/>
+            <activity  android:name="ua.mkh.settings.full.ActivityOperator"/>
+            <activity  android:name="ua.mkh.settings.full.ActivityZvuki" />
+             <activity  android:name="ua.mkh.settings.full.ActivityOboi"/>
+            <activity  android:name="ua.mkh.settings.full.ActivityOsnova"/>
+            <activity  android:name="ua.mkh.settings.full.ActivityInfo"/>
+            <activity  android:name="ua.mkh.settings.full.ActivityGeo"  />
+            <activity  android:name="ua.mkh.settings.full.ActivityStart" />
+            <activity  android:name="ua.mkh.settings.full.ActivityDisturb" />
+            <activity  android:name="ua.mkh.settings.full.ActivityBrightness" />
+            <activity  android:name="ua.mkh.settings.full.ActivityFromTime" />
+            <activity  android:name="ua.mkh.settings.full.SettingsActivity" />
+            <activity  android:name="ua.mkh.settings.full.ActivityAppsNotifications" />
+            <activity  android:name="ua.mkh.settings.full.ActivityAppsControl" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsMail" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsNotes" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsPhone" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsMessages" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsCompass" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsGameCenter" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsMusic" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsSafari" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsWeather" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsiTunes" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsiCloud" />
+             <activity  android:name="ua.mkh.settings.full.ActivityApps" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsNew1" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsNew2" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsNew3" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsNew4" />
+             <activity  android:name="ua.mkh.settings.full.ActivityStorage" />
+             <activity  android:name="ua.mkh.settings.full.ActivityInformations" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAbout" />
+             <activity  android:name="ua.mkh.settings.full.setWallpaper" />
+             <activity  android:name="ua.mkh.settings.full.ActivityiCloud" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsMaps" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsVk" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsViber" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsOk" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsSkype" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsWhatsapp" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsTwitter" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsFacebook" />
+             <activity  android:name="ua.mkh.settings.full.ActivityAppsInstagram" />
+             <activity  android:name="ua.mkh.settings.full.ChooseWallpaper" />
+             <activity  android:name="ua.mkh.settings.full.ActivitySetRingtone" />
+             <activity  android:name="ua.mkh.settings.full.ActivitySetNotifications" />
+             <activity  android:name="ua.mkh.settings.full.ActivitySetAlarms" />
+            <activity  android:name="ua.mkh.settings.full.ActivityAllowDisturb" />
+            <activity  android:name="ua.mkh.settings.full.ActivityTimeout" />
+            <activity  android:name="ua.mkh.settings.full.ActivityVPN" />
+            <activity  android:name="ua.mkh.settings.full.ActivityTextSize" />
+            <activity  android:name="ua.mkh.settings.full.ActivityBattery" />
+            <activity  android:name="ua.mkh.settings.full.ActivityUsage" />
+            <activity  android:name="ua.mkh.settings.full.ViewWallpaper" />
+            <activity  android:name="ua.mkh.settings.full.ActivityCharge" android:theme="@style/Theme.Transparent" />
+            <activity  android:name="ua.mkh.settings.full.MessageBox" android:theme="@style/Theme.Transparent" />
+            <receiver android:name=".AlarmReceiverOn" android:process=":remote" />
+       		<receiver android:name=".AlarmReceiverOff" android:process=":remote" />
+       		<receiver android:name=".Blocker">
+          <intent-filter android:priority="1000">
+              <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                 <action android:name="android.intent.action.ACTION_BATTERY_CHANGED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.ACTION_BATTERY_LOW" />
+                <action android:name="android.intent.action.ACTION_BATTERY_OKAY"/>
+           
+          </intent-filter>
+      </receiver>
+      
+       
+     
+              <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+       		
+    </application>
+
+</manifest>
+
+

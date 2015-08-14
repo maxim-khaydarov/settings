@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_fon"
+    android:orientation="vertical"
+    tools:context=".ActivityWifi" >
+
+    <ua.mkh.settings.full.EdgeEffectScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:fadingEdge="none"
+        android:overScrollMode="always"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutWifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:ems="10" >
+
+                    <ImageView
+                        android:id="@+id/ImageView01"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:ems="10"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/line_cray" />
+
+                    <Button
+                        android:id="@+id/ButtonWifi"
+                        android:layout_width="fill_parent"
+                        android:layout_height="39dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="35dp"
+                        android:background="@color/transparent"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/button_wifi"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ToggleButton
+                        android:id="@+id/ToggleButton01"
+                        android:layout_width="60dp"
+                        android:layout_height="44dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/btn_toggle_bg"
+                        android:text="ToggleButton"
+                        android:textOff=" "
+                        android:textOn=" " />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/LayoutMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp" >
+
+                    <Button
+                        android:id="@+id/Connected"
+                        android:layout_width="fill_parent"
+                        android:layout_height="39dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/transparent"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="35dp"
+                        android:text="@string/connection"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/info" />
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonInfo"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/button_toggle_info"
+                        android:text="ToggleButton"
+                        android:textOff=" "
+                        android:textOn=" "
+                        android:visibility="gone" />
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonChek"
+                        android:layout_width="23dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/checked_image_radio_button"
+                        android:text="ToggleButton"
+                        android:textOff=" "
+                        android:textOn=" " />
+
+                    <ImageView
+                        android:id="@+id/ImageView18"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="35dp"
+                        android:ems="10"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/line_cray" />
+
+                    <ImageView
+                        android:id="@+id/ImageView09"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="35dp"
+                        android:ems="10"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/line_cray" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ImageView02"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:ems="10"
+                android:scaleType="fitXY"
+                android:src="@drawable/line_cray" />
+
+            <LinearLayout
+                android:id="@+id/MainLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical" >
+
+                    <TableLayout
+                        android:id="@+id/tableLayout1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:background="@color/white" >
+
+                        <ImageView
+                            android:id="@+id/ImageView04"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1px"
+                            android:ems="10"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/line_cray" />
+
+                        <TableRow
+                            android:id="@+id/tableRow1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ip"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/Ip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="TextView"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tableRow2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/txtPercentage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ssid"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/Ssid"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="TextView"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tableRow3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/bsid"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/Bssid"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="TextView"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tableRow4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/mac"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/Mac"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="TextView"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tableRow5"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/speed"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/Speed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="TextView"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tableRow6"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rssi"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/Rssi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="TextView"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+                        </TableRow>
+
+                        <ImageView
+                            android:id="@+id/ImageView03"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1px"
+                            android:ems="10"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/line_cray" />
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutCon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/choose_wifi"
+                        android:textColor="@color/hint_text"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/ImageView05"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:ems="10"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/line_cray" />
+
+                    <ListView
+                        android:id="@+id/list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white" >
+                    </ListView>
+
+                    <ImageView
+                        android:id="@+id/ImageView08"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:ems="10"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/line_cray" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ua.mkh.settings.full.EdgeEffectScrollView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/background_title"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/include1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            layout="@layout/title_status" />
+    </LinearLayout>
+
+</RelativeLayout>
