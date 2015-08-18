@@ -579,7 +579,7 @@
                     android:src="@drawable/line_cray" />
 
             </LinearLayout>
-
+    
         </LinearLayout>
 
     </ua.mkh.settings.full.EdgeEffectScrollView>

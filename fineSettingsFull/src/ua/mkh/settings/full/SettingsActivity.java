@@ -7,7 +7,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 import ua.mkh.settings.full.SimpleGestureFilter.SimpleGestureListener;
-
+import android.animation.Animator;
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -17,10 +18,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.pm.PackageManager;
+import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -48,6 +52,12 @@ public class SettingsActivity extends Activity implements OnClickListener, Simpl
 	 Boolean tgb1_s, tgb2_s, tgb3_s, tgb4_s; 
 	 TextView txt1, txt2;
 
+	 View toggleCircle, background_oval_off, background_oval_on;
+	 int dimen;
+	 private Boolean _crossfadeRunning = false;
+	    private SharedPreferences _sp;
+	    private ObjectAnimator _oaLeft, _oaRight;
+	    private String _prefName;
 	 
 	 SharedPreferences mSettings;
 	 
@@ -157,10 +167,7 @@ public class SettingsActivity extends Activity implements OnClickListener, Simpl
             Button20.setTypeface(typefaceRoman);
             Button23.setTypeface(typefaceRoman);
             
-            
-               
-            
-              }
+	}
     
 	private void HideLayoutDown() {
 
@@ -517,6 +524,14 @@ public class SettingsActivity extends Activity implements OnClickListener, Simpl
 
 		overridePendingTransition(center_to_right, center_to_right2);
 	   	 }
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 }
     
    
