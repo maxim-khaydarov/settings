@@ -195,6 +195,7 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
   	<string name="choose_wifi">CHOOSE A NETWORK...</string>
   	<string name="new_account">New Account</string>
   	<string name="zimowets_block">This program has been loaded using pirated account.\n Download using your account!</string>
+  	<string name="block_license">This program was not loaded with Yandex Store.\nGo to your account and download the application ! :)</string>
   	<string name="attention">CAUTION</string>
     <string name="language_region">Language and Region</string>
   	<string name="sounds_vibration">SOUNDS AND PICTURES VIBRATION</string>

@@ -44,6 +44,7 @@ import android.provider.Settings;
 import android.support.v4.view.ViewPager.LayoutParams;
 import android.telephony.TelephonyManager;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -195,6 +196,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	   String possibleEmail;
 	   
 	   String YA = null, G = null;
+	   String svoi = null;
 	   
 	   Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 
@@ -1144,6 +1146,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	        Airmode();
 	        ButtonTextBth();
 	        operator();
+	        check_pirat();
 	        zimowets();
 	       
 	       
@@ -2139,7 +2142,62 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 		    }
 		    
 		   
+		    public void check_pirat(){
+		    	Account[] accounts2 = AccountManager.get(this).getAccountsByType("com.google");
+        		for (Account account : accounts2) {
+        			svoi = account.name;
+        		}
+        		if (svoi.contains("maxim.khaydarov@gmail.com") || svoi.contains("vikysya1650@gmail.com")){
+        			
+        		}
+        		else{
+		    	if (isStoreVersion(this) == null){
+		        	 //Toast.makeText(getApplication(), "NOT YANDEX", Toast.LENGTH_LONG).show();
+		        	 
+		        	 final Dialog dialog = new Dialog(MainActivity.this,android.R.style.Theme_Translucent);
+	       		     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+	       				dialog.setContentView(R.layout.dialog_inform);
+	       				
+	       				// set the custom dialog components - text, image and button
+
+	       				Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+	       				TextView text = (TextView)dialog.findViewById(R.id.text);
+	       				TextView textB = (TextView)dialog.findViewById(R.id.textBold);
+	       				text.setText(R.string.block_license);
+	       				textB.setText(R.string.attention);
+	       				
+	       				dialogButton.setTypeface(typefaceRoman);
+	       				text.setTypeface(typefaceRoman);
+	       				textB.setTypeface(typefaceBold);
+	       				// if button is clicked, close the custom dialog
+	       				dialogButton.setOnClickListener(new OnClickListener() {
+	       					@Override
+	       					public void onClick(View v) {
+	       						dialog.dismiss();
+	       						Intent intent = new Intent(Intent.ACTION_MAIN);
+	    		            	intent.addCategory(Intent.CATEGORY_HOME);
+	    		            	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+	    		            	startActivity(intent);
+	       					}
+	       				});
+	       				dialog.show();
+	       				
+		         }
+		         else if (isStoreVersion(this).contains("com.yandex.store")){
+		         }
+        		}
+		    }
 		    
+		    public static String isStoreVersion(Context context) {
+		        String installer = null;
+		        try {
+		            installer = context.getPackageManager().getInstallerPackageName(context.getPackageName());
+		            
+		        } catch (Throwable e) {          
+		        }
+
+		        return installer;
+		    }
 		    
 	    	
 		    @Override

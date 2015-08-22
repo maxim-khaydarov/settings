@@ -194,6 +194,7 @@
   	<string name="choose_wifi">ВЫБРАТЬ СЕТЬ...</string>
   	<string name="new_account">Новый аккаунт</string>
   	<string name="zimowets_block">Данная программа была загружена с помощью пиратского аккаунта.\nЗагрузите с помощью своей учетной записи!</string>
+  	<string name="block_license">Данная программа была загружена не с Yandex Store.\nЗайдите в свой аккаунт и загрузите приложение! :)</string>
   	<string name="attention">ВНИМАНИЕ</string>
   	<string name="language_region">Язык и регион</string>
   	<string name="sounds_vibration">ЗВУКИ И РИСУНКИ ВИБРАЦИИ</string>
