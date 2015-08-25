@@ -978,15 +978,15 @@ android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     boolean mCalledSuper -> U
     int mDecorChildCount -> V
     android.support.v4.view.ViewPager$OnPageChangeListener mOnPageChangeListener -> W
-    android.support.v4.view.ViewPager$OnPageChangeListener mInternalPageChangeListener -> Z
-    android.support.v4.view.ViewPager$OnAdapterChangeListener mAdapterChangeListener -> aa
-    android.support.v4.view.ViewPager$PageTransformer mPageTransformer -> ab
-    java.lang.reflect.Method mSetChildrenDrawingOrderEnabled -> ac
-    int mDrawingOrder -> ad
-    java.util.ArrayList mDrawingOrderedChildren -> ae
-    android.support.v4.view.ViewPager$ViewPositionComparator sPositionComparator -> af
-    java.lang.Runnable mEndScrollRunnable -> ag
-    int mScrollState -> ah
+    android.support.v4.view.ViewPager$OnPageChangeListener mInternalPageChangeListener -> aa
+    android.support.v4.view.ViewPager$OnAdapterChangeListener mAdapterChangeListener -> ab
+    android.support.v4.view.ViewPager$PageTransformer mPageTransformer -> ac
+    java.lang.reflect.Method mSetChildrenDrawingOrderEnabled -> ad
+    int mDrawingOrder -> ae
+    java.util.ArrayList mDrawingOrderedChildren -> af
+    android.support.v4.view.ViewPager$ViewPositionComparator sPositionComparator -> ag
+    java.lang.Runnable mEndScrollRunnable -> ah
+    int mScrollState -> ai
     void onDetachedFromWindow() -> onDetachedFromWindow
     void setScrollState(int) -> setScrollState
     void setAdapter(android.support.v4.view.PagerAdapter) -> setAdapter
@@ -14674,39 +14674,37 @@ ua.mkh.settings.full.ActivityBrightness$4 -> ua.mkh.settings.full.ar:
     ua.mkh.settings.full.ActivityBrightness this$0 -> a
     void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.ActivityBth -> ua.mkh.settings.full.ActivityBth:
-    android.widget.ToggleButton tb_bt -> z
+    android.widget.ToggleButton tb_bt -> x
     android.widget.Button btn_back -> a
-    android.widget.Button Button01 -> b
-    android.bluetooth.BluetoothAdapter bluetoothAdapter -> c
-    android.widget.TextView textView1 -> d
-    android.widget.TextView textView2 -> e
-    android.widget.TextView textView3 -> f
-    android.widget.TextView textStatus -> g
-    android.widget.TextView nameBT -> h
-    android.widget.TextView textView4 -> i
-    android.widget.Button btn_Bth -> j
-    int OS -> k
-    ua.mkh.settings.full.SimpleGestureFilter detector -> A
-    android.graphics.Typeface typefaceRoman -> l
-    android.graphics.Typeface typefaceMedium -> m
-    android.graphics.Typeface typefaceBold -> n
-    android.widget.LinearLayout mainLayout -> o
-    int menui -> p
-    int scan_number -> q
-    int center_to_right -> r
-    int center_to_right2 -> s
-    int center_to_left -> t
-    int center_to_left2 -> u
-    android.content.SharedPreferences mSettings -> v
-    ua.mkh.settings.full.DeviceListAdapter mAdapter_pair -> B
-    ua.mkh.settings.full.DeviceListAdapter mAdapter_scan -> C
-    java.util.ArrayList mDeviceListPair -> D
-    java.util.ArrayList mDeviceListScan -> E
-    android.widget.ProgressBar progressBarScan -> w
-    android.widget.ListView scan -> x
-    android.widget.ListView listDevicesFound -> y
-    android.content.BroadcastReceiver mReceiver -> F
-    android.content.BroadcastReceiver mPairReceiver -> G
+    android.bluetooth.BluetoothAdapter bluetoothAdapter -> b
+    android.widget.TextView textView1 -> c
+    android.widget.TextView textView2 -> d
+    android.widget.TextView textStatus -> e
+    android.widget.TextView nameBT -> f
+    android.widget.TextView textView4 -> g
+    android.widget.Button btn_Bth -> h
+    int OS -> i
+    ua.mkh.settings.full.SimpleGestureFilter detector -> y
+    android.graphics.Typeface typefaceRoman -> j
+    android.graphics.Typeface typefaceMedium -> k
+    android.graphics.Typeface typefaceBold -> l
+    android.widget.LinearLayout mainLayout -> m
+    int menui -> n
+    int scan_number -> o
+    int center_to_right -> p
+    int center_to_right2 -> q
+    int center_to_left -> r
+    int center_to_left2 -> s
+    android.content.SharedPreferences mSettings -> t
+    ua.mkh.settings.full.DeviceListAdapter mAdapter_pair -> z
+    ua.mkh.settings.full.DeviceListAdapter mAdapter_scan -> A
+    java.util.ArrayList mDeviceListPair -> B
+    java.util.ArrayList mDeviceListScan -> C
+    android.widget.ProgressBar progressBarScan -> u
+    android.widget.ListView scan -> v
+    android.widget.ListView listDevicesFound -> w
+    android.content.BroadcastReceiver mReceiver -> D
+    android.content.BroadcastReceiver mPairReceiver -> E
     void onCreate(android.os.Bundle) -> onCreate
     void pair() -> c
     void connection(android.bluetooth.BluetoothDevice,java.lang.String,java.lang.String,java.lang.String) -> a
@@ -14743,48 +14741,35 @@ ua.mkh.settings.full.ActivityBth -> ua.mkh.settings.full.ActivityBth:
 ua.mkh.settings.full.ActivityBth$1 -> ua.mkh.settings.full.as:
     ua.mkh.settings.full.ActivityBth this$0 -> a
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
-ua.mkh.settings.full.ActivityBth$10 -> ua.mkh.settings.full.at:
-    ua.mkh.settings.full.ActivityBth this$0 -> a
-    android.app.Dialog val$dialog -> b
-    void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityBth$11 -> ua.mkh.settings.full.au:
-    ua.mkh.settings.full.ActivityBth this$0 -> a
-    void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityBth$2 -> ua.mkh.settings.full.av:
+ua.mkh.settings.full.ActivityBth$2 -> ua.mkh.settings.full.at:
     ua.mkh.settings.full.ActivityBth this$0 -> a
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
-ua.mkh.settings.full.ActivityBth$3 -> ua.mkh.settings.full.aw:
+ua.mkh.settings.full.ActivityBth$3 -> ua.mkh.settings.full.au:
     ua.mkh.settings.full.ActivityBth this$0 -> a
     void onPairButtonClick(int) -> a
-ua.mkh.settings.full.ActivityBth$4 -> ua.mkh.settings.full.ax:
+ua.mkh.settings.full.ActivityBth$4 -> ua.mkh.settings.full.av:
     ua.mkh.settings.full.ActivityBth this$0 -> a
     void onPairButtonClick(int) -> a
-ua.mkh.settings.full.ActivityBth$5 -> ua.mkh.settings.full.ay:
+ua.mkh.settings.full.ActivityBth$5 -> ua.mkh.settings.full.aw:
     ua.mkh.settings.full.ActivityBth this$0 -> a
     android.bluetooth.BluetoothDevice val$device -> b
     android.app.Dialog val$Activation -> c
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityBth$6 -> ua.mkh.settings.full.az:
+ua.mkh.settings.full.ActivityBth$6 -> ua.mkh.settings.full.ax:
     ua.mkh.settings.full.ActivityBth this$0 -> a
     android.app.Dialog val$Activation -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityBth$7 -> ua.mkh.settings.full.ba:
+ua.mkh.settings.full.ActivityBth$7 -> ua.mkh.settings.full.ay:
     ua.mkh.settings.full.ActivityBth this$0 -> a
-    android.widget.EditText val$ed1 -> b
-    android.app.Dialog val$dialogC -> c
+    android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityBth$8 -> ua.mkh.settings.full.bb:
+ua.mkh.settings.full.ActivityBth$8 -> ua.mkh.settings.full.az:
     ua.mkh.settings.full.ActivityBth this$0 -> a
-    android.app.Dialog val$dialogC -> b
-    void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityBth$9 -> ua.mkh.settings.full.bc:
-    ua.mkh.settings.full.ActivityBth this$0 -> a
-    android.app.Dialog val$dialogC -> b
     void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.ActivityCharge -> ua.mkh.settings.full.ActivityCharge:
     void onCreate(android.os.Bundle) -> onCreate
     boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
-ua.mkh.settings.full.ActivityCharge$1 -> ua.mkh.settings.full.bd:
+ua.mkh.settings.full.ActivityCharge$1 -> ua.mkh.settings.full.ba:
     ua.mkh.settings.full.ActivityCharge this$0 -> a
     void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.ActivityDisturb -> ua.mkh.settings.full.ActivityDisturb:
@@ -14843,11 +14828,11 @@ ua.mkh.settings.full.ActivityDisturb -> ua.mkh.settings.full.ActivityDisturb:
     void launchIntent() -> k
     void onCheckedChanged(android.widget.RadioGroup,int) -> onCheckedChanged
     void access$0(ua.mkh.settings.full.ActivityDisturb) -> a
-ua.mkh.settings.full.ActivityDisturb$1 -> ua.mkh.settings.full.be:
+ua.mkh.settings.full.ActivityDisturb$1 -> ua.mkh.settings.full.bb:
     ua.mkh.settings.full.ActivityDisturb this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityDisturb$2 -> ua.mkh.settings.full.bf:
+ua.mkh.settings.full.ActivityDisturb$2 -> ua.mkh.settings.full.bc:
     ua.mkh.settings.full.ActivityDisturb this$0 -> a
     void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.ActivityFromTime -> ua.mkh.settings.full.ActivityFromTime:
@@ -14890,53 +14875,54 @@ ua.mkh.settings.full.ActivityFromTime -> ua.mkh.settings.full.ActivityFromTime:
     void onDoubleTap() -> b
     void onResume() -> onResume
     void BackClick(android.view.View) -> BackClick
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
     void SaveClick(android.view.View) -> SaveClick
     boolean access$0(ua.mkh.settings.full.ActivityFromTime) -> a
     void access$1(ua.mkh.settings.full.ActivityFromTime,boolean) -> a
     void access$2(ua.mkh.settings.full.ActivityFromTime,boolean) -> b
     boolean access$3(ua.mkh.settings.full.ActivityFromTime) -> b
-ua.mkh.settings.full.ActivityFromTime$1 -> ua.mkh.settings.full.bg:
+ua.mkh.settings.full.ActivityFromTime$1 -> ua.mkh.settings.full.bd:
     ua.mkh.settings.full.ActivityFromTime this$0 -> a
     kankan.wheel.widget.WheelView val$hours1 -> b
     kankan.wheel.widget.WheelView val$mins1 -> c
     void onChanged(kankan.wheel.widget.WheelView,int,int) -> a
-ua.mkh.settings.full.ActivityFromTime$10 -> ua.mkh.settings.full.bh:
+ua.mkh.settings.full.ActivityFromTime$10 -> ua.mkh.settings.full.be:
     ua.mkh.settings.full.ActivityFromTime this$0 -> a
     void onChanged(kankan.wheel.widget.WheelView,int,int) -> a
-ua.mkh.settings.full.ActivityFromTime$2 -> ua.mkh.settings.full.bi:
+ua.mkh.settings.full.ActivityFromTime$2 -> ua.mkh.settings.full.bf:
     ua.mkh.settings.full.ActivityFromTime this$0 -> a
     void onItemClicked(kankan.wheel.widget.WheelView,int) -> a
-ua.mkh.settings.full.ActivityFromTime$3 -> ua.mkh.settings.full.bj:
+ua.mkh.settings.full.ActivityFromTime$3 -> ua.mkh.settings.full.bg:
     ua.mkh.settings.full.ActivityFromTime this$0 -> a
     kankan.wheel.widget.WheelView val$hours1 -> b
     kankan.wheel.widget.WheelView val$mins1 -> c
     void onScrollingStarted(kankan.wheel.widget.WheelView) -> a
     void onScrollingFinished(kankan.wheel.widget.WheelView) -> b
-ua.mkh.settings.full.ActivityFromTime$4 -> ua.mkh.settings.full.bk:
+ua.mkh.settings.full.ActivityFromTime$4 -> ua.mkh.settings.full.bh:
     ua.mkh.settings.full.ActivityFromTime this$0 -> a
     kankan.wheel.widget.WheelView val$hours1 -> b
     kankan.wheel.widget.WheelView val$mins1 -> c
     void onTimeChanged(android.widget.TimePicker,int,int) -> onTimeChanged
-ua.mkh.settings.full.ActivityFromTime$5 -> ua.mkh.settings.full.bl:
+ua.mkh.settings.full.ActivityFromTime$5 -> ua.mkh.settings.full.bi:
     ua.mkh.settings.full.ActivityFromTime this$0 -> a
     kankan.wheel.widget.WheelView val$hours2 -> b
     kankan.wheel.widget.WheelView val$mins2 -> c
     void onChanged(kankan.wheel.widget.WheelView,int,int) -> a
-ua.mkh.settings.full.ActivityFromTime$6 -> ua.mkh.settings.full.bm:
+ua.mkh.settings.full.ActivityFromTime$6 -> ua.mkh.settings.full.bj:
     ua.mkh.settings.full.ActivityFromTime this$0 -> a
     void onItemClicked(kankan.wheel.widget.WheelView,int) -> a
-ua.mkh.settings.full.ActivityFromTime$7 -> ua.mkh.settings.full.bn:
+ua.mkh.settings.full.ActivityFromTime$7 -> ua.mkh.settings.full.bk:
     ua.mkh.settings.full.ActivityFromTime this$0 -> a
     kankan.wheel.widget.WheelView val$hours2 -> b
     kankan.wheel.widget.WheelView val$mins2 -> c
     void onScrollingStarted(kankan.wheel.widget.WheelView) -> a
     void onScrollingFinished(kankan.wheel.widget.WheelView) -> b
-ua.mkh.settings.full.ActivityFromTime$8 -> ua.mkh.settings.full.bo:
+ua.mkh.settings.full.ActivityFromTime$8 -> ua.mkh.settings.full.bl:
     ua.mkh.settings.full.ActivityFromTime this$0 -> a
     kankan.wheel.widget.WheelView val$hours2 -> b
     kankan.wheel.widget.WheelView val$mins2 -> c
     void onTimeChanged(android.widget.TimePicker,int,int) -> onTimeChanged
-ua.mkh.settings.full.ActivityFromTime$9 -> ua.mkh.settings.full.bp:
+ua.mkh.settings.full.ActivityFromTime$9 -> ua.mkh.settings.full.bm:
     ua.mkh.settings.full.ActivityFromTime this$0 -> a
     void onChanged(kankan.wheel.widget.WheelView,int,int) -> a
 ua.mkh.settings.full.ActivityGeo -> ua.mkh.settings.full.ActivityGeo:
@@ -14968,11 +14954,11 @@ ua.mkh.settings.full.ActivityGeo -> ua.mkh.settings.full.ActivityGeo:
     void openDialog() -> c
     void launchIntent() -> d
     void access$0(ua.mkh.settings.full.ActivityGeo) -> a
-ua.mkh.settings.full.ActivityGeo$1 -> ua.mkh.settings.full.bq:
+ua.mkh.settings.full.ActivityGeo$1 -> ua.mkh.settings.full.bn:
     ua.mkh.settings.full.ActivityGeo this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityGeo$2 -> ua.mkh.settings.full.br:
+ua.mkh.settings.full.ActivityGeo$2 -> ua.mkh.settings.full.bo:
     ua.mkh.settings.full.ActivityGeo this$0 -> a
     void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.ActivityInfo -> ua.mkh.settings.full.ActivityInfo:
@@ -15011,14 +14997,14 @@ ua.mkh.settings.full.ActivityInfo -> ua.mkh.settings.full.ActivityInfo:
     void launchIntent() -> d
     java.lang.String access$0() -> a
     void access$3(ua.mkh.settings.full.ActivityInfo) -> a
-ua.mkh.settings.full.ActivityInfo$3 -> ua.mkh.settings.full.bs:
+ua.mkh.settings.full.ActivityInfo$3 -> ua.mkh.settings.full.bp:
     ua.mkh.settings.full.ActivityInfo this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityInfo$4 -> ua.mkh.settings.full.bt:
+ua.mkh.settings.full.ActivityInfo$4 -> ua.mkh.settings.full.bq:
     ua.mkh.settings.full.ActivityInfo this$0 -> a
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityInfo$GetContacts -> ua.mkh.settings.full.bu:
+ua.mkh.settings.full.ActivityInfo$GetContacts -> ua.mkh.settings.full.br:
     ua.mkh.settings.full.ActivityInfo this$0 -> a
     void onPreExecute() -> onPreExecute
     java.lang.Void doInBackground(java.lang.Void[]) -> a
@@ -15070,19 +15056,19 @@ ua.mkh.settings.full.ActivityInformations -> ua.mkh.settings.full.ActivityInform
     void access$0(ua.mkh.settings.full.ActivityInformations) -> a
     void access$1(ua.mkh.settings.full.ActivityInformations) -> b
     void access$2(ua.mkh.settings.full.ActivityInformations) -> c
-ua.mkh.settings.full.ActivityInformations$1 -> ua.mkh.settings.full.bv:
+ua.mkh.settings.full.ActivityInformations$1 -> ua.mkh.settings.full.bs:
     ua.mkh.settings.full.ActivityInformations this$0 -> a
     android.view.View val$view -> b
     void run() -> run
-ua.mkh.settings.full.ActivityInformations$2 -> ua.mkh.settings.full.bw:
+ua.mkh.settings.full.ActivityInformations$2 -> ua.mkh.settings.full.bt:
     ua.mkh.settings.full.ActivityInformations this$0 -> a
     android.view.View val$view -> b
     void run() -> run
-ua.mkh.settings.full.ActivityInformations$3 -> ua.mkh.settings.full.bx:
+ua.mkh.settings.full.ActivityInformations$3 -> ua.mkh.settings.full.bu:
     ua.mkh.settings.full.ActivityInformations this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityInformations$4 -> ua.mkh.settings.full.by:
+ua.mkh.settings.full.ActivityInformations$4 -> ua.mkh.settings.full.bv:
     ua.mkh.settings.full.ActivityInformations this$0 -> a
     void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.ActivityOboi -> ua.mkh.settings.full.ActivityOboi:
@@ -15093,28 +15079,30 @@ ua.mkh.settings.full.ActivityOboi -> ua.mkh.settings.full.ActivityOboi:
     int center_to_left -> e
     int center_to_left2 -> f
     android.content.SharedPreferences mSettings -> g
-    ua.mkh.settings.full.SimpleGestureFilter detector -> u
+    ua.mkh.settings.full.SimpleGestureFilter detector -> w
     android.widget.TextView textView2 -> h
     android.widget.TextView textView4 -> i
     android.widget.TextView time -> j
     android.widget.TextView data -> k
-    android.widget.Button btn_back -> l
-    android.widget.Button Button03 -> m
-    android.widget.ImageView img_menu -> n
-    android.widget.ImageView img_lock -> o
-    android.graphics.Typeface typefaceRoman -> p
-    android.graphics.Typeface typefaceMedium -> q
-    android.graphics.Typeface typefaceBold -> r
-    android.graphics.Typeface typefaceUltraLight -> s
-    android.graphics.Typeface typefaceThin -> t
+    android.widget.TextView TextView01 -> l
+    android.widget.Button btn_back -> m
+    android.widget.Button Button03 -> n
+    android.widget.ImageView img_menu -> o
+    android.widget.ImageView img_lock -> p
+    android.graphics.Typeface typefaceRoman -> q
+    android.graphics.Typeface typefaceMedium -> r
+    android.graphics.Typeface typefaceBold -> s
+    android.graphics.Typeface typefaceUltraLight -> t
+    android.graphics.Typeface typefaceThin -> u
+    android.widget.RelativeLayout RelativeLayoutView -> v
     void onCreate(android.os.Bundle) -> onCreate
     boolean dispatchTouchEvent(android.view.MotionEvent) -> dispatchTouchEvent
     void onSwipe(int) -> a
     void onDoubleTap() -> b
     void onResume() -> onResume
-    void time_data() -> a
-    void wallpaper_set() -> c
+    void wallpaper_set() -> a
     void onClick(android.view.View) -> onClick
+    void wall() -> c
     void BackClick(android.view.View) -> BackClick
     void onActivityResult(int,int,android.content.Intent) -> onActivityResult
     java.lang.String selectedWallpaperImage(android.content.Context,android.content.Intent) -> a
@@ -15122,11 +15110,19 @@ ua.mkh.settings.full.ActivityOboi -> ua.mkh.settings.full.ActivityOboi:
     void openDialog() -> d
     void launchIntent() -> e
     void access$0(ua.mkh.settings.full.ActivityOboi) -> a
-ua.mkh.settings.full.ActivityOboi$1 -> ua.mkh.settings.full.bz:
+ua.mkh.settings.full.ActivityOboi$1 -> ua.mkh.settings.full.bw:
     ua.mkh.settings.full.ActivityOboi this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityOboi$2 -> ua.mkh.settings.full.ca:
+ua.mkh.settings.full.ActivityOboi$2 -> ua.mkh.settings.full.bx:
+    ua.mkh.settings.full.ActivityOboi this$0 -> a
+    android.app.Dialog val$dialog -> b
+    void onClick(android.view.View) -> onClick
+ua.mkh.settings.full.ActivityOboi$3 -> ua.mkh.settings.full.by:
+    ua.mkh.settings.full.ActivityOboi this$0 -> a
+    android.app.Dialog val$dialog -> b
+    void onClick(android.view.View) -> onClick
+ua.mkh.settings.full.ActivityOboi$4 -> ua.mkh.settings.full.bz:
     ua.mkh.settings.full.ActivityOboi this$0 -> a
     void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.ActivityOperator -> ua.mkh.settings.full.ActivityOperator:
@@ -15160,23 +15156,23 @@ ua.mkh.settings.full.ActivityOperator -> ua.mkh.settings.full.ActivityOperator:
     void openDialog() -> d
     void launchIntent() -> e
     void access$0(ua.mkh.settings.full.ActivityOperator) -> a
-ua.mkh.settings.full.ActivityOperator$1 -> ua.mkh.settings.full.cb:
+ua.mkh.settings.full.ActivityOperator$1 -> ua.mkh.settings.full.ca:
     ua.mkh.settings.full.ActivityOperator this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityOperator$2 -> ua.mkh.settings.full.cc:
+ua.mkh.settings.full.ActivityOperator$2 -> ua.mkh.settings.full.cb:
     ua.mkh.settings.full.ActivityOperator this$0 -> a
     android.widget.EditText val$Ed -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityOperator$3 -> ua.mkh.settings.full.cd:
+ua.mkh.settings.full.ActivityOperator$3 -> ua.mkh.settings.full.cc:
     ua.mkh.settings.full.ActivityOperator this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityOperator$4 -> ua.mkh.settings.full.ce:
+ua.mkh.settings.full.ActivityOperator$4 -> ua.mkh.settings.full.cd:
     ua.mkh.settings.full.ActivityOperator this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityOperator$5 -> ua.mkh.settings.full.cf:
+ua.mkh.settings.full.ActivityOperator$5 -> ua.mkh.settings.full.ce:
     ua.mkh.settings.full.ActivityOperator this$0 -> a
     void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.ActivityOsnova -> ua.mkh.settings.full.ActivityOsnova:
@@ -15273,18 +15269,18 @@ ua.mkh.settings.full.ActivityOsnova -> ua.mkh.settings.full.ActivityOsnova:
     void stok() -> g
     void access$0(ua.mkh.settings.full.ActivityOsnova) -> a
     void access$1(ua.mkh.settings.full.ActivityOsnova) -> b
-ua.mkh.settings.full.ActivityOsnova$1 -> ua.mkh.settings.full.cg:
+ua.mkh.settings.full.ActivityOsnova$1 -> ua.mkh.settings.full.cf:
     ua.mkh.settings.full.ActivityOsnova this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityOsnova$2 -> ua.mkh.settings.full.ch:
+ua.mkh.settings.full.ActivityOsnova$2 -> ua.mkh.settings.full.cg:
     ua.mkh.settings.full.ActivityOsnova this$0 -> a
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityOsnova$3 -> ua.mkh.settings.full.ci:
+ua.mkh.settings.full.ActivityOsnova$3 -> ua.mkh.settings.full.ch:
     ua.mkh.settings.full.ActivityOsnova this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityOsnova$4 -> ua.mkh.settings.full.cj:
+ua.mkh.settings.full.ActivityOsnova$4 -> ua.mkh.settings.full.ci:
     ua.mkh.settings.full.ActivityOsnova this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
@@ -15324,14 +15320,14 @@ ua.mkh.settings.full.ActivitySetAlarms -> ua.mkh.settings.full.ActivitySetAlarms
     void access$0(ua.mkh.settings.full.ActivitySetAlarms,java.lang.String) -> a
     void access$1(ua.mkh.settings.full.ActivitySetAlarms) -> a
     void access$2(ua.mkh.settings.full.ActivitySetAlarms) -> b
-ua.mkh.settings.full.ActivitySetAlarms$1 -> ua.mkh.settings.full.ck:
+ua.mkh.settings.full.ActivitySetAlarms$1 -> ua.mkh.settings.full.cj:
     ua.mkh.settings.full.ActivitySetAlarms this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-ua.mkh.settings.full.ActivitySetAlarms$2 -> ua.mkh.settings.full.cl:
+ua.mkh.settings.full.ActivitySetAlarms$2 -> ua.mkh.settings.full.ck:
     ua.mkh.settings.full.ActivitySetAlarms this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivitySetAlarms$3 -> ua.mkh.settings.full.cm:
+ua.mkh.settings.full.ActivitySetAlarms$3 -> ua.mkh.settings.full.cl:
     ua.mkh.settings.full.ActivitySetAlarms this$0 -> a
     void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.ActivitySetNotifications -> ua.mkh.settings.full.ActivitySetNotifications:
@@ -15370,14 +15366,14 @@ ua.mkh.settings.full.ActivitySetNotifications -> ua.mkh.settings.full.ActivitySe
     void access$0(ua.mkh.settings.full.ActivitySetNotifications,java.lang.String) -> a
     void access$1(ua.mkh.settings.full.ActivitySetNotifications) -> a
     void access$2(ua.mkh.settings.full.ActivitySetNotifications) -> b
-ua.mkh.settings.full.ActivitySetNotifications$1 -> ua.mkh.settings.full.cn:
+ua.mkh.settings.full.ActivitySetNotifications$1 -> ua.mkh.settings.full.cm:
     ua.mkh.settings.full.ActivitySetNotifications this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-ua.mkh.settings.full.ActivitySetNotifications$2 -> ua.mkh.settings.full.co:
+ua.mkh.settings.full.ActivitySetNotifications$2 -> ua.mkh.settings.full.cn:
     ua.mkh.settings.full.ActivitySetNotifications this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivitySetNotifications$3 -> ua.mkh.settings.full.cp:
+ua.mkh.settings.full.ActivitySetNotifications$3 -> ua.mkh.settings.full.co:
     ua.mkh.settings.full.ActivitySetNotifications this$0 -> a
     void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.ActivitySetRingtone -> ua.mkh.settings.full.ActivitySetRingtone:
@@ -15416,14 +15412,14 @@ ua.mkh.settings.full.ActivitySetRingtone -> ua.mkh.settings.full.ActivitySetRing
     void access$0(ua.mkh.settings.full.ActivitySetRingtone,java.lang.String) -> a
     void access$1(ua.mkh.settings.full.ActivitySetRingtone) -> a
     void access$2(ua.mkh.settings.full.ActivitySetRingtone) -> b
-ua.mkh.settings.full.ActivitySetRingtone$1 -> ua.mkh.settings.full.cq:
+ua.mkh.settings.full.ActivitySetRingtone$1 -> ua.mkh.settings.full.cp:
     ua.mkh.settings.full.ActivitySetRingtone this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-ua.mkh.settings.full.ActivitySetRingtone$2 -> ua.mkh.settings.full.cr:
+ua.mkh.settings.full.ActivitySetRingtone$2 -> ua.mkh.settings.full.cq:
     ua.mkh.settings.full.ActivitySetRingtone this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivitySetRingtone$3 -> ua.mkh.settings.full.cs:
+ua.mkh.settings.full.ActivitySetRingtone$3 -> ua.mkh.settings.full.cr:
     ua.mkh.settings.full.ActivitySetRingtone this$0 -> a
     void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.ActivitySota -> ua.mkh.settings.full.ActivitySota:
@@ -15462,11 +15458,11 @@ ua.mkh.settings.full.ActivitySota -> ua.mkh.settings.full.ActivitySota:
     void launchIntent() -> e
     void BackClick(android.view.View) -> BackClick
     void access$0(ua.mkh.settings.full.ActivitySota) -> a
-ua.mkh.settings.full.ActivitySota$1 -> ua.mkh.settings.full.ct:
+ua.mkh.settings.full.ActivitySota$1 -> ua.mkh.settings.full.cs:
     ua.mkh.settings.full.ActivitySota this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivitySota$2 -> ua.mkh.settings.full.cu:
+ua.mkh.settings.full.ActivitySota$2 -> ua.mkh.settings.full.ct:
     ua.mkh.settings.full.ActivitySota this$0 -> a
     void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.ActivityStart -> ua.mkh.settings.full.ActivityStart:
@@ -15530,17 +15526,17 @@ ua.mkh.settings.full.ActivityTextSize -> ua.mkh.settings.full.ActivityTextSize:
     void launchIntent() -> c
     void BackClick(android.view.View) -> BackClick
     void access$0(ua.mkh.settings.full.ActivityTextSize) -> a
-ua.mkh.settings.full.ActivityTextSize$1 -> ua.mkh.settings.full.cv:
+ua.mkh.settings.full.ActivityTextSize$1 -> ua.mkh.settings.full.cu:
     int progressValue -> a
     ua.mkh.settings.full.ActivityTextSize this$0 -> b
     void onStopTrackingTouch(android.widget.SeekBar) -> onStopTrackingTouch
     void onStartTrackingTouch(android.widget.SeekBar) -> onStartTrackingTouch
     void onProgressChanged(android.widget.SeekBar,int,boolean) -> onProgressChanged
-ua.mkh.settings.full.ActivityTextSize$2 -> ua.mkh.settings.full.cw:
+ua.mkh.settings.full.ActivityTextSize$2 -> ua.mkh.settings.full.cv:
     ua.mkh.settings.full.ActivityTextSize this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityTextSize$3 -> ua.mkh.settings.full.cx:
+ua.mkh.settings.full.ActivityTextSize$3 -> ua.mkh.settings.full.cw:
     ua.mkh.settings.full.ActivityTextSize this$0 -> a
     void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.ActivityTimeout -> ua.mkh.settings.full.ActivityTimeout:
@@ -15576,11 +15572,11 @@ ua.mkh.settings.full.ActivityTimeout -> ua.mkh.settings.full.ActivityTimeout:
     void openDialog() -> c
     void launchIntent() -> d
     void access$0(ua.mkh.settings.full.ActivityTimeout) -> a
-ua.mkh.settings.full.ActivityTimeout$1 -> ua.mkh.settings.full.cy:
+ua.mkh.settings.full.ActivityTimeout$1 -> ua.mkh.settings.full.cx:
     ua.mkh.settings.full.ActivityTimeout this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityTimeout$2 -> ua.mkh.settings.full.cz:
+ua.mkh.settings.full.ActivityTimeout$2 -> ua.mkh.settings.full.cy:
     ua.mkh.settings.full.ActivityTimeout this$0 -> a
     void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.ActivityUsage -> ua.mkh.settings.full.ActivityUsage:
@@ -15619,11 +15615,11 @@ ua.mkh.settings.full.ActivityUsage -> ua.mkh.settings.full.ActivityUsage:
     void launchIntent() -> d
     void BackClick(android.view.View) -> BackClick
     void access$0(ua.mkh.settings.full.ActivityUsage) -> a
-ua.mkh.settings.full.ActivityUsage$1 -> ua.mkh.settings.full.da:
+ua.mkh.settings.full.ActivityUsage$1 -> ua.mkh.settings.full.cz:
     ua.mkh.settings.full.ActivityUsage this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityUsage$2 -> ua.mkh.settings.full.db:
+ua.mkh.settings.full.ActivityUsage$2 -> ua.mkh.settings.full.da:
     ua.mkh.settings.full.ActivityUsage this$0 -> a
     void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.ActivityVPN -> ua.mkh.settings.full.ActivityVPN:
@@ -15660,64 +15656,57 @@ ua.mkh.settings.full.ActivityVPN -> ua.mkh.settings.full.ActivityVPN:
     void openDialog() -> a
     void launchIntent() -> c
     void access$0(ua.mkh.settings.full.ActivityVPN) -> a
-ua.mkh.settings.full.ActivityVPN$1 -> ua.mkh.settings.full.dc:
+ua.mkh.settings.full.ActivityVPN$1 -> ua.mkh.settings.full.db:
     ua.mkh.settings.full.ActivityVPN this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityVPN$2 -> ua.mkh.settings.full.dd:
+ua.mkh.settings.full.ActivityVPN$2 -> ua.mkh.settings.full.dc:
     ua.mkh.settings.full.ActivityVPN this$0 -> a
     void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.ActivityWifi -> ua.mkh.settings.full.ActivityWifi:
     android.widget.TextView textConnected -> a
-    android.widget.TextView textIp -> b
-    android.widget.TextView textSsid -> c
-    android.widget.TextView textBssid -> d
-    android.widget.TextView textMac -> e
-    android.widget.TextView textSpeed -> f
-    android.widget.TextView textRssi -> g
-    android.content.Context context -> h
-    android.widget.ToggleButton tb_in -> i
-    android.widget.ToggleButton tb_wifi -> j
-    android.widget.ToggleButton tb_ch -> k
-    android.widget.ToggleButton buttonWifi -> l
-    android.net.wifi.WifiManager wifi -> m
-    android.widget.TextView number -> n
-    android.widget.TextView textStatus -> o
-    android.widget.TextView txtPercentage -> p
-    android.widget.TextView textView3 -> q
-    android.widget.TextView textView4 -> r
-    android.widget.TextView textView5 -> s
-    android.widget.TextView textView6 -> t
-    android.widget.TextView textView1 -> u
-    android.widget.Button btn_back -> v
-    android.widget.Button btn_1 -> w
-    android.widget.TableLayout tableLayout -> x
-    android.graphics.Typeface typefaceRoman -> y
-    android.graphics.Typeface typefaceMedium -> z
-    android.graphics.Typeface typefaceBold -> A
-    android.graphics.Typeface typefaceThin -> B
-    android.widget.LinearLayout LinearLayoutCon -> C
-    android.widget.LinearLayout MainLayout2 -> D
-    android.widget.RelativeLayout LayoutMain -> E
-    int menui -> F
-    int center_to_right -> G
-    int center_to_right2 -> H
-    int center_to_left -> I
-    int center_to_left2 -> J
-    android.content.SharedPreferences mSettings -> K
-    ua.mkh.settings.full.SimpleGestureFilter detector -> V
-    android.widget.ListView lv -> L
-    java.lang.String Capabilities -> M
-    android.widget.Button info -> N
-    int size -> O
-    java.util.List results -> P
-    java.lang.String m_Text -> W
-    java.lang.String ITEM_KEY -> Q
-    java.lang.String WIFI_KEY -> R
-    java.lang.String RSSI_KEY -> S
-    java.util.ArrayList arraylist -> T
-    android.widget.SimpleAdapter adapter -> U
-    android.content.BroadcastReceiver myWifiReceiver -> X
+    android.content.Context context -> b
+    android.widget.ToggleButton tb_in -> c
+    android.widget.ToggleButton tb_wifi -> d
+    android.widget.ToggleButton tb_ch -> e
+    android.widget.ToggleButton buttonWifi -> f
+    android.net.wifi.WifiManager wifi -> g
+    android.widget.TextView textStatus -> h
+    android.widget.TextView txtPercentage -> i
+    android.widget.TextView textView3 -> j
+    android.widget.TextView textView4 -> k
+    android.widget.TextView textView5 -> l
+    android.widget.TextView textView6 -> m
+    android.widget.TextView textView1 -> n
+    android.widget.Button btn_back -> o
+    android.widget.Button btn_1 -> p
+    android.graphics.Typeface typefaceRoman -> q
+    android.graphics.Typeface typefaceMedium -> r
+    android.graphics.Typeface typefaceBold -> s
+    android.graphics.Typeface typefaceThin -> t
+    android.widget.LinearLayout LinearLayoutCon -> u
+    android.widget.LinearLayout MainLayout2 -> v
+    android.widget.RelativeLayout LayoutMain -> w
+    int menui -> x
+    int center_to_right -> y
+    int center_to_right2 -> z
+    int center_to_left -> A
+    int center_to_left2 -> B
+    android.content.SharedPreferences mSettings -> C
+    ua.mkh.settings.full.SimpleGestureFilter detector -> O
+    android.widget.ListView lv -> D
+    android.widget.ImageView img2 -> E
+    java.lang.String Capabilities -> F
+    android.widget.Button info -> G
+    int size -> H
+    java.util.List results -> I
+    java.lang.String m_Text -> P
+    java.lang.String ITEM_KEY -> J
+    java.lang.String WIFI_KEY -> K
+    java.lang.String RSSI_KEY -> L
+    java.util.ArrayList arraylist -> M
+    android.widget.SimpleAdapter adapter -> N
+    android.content.BroadcastReceiver myWifiReceiver -> Q
     void onCreate(android.os.Bundle) -> onCreate
     void onPause() -> onPause
     boolean dispatchTouchEvent(android.view.MotionEvent) -> dispatchTouchEvent
@@ -15733,60 +15722,105 @@ ua.mkh.settings.full.ActivityWifi -> ua.mkh.settings.full.ActivityWifi:
     void openDialog() -> e
     void launchIntent() -> f
     void setListViewHeightBasedOnChildren(android.widget.ListView) -> a
-    void show() -> g
     void access$0(ua.mkh.settings.full.ActivityWifi) -> a
     void access$1(ua.mkh.settings.full.ActivityWifi,java.lang.String) -> a
     java.lang.String access$2(ua.mkh.settings.full.ActivityWifi) -> b
     void access$3(ua.mkh.settings.full.ActivityWifi) -> c
-ua.mkh.settings.full.ActivityWifi$1 -> ua.mkh.settings.full.de:
+ua.mkh.settings.full.ActivityWifi$1 -> ua.mkh.settings.full.dd:
     ua.mkh.settings.full.ActivityWifi this$0 -> a
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
-ua.mkh.settings.full.ActivityWifi$2 -> ua.mkh.settings.full.df:
+ua.mkh.settings.full.ActivityWifi$2 -> ua.mkh.settings.full.de:
     ua.mkh.settings.full.ActivityWifi this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
     void connectToWifi(int) -> a
     ua.mkh.settings.full.ActivityWifi access$0(ua.mkh.settings.full.ActivityWifi$2) -> a
-ua.mkh.settings.full.ActivityWifi$2$1 -> ua.mkh.settings.full.dg:
+ua.mkh.settings.full.ActivityWifi$2$1 -> ua.mkh.settings.full.df:
     ua.mkh.settings.full.ActivityWifi$2 this$1 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityWifi$2$2 -> ua.mkh.settings.full.dh:
+ua.mkh.settings.full.ActivityWifi$2$2 -> ua.mkh.settings.full.dg:
     ua.mkh.settings.full.ActivityWifi$2 this$1 -> a
     android.widget.EditText val$Ed -> b
     int val$value -> c
     android.app.Dialog val$dialog -> d
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityWifi$2$3 -> ua.mkh.settings.full.di:
+ua.mkh.settings.full.ActivityWifi$2$3 -> ua.mkh.settings.full.dh:
     ua.mkh.settings.full.ActivityWifi$2 this$1 -> a
     android.widget.EditText val$Ed -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityWifi$2$4 -> ua.mkh.settings.full.dj:
+ua.mkh.settings.full.ActivityWifi$2$4 -> ua.mkh.settings.full.di:
     ua.mkh.settings.full.ActivityWifi$2 this$1 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityWifi$2$5 -> ua.mkh.settings.full.dk:
+ua.mkh.settings.full.ActivityWifi$2$5 -> ua.mkh.settings.full.dj:
     ua.mkh.settings.full.ActivityWifi$2 this$1 -> a
     android.widget.EditText val$Ed -> b
     int val$value -> c
     android.app.Dialog val$dialog -> d
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityWifi$2$6 -> ua.mkh.settings.full.dl:
+ua.mkh.settings.full.ActivityWifi$2$6 -> ua.mkh.settings.full.dk:
     ua.mkh.settings.full.ActivityWifi$2 this$1 -> a
     android.widget.EditText val$Ed -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityWifi$3 -> ua.mkh.settings.full.dm:
+ua.mkh.settings.full.ActivityWifi$3 -> ua.mkh.settings.full.dl:
     ua.mkh.settings.full.ActivityWifi this$0 -> a
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
-ua.mkh.settings.full.ActivityWifi$4 -> ua.mkh.settings.full.dn:
+ua.mkh.settings.full.ActivityWifi$4 -> ua.mkh.settings.full.dm:
     ua.mkh.settings.full.ActivityWifi this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityWifi$5 -> ua.mkh.settings.full.do:
+ua.mkh.settings.full.ActivityWifi$5 -> ua.mkh.settings.full.dn:
     ua.mkh.settings.full.ActivityWifi this$0 -> a
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ActivityWifi$6 -> ua.mkh.settings.full.dp:
-    ua.mkh.settings.full.ActivityWifi this$0 -> a
-    android.app.Dialog val$Activation -> b
+ua.mkh.settings.full.ActivityWifiInfo -> ua.mkh.settings.full.ActivityWifiInfo:
+    android.net.wifi.WifiManager wifi -> a
+    int menui -> b
+    int center_to_right -> c
+    int center_to_right2 -> d
+    int center_to_left -> e
+    int center_to_left2 -> f
+    android.graphics.Typeface typefaceRoman -> g
+    android.graphics.Typeface typefaceMedium -> h
+    android.graphics.Typeface typefaceBold -> i
+    android.graphics.Typeface typefaceThin -> j
+    android.content.SharedPreferences mSettings -> k
+    ua.mkh.settings.full.SimpleGestureFilter detector -> E
+    android.widget.TextView textStatus -> l
+    android.widget.TextView txtip -> m
+    android.widget.TextView txtdns -> n
+    android.widget.TextView txtmask -> o
+    android.widget.TextView txtmarsh -> p
+    android.widget.TextView textView1 -> q
+    android.widget.TextView textView2 -> r
+    android.widget.Button btn_back -> s
+    android.widget.Button foget -> t
+    android.widget.Button b1 -> u
+    android.widget.Button b2 -> v
+    android.widget.Button b3 -> w
+    android.widget.Button Button01 -> x
+    android.widget.Button Button02 -> y
+    android.widget.Button Button03 -> z
+    android.widget.Button Button04 -> A
+    android.widget.Button b5 -> B
+    android.widget.Button b6 -> C
+    android.widget.Button b7 -> D
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean dispatchTouchEvent(android.view.MotionEvent) -> dispatchTouchEvent
+    void onSwipe(int) -> a
+    void onDoubleTap() -> b
+    void onResume() -> onResume
+    void BackClick(android.view.View) -> BackClick
+    void onClick(android.view.View) -> onClick
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void openDialog() -> a
+    void launchIntent() -> c
+    void access$0(ua.mkh.settings.full.ActivityWifiInfo) -> a
+ua.mkh.settings.full.ActivityWifiInfo$1 -> ua.mkh.settings.full.do:
+    ua.mkh.settings.full.ActivityWifiInfo this$0 -> a
+    android.app.Dialog val$dialog -> b
+    void onClick(android.view.View) -> onClick
+ua.mkh.settings.full.ActivityWifiInfo$2 -> ua.mkh.settings.full.dp:
+    ua.mkh.settings.full.ActivityWifiInfo this$0 -> a
     void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.ActivityZvuki -> ua.mkh.settings.full.ActivityZvuki:
     android.widget.TextView textView2 -> a
@@ -16045,23 +16079,33 @@ ua.mkh.settings.full.ChooseWallpaper -> ua.mkh.settings.full.ChooseWallpaper:
     android.graphics.Typeface typefaceMedium -> g
     android.graphics.Typeface typefaceBold -> h
     android.content.SharedPreferences mSettings -> i
-    ua.mkh.settings.full.SimpleGestureFilter detector -> o
+    ua.mkh.settings.full.SimpleGestureFilter detector -> u
     android.widget.Button btn_back -> j
     android.widget.Button my_phot -> k
-    android.widget.TextView din -> l
-    android.widget.TextView stat -> m
-    android.widget.TextView phot -> n
+    android.widget.Button button1 -> l
+    android.widget.TextView din -> m
+    android.widget.TextView stat -> n
+    android.widget.TextView phot -> o
+    android.widget.TextView textView4 -> p
+    android.widget.TextView textView5 -> q
+    android.widget.ProgressBar pb1 -> r
+    ua.mkh.settings.full.ChooseWallpaper$MyTask mt -> s
+    android.graphics.Bitmap scaledBitmapCamera -> t
     void onCreate(android.os.Bundle) -> onCreate
+    void preview() -> a
+    android.graphics.Bitmap scaleDown(android.graphics.Bitmap,float,boolean) -> a
     void onClick(android.view.View) -> onClick
     boolean dispatchTouchEvent(android.view.MotionEvent) -> dispatchTouchEvent
     void onSwipe(int) -> a
     void onDoubleTap() -> b
     void onResume() -> onResume
+    void getPhotoList() -> c
     boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
-    void openDialog() -> a
-    void launchIntent() -> c
+    void openDialog() -> d
+    void launchIntent() -> e
     void BackClick(android.view.View) -> BackClick
     void access$0(ua.mkh.settings.full.ChooseWallpaper) -> a
+    void access$1(ua.mkh.settings.full.ChooseWallpaper) -> b
 ua.mkh.settings.full.ChooseWallpaper$1 -> ua.mkh.settings.full.eb:
     ua.mkh.settings.full.ChooseWallpaper this$0 -> a
     void onClick(android.view.View) -> onClick
@@ -16075,7 +16119,14 @@ ua.mkh.settings.full.ChooseWallpaper$3 -> ua.mkh.settings.full.ed:
 ua.mkh.settings.full.ChooseWallpaper$4 -> ua.mkh.settings.full.ee:
     ua.mkh.settings.full.ChooseWallpaper this$0 -> a
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.ContextWrapperEdgeEffect -> ua.mkh.settings.full.ef:
+ua.mkh.settings.full.ChooseWallpaper$MyTask -> ua.mkh.settings.full.ef:
+    ua.mkh.settings.full.ChooseWallpaper this$0 -> a
+    void onPreExecute() -> onPreExecute
+    java.lang.Void doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(java.lang.Void) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+ua.mkh.settings.full.ContextWrapperEdgeEffect -> ua.mkh.settings.full.eg:
     ua.mkh.settings.full.ContextWrapperEdgeEffect$ResourcesEdgeEffect mResourcesEdgeEffect -> a
     int mColor -> b
     android.graphics.drawable.Drawable mEdgeDrawable -> c
@@ -16087,13 +16138,13 @@ ua.mkh.settings.full.ContextWrapperEdgeEffect -> ua.mkh.settings.full.ef:
     void access$2(ua.mkh.settings.full.ContextWrapperEdgeEffect,android.graphics.drawable.Drawable) -> b
     android.graphics.drawable.Drawable access$3(ua.mkh.settings.full.ContextWrapperEdgeEffect) -> b
     int access$4(ua.mkh.settings.full.ContextWrapperEdgeEffect) -> c
-ua.mkh.settings.full.ContextWrapperEdgeEffect$ResourcesEdgeEffect -> ua.mkh.settings.full.eg:
+ua.mkh.settings.full.ContextWrapperEdgeEffect$ResourcesEdgeEffect -> ua.mkh.settings.full.eh:
     int overscroll_edge -> b
     int overscroll_glow -> c
     ua.mkh.settings.full.ContextWrapperEdgeEffect this$0 -> a
     int getPlatformDrawableId(java.lang.String) -> a
     android.graphics.drawable.Drawable getDrawable(int) -> getDrawable
-ua.mkh.settings.full.CustomersDbAdapter -> ua.mkh.settings.full.eh:
+ua.mkh.settings.full.CustomersDbAdapter -> ua.mkh.settings.full.ei:
     ua.mkh.settings.full.CustomersDbAdapter$DatabaseHelper mDbHelper -> a
     android.database.sqlite.SQLiteDatabase mDb -> b
     android.content.Context mCtx -> c
@@ -16104,10 +16155,10 @@ ua.mkh.settings.full.CustomersDbAdapter -> ua.mkh.settings.full.eh:
     android.database.Cursor searchCustomer_ru(java.lang.String) -> a
     android.database.Cursor searchCustomer_uk(java.lang.String) -> b
     boolean deleteAllCustomers() -> c
-ua.mkh.settings.full.CustomersDbAdapter$DatabaseHelper -> ua.mkh.settings.full.ei:
+ua.mkh.settings.full.CustomersDbAdapter$DatabaseHelper -> ua.mkh.settings.full.ej:
     void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
     void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
-ua.mkh.settings.full.DeviceListAdapter -> ua.mkh.settings.full.ej:
+ua.mkh.settings.full.DeviceListAdapter -> ua.mkh.settings.full.ek:
     android.view.LayoutInflater mInflater -> a
     java.util.List mData -> b
     ua.mkh.settings.full.DeviceListAdapter$OnPairButtonClickListener mListener -> c
@@ -16118,13 +16169,13 @@ ua.mkh.settings.full.DeviceListAdapter -> ua.mkh.settings.full.ej:
     long getItemId(int) -> getItemId
     android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
     ua.mkh.settings.full.DeviceListAdapter$OnPairButtonClickListener access$0(ua.mkh.settings.full.DeviceListAdapter) -> a
-ua.mkh.settings.full.DeviceListAdapter$1 -> ua.mkh.settings.full.ek:
+ua.mkh.settings.full.DeviceListAdapter$1 -> ua.mkh.settings.full.el:
     ua.mkh.settings.full.DeviceListAdapter this$0 -> a
     int val$position -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.DeviceListAdapter$OnPairButtonClickListener -> ua.mkh.settings.full.el:
+ua.mkh.settings.full.DeviceListAdapter$OnPairButtonClickListener -> ua.mkh.settings.full.em:
     void onPairButtonClick(int) -> a
-ua.mkh.settings.full.DeviceListAdapter$ViewHolder -> ua.mkh.settings.full.em:
+ua.mkh.settings.full.DeviceListAdapter$ViewHolder -> ua.mkh.settings.full.en:
     android.widget.TextView nameTv -> a
     android.widget.TextView addressTv -> b
     android.widget.TextView pairBtn -> c
@@ -16135,7 +16186,7 @@ ua.mkh.settings.full.EdgeEffectScrollView -> ua.mkh.settings.full.EdgeEffectScro
     void setEdgeEffectColor(int) -> setEdgeEffectColor
     void initBounceScrollView() -> a
     boolean overScrollBy(int,int,int,int,int,int,int,int,boolean) -> overScrollBy
-ua.mkh.settings.full.GetNameInForeground -> ua.mkh.settings.full.en:
+ua.mkh.settings.full.GetNameInForeground -> ua.mkh.settings.full.eo:
     java.lang.String fetchToken() -> a
 ua.mkh.settings.full.MainActivity -> ua.mkh.settings.full.MainActivity:
     android.net.wifi.WifiManager wifi -> a
@@ -16251,7 +16302,7 @@ ua.mkh.settings.full.MainActivity -> ua.mkh.settings.full.MainActivity:
     int menui -> bg
     int versionCode -> bh
     int task -> bi
-    java.lang.String url -> ch
+    java.lang.String url -> cj
     java.lang.String versionName -> bj
     java.lang.String idd -> bk
     int VerIntent -> bl
@@ -16290,40 +16341,45 @@ ua.mkh.settings.full.MainActivity -> ua.mkh.settings.full.MainActivity:
     java.lang.String versionNow -> bS
     java.lang.String YA -> bT
     java.lang.String G -> bU
-    android.graphics.Typeface typefaceRoman -> bV
-    android.graphics.Typeface typefaceMedium -> bW
-    android.graphics.Typeface typefaceBold -> bX
-    java.lang.String cPASS -> ci
-    java.lang.String cPRIVACY -> cj
-    java.lang.String cAPN -> ck
-    android.content.pm.PackageManager pm -> bY
-    android.bluetooth.BluetoothAdapter bt -> bZ
-    ua.mkh.settings.full.MainActivity$GetContacts mTask -> cl
-    android.widget.EditText ed1 -> ca
-    android.widget.EditText ed11 -> cb
-    android.widget.LinearLayout ll1 -> cc
-    android.widget.ListView mListView -> cm
-    android.widget.SearchView searchView -> cn
-    ua.mkh.settings.full.CustomersDbAdapter mDbHelper -> co
-    android.widget.Button b1 -> cd
-    android.widget.Button b2 -> ce
-    android.widget.Button b11 -> cf
-    android.widget.Button b21 -> cg
+    java.lang.String svoi -> bV
+    android.graphics.Typeface typefaceRoman -> bW
+    android.graphics.Typeface typefaceMedium -> bX
+    android.graphics.Typeface typefaceBold -> bY
+    android.graphics.Typeface typefaceThin -> bZ
+    java.lang.String cPASS -> ck
+    java.lang.String cPRIVACY -> cl
+    java.lang.String cAPN -> cm
+    android.content.pm.PackageManager pm -> ca
+    android.bluetooth.BluetoothAdapter bt -> cb
+    ua.mkh.settings.full.MainActivity$GetContacts mTask -> cn
+    android.widget.EditText ed1 -> cc
+    android.widget.EditText ed11 -> cd
+    android.widget.LinearLayout ll1 -> ce
+    android.widget.ListView mListView -> co
+    android.widget.SearchView searchView -> cp
+    ua.mkh.settings.full.CustomersDbAdapter mDbHelper -> cq
+    android.widget.Button b1 -> cf
+    android.widget.Button b2 -> cg
+    android.widget.Button b11 -> ch
+    android.widget.Button b21 -> ci
     void onCreate(android.os.Bundle) -> onCreate
-    void stok() -> c
-    void openDialog() -> d
-    void launchIntent() -> e
+    void stok() -> e
+    void openDialog() -> f
+    void launchIntent() -> g
     void onClick(android.view.View) -> onClick
     boolean isSharingWiFi(android.net.wifi.WifiManager) -> a
     void onResume() -> onResume
-    void ifest() -> f
-    void ButtonTextWifi() -> g
-    void Airmode() -> h
-    void ButtonTextBth() -> i
-    void operator() -> a
+    void ifest() -> h
+    void ButtonTextWifi() -> i
+    void update() -> a
+    void Airmode() -> j
+    void ButtonTextBth() -> k
+    void operator() -> b
+    void check_pirat() -> c
+    java.lang.String isStoreVersion(android.content.Context) -> a
     boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
     java.lang.String codes(java.lang.String) -> a
-    void zimowets() -> j
+    void zimowets() -> l
     void onDestroy() -> onDestroy
     boolean onQueryTextChange(java.lang.String) -> onQueryTextChange
     boolean onQueryTextSubmit(java.lang.String) -> onQueryTextSubmit
@@ -16331,47 +16387,58 @@ ua.mkh.settings.full.MainActivity -> ua.mkh.settings.full.MainActivity:
     void showResults(java.lang.String) -> b
     void onPause() -> onPause
     void onFocusChange(android.view.View,boolean) -> onFocusChange
-    void copyDataBase() -> k
+    void copyDataBase() -> m
     ua.mkh.settings.full.MainActivity$GetContacts access$0(ua.mkh.settings.full.MainActivity) -> a
-    java.lang.String access$1() -> b
+    java.lang.String access$1() -> d
     android.widget.SearchView access$2(ua.mkh.settings.full.MainActivity) -> b
     android.widget.ListView access$3(ua.mkh.settings.full.MainActivity) -> c
     void access$4(ua.mkh.settings.full.MainActivity) -> d
     java.lang.String access$5(ua.mkh.settings.full.MainActivity,java.lang.String) -> a
-ua.mkh.settings.full.MainActivity$1 -> ua.mkh.settings.full.eo:
+ua.mkh.settings.full.MainActivity$1 -> ua.mkh.settings.full.ep:
     ua.mkh.settings.full.MainActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.MainActivity$2 -> ua.mkh.settings.full.ep:
+ua.mkh.settings.full.MainActivity$10 -> ua.mkh.settings.full.eq:
+    ua.mkh.settings.full.MainActivity this$0 -> a
+    android.app.Dialog val$dialog -> b
+    void onClick(android.view.View) -> onClick
+ua.mkh.settings.full.MainActivity$11 -> ua.mkh.settings.full.er:
+    ua.mkh.settings.full.MainActivity this$0 -> a
+    android.app.Dialog val$dialog -> b
+    void onClick(android.view.View) -> onClick
+ua.mkh.settings.full.MainActivity$12 -> ua.mkh.settings.full.es:
+    ua.mkh.settings.full.MainActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+ua.mkh.settings.full.MainActivity$2 -> ua.mkh.settings.full.et:
     ua.mkh.settings.full.MainActivity this$0 -> a
     void onFocusChange(android.view.View,boolean) -> onFocusChange
-ua.mkh.settings.full.MainActivity$3 -> ua.mkh.settings.full.eq:
+ua.mkh.settings.full.MainActivity$3 -> ua.mkh.settings.full.eu:
     ua.mkh.settings.full.MainActivity this$0 -> a
     void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
     void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
     void afterTextChanged(android.text.Editable) -> afterTextChanged
-ua.mkh.settings.full.MainActivity$4 -> ua.mkh.settings.full.er:
+ua.mkh.settings.full.MainActivity$4 -> ua.mkh.settings.full.ev:
     ua.mkh.settings.full.MainActivity this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.MainActivity$5 -> ua.mkh.settings.full.es:
+ua.mkh.settings.full.MainActivity$5 -> ua.mkh.settings.full.ew:
     ua.mkh.settings.full.MainActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.MainActivity$6 -> ua.mkh.settings.full.et:
+ua.mkh.settings.full.MainActivity$6 -> ua.mkh.settings.full.ex:
     ua.mkh.settings.full.MainActivity this$0 -> a
     android.app.Dialog val$Activation -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.MainActivity$7 -> ua.mkh.settings.full.eu:
+ua.mkh.settings.full.MainActivity$7 -> ua.mkh.settings.full.ey:
     ua.mkh.settings.full.MainActivity this$0 -> a
     android.app.Dialog val$dialogC -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.MainActivity$8 -> ua.mkh.settings.full.ev:
+ua.mkh.settings.full.MainActivity$8 -> ua.mkh.settings.full.ez:
+    ua.mkh.settings.full.MainActivity this$0 -> a
+    void run() -> run
+ua.mkh.settings.full.MainActivity$9 -> ua.mkh.settings.full.fa:
     ua.mkh.settings.full.MainActivity this$0 -> a
     android.app.Dialog val$dialog -> b
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.MainActivity$9 -> ua.mkh.settings.full.ew:
-    ua.mkh.settings.full.MainActivity this$0 -> a
-    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-ua.mkh.settings.full.MainActivity$GetContacts -> ua.mkh.settings.full.ex:
+ua.mkh.settings.full.MainActivity$GetContacts -> ua.mkh.settings.full.fb:
     ua.mkh.settings.full.MainActivity this$0 -> a
     void onCancelled() -> onCancelled
     void onPreExecute() -> onPreExecute
@@ -16387,11 +16454,11 @@ ua.mkh.settings.full.MessageBox -> ua.mkh.settings.full.MessageBox:
     android.graphics.Typeface typefaceThin -> e
     void onCreate(android.os.Bundle) -> onCreate
     float getBatteryLevel() -> a
-ua.mkh.settings.full.MessageBox$1 -> ua.mkh.settings.full.ey:
+ua.mkh.settings.full.MessageBox$1 -> ua.mkh.settings.full.fc:
     ua.mkh.settings.full.MessageBox this$0 -> a
     void onClick(android.view.View) -> onClick
-ua.mkh.settings.full.R -> ua.mkh.settings.full.ez:
-ua.mkh.settings.full.R$styleable -> ua.mkh.settings.full.fa:
+ua.mkh.settings.full.R -> ua.mkh.settings.full.fd:
+ua.mkh.settings.full.R$styleable -> ua.mkh.settings.full.fe:
     int[] AdsAttrs -> AdsAttrs
     int AdsAttrs_adSize -> AdsAttrs_adSize
     int AdsAttrs_adSizes -> AdsAttrs_adSizes
@@ -16441,7 +16508,7 @@ ua.mkh.settings.full.R$styleable -> ua.mkh.settings.full.fa:
 ua.mkh.settings.full.RoundedImageView -> ua.mkh.settings.full.RoundedImageView:
     void onDraw(android.graphics.Canvas) -> onDraw
     android.graphics.Bitmap getRoundedCroppedBitmap(android.graphics.Bitmap,int) -> a
-ua.mkh.settings.full.ServiceHandler -> ua.mkh.settings.full.fb:
+ua.mkh.settings.full.ServiceHandler -> ua.mkh.settings.full.ff:
     java.lang.String response -> a
     java.lang.String makeServiceCall(java.lang.String,int) -> a
     java.lang.String makeServiceCall(java.lang.String,int,java.util.List) -> a
@@ -16471,8 +16538,9 @@ ua.mkh.settings.full.SettingsActivity -> ua.mkh.settings.full.SettingsActivity:
     android.widget.ToggleButton tgb_3 -> w
     android.widget.ToggleButton tgb_4 -> x
     android.widget.TextView txt1 -> y
+    java.lang.Boolean _crossfadeRunning -> G
     android.content.SharedPreferences mSettings -> z
-    ua.mkh.settings.full.SimpleGestureFilter detector -> G
+    ua.mkh.settings.full.SimpleGestureFilter detector -> H
     int center_to_right -> A
     int center_to_right2 -> B
     int center_to_left -> C
@@ -16491,15 +16559,15 @@ ua.mkh.settings.full.SettingsActivity -> ua.mkh.settings.full.SettingsActivity:
     void BackClick(android.view.View) -> BackClick
     void access$0(ua.mkh.settings.full.SettingsActivity) -> a
     void access$1(ua.mkh.settings.full.SettingsActivity) -> b
-ua.mkh.settings.full.SettingsActivity$1 -> ua.mkh.settings.full.fc:
+ua.mkh.settings.full.SettingsActivity$1 -> ua.mkh.settings.full.fg:
     ua.mkh.settings.full.SettingsActivity this$0 -> a
     android.view.View val$view -> b
     void run() -> run
-ua.mkh.settings.full.SettingsActivity$2 -> ua.mkh.settings.full.fd:
+ua.mkh.settings.full.SettingsActivity$2 -> ua.mkh.settings.full.fh:
     ua.mkh.settings.full.SettingsActivity this$0 -> a
     android.view.View val$view -> b
     void run() -> run
-ua.mkh.settings.full.SimNoInfo -> ua.mkh.settings.full.fe:
+ua.mkh.settings.full.SimNoInfo -> ua.mkh.settings.full.fi:
     ua.mkh.settings.full.SimNoInfo telephonyInfo -> a
     java.lang.String imeiSIM1 -> b
     java.lang.String imeiSIM2 -> c
@@ -16513,8 +16581,8 @@ ua.mkh.settings.full.SimNoInfo -> ua.mkh.settings.full.fe:
     ua.mkh.settings.full.SimNoInfo getInstance(android.content.Context) -> a
     java.lang.String getDeviceIdBySlot(android.content.Context,java.lang.String,int) -> a
     boolean getSIMStateBySlot(android.content.Context,java.lang.String,int) -> b
-ua.mkh.settings.full.SimNoInfo$GeminiMethodNotFoundException -> ua.mkh.settings.full.ff:
-ua.mkh.settings.full.SimpleGestureFilter -> ua.mkh.settings.full.fg:
+ua.mkh.settings.full.SimNoInfo$GeminiMethodNotFoundException -> ua.mkh.settings.full.fj:
+ua.mkh.settings.full.SimpleGestureFilter -> ua.mkh.settings.full.fk:
     int swipe_Min_Distance -> a
     int swipe_Max_Distance -> b
     int swipe_Min_Velocity -> c
@@ -16530,80 +16598,106 @@ ua.mkh.settings.full.SimpleGestureFilter -> ua.mkh.settings.full.fg:
     boolean onDoubleTap(android.view.MotionEvent) -> onDoubleTap
     boolean onDoubleTapEvent(android.view.MotionEvent) -> onDoubleTapEvent
     boolean onSingleTapConfirmed(android.view.MotionEvent) -> onSingleTapConfirmed
-ua.mkh.settings.full.SimpleGestureFilter$SimpleGestureListener -> ua.mkh.settings.full.fh:
+ua.mkh.settings.full.SimpleGestureFilter$SimpleGestureListener -> ua.mkh.settings.full.fl:
     void onSwipe(int) -> a
     void onDoubleTap() -> b
-ua.mkh.settings.full.StorageUtils -> ua.mkh.settings.full.fi:
+ua.mkh.settings.full.StorageUtils -> ua.mkh.settings.full.fm:
     java.util.List getStorageList() -> a
-ua.mkh.settings.full.StorageUtils$StorageInfo -> ua.mkh.settings.full.fj:
+ua.mkh.settings.full.StorageUtils$StorageInfo -> ua.mkh.settings.full.fn:
     java.lang.String path -> a
     boolean readonly -> b
     boolean removable -> c
     int number -> d
     java.lang.String getDisplayName() -> a
+ua.mkh.settings.full.ViewWallpaper -> ua.mkh.settings.full.ViewWallpaper:
+    int menui -> a
+    int RESULT_LOAD_IMAGE -> b
+    int center_to_right -> c
+    int center_to_right2 -> d
+    int center_to_left -> e
+    int center_to_left2 -> f
+    android.content.SharedPreferences mSettings -> g
+    ua.mkh.settings.full.SimpleGestureFilter detector -> r
+    android.graphics.Typeface typefaceRoman -> h
+    android.graphics.Typeface typefaceMedium -> i
+    android.graphics.Typeface typefaceBold -> j
+    android.graphics.Typeface typefaceUltraLight -> k
+    android.graphics.Typeface typefaceThin -> l
+    android.widget.Button button1 -> m
+    android.widget.Button button2 -> n
+    android.widget.TextView data -> o
+    android.widget.TextView time -> p
+    android.widget.ImageView background -> q
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean dispatchTouchEvent(android.view.MotionEvent) -> dispatchTouchEvent
+    void onSwipe(int) -> a
+    void onDoubleTap() -> b
+    void onResume() -> onResume
+    void time_data() -> a
+    void wallpaper_set() -> c
+    void onClick(android.view.View) -> onClick
+    void BackClick(android.view.View) -> BackClick
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    java.lang.String selectedWallpaperImage(android.content.Context,android.content.Intent) -> a
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void openDialog() -> d
+    void launchIntent() -> e
+    void access$0(ua.mkh.settings.full.ViewWallpaper) -> a
+ua.mkh.settings.full.ViewWallpaper$1 -> ua.mkh.settings.full.fo:
+    ua.mkh.settings.full.ViewWallpaper this$0 -> a
+    android.app.Dialog val$dialog -> b
+    void onClick(android.view.View) -> onClick
+ua.mkh.settings.full.ViewWallpaper$2 -> ua.mkh.settings.full.fp:
+    ua.mkh.settings.full.ViewWallpaper this$0 -> a
+    void onClick(android.view.View) -> onClick
 ua.mkh.settings.full.setWallpaper -> ua.mkh.settings.full.setWallpaper:
-    ua.mkh.settings.full.setWallpaper$AsyncTaskLoadFiles myAsyncTaskLoadFiles -> a
-    ua.mkh.settings.full.setWallpaper$ImageAdapter myImageAdapter -> b
-    android.graphics.Bitmap decodedSampleBitmap -> c
-    int center_to_right -> d
-    int center_to_right2 -> e
-    int center_to_left -> f
-    int center_to_left2 -> g
-    android.content.SharedPreferences mSettings -> h
+    int center_to_right -> a
+    int center_to_right2 -> b
+    int center_to_left -> c
+    int center_to_left2 -> d
+    android.content.SharedPreferences mSettings -> e
     ua.mkh.settings.full.SimpleGestureFilter detector -> q
-    android.widget.TextView textStatus -> i
-    android.widget.Button btn_back -> j
-    int menui -> k
-    android.graphics.Typeface typefaceRoman -> l
-    android.graphics.Typeface typefaceMedium -> m
-    android.graphics.Typeface typefaceBold -> n
-    android.graphics.Typeface typefaceThin -> o
+    android.widget.TextView textStatus -> f
+    android.widget.Button btn_back -> g
+    int menui -> h
+    android.graphics.Typeface typefaceRoman -> i
+    android.graphics.Typeface typefaceMedium -> j
+    android.graphics.Typeface typefaceBold -> k
+    android.graphics.Typeface typefaceThin -> l
+    android.graphics.Typeface typefaceUltraLight -> m
+    ua.mkh.settings.full.setWallpaper$ImageAdapter imageAdapter -> n
+    android.widget.GridView gridview -> o
     android.widget.AdapterView$OnItemClickListener myOnItemClickListener -> p
     void onCreate(android.os.Bundle) -> onCreate
-    int calculateInSampleSize(android.graphics.BitmapFactory$Options,int,int) -> a
     void onResume() -> onResume
+    void wall(int) -> b
     boolean dispatchTouchEvent(android.view.MotionEvent) -> dispatchTouchEvent
     void onSwipe(int) -> a
     void onDoubleTap() -> b
     void BackClick(android.view.View) -> BackClick
-    void wallpaper() -> a
-    void copyAssetFiles(java.io.InputStream,java.io.OutputStream) -> a
-ua.mkh.settings.full.setWallpaper$1 -> ua.mkh.settings.full.fk:
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+ua.mkh.settings.full.setWallpaper$1 -> ua.mkh.settings.full.fq:
     ua.mkh.settings.full.setWallpaper this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-ua.mkh.settings.full.setWallpaper$AsyncTaskLoadFiles -> ua.mkh.settings.full.fl:
-    java.io.File targetDirector -> a
-    ua.mkh.settings.full.setWallpaper$ImageAdapter myTaskAdapter -> b
-    android.app.ProgressDialog progress -> d
-    ua.mkh.settings.full.setWallpaper this$0 -> c
-    void onPreExecute() -> onPreExecute
-    java.lang.Void doInBackground(java.lang.Void[]) -> a
-    void onProgressUpdate(java.lang.String[]) -> a
-    void onPostExecute(java.lang.Void) -> a
-    void onPostExecute(java.lang.Object) -> onPostExecute
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
-ua.mkh.settings.full.setWallpaper$ImageAdapter -> ua.mkh.settings.full.fm:
-    android.content.Context mContext -> c
+ua.mkh.settings.full.setWallpaper$2 -> ua.mkh.settings.full.fr:
+    ua.mkh.settings.full.setWallpaper this$0 -> a
+    android.app.Dialog val$dialog -> b
+    void onClick(android.view.View) -> onClick
+ua.mkh.settings.full.setWallpaper$3 -> ua.mkh.settings.full.fs:
+    ua.mkh.settings.full.setWallpaper this$0 -> a
+    android.widget.ImageView val$background -> b
+    android.app.Dialog val$dialog -> c
+    void onClick(android.view.View) -> onClick
+ua.mkh.settings.full.setWallpaper$ImageAdapter -> ua.mkh.settings.full.ft:
+    android.content.Context mContext -> d
     java.util.ArrayList itemList -> a
-    ua.mkh.settings.full.setWallpaper this$0 -> b
-    void add(java.lang.String) -> a
-    void clear() -> a
+    java.lang.Integer[] mThumbIds -> b
+    ua.mkh.settings.full.setWallpaper this$0 -> c
     int getCount() -> getCount
     java.lang.Object getItem(int) -> getItem
     long getItemId(int) -> getItemId
     android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
-    android.graphics.Bitmap decodeSampledBitmapFromUri(java.lang.String,int,int) -> a
-    int calculateInSampleSize(android.graphics.BitmapFactory$Options,int,int) -> a
-ua.mkh.settings.full.setWallpaper$MyTask2 -> ua.mkh.settings.full.fn:
-    android.app.ProgressDialog progress -> b
-    ua.mkh.settings.full.setWallpaper this$0 -> a
-    void onPreExecute() -> onPreExecute
-    java.lang.Void doInBackground(java.lang.Void[]) -> a
-    void onPostExecute(java.lang.Void) -> a
-    void onPostExecute(java.lang.Object) -> onPostExecute
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-ua.mkh.settings.full.timeSet -> ua.mkh.settings.full.fo:
+ua.mkh.settings.full.timeSet -> ua.mkh.settings.full.fu:
     android.content.Context kContext -> a
     android.app.NotificationManager notificationManager -> b
     android.app.Notification myNotification -> c

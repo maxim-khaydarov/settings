@@ -732,6 +732,8 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	     }
 	     else{
 	      textConnected.setText(R.string.no_connections);
+	      info.setVisibility(View.INVISIBLE);
+			tb_ch.setVisibility(View.INVISIBLE);
 	      img2.setVisibility(View.INVISIBLE);
 	      
 	     }

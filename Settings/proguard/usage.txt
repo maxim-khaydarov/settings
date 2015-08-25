@@ -1,6 +1,4 @@
 android.UnusedStub
-android.annotation.SuppressLint
-android.annotation.TargetApi
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoIcsImpl
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoJellyBeanMr2
@@ -7732,8 +7730,9 @@ ua.mkh.settings.full.ActivityOboi:
     android.widget.ToggleButton tb_oboi
     ua.mkh.settings.full.ActivityOboi$MyTask mt
     private static final int BUFFER_SIZE
-    533:585:public void wallpaper()
-    591:611:private static void copyAssetFiles(java.io.InputStream,java.io.OutputStream)
+    266:396:public void time_data()
+    735:787:public void wallpaper()
+    793:813:private static void copyAssetFiles(java.io.InputStream,java.io.OutputStream)
 ua.mkh.settings.full.ActivityOboi$MyTask
 ua.mkh.settings.full.ActivityOperator:
     public static final java.lang.String APP_PREFERENCES
@@ -7742,6 +7741,7 @@ ua.mkh.settings.full.ActivityOperator:
     public static final java.lang.String APP_PREFERENCES_ANIM_SPEED
     public static final java.lang.String APP_PREFERENCES_tgb_menu
     public static final java.lang.String APP_PREFERENCES_NETWORK
+    java.lang.String name
 ua.mkh.settings.full.ActivityOsnova:
     android.widget.Button btn_info
     android.widget.TextView textView2
@@ -7893,6 +7893,7 @@ ua.mkh.settings.full.ActivityVPN:
     public static final java.lang.String APP_PREFERENCES_tgb_menu
 ua.mkh.settings.full.ActivityWifi:
     android.widget.Button Button04
+    android.widget.TableLayout tableLayout
     public static final java.lang.String APP_PREFERENCES
     public static final java.lang.String APP_PREFERENCES_text_size
     public static final java.lang.String APP_PREFERENCES_bold_text
@@ -7900,6 +7901,16 @@ ua.mkh.settings.full.ActivityWifi:
     public static final java.lang.String APP_PREFERENCES_tgb_menu
     android.widget.ImageView img1
     android.widget.Button buttonScan
+ua.mkh.settings.full.ActivityWifiInfo:
+    public static final java.lang.String APP_PREFERENCES
+    public static final java.lang.String APP_PREFERENCES_text_size
+    public static final java.lang.String APP_PREFERENCES_bold_text
+    public static final java.lang.String APP_PREFERENCES_ANIM_SPEED
+    public static final java.lang.String APP_PREFERENCES_tgb_menu
+    java.lang.String ip
+    java.lang.String dns
+    java.lang.String marsh
+    java.lang.String mask
 ua.mkh.settings.full.ActivityZvuki:
     private android.widget.ToggleButton tb_d
     android.widget.TextView textView1
@@ -8003,6 +8014,7 @@ ua.mkh.settings.full.ChooseWallpaper:
     public static final java.lang.String APP_PREFERENCES_bold_text
     public static final java.lang.String APP_PREFERENCES_ANIM_SPEED
     public static final java.lang.String APP_PREFERENCES_tgb_menu
+    157:159:public static android.graphics.Bitmap RotateBitmap(android.graphics.Bitmap,float)
 ua.mkh.settings.full.CustomersDbAdapter:
     public static final java.lang.String KEY_ROWID
     public static final java.lang.String KEY_CUSTOMER
@@ -8101,7 +8113,7 @@ ua.mkh.settings.full.MainActivity:
     android.view.animation.Animation animationFalling
     android.widget.LinearLayout ll11
     java.lang.String base
-    2572:2591:public static void setListViewHeightBasedOnChildren(android.widget.ListView)
+    2737:2756:public static void setListViewHeightBasedOnChildren(android.widget.ListView)
 ua.mkh.settings.full.Person
 ua.mkh.settings.full.R:
     10:10:public R()
@@ -8118,7 +8130,7 @@ ua.mkh.settings.full.R$raw
 ua.mkh.settings.full.R$string
 ua.mkh.settings.full.R$style
 ua.mkh.settings.full.R$styleable:
-    1631:1631:public R$styleable()
+    1688:1688:public R$styleable()
 ua.mkh.settings.full.ServiceHandler:
     public static final int GET
     public static final int POST
@@ -8128,6 +8140,14 @@ ua.mkh.settings.full.SettingsActivity:
     java.lang.Boolean tgb3_s
     java.lang.Boolean tgb4_s
     android.widget.TextView txt2
+    android.view.View toggleCircle
+    android.view.View background_oval_off
+    android.view.View background_oval_on
+    int dimen
+    private android.content.SharedPreferences _sp
+    private android.animation.ObjectAnimator _oaLeft
+    private android.animation.ObjectAnimator _oaRight
+    private java.lang.String _prefName
     java.lang.String apn1
     public static final java.lang.String APP_PREFERENCES
     public static final java.lang.String APP_PREFERENCES_tgb_passcode
@@ -8161,13 +8181,24 @@ ua.mkh.settings.full.SimpleGestureFilter:
 ua.mkh.settings.full.StorageUtils:
     private static final java.lang.String TAG
     16:16:public StorageUtils()
+ua.mkh.settings.full.ViewWallpaper:
+    public static final java.lang.String APP_PREFERENCES
+    public static final java.lang.String APP_PREFERENCES_text_size
+    public static final java.lang.String APP_PREFERENCES_bold_text
+    public static final java.lang.String APP_PREFERENCES_ANIM_SPEED
+    public static final java.lang.String APP_PREFERENCES_tgb_menu
+    android.widget.Button btn_back
+    378:406:public void wall()
 ua.mkh.settings.full.setWallpaper:
+    ua.mkh.settings.full.setWallpaper$ImageAdapter myImageAdapter
+    android.graphics.Bitmap decodedSampleBitmap
     ua.mkh.settings.full.ActivityOboi$MyTask mt
     private static final int BUFFER_SIZE
     public static final java.lang.String APP_PREFERENCES_ANIM_SPEED
     public static final java.lang.String APP_PREFERENCES
-ua.mkh.settings.full.setWallpaper$ImageAdapter:
-    223:224:void remove(int)
+    173:186:public int calculateInSampleSize(android.graphics.BitmapFactory$Options,int,int)
+    242:256:public android.graphics.Bitmap decodeSampledBitmapFromUri(java.lang.String,int,int)
+ua.mkh.settings.full.setWallpaper$MyTask2
 ua.mkh.settings.full.timeSet:
     static final int RQS_1
     private static final int MY_NOTIFICATION_ID

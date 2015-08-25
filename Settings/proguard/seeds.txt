@@ -1353,13 +1353,10 @@ ua.mkh.settings.full.ActivityBth
 ua.mkh.settings.full.ActivityBth: ActivityBth()
 ua.mkh.settings.full.ActivityBth: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityBth: void BackClick(android.view.View)
-ua.mkh.settings.full.ActivityBth$10: void onClick(android.view.View)
-ua.mkh.settings.full.ActivityBth$11: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityBth$5: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityBth$6: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityBth$7: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityBth$8: void onClick(android.view.View)
-ua.mkh.settings.full.ActivityBth$9: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityCharge
 ua.mkh.settings.full.ActivityCharge: ActivityCharge()
 ua.mkh.settings.full.ActivityCharge$1: void onClick(android.view.View)
@@ -1400,6 +1397,8 @@ ua.mkh.settings.full.ActivityOboi: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityOboi: void BackClick(android.view.View)
 ua.mkh.settings.full.ActivityOboi$1: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityOboi$2: void onClick(android.view.View)
+ua.mkh.settings.full.ActivityOboi$3: void onClick(android.view.View)
+ua.mkh.settings.full.ActivityOboi$4: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityOperator
 ua.mkh.settings.full.ActivityOperator: ActivityOperator()
 ua.mkh.settings.full.ActivityOperator: void onClick(android.view.View)
@@ -1485,7 +1484,12 @@ ua.mkh.settings.full.ActivityWifi$2$5: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityWifi$2$6: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityWifi$4: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityWifi$5: void onClick(android.view.View)
-ua.mkh.settings.full.ActivityWifi$6: void onClick(android.view.View)
+ua.mkh.settings.full.ActivityWifiInfo
+ua.mkh.settings.full.ActivityWifiInfo: ActivityWifiInfo()
+ua.mkh.settings.full.ActivityWifiInfo: void BackClick(android.view.View)
+ua.mkh.settings.full.ActivityWifiInfo: void onClick(android.view.View)
+ua.mkh.settings.full.ActivityWifiInfo$1: void onClick(android.view.View)
+ua.mkh.settings.full.ActivityWifiInfo$2: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityZvuki
 ua.mkh.settings.full.ActivityZvuki: ActivityZvuki()
 ua.mkh.settings.full.ActivityZvuki: void BackClick(android.view.View)
@@ -1522,15 +1526,18 @@ ua.mkh.settings.full.MainActivity
 ua.mkh.settings.full.MainActivity: MainActivity()
 ua.mkh.settings.full.MainActivity: void onClick(android.view.View)
 ua.mkh.settings.full.MainActivity$1: void onClick(android.view.View)
+ua.mkh.settings.full.MainActivity$10: void onClick(android.view.View)
+ua.mkh.settings.full.MainActivity$11: void onClick(android.view.View)
 ua.mkh.settings.full.MainActivity$4: void onClick(android.view.View)
 ua.mkh.settings.full.MainActivity$5: void onClick(android.view.View)
 ua.mkh.settings.full.MainActivity$6: void onClick(android.view.View)
 ua.mkh.settings.full.MainActivity$7: void onClick(android.view.View)
-ua.mkh.settings.full.MainActivity$8: void onClick(android.view.View)
+ua.mkh.settings.full.MainActivity$9: void onClick(android.view.View)
 ua.mkh.settings.full.MessageBox
 ua.mkh.settings.full.MessageBox: MessageBox()
 ua.mkh.settings.full.MessageBox$1: void onClick(android.view.View)
 ua.mkh.settings.full.R$anim: int anim_down
+ua.mkh.settings.full.R$anim: int anim_null
 ua.mkh.settings.full.R$anim: int anim_up
 ua.mkh.settings.full.R$anim: int rotate_down
 ua.mkh.settings.full.R$anim: int rotate_up
@@ -1643,6 +1650,9 @@ ua.mkh.settings.full.R$drawable: int button_toggle
 ua.mkh.settings.full.R$drawable: int button_toggle_chek
 ua.mkh.settings.full.R$drawable: int button_toggle_down
 ua.mkh.settings.full.R$drawable: int button_toggle_info
+ua.mkh.settings.full.R$drawable: int button_wifi_off_center
+ua.mkh.settings.full.R$drawable: int button_wifi_off_left
+ua.mkh.settings.full.R$drawable: int button_wifi_on
 ua.mkh.settings.full.R$drawable: int cast_ic_notification_0
 ua.mkh.settings.full.R$drawable: int cast_ic_notification_1
 ua.mkh.settings.full.R$drawable: int cast_ic_notification_2
@@ -1724,6 +1734,30 @@ ua.mkh.settings.full.R$drawable: int overscroll_edge
 ua.mkh.settings.full.R$drawable: int overscroll_glow
 ua.mkh.settings.full.R$drawable: int passcode
 ua.mkh.settings.full.R$drawable: int phone
+ua.mkh.settings.full.R$drawable: int pic_1
+ua.mkh.settings.full.R$drawable: int pic_10
+ua.mkh.settings.full.R$drawable: int pic_10s
+ua.mkh.settings.full.R$drawable: int pic_11
+ua.mkh.settings.full.R$drawable: int pic_11s
+ua.mkh.settings.full.R$drawable: int pic_12
+ua.mkh.settings.full.R$drawable: int pic_12s
+ua.mkh.settings.full.R$drawable: int pic_1s
+ua.mkh.settings.full.R$drawable: int pic_2
+ua.mkh.settings.full.R$drawable: int pic_2s
+ua.mkh.settings.full.R$drawable: int pic_3
+ua.mkh.settings.full.R$drawable: int pic_3s
+ua.mkh.settings.full.R$drawable: int pic_4
+ua.mkh.settings.full.R$drawable: int pic_4s
+ua.mkh.settings.full.R$drawable: int pic_5
+ua.mkh.settings.full.R$drawable: int pic_5s
+ua.mkh.settings.full.R$drawable: int pic_6
+ua.mkh.settings.full.R$drawable: int pic_6s
+ua.mkh.settings.full.R$drawable: int pic_7
+ua.mkh.settings.full.R$drawable: int pic_7s
+ua.mkh.settings.full.R$drawable: int pic_8
+ua.mkh.settings.full.R$drawable: int pic_8s
+ua.mkh.settings.full.R$drawable: int pic_9
+ua.mkh.settings.full.R$drawable: int pic_9s
 ua.mkh.settings.full.R$drawable: int plane
 ua.mkh.settings.full.R$drawable: int powered_by_google_dark
 ua.mkh.settings.full.R$drawable: int powered_by_google_light
@@ -1744,6 +1778,9 @@ ua.mkh.settings.full.R$drawable: int sun_down
 ua.mkh.settings.full.R$drawable: int sun_on
 ua.mkh.settings.full.R$drawable: int sync
 ua.mkh.settings.full.R$drawable: int twitter
+ua.mkh.settings.full.R$drawable: int u1
+ua.mkh.settings.full.R$drawable: int u2
+ua.mkh.settings.full.R$drawable: int u3
 ua.mkh.settings.full.R$drawable: int up
 ua.mkh.settings.full.R$drawable: int viber
 ua.mkh.settings.full.R$drawable: int vk
@@ -1759,7 +1796,6 @@ ua.mkh.settings.full.R$drawable: int wifi_signal_2
 ua.mkh.settings.full.R$drawable: int wifi_signal_3
 ua.mkh.settings.full.R$drawable: int wifi_signal_4
 ua.mkh.settings.full.R$id: int BTtoggle
-ua.mkh.settings.full.R$id: int Bssid
 ua.mkh.settings.full.R$id: int Button01
 ua.mkh.settings.full.R$id: int Button02
 ua.mkh.settings.full.R$id: int Button03
@@ -1955,7 +1991,6 @@ ua.mkh.settings.full.R$id: int ImageView96
 ua.mkh.settings.full.R$id: int ImageView97
 ua.mkh.settings.full.R$id: int ImageView98
 ua.mkh.settings.full.R$id: int ImageView99
-ua.mkh.settings.full.R$id: int Ip
 ua.mkh.settings.full.R$id: int LayoutMain
 ua.mkh.settings.full.R$id: int LinearLayour122
 ua.mkh.settings.full.R$id: int LinearLayout01
@@ -2038,17 +2073,16 @@ ua.mkh.settings.full.R$id: int LinearLayoutWiFi
 ua.mkh.settings.full.R$id: int LinearLayoutWifi
 ua.mkh.settings.full.R$id: int LinearLayoutZvuki
 ua.mkh.settings.full.R$id: int LinearLayoutZvuki1
-ua.mkh.settings.full.R$id: int Mac
 ua.mkh.settings.full.R$id: int MainLayout2
 ua.mkh.settings.full.R$id: int Ok
+ua.mkh.settings.full.R$id: int ProgressBar01
 ua.mkh.settings.full.R$id: int RelativeLayout01
 ua.mkh.settings.full.R$id: int RelativeLayout1
 ua.mkh.settings.full.R$id: int RelativeLayout12
 ua.mkh.settings.full.R$id: int RelativeLayout2
-ua.mkh.settings.full.R$id: int Rssi
-ua.mkh.settings.full.R$id: int Speed
-ua.mkh.settings.full.R$id: int Ssid
+ua.mkh.settings.full.R$id: int RelativeLayoutView
 ua.mkh.settings.full.R$id: int StaticLayout
+ua.mkh.settings.full.R$id: int TableRow01
 ua.mkh.settings.full.R$id: int TextOper
 ua.mkh.settings.full.R$id: int TextView01
 ua.mkh.settings.full.R$id: int TextView02
@@ -2064,6 +2098,10 @@ ua.mkh.settings.full.R$id: int TextView11
 ua.mkh.settings.full.R$id: int TextView12
 ua.mkh.settings.full.R$id: int TextView13
 ua.mkh.settings.full.R$id: int TextView14
+ua.mkh.settings.full.R$id: int TextViewDns
+ua.mkh.settings.full.R$id: int TextViewIp
+ua.mkh.settings.full.R$id: int TextViewMarsh
+ua.mkh.settings.full.R$id: int TextViewMask
 ua.mkh.settings.full.R$id: int ToggleButton01
 ua.mkh.settings.full.R$id: int ToggleButton02
 ua.mkh.settings.full.R$id: int ToggleButton03
@@ -2110,6 +2148,7 @@ ua.mkh.settings.full.R$id: int button1
 ua.mkh.settings.full.R$id: int button11
 ua.mkh.settings.full.R$id: int button2
 ua.mkh.settings.full.R$id: int button21
+ua.mkh.settings.full.R$id: int button3
 ua.mkh.settings.full.R$id: int buttonBack
 ua.mkh.settings.full.R$id: int buttonCancel
 ua.mkh.settings.full.R$id: int buttonDel
@@ -2119,6 +2158,7 @@ ua.mkh.settings.full.R$id: int buy_now
 ua.mkh.settings.full.R$id: int buy_with_google
 ua.mkh.settings.full.R$id: int cast_notification_id
 ua.mkh.settings.full.R$id: int classic
+ua.mkh.settings.full.R$id: int data
 ua.mkh.settings.full.R$id: int devicesfound
 ua.mkh.settings.full.R$id: int dialogButtonCancel
 ua.mkh.settings.full.R$id: int dialogButtonClean
@@ -2182,7 +2222,6 @@ ua.mkh.settings.full.R$id: int music
 ua.mkh.settings.full.R$id: int nameBT
 ua.mkh.settings.full.R$id: int none
 ua.mkh.settings.full.R$id: int normal
-ua.mkh.settings.full.R$id: int number
 ua.mkh.settings.full.R$id: int pickerdate
 ua.mkh.settings.full.R$id: int production
 ua.mkh.settings.full.R$id: int progressBar1
@@ -2216,10 +2255,6 @@ ua.mkh.settings.full.R$id: int szipCode
 ua.mkh.settings.full.R$id: int tableLayout1
 ua.mkh.settings.full.R$id: int tableRow1
 ua.mkh.settings.full.R$id: int tableRow2
-ua.mkh.settings.full.R$id: int tableRow3
-ua.mkh.settings.full.R$id: int tableRow4
-ua.mkh.settings.full.R$id: int tableRow5
-ua.mkh.settings.full.R$id: int tableRow6
 ua.mkh.settings.full.R$id: int terrain
 ua.mkh.settings.full.R$id: int test
 ua.mkh.settings.full.R$id: int text
@@ -2244,6 +2279,7 @@ ua.mkh.settings.full.R$id: int text_app_main
 ua.mkh.settings.full.R$id: int textbt
 ua.mkh.settings.full.R$id: int textver
 ua.mkh.settings.full.R$id: int textwifi
+ua.mkh.settings.full.R$id: int time
 ua.mkh.settings.full.R$id: int timeOutsT
 ua.mkh.settings.full.R$id: int timePicker1
 ua.mkh.settings.full.R$id: int timePicker2
@@ -2281,7 +2317,6 @@ ua.mkh.settings.full.R$layout: int activity_operator
 ua.mkh.settings.full.R$layout: int activity_osnova
 ua.mkh.settings.full.R$layout: int activity_paired_devices
 ua.mkh.settings.full.R$layout: int activity_set_ringtone
-ua.mkh.settings.full.R$layout: int activity_set_wallpaper
 ua.mkh.settings.full.R$layout: int activity_settings
 ua.mkh.settings.full.R$layout: int activity_setwall
 ua.mkh.settings.full.R$layout: int activity_sota
@@ -2290,9 +2325,12 @@ ua.mkh.settings.full.R$layout: int activity_storage
 ua.mkh.settings.full.R$layout: int activity_text_size
 ua.mkh.settings.full.R$layout: int activity_timeout
 ua.mkh.settings.full.R$layout: int activity_to_time
+ua.mkh.settings.full.R$layout: int activity_update
 ua.mkh.settings.full.R$layout: int activity_usage
+ua.mkh.settings.full.R$layout: int activity_view_wallpaper
 ua.mkh.settings.full.R$layout: int activity_vpn
 ua.mkh.settings.full.R$layout: int activity_wifi
+ua.mkh.settings.full.R$layout: int activity_wifi_info
 ua.mkh.settings.full.R$layout: int activity_zvuki
 ua.mkh.settings.full.R$layout: int changelog_view
 ua.mkh.settings.full.R$layout: int custom
@@ -2326,7 +2364,10 @@ ua.mkh.settings.full.R$string: int accept
 ua.mkh.settings.full.R$string: int account
 ua.mkh.settings.full.R$string: int action_settings
 ua.mkh.settings.full.R$string: int activation
+ua.mkh.settings.full.R$string: int adress_ip
+ua.mkh.settings.full.R$string: int adress_ip_text
 ua.mkh.settings.full.R$string: int alarm
+ua.mkh.settings.full.R$string: int all_camera
 ua.mkh.settings.full.R$string: int all_storage
 ua.mkh.settings.full.R$string: int allow_call_disturb
 ua.mkh.settings.full.R$string: int allow_call_disturb_contacts
@@ -2342,12 +2383,14 @@ ua.mkh.settings.full.R$string: int apps
 ua.mkh.settings.full.R$string: int attention
 ua.mkh.settings.full.R$string: int auth_google_play_services_client_facebook_display_name
 ua.mkh.settings.full.R$string: int auth_google_play_services_client_google_display_name
+ua.mkh.settings.full.R$string: int auto
 ua.mkh.settings.full.R$string: int autor
 ua.mkh.settings.full.R$string: int autorotation_text
 ua.mkh.settings.full.R$string: int back
 ua.mkh.settings.full.R$string: int battery_manager
 ua.mkh.settings.full.R$string: int battery_percent
 ua.mkh.settings.full.R$string: int battery_text
+ua.mkh.settings.full.R$string: int block_license
 ua.mkh.settings.full.R$string: int bluetooth_devices
 ua.mkh.settings.full.R$string: int bluetooth_devices_other
 ua.mkh.settings.full.R$string: int bluetooth_disable_pair
@@ -2394,7 +2437,9 @@ ua.mkh.settings.full.R$string: int button_volume
 ua.mkh.settings.full.R$string: int button_wallpaper
 ua.mkh.settings.full.R$string: int button_wifi
 ua.mkh.settings.full.R$string: int call_and_reminders
+ua.mkh.settings.full.R$string: int camera
 ua.mkh.settings.full.R$string: int cancel
+ua.mkh.settings.full.R$string: int cancel_oboi
 ua.mkh.settings.full.R$string: int cast_notification_connected_message
 ua.mkh.settings.full.R$string: int cast_notification_connecting_message
 ua.mkh.settings.full.R$string: int cast_notification_disconnect
@@ -2441,6 +2486,7 @@ ua.mkh.settings.full.R$string: int connection
 ua.mkh.settings.full.R$string: int control_center
 ua.mkh.settings.full.R$string: int create_calendar_message
 ua.mkh.settings.full.R$string: int create_calendar_title
+ua.mkh.settings.full.R$string: int data_oboi
 ua.mkh.settings.full.R$string: int date_time
 ua.mkh.settings.full.R$string: int decline
 ua.mkh.settings.full.R$string: int delete
@@ -2457,6 +2503,7 @@ ua.mkh.settings.full.R$string: int down_install
 ua.mkh.settings.full.R$string: int edge
 ua.mkh.settings.full.R$string: int enter_text
 ua.mkh.settings.full.R$string: int facebook
+ua.mkh.settings.full.R$string: int fogot_wifi
 ua.mkh.settings.full.R$string: int full
 ua.mkh.settings.full.R$string: int game_center
 ua.mkh.settings.full.R$string: int geolocation_services
@@ -2465,11 +2512,11 @@ ua.mkh.settings.full.R$string: int geolocaton_what2
 ua.mkh.settings.full.R$string: int gprs
 ua.mkh.settings.full.R$string: int gps
 ua.mkh.settings.full.R$string: int hello_world
-ua.mkh.settings.full.R$string: int hint_search
 ua.mkh.settings.full.R$string: int hsdpa
 ua.mkh.settings.full.R$string: int hspa
 ua.mkh.settings.full.R$string: int hspa_plus
 ua.mkh.settings.full.R$string: int hsupa
+ua.mkh.settings.full.R$string: int http_proxy
 ua.mkh.settings.full.R$string: int iccid
 ua.mkh.settings.full.R$string: int icloud
 ua.mkh.settings.full.R$string: int icloud_t
@@ -2503,7 +2550,10 @@ ua.mkh.settings.full.R$string: int mac_bluetooth
 ua.mkh.settings.full.R$string: int mac_wifi
 ua.mkh.settings.full.R$string: int mail
 ua.mkh.settings.full.R$string: int manage_storage
+ua.mkh.settings.full.R$string: int manual
 ua.mkh.settings.full.R$string: int maps
+ua.mkh.settings.full.R$string: int marsh_wifi
+ua.mkh.settings.full.R$string: int mask_wifi
 ua.mkh.settings.full.R$string: int memory
 ua.mkh.settings.full.R$string: int menu_info
 ua.mkh.settings.full.R$string: int menu_info_main
@@ -2522,10 +2572,12 @@ ua.mkh.settings.full.R$string: int new2
 ua.mkh.settings.full.R$string: int new3
 ua.mkh.settings.full.R$string: int new4
 ua.mkh.settings.full.R$string: int new_account
+ua.mkh.settings.full.R$string: int new_update
 ua.mkh.settings.full.R$string: int no_connections
 ua.mkh.settings.full.R$string: int notes
 ua.mkh.settings.full.R$string: int notification
 ua.mkh.settings.full.R$string: int notifications
+ua.mkh.settings.full.R$string: int oboi_safe_mode
 ua.mkh.settings.full.R$string: int odnoklassniki
 ua.mkh.settings.full.R$string: int off
 ua.mkh.settings.full.R$string: int ok
@@ -2537,6 +2589,7 @@ ua.mkh.settings.full.R$string: int passcode
 ua.mkh.settings.full.R$string: int phone
 ua.mkh.settings.full.R$string: int phone_about
 ua.mkh.settings.full.R$string: int photo
+ua.mkh.settings.full.R$string: int preview_oboi
 ua.mkh.settings.full.R$string: int privacy
 ua.mkh.settings.full.R$string: int proverka_ios
 ua.mkh.settings.full.R$string: int proverka_ios_no
@@ -2554,6 +2607,7 @@ ua.mkh.settings.full.R$string: int search_spotlight
 ua.mkh.settings.full.R$string: int secundes
 ua.mkh.settings.full.R$string: int serial_about
 ua.mkh.settings.full.R$string: int set_add
+ua.mkh.settings.full.R$string: int set_oboi
 ua.mkh.settings.full.R$string: int set_wallpaper
 ua.mkh.settings.full.R$string: int settings_app
 ua.mkh.settings.full.R$string: int settings_app_dop
@@ -2570,6 +2624,7 @@ ua.mkh.settings.full.R$string: int speed
 ua.mkh.settings.full.R$string: int speed_anim
 ua.mkh.settings.full.R$string: int speed_anim_text
 ua.mkh.settings.full.R$string: int ssid
+ua.mkh.settings.full.R$string: int static_ip
 ua.mkh.settings.full.R$string: int storage_dostupno
 ua.mkh.settings.full.R$string: int storage_usage
 ua.mkh.settings.full.R$string: int storage_zanyato
@@ -2589,6 +2644,9 @@ ua.mkh.settings.full.R$string: int top_low_mode_dialog
 ua.mkh.settings.full.R$string: int twitter
 ua.mkh.settings.full.R$string: int umts
 ua.mkh.settings.full.R$string: int unknown
+ua.mkh.settings.full.R$string: int update_1
+ua.mkh.settings.full.R$string: int update_2
+ua.mkh.settings.full.R$string: int update_3
 ua.mkh.settings.full.R$string: int update_icloud
 ua.mkh.settings.full.R$string: int usage_battery
 ua.mkh.settings.full.R$string: int ver_database
@@ -2622,7 +2680,6 @@ ua.mkh.settings.full.R$string: int zimowets_block
 ua.mkh.settings.full.R$style: int AppBaseTheme
 ua.mkh.settings.full.R$style: int AppTheme
 ua.mkh.settings.full.R$style: int DialogAnimation
-ua.mkh.settings.full.R$style: int MyActionBarTheme
 ua.mkh.settings.full.R$style: int Theme_IAPTheme
 ua.mkh.settings.full.R$style: int Theme_Transparent
 ua.mkh.settings.full.R$style: int WalletFragmentDefaultButtonTextAppearance
@@ -2681,6 +2738,14 @@ ua.mkh.settings.full.SettingsActivity
 ua.mkh.settings.full.SettingsActivity: SettingsActivity()
 ua.mkh.settings.full.SettingsActivity: void onClick(android.view.View)
 ua.mkh.settings.full.SettingsActivity: void BackClick(android.view.View)
+ua.mkh.settings.full.ViewWallpaper
+ua.mkh.settings.full.ViewWallpaper: ViewWallpaper()
+ua.mkh.settings.full.ViewWallpaper: void onClick(android.view.View)
+ua.mkh.settings.full.ViewWallpaper: void BackClick(android.view.View)
+ua.mkh.settings.full.ViewWallpaper$1: void onClick(android.view.View)
+ua.mkh.settings.full.ViewWallpaper$2: void onClick(android.view.View)
 ua.mkh.settings.full.setWallpaper
 ua.mkh.settings.full.setWallpaper: setWallpaper()
 ua.mkh.settings.full.setWallpaper: void BackClick(android.view.View)
+ua.mkh.settings.full.setWallpaper$2: void onClick(android.view.View)
+ua.mkh.settings.full.setWallpaper$3: void onClick(android.view.View)
