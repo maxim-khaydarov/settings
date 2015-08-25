@@ -57,7 +57,7 @@
                         android:ems="10"
                         android:gravity="left|center_vertical"
                         android:paddingLeft="15dp"
-                        android:text="Забыть эту сеть"
+                        android:text="@string/fogot_wifi"
                         android:textColor="@color/blue"
                         android:textSize="16sp" />
 
@@ -79,7 +79,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:text="АДРЕСС IP"
+                android:text="@string/adress_ip_text"
                 android:textColor="@color/hint_text"
                 android:textSize="13sp" />
 
@@ -129,7 +129,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/button_wifi_off_left"
-                        android:text="Статичн."
+                        android:text="@string/static_ip"
                         android:textColor="@color/blue"
                         android:textSize="16sp" />
 
@@ -168,7 +168,7 @@
                             android:ems="10"
                             android:gravity="left|center_vertical"
                             android:paddingLeft="15dp"
-                            android:text="Адресс IP"
+                            android:text="@string/adress_ip"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
                     </RelativeLayout>
@@ -209,7 +209,7 @@
                             android:ems="10"
                             android:gravity="left|center_vertical"
                             android:paddingLeft="15dp"
-                            android:text="Маска подсети"
+                            android:text="@string/mask_wifi"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
                     </RelativeLayout>
@@ -250,7 +250,7 @@
                             android:ems="10"
                             android:gravity="left|center_vertical"
                             android:paddingLeft="15dp"
-                            android:text="Маршрутизатор"
+                            android:text="@string/marsh_wifi"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
                     </RelativeLayout>
@@ -314,7 +314,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="30dp"
-                android:text="HTTP ПРОКСИ"
+                android:text="@string/http_proxy"
                 android:textColor="@color/hint_text"
                 android:textSize="13sp" />
 
@@ -332,7 +332,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/button_wifi_on"
-                    android:text="Выкл."
+                    android:text="@string/off"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -344,7 +344,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/button_wifi_off_center"
-                    android:text="Вручную"
+                    android:text="@string/manual"
                     android:textColor="@color/blue"
                     android:textSize="16sp" />
 
@@ -358,7 +358,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/button_wifi_off_left"
-                    android:text="Авто"
+                    android:text="@string/auto"
                     android:textColor="@color/blue"
                     android:textSize="16sp" />
             </LinearLayout>

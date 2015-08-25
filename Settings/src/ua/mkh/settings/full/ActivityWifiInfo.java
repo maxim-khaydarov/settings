@@ -39,8 +39,8 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
 	   SharedPreferences mSettings;
 	   private SimpleGestureFilter detector;
 	   
-	   TextView textStatus, txtip, txtdns, txtmask, txtmarsh;
-	   Button btn_back, foget;
+	   TextView textStatus, txtip, txtdns, txtmask, txtmarsh, textView1, textView2;
+	   Button btn_back, foget, b1, b2, b3, Button01, Button02, Button03, Button04, b5, b6, b7;
 	   String ip, dns, marsh, mask;
 	   
 	   @Override
@@ -67,6 +67,20 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
 			 txtmarsh = (TextView) findViewById(R.id.TextViewMarsh);
 			 txtdns = (TextView) findViewById(R.id.TextViewDns);
 			 
+			 textView1 = (TextView) findViewById(R.id.textView1);
+			 textView2 = (TextView) findViewById(R.id.textView2);
+			 b1 = (Button) findViewById(R.id.button1);
+			 b2 = (Button) findViewById(R.id.button2);
+			 b3 = (Button) findViewById(R.id.button3);
+			 b5 = (Button) findViewById(R.id.Button05);
+			 b6 = (Button) findViewById(R.id.Button06);
+			 b7 = (Button) findViewById(R.id.Button07);
+			 Button01 = (Button) findViewById(R.id.Button01);
+			 Button02 = (Button) findViewById(R.id.Button02);
+			 Button03 = (Button) findViewById(R.id.Button03);
+			 Button04 = (Button) findViewById(R.id.Button04);
+			 
+			 
 			 foget = (Button) findViewById(R.id.ButtonWifi);
 			 foget.setOnClickListener(this);
 			 btn_back = (Button) findViewById(R.id.buttonBack);
@@ -89,6 +103,23 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
 				
 				textStatus.setTypeface(typefaceMedium);
     			btn_back.setTypeface(typefaceMedium);
+    			foget.setTypeface(typefaceRoman);
+    			textView1.setTypeface(typefaceRoman);
+    			textView2.setTypeface(typefaceRoman);
+    			b1.setTypeface(typefaceRoman);
+    			b2.setTypeface(typefaceRoman);
+    			b3.setTypeface(typefaceRoman);
+    			b5.setTypeface(typefaceRoman);
+    			b6.setTypeface(typefaceRoman);
+    			b7.setTypeface(typefaceRoman);
+    			Button01.setTypeface(typefaceRoman);
+    			Button02.setTypeface(typefaceRoman);
+    			Button03.setTypeface(typefaceRoman);
+    			Button04.setTypeface(typefaceRoman);
+    			txtip.setTypeface(typefaceRoman);
+    			txtmask.setTypeface(typefaceRoman);
+    			txtmarsh.setTypeface(typefaceRoman);
+    			txtdns.setTypeface(typefaceRoman);
     			
 			 
     			 wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE); 

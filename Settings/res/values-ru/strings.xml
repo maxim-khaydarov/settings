@@ -270,6 +270,15 @@
 	<string name="new_update">Новые функции</string>
 	<string name="camera">Камера</string>	
 	<string name="all_camera">Все фото</string>
+	<string name="fogot_wifi">Забыть эту сеть</string>
+	<string name="adress_ip_text">АДРЕС IP</string>
+	<string name="static_ip">Статичн.</string>
+	<string name="adress_ip">Адрес IP</string>
+	<string name="mask_wifi">Маска подсети</string>
+	<string name="marsh_wifi">Маршрутизатор</string>
+	<string name="http_proxy">HTTP ПРОКСИ</string>
+	<string name="manual">Вручную</string>
+	<string name="auto">Авто</string>
 </resources>
 
 

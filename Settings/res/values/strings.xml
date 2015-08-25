@@ -272,6 +272,15 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
 	<string name="new_update">New features</string>
 	<string name="camera">Camera Roll</string>
 	<string name="all_camera">All Photo</string>
+	<string name="fogot_wifi">Forget This Network</string>
+	<string name="adress_ip_text">IP ADDRESS</string>
+	<string name="static_ip">Static</string>
+	<string name="adress_ip">IP Address</string>
+	<string name="mask_wifi">Subnet Mask</string>
+	<string name="marsh_wifi">Router</string>
+	<string name="http_proxy">HTTP PROXY</string>
+	<string name="manual">Manual</string>
+	<string name="auto">Auto</string>
 </resources>
 
 
