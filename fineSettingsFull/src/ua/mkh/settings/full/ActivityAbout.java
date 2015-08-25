@@ -823,6 +823,8 @@ public class ActivityAbout extends Activity implements OnClickListener, SimpleGe
 					   	editor.putString(APP_PREFERENCES_NAME_DEVICE, value);
 					   	editor.apply();
 					   	text_name.setText(value);
+					   	BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+					   	bluetoothAdapter.setName(value);
 					   	dialog.dismiss();
 				   }
 				});

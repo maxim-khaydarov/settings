@@ -50,11 +50,11 @@ public class ActivityBth extends Activity implements OnClickListener, SimpleGest
 	 private static final int REQUEST_ENABLE_BT = 1;
 	
 	 private ToggleButton tb_bt;  
-	 Button  btn_back, Button01;
+	 Button  btn_back;
 	 TextView stateBluetooth;
 	 BluetoothAdapter bluetoothAdapter;
 	 //ArrayAdapter<String> btArrayAdapter;
-	 TextView textView1, textView2, textView3, textStatus, nameBT, textView4;
+	 TextView textView1, textView2, textStatus, nameBT, textView4;
 	 Button btn_Bth;
 	 int OS = android.os.Build.VERSION.SDK_INT;
 	 
@@ -117,14 +117,11 @@ public class ActivityBth extends Activity implements OnClickListener, SimpleGest
 	        tb_bt = (ToggleButton) findViewById(R.id.BTtoggle);
 	        tb_bt.setOnClickListener(this);
 	        
-	        Button01 = (Button)findViewById(R.id.Button01);
-	        Button01.setOnClickListener(this);
-	        
+	       
 	        nameBT = (TextView) findViewById(R.id.nameBT);
 	        nameBT.setVisibility(View.GONE);
 	        btn_Bth = (Button) findViewById(R.id.ButtonBth);
 	        textView4 = (TextView) findViewById(R.id.textView4);
-	        textView3 = (TextView) findViewById(R.id.textView3);
 	        textView2 = (TextView) findViewById(R.id.textView2);
 	        textView1 = (TextView) findViewById(R.id.textView1);
 	        btn_back = (Button) findViewById(R.id.buttonBack);
@@ -160,13 +157,12 @@ public class ActivityBth extends Activity implements OnClickListener, SimpleGest
 	        
 			textView4.setTypeface(typefaceRoman);
 	        textView2.setTypeface(typefaceRoman);
-	        textView3.setTypeface(typefaceRoman);
 	        textView1.setTypeface(typefaceRoman);
 	        btn_Bth.setTypeface(typefaceRoman);
 	        textStatus.setTypeface(typefaceMedium);
 			btn_back.setTypeface(typefaceMedium);
 			textStatus.setText(R.string.button_bluetooth);
-			Button01.setTypeface(typefaceRoman);
+			
 	        
 	        nameBT.setTypeface(typefaceRoman);
 	        
@@ -546,11 +542,9 @@ public class ActivityBth extends Activity implements OnClickListener, SimpleGest
 	        	 Boolean bold = mSettings.getBoolean(APP_PREFERENCES_bold_text, true);
 				if (bold == true){
 					textView4.setTypeface(typefaceBold);
-					textView3.setTypeface(typefaceBold);
 					textView2.setTypeface(typefaceBold);
 			        textView1.setTypeface(typefaceBold);
 			        btn_Bth.setTypeface(typefaceBold);
-			        Button01.setTypeface(typefaceBold);
 			        nameBT.setTypeface(typefaceBold);
 					
 				}
@@ -561,39 +555,31 @@ public class ActivityBth extends Activity implements OnClickListener, SimpleGest
 	        	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 				if (size .contains( "Small")){
 					textView4.setTextSize(11);
-					textView3.setTextSize(11);
 					nameBT.setTextSize(13);
 					textView2.setTextSize(11);
 			        textView1.setTextSize(11);
 			        btn_Bth.setTextSize(14);
-			        Button01.setTextSize(14);
 				}
 				if (size .contains( "Normal")){
 					textView4.setTextSize(13);
-					textView3.setTextSize(13);
 					nameBT.setTextSize(13);
 					textView2.setTextSize(13);
 			        textView1.setTextSize(13);
 			        btn_Bth.setTextSize(16);
-			        Button01.setTextSize(16);
 				}
 				if (size .contains( "Large")){
 					textView4.setTextSize(16);
-					textView3.setTextSize(16);
 					nameBT.setTextSize(16);
 					textView2.setTextSize(15);
 			        textView1.setTextSize(15);
 			        btn_Bth.setTextSize(19);
-			        Button01.setTextSize(19);
 				}
 				if (size .contains( "xLarge")){
 					textView4.setTextSize(18);
-					textView3.setTextSize(18);
 					nameBT.setTextSize(18);
 					textView2.setTextSize(17);
 			        textView1.setTextSize(17);
 			        btn_Bth.setTextSize(21);
-			        Button01.setTextSize(21);
 				}
 	       }
 	       
@@ -656,48 +642,7 @@ public class ActivityBth extends Activity implements OnClickListener, SimpleGest
 		        	overridePendingTransition(center_to_left, center_to_left2);
 		        	 }
 	        
-	        else if (id == R.id.Button01) {
-	        	 final Dialog dialogC = new Dialog(this,android.R.style.Theme_Translucent);
-			     dialogC.requestWindowFeature(Window.FEATURE_NO_TITLE);
-					dialogC.setContentView(R.layout.dialog_3_button);
-					
-					// set the custom dialog components - text, image and button
-
-					Button dialogButtonOk = (Button) dialogC.findViewById(R.id.dialogButtonOK);
-					Button dialogButtonCancel = (Button) dialogC.findViewById(R.id.dialogButtonCancel);
-					Button dialogButtonClean = (Button) dialogC.findViewById(R.id.dialogButtonClean);
-					final EditText ed1 = (EditText) dialogC.findViewById(R.id.editText1);
-					
-					dialogButtonOk.setTypeface(typefaceRoman);
-					dialogButtonCancel.setTypeface(typefaceRoman);
-					dialogButtonClean.setTypeface(typefaceRoman);
-					
-					// if button is clicked, close the custom dialog
-					dialogButtonOk.setOnClickListener(new OnClickListener() {
-						@Override
-						public void onClick(View v) {
-							bluetoothAdapter.setName(ed1.getText().toString());
-							nameBT.setText(getString(R.string.bt_name) + " " + "\"" + ed1.getText().toString() + "\"");
-						    dialogC.dismiss();
-						}
-					});
-					dialogButtonCancel.setOnClickListener(new OnClickListener() {
-						@Override
-						public void onClick(View v) {
-							dialogC.dismiss();
-						}
-					});
-					dialogButtonClean.setOnClickListener(new OnClickListener() {
-						@Override
-						public void onClick(View v) {
-							
-							bluetoothAdapter.setName("iPhone");
-							nameBT.setText(getString(R.string.bt_name) + " " + "\"" + "iPhone" + "\"");
-						    dialogC.dismiss();
-						}
-					});
-					dialogC.show();
-					}
+	        
 	  }
 
 	  

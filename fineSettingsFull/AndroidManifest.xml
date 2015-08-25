@@ -108,6 +108,7 @@
             <activity  android:name="ua.mkh.settings.full.ActivityBattery" />
             <activity  android:name="ua.mkh.settings.full.ActivityUsage" />
             <activity  android:name="ua.mkh.settings.full.ViewWallpaper" />
+             <activity  android:name="ua.mkh.settings.full.ActivityWifiInfo" />
             <activity  android:name="ua.mkh.settings.full.ActivityCharge" android:theme="@style/Theme.Transparent" />
             <activity  android:name="ua.mkh.settings.full.MessageBox" android:theme="@style/Theme.Transparent" />
             <receiver android:name=".AlarmReceiverOn" android:process=":remote" />

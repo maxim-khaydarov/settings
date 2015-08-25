@@ -21,6 +21,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.graphics.Typeface;
 import android.net.ConnectivityManager;
+import android.net.DhcpInfo;
 import android.net.NetworkInfo;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
@@ -29,6 +30,7 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;    
 import android.support.v4.view.ViewPager.LayoutParams;
 import android.text.InputType;
+import android.text.format.Formatter;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -57,11 +59,11 @@ import android.widget.ToggleButton;
 
 public class ActivityWifi extends Activity implements OnClickListener, SimpleGestureListener {
 	
-	TextView textConnected, textIp, textSsid, textBssid, textMac, textSpeed, textRssi;
+	TextView textConnected;
 	final Context context = this;
 	ToggleButton tb_in, tb_wifi, tb_ch, buttonWifi; 
 	WifiManager wifi;
-	TextView number, textStatus, txtPercentage, textView3, textView4, textView5, textView6, textView1;
+	TextView  textStatus, txtPercentage, textView3, textView4, textView5, textView6, textView1;
 	Button btn_back, btn_1, Button04;
 	TableLayout tableLayout;
 	Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
@@ -84,7 +86,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	   private SimpleGestureFilter detector;
 	   
 	   ListView lv;
-	   ImageView img1;
+	   ImageView img1, img2;
 	   String Capabilities;
 
 	  Button buttonScan, info;
@@ -132,8 +134,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 			buttonWifi.setOnClickListener(this);
 			
 			
-				tableLayout = (TableLayout)findViewById(R.id.tableLayout1);
-				tableLayout.setVisibility(View.GONE);
+				
 				
 			
 			tb_wifi = (ToggleButton) findViewById(R.id.ToggleButton01);
@@ -148,8 +149,8 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 			 info.setOnClickListener(this);
 			 
 			 textConnected = (TextView)findViewById(R.id.Connected);
-		       textIp = (TextView)findViewById(R.id.Ip);
-		       number = (TextView)findViewById(R.id.number);
+			 textConnected.setOnClickListener(this);
+		      
 		       txtPercentage= (TextView)findViewById(R.id.txtPercentage);
 		       textView1 = (TextView)findViewById(R.id.textView1);
 		       textView3 = (TextView)findViewById(R.id.textView3);
@@ -159,33 +160,26 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		       
 		       
 		      
-		       textSsid = (TextView)findViewById(R.id.Ssid);
-		       textBssid = (TextView)findViewById(R.id.Bssid);
-		       textMac = (TextView)findViewById(R.id.Mac);
-		       textSpeed = (TextView)findViewById(R.id.Speed);
-		       textRssi = (TextView)findViewById(R.id.Rssi);
+		       
 		       textConnected.setTypeface(typefaceRoman);
 		      
 		       tb_in.setVisibility(View.INVISIBLE);
           		tb_ch.setVisibility(View.INVISIBLE);
+          		img2 = (ImageView) findViewById(R.id.imageView1);
+          		img2.setVisibility(View.INVISIBLE);
           		
           		textStatus.setTypeface(typefaceMedium);
     			btn_back.setTypeface(typefaceMedium);
     			textStatus.setText(R.string.button_wifi);
     			btn_1.setTypeface(typefaceRoman);
-    			textIp.setTypeface(typefaceRoman);
-    			number.setTypeface(typefaceRoman);
-    			txtPercentage.setTypeface(typefaceRoman);
+    			
+    			/*
     			textView1.setTypeface(typefaceRoman);
     			textView3.setTypeface(typefaceRoman);
     			textView4.setTypeface(typefaceRoman);
     			textView5.setTypeface(typefaceRoman);
     			textView6.setTypeface(typefaceRoman);
-    			textSsid.setTypeface(typefaceRoman);
-    			textBssid.setTypeface(typefaceRoman);
-    			textMac.setTypeface(typefaceRoman);
-    			textSpeed.setTypeface(typefaceRoman);
-    			textRssi.setTypeface(typefaceRoman);
+    			*/
     			
     			
 		       DisplayWifiState();
@@ -599,19 +593,12 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	        	 Boolean bold = mSettings.getBoolean(APP_PREFERENCES_bold_text, true);
 				if (bold == true){
 					btn_1.setTypeface(typefaceBold);
-	    			textIp.setTypeface(typefaceBold);
-	    			number.setTypeface(typefaceBold);
 	    			txtPercentage.setTypeface(typefaceBold);
 	    			textView1.setTypeface(typefaceBold);
 	    			textView3.setTypeface(typefaceBold);
 	    			textView4.setTypeface(typefaceBold);
 	    			textView5.setTypeface(typefaceBold);
 	    			textView6.setTypeface(typefaceBold);
-	    			textSsid.setTypeface(typefaceBold);
-	    			textBssid.setTypeface(typefaceBold);
-	    			textMac.setTypeface(typefaceBold);
-	    			textSpeed.setTypeface(typefaceBold);
-	    			textRssi.setTypeface(typefaceBold);
 	    			textConnected.setTypeface(typefaceBold);
 					
 				}
@@ -622,70 +609,42 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	        	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 				if (size .contains( "Small")){
 					btn_1.setTextSize(14);
-	    			textIp.setTextSize(13);
-	    			number.setTextSize(13);
 	    			txtPercentage.setTextSize(13);
 	    			textView1.setTextSize(11);
 	    			textView3.setTextSize(13);
 	    			textView4.setTextSize(13);
 	    			textView5.setTextSize(13);
 	    			textView6.setTextSize(13);
-	    			textSsid.setTextSize(13);
-	    			textBssid.setTextSize(13);
-	    			textMac.setTextSize(13);
-	    			textSpeed.setTextSize(13);
-	    			textRssi.setTextSize(13);
 	    			textConnected.setTextSize(14);
 				}
 				if (size .contains( "Normal")){
 					btn_1.setTextSize(16);
-	    			textIp.setTextSize(15);
-	    			number.setTextSize(15);
 	    			txtPercentage.setTextSize(15);
 	    			textView1.setTextSize(13);
 	    			textView3.setTextSize(15);
 	    			textView4.setTextSize(15);
 	    			textView5.setTextSize(15);
 	    			textView6.setTextSize(15);
-	    			textSsid.setTextSize(15);
-	    			textBssid.setTextSize(15);
-	    			textMac.setTextSize(15);
-	    			textSpeed.setTextSize(15);
-	    			textRssi.setTextSize(15);
 	    			textConnected.setTextSize(16);
 				}
 				if (size .contains( "Large")){
 					btn_1.setTextSize(19);
-	    			textIp.setTextSize(18);
-	    			number.setTextSize(18);
 	    			txtPercentage.setTextSize(18);
 	    			textView1.setTextSize(16);
 	    			textView3.setTextSize(18);
 	    			textView4.setTextSize(18);
 	    			textView5.setTextSize(18);
 	    			textView6.setTextSize(18);
-	    			textSsid.setTextSize(18);
-	    			textBssid.setTextSize(18);
-	    			textMac.setTextSize(18);
-	    			textSpeed.setTextSize(18);
-	    			textRssi.setTextSize(18);
 	    			textConnected.setTextSize(19);
 				}
 				if (size .contains( "xLarge")){
 					btn_1.setTextSize(21);
-	    			textIp.setTextSize(20);
-	    			number.setTextSize(20);
 	    			txtPercentage.setTextSize(20);
 	    			textView1.setTextSize(18);
 	    			textView3.setTextSize(20);
 	    			textView4.setTextSize(20);
 	    			textView5.setTextSize(20);
 	    			textView6.setTextSize(20);
-	    			textSsid.setTextSize(20);
-	    			textBssid.setTextSize(20);
-	    			textMac.setTextSize(20);
-	    			textSpeed.setTextSize(20);
-	    			textRssi.setTextSize(20);
 	    			textConnected.setTextSize(21);
 				}
 	       }
@@ -697,6 +656,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	    	if(mWifi.isConnected()){
 	    		info.setVisibility(View.VISIBLE);
            		tb_ch.setVisibility(View.VISIBLE);
+           		img2.setVisibility(View.VISIBLE);
            		//LayoutMain.setVisibility(View.VISIBLE);
 	            
 	        }
@@ -713,7 +673,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	            tb_wifi.setChecked(true);
 	            LayoutMain.setVisibility(View.VISIBLE);
            		MainLayout2.setVisibility(View.VISIBLE);
-	            
+           		img2.setVisibility(View.VISIBLE);
 	            
 	        }
 	    	else {
@@ -753,44 +713,27 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	   WifiInfo myWifiInfo = myWifiManager.getConnectionInfo();
 	   
 	   
-	   textMac.setText(myWifiInfo.getMacAddress());
+	  
 	   
 	     if (myNetworkInfo.isConnected()){
-	      int myIp = myWifiInfo.getIpAddress();
+	     
 	      
 	      info.setVisibility(View.VISIBLE);
 			tb_ch.setVisibility(View.VISIBLE);
-	       
+			img2.setVisibility(View.VISIBLE);
 	      
 	       
-	      int intMyIp3 = myIp/0x1000000;
-	      int intMyIp3mod = myIp%0x1000000;
-	       
-	      int intMyIp2 = intMyIp3mod/0x10000;
-	      int intMyIp2mod = intMyIp3mod%0x10000;
-	       
-	      int intMyIp1 = intMyIp2mod/0x100;
-	      int intMyIp0 = intMyIp2mod%0x100;
-	       
-	      textIp.setText(String.valueOf(intMyIp0)
-	        + "." + String.valueOf(intMyIp1)
-	        + "." + String.valueOf(intMyIp2)
-	        + "." + String.valueOf(intMyIp3)
-	        );
+	     
+	     
 	       String wi = myWifiInfo.getSSID().replace('"',' ');
-	      textSsid.setText(wi);
-	      textBssid.setText(myWifiInfo.getBSSID());
+	     
 	      textConnected.setText(wi);
-	      textSpeed.setText(String.valueOf(myWifiInfo.getLinkSpeed()) + " " + WifiInfo.LINK_SPEED_UNITS);
-	      textRssi.setText(String.valueOf(myWifiInfo.getRssi()));
+	     
 	     }
 	     else{
 	      textConnected.setText(R.string.no_connections);
-	      textIp.setText("---");
-	      textSsid.setText("---");
-	      textBssid.setText("---");
-	      textSpeed.setText("---");
-	      textRssi.setText("---");
+	      img2.setVisibility(View.INVISIBLE);
+	      
 	     }
 	     
 	    }
@@ -831,6 +774,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	               		tb_ch.setVisibility(View.INVISIBLE);
 	               		LayoutMain.setVisibility(View.GONE);
 	               		MainLayout2.setVisibility(View.GONE);
+	               		img2.setVisibility(View.INVISIBLE);
 	               	 }
 		        }
 		        	
@@ -840,8 +784,56 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 			        	overridePendingTransition(center_to_left, center_to_left2);
 			        	 }
 		        
+		        else if (id == R.id.Connected){
+		        	WifiManager myWifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+		        	WifiInfo myWifiInfo = myWifiManager.getConnectionInfo();
+ 					DhcpInfo info = wifi.getDhcpInfo();
+ 					
+ 					
+ 					
+ 					String s_netmask = Formatter.formatIpAddress(info.netmask);
+ 					String s_ipAddress = Formatter.formatIpAddress(info.ipAddress); 
+ 					String s_serverAddress = Formatter.formatIpAddress(info.serverAddress);
+ 					String s_dns1 =Formatter.formatIpAddress(info.dns1);
+ 					String s_dns2 =Formatter.formatIpAddress(info.dns2);
+ 					String wi = myWifiInfo.getSSID().replace('"',' ');
+ 					
+		        	Intent settingsIntent = new Intent(this, ActivityWifiInfo.class);
+		        	settingsIntent.putExtra("ip", s_ipAddress);
+		        	settingsIntent.putExtra("dns1", s_dns1);
+		        	settingsIntent.putExtra("dns2", s_dns2);
+		        	settingsIntent.putExtra("mask", s_netmask);
+		        	settingsIntent.putExtra("marsh", s_serverAddress);
+		        	settingsIntent.putExtra("name", wi);
+		        	startActivity(settingsIntent);
+			        	overridePendingTransition(center_to_left, center_to_left2);
+		        	
+		        }
+		        
 		        else if (id == R.id.button1){
-		        	show ();
+		        	WifiManager myWifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+		        	WifiInfo myWifiInfo = myWifiManager.getConnectionInfo();
+ 					DhcpInfo info = wifi.getDhcpInfo();
+ 					
+ 					
+ 					
+ 					String s_netmask = Formatter.formatIpAddress(info.netmask);
+ 					String s_ipAddress = Formatter.formatIpAddress(info.ipAddress); 
+ 					String s_serverAddress = Formatter.formatIpAddress(info.serverAddress);
+ 					String s_dns1 =Formatter.formatIpAddress(info.dns1);
+ 					String s_dns2 =Formatter.formatIpAddress(info.dns2);
+ 					String wi = myWifiInfo.getSSID().replace('"',' ');
+ 					
+		        	Intent settingsIntent = new Intent(this, ActivityWifiInfo.class);
+		        	settingsIntent.putExtra("ip", s_ipAddress);
+		        	settingsIntent.putExtra("dns1", s_dns1);
+		        	settingsIntent.putExtra("dns2", s_dns2);
+		        	settingsIntent.putExtra("mask", s_netmask);
+		        	settingsIntent.putExtra("marsh", s_serverAddress);
+		        	settingsIntent.putExtra("name", wi);
+		        	startActivity(settingsIntent);
+			        	overridePendingTransition(center_to_left, center_to_left2);
+			        	
 		        }
 		 }
 		 
@@ -927,63 +919,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		        }
 		        
 		        
-		        private void show (){
-		        	 final Dialog Activation = new Dialog(this,android.R.style.Theme_Translucent);
-		 	        Activation.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		 	        Activation.setContentView(R.layout.dialog_inform);
-		 				
-		 				// set the custom dialog components - text, image and button
-
-		 				Button dialogButton = (Button) Activation.findViewById(R.id.dialogButtonOK);
-		 				TextView text = (TextView)Activation.findViewById(R.id.textBold);
-		 				TextView textver = (TextView)Activation.findViewById(R.id.text);
-		 				
-		 				
-		 				
-		 				//////////////////////////////////////////////
-		 				ConnectivityManager myConnManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
-		 				NetworkInfo myNetworkInfo = myConnManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-		 				WifiManager myWifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
-		 				WifiInfo myWifiInfo = myWifiManager.getConnectionInfo();
-
-		 				////////////////////////////////////////////////////
-		 				int myIp = myWifiInfo.getIpAddress();
-		 				int intMyIp3 = myIp/0x1000000;
-	 					int intMyIp3mod = myIp%0x1000000;
-
-	 					int intMyIp2 = intMyIp3mod/0x10000;
-	 					int intMyIp2mod = intMyIp3mod%0x10000;
-
-	 					int intMyIp1 = intMyIp2mod/0x100;
-	 					int intMyIp0 = intMyIp2mod%0x100;
-	 					
-	 					String wi = myWifiInfo.getSSID().replace('"',' ');
-	 					
-	 					textBssid.setText(myWifiInfo.getBSSID());
-	 					
-		 				dialogButton.setTypeface(typefaceRoman);
-		 				text.setTypeface(typefaceBold);
-		 				text.setText(R.string.information);
-		 				textver.setTypeface(typefaceRoman);
-		 				textver.setTextSize(16);
-		 				textver.setText("IP: " + String.valueOf(intMyIp0)
-	 							+ "." + String.valueOf(intMyIp1)
-	 							+ "." + String.valueOf(intMyIp2)
-	 							+ "." + String.valueOf(intMyIp3) + "\n" + "SSID: " + wi + "\n" + "BSID: " + myWifiInfo.getBSSID() + "\n" +
-	 							"MAC: " + myWifiInfo.getMacAddress() + "\n" + "SPEED: " + String.valueOf(myWifiInfo.getLinkSpeed()) + " " + WifiInfo.LINK_SPEED_UNITS + "\n" + 
-	 							"RSSI: " + String.valueOf(myWifiInfo.getRssi()));
-		 				
-		 				// if button is clicked, close the custom dialog
-		 				dialogButton.setOnClickListener(new OnClickListener() {
-		 					
-		 					@Override
-		 					public void onClick(View v) {
-		 						
-		 						Activation.dismiss();
-		 					}
-		 				});
-		 				Activation.show();
-		        }
+		       
 		        
 }
 
