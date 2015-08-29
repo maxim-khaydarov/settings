@@ -42,7 +42,7 @@
     <string name="button_update">Software update</string>
     <string name="autor">Maxim Khaydarov</string>
     <string name="what_news">What&quot;s new?</string>
-	<string name="what_news_text3">- Update to iOS9 beta 5\n- New features in \"Wallpaper\"\n- Correction of errors in text, graphics and functionality</string>
+	<string name="what_news_text3">- Update to iOS9 beta 5\n- New features in \"Wallpaper\"\n- Update in points \"Wi-Fi\" and \"Bluetooth\"\n- Correction of errors in text, graphics and functionality</string>
     <string name="button_license">License</string>
     <string name="license_my">All rights reserved.\nThe program is protected by copyright and any unauthorized use may be punished according to the law of copyright.
 Placing full version to any resources other than Yandex.Store prohibited.</string>
