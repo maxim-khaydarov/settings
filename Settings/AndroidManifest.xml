@@ -36,6 +36,8 @@
  <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    
+     <uses-permission android:name="android.permission.SET_TIME"/>
  
     <application
         android:allowBackup="false"
@@ -109,6 +111,7 @@
             <activity  android:name="ua.mkh.settings.full.ActivityUsage" />
             <activity  android:name="ua.mkh.settings.full.ViewWallpaper" />
              <activity  android:name="ua.mkh.settings.full.ActivityWifiInfo" />
+             <activity  android:name="ua.mkh.settings.full.ActivitySetTime" />
             <activity  android:name="ua.mkh.settings.full.ActivityCharge" android:theme="@style/Theme.Transparent" />
             <activity  android:name="ua.mkh.settings.full.MessageBox" android:theme="@style/Theme.Transparent" />
             <receiver android:name=".AlarmReceiverOn" android:process=":remote" />

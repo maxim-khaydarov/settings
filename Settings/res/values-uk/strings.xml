@@ -281,6 +281,20 @@
 	<string name="manual">Вручну</string>
 	<string name="auto">Авто</string>
 	
+	<string-array name="month"> 
+    <item>січня</item>
+    <item>лютого</item>
+    <item>березеня</item>
+    <item>квітня</item>
+    <item>травня</item>
+    <item>червня</item>
+    <item>липня</item>
+    <item>серпня</item>
+    <item>вересня</item>
+    <item>жовтня</item>
+    <item>листопада</item>
+    <item>грудня</item>
+    </string-array>
 </resources>
 
 

@@ -691,8 +691,11 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 	  	        	overridePendingTransition(center_to_left, center_to_left2);
 	  	        	 }
 	    	else if (id == R.id.Button07){
+	    		Intent intent8 = new Intent(ActivityOsnova.this, ActivitySetTime.class);
+	           	 startActivity(intent8);
+	    		/*
 	    		Intent settingsIntent = new Intent(android.provider.Settings.ACTION_DATE_SETTINGS);
-	        	startActivity(settingsIntent);
+	        	startActivity(settingsIntent);*/
 	 	        	overridePendingTransition(center_to_left, center_to_left2);
 	 	        	 }
 	    	else if (id == R.id.Button08){

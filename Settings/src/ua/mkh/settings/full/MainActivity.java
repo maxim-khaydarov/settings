@@ -2,9 +2,13 @@ package ua.mkh.settings.full;
 
 
 
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
@@ -17,6 +21,7 @@ import org.json.JSONObject;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.Activity;
+import android.app.AlarmManager;
 import android.app.Dialog;
 import android.app.WallpaperManager;
 import android.bluetooth.BluetoothAdapter;
@@ -1137,7 +1142,9 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	    }
 	
 	 
-	    
+	 
+	 
+	 
 	 
 	 protected void onResume() {
 	        super.onResume();
@@ -1146,9 +1153,15 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	        Airmode();
 	        ButtonTextBth();
 	        operator();
-	        check_pirat();
+	        //check_pirat();
 	        zimowets();
 	       
+	       
+	        	
+	        	
+
+	        	
+	        
 	       
 	       
 	        

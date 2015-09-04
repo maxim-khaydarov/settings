@@ -279,6 +279,22 @@
 	<string name="http_proxy">HTTP ПРОКСИ</string>
 	<string name="manual">Вручную</string>
 	<string name="auto">Авто</string>
+	
+	<string-array name="month"> 
+    <item>января</item>
+    <item>февраля</item>
+    <item>марта</item>
+    <item>апреля</item>
+    <item>мая</item>
+    <item>июня</item>
+    <item>июля</item>
+    <item>августа</item>
+    <item>сентября</item>
+    <item>октября</item>
+    <item>ноября</item>
+    <item>декабря</item>
+	</string-array>
+	
 </resources>
 
 
