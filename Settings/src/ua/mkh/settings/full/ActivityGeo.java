@@ -73,7 +73,7 @@ public class ActivityGeo extends Activity implements OnClickListener, SimpleGest
 			
 			textStatus.setText(R.string.button_geolocatoin);
 	        textStatus.setTypeface(typefaceMedium);
-	        btn_back.setTypeface(typefaceMedium);
+	        btn_back.setTypeface(typefaceBold);
 	        textView1.setTypeface(typefaceRoman);
 	        textView2.setTypeface(typefaceMedium);
 	        textView3.setTypeface(typefaceRoman);

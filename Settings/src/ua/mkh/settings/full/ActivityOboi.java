@@ -128,7 +128,7 @@ public class ActivityOboi extends Activity implements OnClickListener, SimpleGes
 		*/
 		 textStatus.setText(R.string.button_wallpaper);
 		 btn_back.setText(R.string.app_name);
-	        textStatus.setTypeface(typefaceMedium);
+	        textStatus.setTypeface(typefaceBold);
 	        btn_back.setTypeface(typefaceMedium);
 	        textView2.setTypeface(typefaceRoman);
 	        textView4.setTypeface(typefaceThin);

@@ -90,7 +90,7 @@ public class ActivityBattery extends Activity implements OnClickListener, Simple
 			 detector = new SimpleGestureFilter(this,this);
 			 
 			 
-			 textStatus.setTypeface(typefaceMedium);
+			 textStatus.setTypeface(typefaceBold);
 			 textStatus.setText(R.string.button_battery);
 			 btn_low.setTypeface(typefaceRoman);
 			 text_low.setTypeface(typefaceRoman);

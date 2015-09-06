@@ -40,11 +40,11 @@ import android.widget.ToggleButton;
 
 public class ActivityOsnova extends Activity implements OnClickListener, SimpleGestureListener{
 
-	Button btn_back, btn_info, Button02, Button01, Button03, Button04, Button06, Button05, Button07, Button08,
+	Button btn_back, btn_info, Button02, Button01, Button03, Button04, Button05, Button07, Button08,
 	btn_setup_app, Button09, Button10, Button11, Button12, Button13;
 	TextView textStatus, textView1, textView2, textView3, textView4, textView5, textView6,
 	textView7, textView8, textView9, textView10, textView11, textView12, textView13, textView14,
-	TextView02, TextView01, TextView03, TextView04, timeOutsT;
+	 TextView01, TextView03, TextView04, timeOutsT;
 	ToggleButton tb_rotate;
 	//LinearLayout layout12;
 	
@@ -174,8 +174,7 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 			 Button04 = (Button)findViewById(R.id.Button04);
 			 Button04.setOnClickListener(this);
 			 
-			 Button06 = (Button)findViewById(R.id.Button06);
-			 Button06.setOnClickListener(this);
+			 
 			 
 			 Button07 = (Button)findViewById(R.id.Button07);
 			 Button07.setOnClickListener(this);
@@ -222,13 +221,12 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 			 textView13= (TextView)findViewById(R.id.textView13);
 			 //textView14= (TextView)findViewById(R.id.textView14);
 			 TextView01= (TextView)findViewById(R.id.TextView01);
-			 TextView02= (TextView)findViewById(R.id.TextView02);
 			 TextView03= (TextView)findViewById(R.id.TextView03);
 			 TextView04= (TextView)findViewById(R.id.TextView04);
 			 timeOutsT = (TextView)findViewById(R.id.timeOutsT);
 			 
 			 
-			 textStatus.setTypeface(typefaceMedium);
+			 textStatus.setTypeface(typefaceBold);
 			 textStatus.setText(R.string.button_general);
 		     btn_back.setTypeface(typefaceMedium);
 		     //btn_info.setTypeface(typefaceRoman);
@@ -238,7 +236,6 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 		     Button03.setTypeface(typefaceRoman);
 		     Button04.setTypeface(typefaceRoman);
 		     Button05.setTypeface(typefaceRoman);
-		     Button06.setTypeface(typefaceRoman);
 		     Button07.setTypeface(typefaceRoman);
 		     Button08.setTypeface(typefaceRoman);
 		     Button09.setTypeface(typefaceRoman);
@@ -262,7 +259,7 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 		     textView13.setTypeface(typefaceRoman);
 		     //textView14.setTypeface(typefaceRoman);
 		     TextView01.setTypeface(typefaceRoman);
-		     TextView02.setTypeface(typefaceRoman);
+
 		     TextView03.setTypeface(typefaceRoman);
 		     TextView04.setTypeface(typefaceRoman);
 		     timeOutsT.setTypeface(typefaceRoman);
@@ -446,7 +443,6 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				     Button01.setTypeface(typefaceBold);
 				     Button04.setTypeface(typefaceBold);
 				     Button05.setTypeface(typefaceBold);
-				     Button06.setTypeface(typefaceBold);
 				     Button07.setTypeface(typefaceBold);
 				     Button08.setTypeface(typefaceBold);
 				     Button09.setTypeface(typefaceBold);
@@ -470,7 +466,6 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				     textView13.setTypeface(typefaceBold);
 				    // textView14.setTypeface(typefaceBold);
 				     TextView01.setTypeface(typefaceBold);
-				     TextView02.setTypeface(typefaceBold);
 				     TextView03.setTypeface(typefaceBold);
 				     timeOutsT.setTypeface(typefaceBold);
 					
@@ -486,7 +481,6 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				     Button01.setTextSize(14);
 				     Button04.setTextSize(14);
 				     Button05.setTextSize(14);
-				     Button06.setTextSize(14);
 				     Button07.setTextSize(14);
 				     Button08.setTextSize(14);
 				     Button09.setTextSize(14);
@@ -510,7 +504,6 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				     textView13.setTextSize(11);
 				    // textView14.setTextSize(10);
 				     TextView01.setTextSize(11);
-				     TextView02.setTextSize(11);
 				     TextView03.setTextSize(11);
 				     timeOutsT.setTextSize(14);
 				}
@@ -520,7 +513,6 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				     Button01.setTextSize(16);
 				     Button04.setTextSize(16);
 				     Button05.setTextSize(16);
-				     Button06.setTextSize(16);
 				     Button07.setTextSize(16);
 				     Button08.setTextSize(16);
 				     Button09.setTextSize(16);
@@ -544,7 +536,6 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				     textView13.setTextSize(13);
 				   //  textView14.setTextSize(12);
 				     TextView01.setTextSize(13);
-				     TextView02.setTextSize(13);
 				     timeOutsT.setTextSize(16);
 				}
 				if (size .contains( "Large")){
@@ -553,7 +544,6 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				     Button01.setTextSize(19);
 				     Button04.setTextSize(19);
 				     Button05.setTextSize(19);
-				     Button06.setTextSize(19);
 				     Button07.setTextSize(19);
 				     Button08.setTextSize(19);
 				     Button09.setTextSize(19);
@@ -577,7 +567,6 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				     textView13.setTextSize(16);
 				  //   textView14.setTextSize(15);
 				     TextView01.setTextSize(16);
-				     TextView02.setTextSize(16);
 				     TextView03.setTextSize(16);
 				     timeOutsT.setTextSize(19);
 				}
@@ -587,7 +576,6 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				     Button01.setTextSize(21);
 				     Button04.setTextSize(21);
 				     Button05.setTextSize(21);
-				     Button06.setTextSize(21);
 				     Button07.setTextSize(21);
 				     Button08.setTextSize(21);
 				     Button09.setTextSize(21);
@@ -611,7 +599,6 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				     textView13.setTextSize(18);
 				   //  textView14.setTextSize(17);
 				     TextView01.setTextSize(18);
-				     TextView02.setTextSize(18);
 				     TextView03.setTextSize(18);
 				     timeOutsT.setTextSize(21);
 				}

@@ -146,7 +146,7 @@ public class ActivityInfo extends Activity implements OnClickListener, SimpleGes
 			
 			
 			 
-			 textStatus.setTypeface(typefaceMedium);
+			 textStatus.setTypeface(typefaceBold);
 			 textStatus.setText(R.string.button_update);
 		     btn_back.setTypeface(typefaceMedium);
 		     textView1.setTypeface(typefaceRoman);

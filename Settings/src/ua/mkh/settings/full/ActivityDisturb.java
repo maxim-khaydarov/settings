@@ -122,7 +122,7 @@ public class ActivityDisturb extends Activity implements OnClickListener, Simple
         LinearLayoutShedule = (LinearLayout)findViewById(R.id.LinearLayoutShedule);
 
         textStatus.setText(R.string.disturb);
-        textStatus.setTypeface(typefaceMedium);
+        textStatus.setTypeface(typefaceBold);
         btn_back.setTypeface(typefaceMedium);
         Button01.setTypeface(typefaceRoman);
         Button03.setTypeface(typefaceRoman);

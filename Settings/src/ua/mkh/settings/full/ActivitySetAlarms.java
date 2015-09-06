@@ -99,7 +99,7 @@ public class ActivitySetAlarms extends Activity implements OnClickListener, Simp
 		
 		
 		
-		textStatus.setTypeface(typefaceMedium);
+		textStatus.setTypeface(typefaceBold);
 		btn_back.setTypeface(typefaceMedium);
 		textStatus.setText(R.string.ringtone);
 		

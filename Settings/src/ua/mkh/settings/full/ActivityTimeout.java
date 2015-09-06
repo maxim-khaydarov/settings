@@ -78,7 +78,7 @@ public class ActivityTimeout extends Activity implements OnClickListener, Simple
 				m30.setText("30"  + " " +  getResources().getString(R.string.minutes));
 				
 				
-				textStatus.setTypeface(typefaceMedium);
+				textStatus.setTypeface(typefaceBold);
 				btn_back.setTypeface(typefaceMedium);
 				textStatus.setText(R.string.choose);
 				

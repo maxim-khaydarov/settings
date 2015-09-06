@@ -85,7 +85,7 @@ public class ChooseWallpaper extends Activity implements OnClickListener, Simple
 			
 			textStatus.setText(R.string.button_wallpaper);
 			btn_back.setText(R.string.button_wallpaper);
-	        textStatus.setTypeface(typefaceMedium);
+	        textStatus.setTypeface(typefaceBold);
 	        btn_back.setTypeface(typefaceMedium);
 	        din.setTypeface(typefaceRoman);
 	        stat.setTypeface(typefaceRoman);

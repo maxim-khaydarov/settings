@@ -108,7 +108,7 @@ public class setWallpaper extends Activity implements SimpleGestureListener{
         btn_back = (Button) findViewById(R.id.buttonBack);
         
         btn_back.setTypeface(typefaceMedium);
-        textStatus.setTypeface(typefaceMedium);
+        textStatus.setTypeface(typefaceBold);
         textStatus.setText(R.string.choose);
         btn_back.setText(R.string.button_wallpaper);
 		

@@ -99,7 +99,7 @@ public class ActivitySetNotifications extends Activity implements OnClickListene
 		
 		
 		
-		textStatus.setTypeface(typefaceMedium);
+		textStatus.setTypeface(typefaceBold);
 		btn_back.setTypeface(typefaceMedium);
 		textStatus.setText(R.string.ringtone);
 		

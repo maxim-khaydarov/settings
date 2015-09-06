@@ -82,7 +82,7 @@ public class ActivityAllowDisturb extends Activity implements OnClickListener, S
       
       textStatus.setText(R.string.disturb);
       textStatus.setTypeface(typefaceMedium);
-      btn_back.setTypeface(typefaceMedium);
+      btn_back.setTypeface(typefaceBold);
       everyone.setTypeface(typefaceRoman);
       noone.setTypeface(typefaceRoman);
       contacts.setTypeface(typefaceRoman);

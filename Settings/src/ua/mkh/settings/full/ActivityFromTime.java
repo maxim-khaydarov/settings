@@ -109,7 +109,7 @@ public class ActivityFromTime extends Activity implements OnClickListener, Simpl
 		timePicker2.setCurrentMinute(now.get(Calendar.MINUTE));
 		
 		textStatus.setText(R.string.disturb);
-        textStatus.setTypeface(typefaceMedium);
+        textStatus.setTypeface(typefaceBold);
         btn_back.setTypeface(typefaceMedium);
         btn_save.setTypeface(typefaceRoman);
         Button01.setTypeface(typefaceRoman);

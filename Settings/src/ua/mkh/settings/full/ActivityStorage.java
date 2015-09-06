@@ -69,7 +69,7 @@ public class ActivityStorage extends Activity implements SimpleGestureListener{
 		 Button btn_back = (Button) findViewById(R.id.buttonBack);
 		TextView textStatus = (TextView)findViewById(R.id.textOk);
 		 
-		 textStatus.setTypeface(typefaceMedium);
+		 textStatus.setTypeface(typefaceBold);
 		 textStatus.setText(R.string.memory);
 	     btn_back.setTypeface(typefaceMedium);
 	    

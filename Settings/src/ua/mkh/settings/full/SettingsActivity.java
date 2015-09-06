@@ -151,7 +151,7 @@ public class SettingsActivity extends Activity implements OnClickListener, Simpl
 	        
 	        btn_back = (Button) findViewById(R.id.buttonBack);
 	        textStatus.setText(R.string.app_name);
-	        textStatus.setTypeface(typefaceMedium);
+	        textStatus.setTypeface(typefaceBold);
 	        btn_back.setTypeface(typefaceMedium);
             Button01.setTypeface(typefaceRoman);
             Button12.setTypeface(typefaceRoman);

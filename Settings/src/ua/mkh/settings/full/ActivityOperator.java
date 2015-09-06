@@ -84,7 +84,7 @@ public class ActivityOperator extends Activity implements OnClickListener, Simpl
 			detector = new SimpleGestureFilter(this,this);
 			
 			
-	        textStatus.setTypeface(typefaceMedium);
+	        textStatus.setTypeface(typefaceBold);
 			btn_back.setTypeface(typefaceMedium);
 			textStatus.setText(R.string.button_operator);
 			operator.setTypeface(typefaceRoman);

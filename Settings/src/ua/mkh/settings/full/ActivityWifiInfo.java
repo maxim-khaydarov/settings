@@ -101,7 +101,7 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
 				    
 				    
 				
-				textStatus.setTypeface(typefaceMedium);
+				textStatus.setTypeface(typefaceBold);
     			btn_back.setTypeface(typefaceMedium);
     			foget.setTypeface(typefaceRoman);
     			textView1.setTypeface(typefaceRoman);

@@ -96,6 +96,9 @@ public class ActivityAbout extends Activity implements OnClickListener, SimpleGe
 			detector = new SimpleGestureFilter(this,this);
 		    ///
 			
+			
+			
+
 			LinearLayoutNumber = (LinearLayout) findViewById(R.id.LinearLayoutNumber);
 			LinearLayoutNumber.setVisibility(View.GONE);
 			
@@ -149,7 +152,7 @@ public class ActivityAbout extends Activity implements OnClickListener, SimpleGe
 			 
 			 TextView01.setText(R.string.version_about_c);
 			 textStatus.setTypeface(typefaceMedium);
-			 btn_back.setTypeface(typefaceMedium);
+			 btn_back.setTypeface(typefaceBold);
 			 
 			 textView001.setTypeface(typefaceRoman);
 			 TextView01.setTypeface(typefaceRoman);
@@ -200,44 +203,9 @@ public class ActivityAbout extends Activity implements OnClickListener, SimpleGe
 	   
 	   private void mac_wifi (){
 		   
-		   ConnectivityManager connManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
-	    	NetworkInfo mWifi = connManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-	    	if(mWifi.isConnected()){
-	    		wifi_con = 1;
-	        }
-	    	else {
-	    		wifi_con = 0;
-	    	}
-	    	
-		   final Handler handler = new Handler();
-		   handler.postDelayed(new Runnable() {
-			   
-		       @Override
-		       public void run() {
-		           WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
-		           WifiInfo info = wifi.getConnectionInfo();
-		           address = info.getMacAddress();
-		       }
-		   }, 2000);
+		   WifiInfo localWifiInfo = ((WifiManager)getSystemService("wifi")).getConnectionInfo();
 		   
-		   TextView05.setText(address);
-		   
-		   
-		   try {
-	            WifiManager wifi = (WifiManager) this
-	                    .getSystemService(this.WIFI_SERVICE);
-	            wifi.setWifiEnabled(true);
-	            WifiInfo info = wifi.getConnectionInfo();
-	            String address = info.getMacAddress();
-	            TextView05.setText(address);
-	            if (address == null) {
-	            	LinearLayoutMacWifi.setVisibility(View.GONE);
-	            } else {
-	                
-	            }
-	        } catch (Exception e) {
-	            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
-	        }
+		   TextView05.setText(localWifiInfo.getMacAddress());
 		   
 	   }
 	   

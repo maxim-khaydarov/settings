@@ -155,7 +155,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
           		img2 = (ImageView) findViewById(R.id.imageView1);
           		img2.setVisibility(View.INVISIBLE);
           		
-          		textStatus.setTypeface(typefaceMedium);
+          		textStatus.setTypeface(typefaceBold);
     			btn_back.setTypeface(typefaceMedium);
     			textStatus.setText(R.string.button_wifi);
     			btn_1.setTypeface(typefaceRoman);

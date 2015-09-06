@@ -89,7 +89,7 @@ public class ActivityVPN extends Activity implements OnClickListener, SimpleGest
 				textStatus = (TextView)findViewById(R.id.textOk);
 				
 				
-				textStatus.setTypeface(typefaceMedium);
+				textStatus.setTypeface(typefaceBold);
     			btn_back.setTypeface(typefaceMedium);
     			textStatus.setText(R.string.apn);
     			Button07.setTypeface(typefaceRoman);

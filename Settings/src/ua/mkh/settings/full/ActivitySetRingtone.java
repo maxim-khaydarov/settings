@@ -99,7 +99,7 @@ public class ActivitySetRingtone extends Activity implements OnClickListener, Si
 		
 		
 		
-		textStatus.setTypeface(typefaceMedium);
+		textStatus.setTypeface(typefaceBold);
 		btn_back.setTypeface(typefaceMedium);
 		textStatus.setText(R.string.ringtone);
 		

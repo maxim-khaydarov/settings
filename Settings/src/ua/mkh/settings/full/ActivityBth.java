@@ -159,7 +159,7 @@ public class ActivityBth extends Activity implements OnClickListener, SimpleGest
 	        textView2.setTypeface(typefaceRoman);
 	        textView1.setTypeface(typefaceRoman);
 	        btn_Bth.setTypeface(typefaceRoman);
-	        textStatus.setTypeface(typefaceMedium);
+	        textStatus.setTypeface(typefaceBold);
 			btn_back.setTypeface(typefaceMedium);
 			textStatus.setText(R.string.button_bluetooth);
 			

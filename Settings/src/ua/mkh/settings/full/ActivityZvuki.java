@@ -115,7 +115,7 @@ public class ActivityZvuki extends Activity implements OnClickListener, SimpleGe
 		
 
 		textStatus.setText(R.string.button_sounds);
-	    textStatus.setTypeface(typefaceMedium);
+	    textStatus.setTypeface(typefaceBold);
 	    btn_back.setTypeface(typefaceMedium);
 	    textView6.setTypeface(typefaceRoman);
 	    textView7.setTypeface(typefaceRoman);

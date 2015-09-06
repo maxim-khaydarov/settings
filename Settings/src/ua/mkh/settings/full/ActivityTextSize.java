@@ -139,7 +139,7 @@ public class ActivityTextSize extends Activity implements  SimpleGestureListener
 			btn_back = (Button) findViewById(R.id.buttonBack);
 			textStatus.setText(R.string.text_size);
 			 btn_back.setText(R.string.button_brightness);
-		        textStatus.setTypeface(typefaceMedium);
+		        textStatus.setTypeface(typefaceBold);
 		        btn_back.setTypeface(typefaceMedium);
 		        
 		}

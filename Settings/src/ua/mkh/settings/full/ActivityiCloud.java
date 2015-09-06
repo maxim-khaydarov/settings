@@ -329,7 +329,7 @@ public class ActivityiCloud extends Activity implements OnClickListener, SimpleG
 		textView3 = (TextView) findViewById(R.id.textView3);
 		textView3.setVisibility(View.GONE);
 		
-		buttonBack.setTypeface(typefaceMedium);
+		buttonBack.setTypeface(typefaceBold);
 		btn_mail.setTypeface(typefaceRoman);
 		btn_notepad.setTypeface(typefaceRoman);
 		btn_phone.setTypeface(typefaceRoman);

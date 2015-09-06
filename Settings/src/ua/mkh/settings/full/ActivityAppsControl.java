@@ -45,12 +45,14 @@ public class ActivityAppsControl extends ListActivity {
         
         String roman = "fonts/Regular.otf";
 		String medium = "fonts/Medium.otf";
+		String bold =  "fonts/Bold.otf";
+		Typeface typefaceBold = Typeface.createFromAsset(getAssets(), bold);
 		Typeface typefaceRoman = Typeface.createFromAsset(getAssets(), roman);
 		Typeface typefaceMedium = Typeface.createFromAsset(getAssets(), medium);
       TextView text_app_main = (TextView)findViewById(R.id.textOk);
       text_app_main.setText(R.string.choose);
       Button buttonBack = (Button) findViewById(R.id.buttonBack);
-      buttonBack.setTypeface(typefaceMedium);
+      buttonBack.setTypeface(typefaceBold);
       text_app_main.setTypeface(typefaceMedium);
  
         packageManager = getPackageManager();

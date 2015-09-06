@@ -102,7 +102,7 @@ public class ActivityBrightness extends Activity implements OnClickListener, Sim
 		
 		
 		 textStatus.setText(R.string.button_brightness);
-	        textStatus.setTypeface(typefaceMedium);
+	        textStatus.setTypeface(typefaceBold);
 	        btn_back.setTypeface(typefaceMedium);
 	        textView1.setTypeface(typefaceRoman);
 	        textView2.setTypeface(typefaceRoman);

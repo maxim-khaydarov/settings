@@ -93,7 +93,7 @@ public class ActivitySota extends Activity implements OnClickListener, SimpleGes
 	        btn_back = (Button) findViewById(R.id.buttonBack);
 	        btn_back.setText(R.string.app_name);
 	        textStatus.setText(R.string.button_sota);
-	        textStatus.setTypeface(typefaceMedium);
+	        textStatus.setTypeface(typefaceBold);
 	        btn_back.setTypeface(typefaceMedium);
 	        
 	        textView2.setTypeface(typefaceRoman);

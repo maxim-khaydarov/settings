@@ -92,7 +92,7 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 			 btn_back = (Button) findViewById(R.id.buttonBack);
 		        btn_back.setText(R.string.button_general);
 		        textStatus.setText(R.string.button_usage);
-		        textStatus.setTypeface(typefaceMedium);
+		        textStatus.setTypeface(typefaceBold);
 		        btn_back.setTypeface(typefaceMedium);
 		        
 		        Button01.setTypeface(typefaceRoman);

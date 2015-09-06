@@ -577,7 +577,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
     	imageView2.setVisibility(View.GONE);
 		
     	 
-    	text_app_main.setTypeface(typefaceMedium);
+    	text_app_main.setTypeface(typefaceBold);
 		btn_avia.setTypeface(typefaceRoman);
 		textView1.setTypeface(typefaceRoman);
 		textView3.setTypeface(typefaceRoman);

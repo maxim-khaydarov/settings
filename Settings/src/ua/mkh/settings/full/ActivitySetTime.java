@@ -98,7 +98,7 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 			 tgAuto.setClickable(false);
 				
 				textStatus.setText(R.string.date_time);
-			    textStatus.setTypeface(typefaceMedium);
+			    textStatus.setTypeface(typefaceBold);
 			    btn_back.setTypeface(typefaceMedium);
 			    Button01.setTypeface(typefaceRoman);
 			    Button02.setTypeface(typefaceRoman);

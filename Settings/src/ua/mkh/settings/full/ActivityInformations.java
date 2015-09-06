@@ -100,7 +100,7 @@ public class ActivityInformations extends Activity implements OnClickListener, S
 		
 		
 		textStatus.setText(R.string.informations);
-	    textStatus.setTypeface(typefaceMedium);
+	    textStatus.setTypeface(typefaceBold);
 	    btn_back.setTypeface(typefaceMedium);
 	    Button02.setTypeface(typefaceRoman);
 	    button1.setTypeface(typefaceRoman);

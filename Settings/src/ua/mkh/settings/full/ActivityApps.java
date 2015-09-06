@@ -78,7 +78,7 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
 	      
 	      
 	      btn_back.setTypeface(typefaceMedium);
-	      text_app_main.setTypeface(typefaceMedium);
+	      text_app_main.setTypeface(typefaceBold);
 	      usage.setTypeface(typefaceRoman);
 	      aviable.setTypeface(typefaceRoman);
 	      Button08.setTypeface(typefaceRoman);
