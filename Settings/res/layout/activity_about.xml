@@ -416,7 +416,7 @@
                         android:ems="10"
                         android:gravity="left|center_vertical"
                         android:paddingLeft="15dp"
-                        android:text="Емкость"
+                        android:text="@string/all_storage"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
                 </RelativeLayout>

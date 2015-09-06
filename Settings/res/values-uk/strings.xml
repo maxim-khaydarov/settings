@@ -168,7 +168,7 @@
   	<string name="name_about">Ім\'я пристрою</string>
   	<string name="network_about">Мережа</string>
   	<string name="version_about">Версія</string>
-  	<string name="version_about_c">iOS 9.0 beta 4 (13A4254v)</string>
+  	<string name="version_about_c">iOS 9.0 beta 5 (13A4254v)</string>
   	<string name="serial_about">Серійний номер</string>
   	<string name="imei_about">IMEI</string>
   	<string name="phone_about">Номер телефону</string>
@@ -295,6 +295,11 @@
     <item>листопада</item>
     <item>грудня</item>
     </string-array>
+    
+	<string name="time24">24-годинний формат</string>
+	<string name="auto_time">Автоматично</string>
+	<string name="time_zone">Часовий пояс</string>
+	
 </resources>
 
 

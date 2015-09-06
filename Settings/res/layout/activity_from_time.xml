@@ -99,8 +99,8 @@
                 <ImageView
                     android:id="@+id/ImageView09"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-69dp"
+                    android:layout_height="1px"
+                    android:layout_marginTop="-67dp"
                     android:ems="10"
                     android:scaleType="fitXY"
                     android:src="@drawable/line_cray" />
@@ -108,8 +108,8 @@
                 <ImageView
                     android:id="@+id/ImageView07"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-30dp"
+                    android:layout_height="1px"
+                    android:layout_marginTop="-28dp"
                     android:ems="10"
                     android:scaleType="fitXY"
                     android:src="@drawable/line_cray" />
@@ -164,8 +164,8 @@
                 <ImageView
                     android:id="@+id/ImageView04"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-69dp"
+                    android:layout_height="1px"
+                    android:layout_marginTop="-67dp"
                     android:ems="10"
                     android:scaleType="fitXY"
                     android:src="@drawable/line_cray" />
@@ -173,8 +173,8 @@
                 <ImageView
                     android:id="@+id/ImageView02"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-30dp"
+                    android:layout_height="1px"
+                    android:layout_marginTop="-28dp"
                     android:ems="10"
                     android:scaleType="fitXY"
                     android:src="@drawable/line_cray" />

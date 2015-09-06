@@ -5,13 +5,153 @@
     android:layout_height="fill_parent"
     android:background="@color/background_fon"
     android:orientation="vertical" >
+    
+    <ua.mkh.settings.full.EdgeEffectScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:fadingEdge="none"
+        android:overScrollMode="always"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutMem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/ImageView01"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:ems="10"
+                android:scaleType="fitXY"
+                android:src="@drawable/line_cray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@color/white" >
+
+                <ImageView
+                    android:id="@+id/ImageView11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_alignLeft="@+id/Button08"
+                    android:layout_alignParentBottom="true"
+                    android:ems="10"
+                    android:paddingLeft="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/line_cray" />
+
+                <TextView
+                    android:id="@+id/TextView07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right"
+                    android:hint="TextView"
+                    android:text="Unknow"
+                    android:textColor="@color/hint_text"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/Button08"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/transparent"
+                    android:clickable="false"
+                    android:ems="10"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="@string/storage_zanyato"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@color/white" >
+
+                <ImageView
+                    android:id="@+id/ImageView12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_alignLeft="@+id/Button09"
+                    android:layout_alignParentBottom="true"
+                    android:ems="10"
+                    android:paddingLeft="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/line_cray" />
+
+                <TextView
+                    android:id="@+id/TextView08"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right"
+                    android:hint="TextView"
+                    android:text="Unknow"
+                    android:textColor="@color/hint_text"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/Button09"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/transparent"
+                    android:clickable="false"
+                    android:ems="10"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="@string/storage_dostupno"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
  
     <ListView
         android:id="@android:id/list"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="30dp"
         android:background="@color/white" />
+    
+     </LinearLayout>
+
+    </ua.mkh.settings.full.EdgeEffectScrollView>
  
 <LinearLayout
         android:layout_width="wrap_content"
@@ -22,8 +162,8 @@
         <include
             android:id="@+id/include1"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            layout="@layout/title_status_del" />
+            android:layout_height="39dp"
+            layout="@layout/title_status" />
     </LinearLayout>
 
 </RelativeLayout>

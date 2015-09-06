@@ -14,15 +14,24 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:gravity="center_vertical"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:paddingLeft="5dp" >
- 
+
         <TextView
             android:id="@+id/app_name"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
+            android:text="Main"
             android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/ImageView02"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/next" />
 
     </LinearLayout>
  

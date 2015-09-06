@@ -204,7 +204,25 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
 				// Получаем число из настроек
 	        	 Boolean bold = mSettings.getBoolean(APP_PREFERENCES_bold_text, true);
 				if (bold == true){
-					
+					textStatus.setTypeface(typefaceBold);
+	    			btn_back.setTypeface(typefaceBold);
+					foget.setTypeface(typefaceBold);
+	    			textView1.setTypeface(typefaceBold);
+	    			textView2.setTypeface(typefaceBold);
+	    			b1.setTypeface(typefaceBold);
+	    			b2.setTypeface(typefaceBold);
+	    			b3.setTypeface(typefaceBold);
+	    			b5.setTypeface(typefaceBold);
+	    			b6.setTypeface(typefaceBold);
+	    			b7.setTypeface(typefaceBold);
+	    			Button01.setTypeface(typefaceBold);
+	    			Button02.setTypeface(typefaceBold);
+	    			Button03.setTypeface(typefaceBold);
+	    			Button04.setTypeface(typefaceBold);
+	    			txtip.setTypeface(typefaceBold);
+	    			txtmask.setTypeface(typefaceBold);
+	    			txtmarsh.setTypeface(typefaceBold);
+	    			txtdns.setTypeface(typefaceBold);
 					
 				}
 	        }
@@ -213,16 +231,56 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
 				// Получаем число из настроек
 	        	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 				if (size .contains( "Small")){
-					
+					foget.setTextSize(14);
+	    			textView1.setTextSize(11);
+	    			textView2.setTextSize(11);
+	    			Button01.setTextSize(14);
+	    			Button02.setTextSize(14);
+	    			Button03.setTextSize(14);
+	    			Button04.setTextSize(14);
+	    			txtip.setTextSize(14);
+	    			txtmask.setTextSize(14);
+	    			txtmarsh.setTextSize(14);
+	    			txtdns.setTextSize(14);
 				}
 				if (size .contains( "Normal")){
-					
+					foget.setTextSize(16);
+	    			textView1.setTextSize(13);
+	    			textView2.setTextSize(13);
+	    			Button01.setTextSize(16);
+	    			Button02.setTextSize(16);
+	    			Button03.setTextSize(16);
+	    			Button04.setTextSize(16);
+	    			txtip.setTextSize(16);
+	    			txtmask.setTextSize(16);
+	    			txtmarsh.setTextSize(16);
+	    			txtdns.setTextSize(16);
 				}
 				if (size .contains( "Large")){
-					
+					foget.setTextSize(19);
+	    			textView1.setTextSize(16);
+	    			textView2.setTextSize(16);
+	    			Button01.setTextSize(19);
+	    			Button02.setTextSize(19);
+	    			Button03.setTextSize(19);
+	    			Button04.setTextSize(19);
+	    			txtip.setTextSize(19);
+	    			txtmask.setTextSize(19);
+	    			txtmarsh.setTextSize(19);
+	    			txtdns.setTextSize(19);
 				}
 				if (size .contains( "xLarge")){
-					
+					foget.setTextSize(21);
+	    			textView1.setTextSize(18);
+	    			textView2.setTextSize(18);
+	    			Button01.setTextSize(21);
+	    			Button02.setTextSize(21);
+	    			Button03.setTextSize(21);
+	    			Button04.setTextSize(21);
+	    			txtip.setTextSize(21);
+	    			txtmask.setTextSize(21);
+	    			txtmarsh.setTextSize(21);
+	    			txtdns.setTextSize(21);
 				}
 	       }
 

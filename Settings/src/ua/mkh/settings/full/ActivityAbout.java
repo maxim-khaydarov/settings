@@ -578,7 +578,7 @@ public class ActivityAbout extends Activity implements OnClickListener, SimpleGe
 				     
 				     textView001.setTextSize(14);
 				     TextView01.setTextSize(14);
-				     TextView02.setTextSize(11);
+				     TextView02.setTextSize(14);
 				     TextView03.setTextSize(14);
 				     TextView04.setTextSize(14);
 				     TextView05.setTextSize(14);
@@ -613,7 +613,7 @@ public class ActivityAbout extends Activity implements OnClickListener, SimpleGe
 				     
 				     textView001.setTextSize(16);
 				     TextView01.setTextSize(16);
-				     TextView02.setTextSize(11);
+				     TextView02.setTextSize(16);
 				     TextView03.setTextSize(16);
 				     TextView04.setTextSize(16);
 				     TextView05.setTextSize(16);
@@ -648,7 +648,7 @@ public class ActivityAbout extends Activity implements OnClickListener, SimpleGe
 				     
 				     textView001.setTextSize(19);
 				     TextView01.setTextSize(19);
-				     TextView02.setTextSize(14);
+				     TextView02.setTextSize(19);
 				     TextView03.setTextSize(19);
 				     TextView04.setTextSize(19);
 				     TextView05.setTextSize(19);
@@ -683,7 +683,7 @@ public class ActivityAbout extends Activity implements OnClickListener, SimpleGe
 				     
 				     textView001.setTextSize(21);
 				     TextView01.setTextSize(21);
-				     TextView02.setTextSize(18);
+				     TextView02.setTextSize(21);
 				     TextView03.setTextSize(21);
 				     TextView04.setTextSize(21);
 				     TextView05.setTextSize(21);

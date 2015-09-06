@@ -168,7 +168,7 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
   	<string name="name_about">The device name</string>
   	<string name="network_about">Network</string>
   	<string name="version_about">Version</string>
-  	<string name="version_about_c">iOS 9.0 beta 4 (13A4254v)</string>
+  	<string name="version_about_c">iOS 9.0 beta 5 (13A4254v)</string>
   	<string name="serial_about">Serial Number</string>
   	<string name="imei_about">IMEI</string>
   	<string name="phone_about">Telephone Number</string>
@@ -296,6 +296,10 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
     <item>November</item>
     <item>December</item>
 	</string-array>
+	
+	<string name="time24">24-Hour Time</string>
+	<string name="auto_time">Set Automatically</string>
+	<string name="time_zone">Time Zone</string>
 
 </resources>
 

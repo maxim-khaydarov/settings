@@ -57,7 +57,7 @@
                         android:clickable="false"
                         android:ems="10"
                         android:gravity="left|center_vertical"
-                        android:text="24-Hour Time"
+                        android:text="@string/time24"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -116,7 +116,7 @@
                         android:clickable="false"
                         android:ems="10"
                         android:gravity="left|center_vertical"
-                        android:text="Set Automaticvaly"
+                        android:text="@string/auto_time"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -167,7 +167,7 @@
                         android:ems="10"
                         android:gravity="left|center_vertical"
                         android:paddingLeft="15dp"
-                        android:text="@string/button_usage"
+                        android:text="@string/time_zone"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 

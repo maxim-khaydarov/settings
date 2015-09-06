@@ -5,20 +5,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import ua.mkh.settings.full.SimpleGestureFilter.SimpleGestureListener;
-
-import android.app.ActionBar;
-import android.app.Activity;    
-import android.app.AlertDialog;
+import android.app.Activity;
 import android.app.Dialog;
-import android.bluetooth.BluetoothAdapter;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.DhcpInfo;
@@ -27,41 +20,39 @@ import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
-import android.os.Bundle;    
+import android.os.Bundle;
 import android.support.v4.view.ViewPager.LayoutParams;
 import android.text.InputType;
 import android.text.format.Formatter;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.MeasureSpec;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.view.View.OnClickListener;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ToggleButton;
+import ua.mkh.settings.full.SimpleGestureFilter.SimpleGestureListener;
 
 public class ActivityWifi extends Activity implements OnClickListener, SimpleGestureListener {
 	
 	TextView textConnected;
 	final Context context = this;
-	ToggleButton tb_in, tb_wifi, tb_ch, buttonWifi; 
+	ToggleButton tb_in, tb_wifi, tb_ch; 
 	WifiManager wifi;
 	TextView  textStatus, txtPercentage, textView3, textView4, textView5, textView6, textView1;
 	Button btn_back, btn_1, Button04;
@@ -69,6 +60,8 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 	LinearLayout LinearLayoutCon, MainLayout2;
 	RelativeLayout LayoutMain;
+	
+	
 	
 	public static final String APP_PREFERENCES = "mysettings"; 
 	public static final String APP_PREFERENCES_text_size = "txt_size";
@@ -130,8 +123,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 			btn_back.setText(R.string.app_name);
 			textStatus = (TextView)findViewById(R.id.textOk);
 			btn_1 = (Button) findViewById(R.id.ButtonWifi);
-			buttonWifi = (ToggleButton)findViewById(R.id.ToggleButton01);
-			buttonWifi.setOnClickListener(this);
+			
 			
 			
 				
@@ -151,12 +143,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 			 textConnected = (TextView)findViewById(R.id.Connected);
 			 textConnected.setOnClickListener(this);
 		      
-		       txtPercentage= (TextView)findViewById(R.id.txtPercentage);
 		       textView1 = (TextView)findViewById(R.id.textView1);
-		       textView3 = (TextView)findViewById(R.id.textView3);
-		       textView4 = (TextView)findViewById(R.id.textView4);
-		       textView5 = (TextView)findViewById(R.id.textView5);
-		       textView6 = (TextView)findViewById(R.id.textView6);
 		       
 		       
 		      
@@ -173,13 +160,9 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
     			textStatus.setText(R.string.button_wifi);
     			btn_1.setTypeface(typefaceRoman);
     			
-    			/*
+    			
     			textView1.setTypeface(typefaceRoman);
-    			textView3.setTypeface(typefaceRoman);
-    			textView4.setTypeface(typefaceRoman);
-    			textView5.setTypeface(typefaceRoman);
-    			textView6.setTypeface(typefaceRoman);
-    			*/
+    			
     			
     			
 		       DisplayWifiState();
@@ -593,12 +576,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	        	 Boolean bold = mSettings.getBoolean(APP_PREFERENCES_bold_text, true);
 				if (bold == true){
 					btn_1.setTypeface(typefaceBold);
-	    			txtPercentage.setTypeface(typefaceBold);
 	    			textView1.setTypeface(typefaceBold);
-	    			textView3.setTypeface(typefaceBold);
-	    			textView4.setTypeface(typefaceBold);
-	    			textView5.setTypeface(typefaceBold);
-	    			textView6.setTypeface(typefaceBold);
 	    			textConnected.setTypeface(typefaceBold);
 					
 				}
@@ -609,42 +587,22 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	        	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 				if (size .contains( "Small")){
 					btn_1.setTextSize(14);
-	    			txtPercentage.setTextSize(13);
 	    			textView1.setTextSize(11);
-	    			textView3.setTextSize(13);
-	    			textView4.setTextSize(13);
-	    			textView5.setTextSize(13);
-	    			textView6.setTextSize(13);
 	    			textConnected.setTextSize(14);
 				}
 				if (size .contains( "Normal")){
 					btn_1.setTextSize(16);
-	    			txtPercentage.setTextSize(15);
 	    			textView1.setTextSize(13);
-	    			textView3.setTextSize(15);
-	    			textView4.setTextSize(15);
-	    			textView5.setTextSize(15);
-	    			textView6.setTextSize(15);
 	    			textConnected.setTextSize(16);
 				}
 				if (size .contains( "Large")){
 					btn_1.setTextSize(19);
-	    			txtPercentage.setTextSize(18);
 	    			textView1.setTextSize(16);
-	    			textView3.setTextSize(18);
-	    			textView4.setTextSize(18);
-	    			textView5.setTextSize(18);
-	    			textView6.setTextSize(18);
 	    			textConnected.setTextSize(19);
 				}
 				if (size .contains( "xLarge")){
 					btn_1.setTextSize(21);
-	    			txtPercentage.setTextSize(20);
 	    			textView1.setTextSize(18);
-	    			textView3.setTextSize(20);
-	    			textView4.setTextSize(20);
-	    			textView5.setTextSize(20);
-	    			textView6.setTextSize(20);
 	    			textConnected.setTextSize(21);
 				}
 	       }
@@ -807,6 +765,9 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		        	settingsIntent.putExtra("mask", s_netmask);
 		        	settingsIntent.putExtra("marsh", s_serverAddress);
 		        	settingsIntent.putExtra("name", wi);
+		        	
+		        	
+		        	
 		        	startActivity(settingsIntent);
 			        	overridePendingTransition(center_to_left, center_to_left2);
 		        	

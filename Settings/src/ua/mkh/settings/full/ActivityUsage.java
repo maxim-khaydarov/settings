@@ -13,12 +13,17 @@ import android.content.SharedPreferences;
 import android.content.pm.ResolveInfo;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager.LayoutParams;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.View.MeasureSpec;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -261,10 +266,16 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 	            break;
 	            
 		  case R.id.Button02:
+			  Intent intent = new Intent(this, ActivityApps.class);
+			  intent.putExtra("used", TextView07.getText().toString());
+			  intent.putExtra("aviable", TextView08.getText().toString());
+	        	 startActivity(intent);
+	  	        	overridePendingTransition(center_to_left, center_to_left2);
+			  /*
 			  Intent dialogIntent = new Intent(android.provider.Settings.ACTION_INTERNAL_STORAGE_SETTINGS);
               dialogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
               startActivity(dialogIntent);
-              overridePendingTransition(center_to_left, center_to_left2);
+              overridePendingTransition(center_to_left, center_to_left2);*/
               break;
 		  }
 		  
@@ -286,7 +297,8 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 		    }
 		    DecimalFormat twoDForm = new DecimalFormat("#.##");
 		    
-		    TextView07.setText(twoDForm.format(ios/1073741824f) +" " + getResources().getString(R.string.GigaByte));
+		    float p = ios - iss;
+		    TextView07.setText(twoDForm.format(p/1073741824f) +" " + getResources().getString(R.string.GigaByte));
 	    	TextView08.setText(twoDForm.format(iss/1073741824f) +" " + getResources().getString(R.string.GigaByte));
 	   }
 	  
@@ -355,5 +367,6 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 
 	   		overridePendingTransition(center_to_right, center_to_right2);
 	       	 }
-
+	        
+	        
 }

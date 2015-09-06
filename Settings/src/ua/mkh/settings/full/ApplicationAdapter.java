@@ -1,17 +1,24 @@
 package ua.mkh.settings.full;
 
+import java.io.File;
+import java.lang.reflect.Method;
 import java.util.List;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.PackageStats;
 import android.graphics.Typeface;
+import android.os.RemoteException;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
  
 public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
     private List<ApplicationInfo> appsList = null;
@@ -64,8 +71,15 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
  
             appName.setText(data.loadLabel(packageManager));
             
+            
             iconview.setImageDrawable(data.loadIcon(packageManager));
+            
+            
+            
+            
         }
         return view;
     }
 };
+
+

@@ -310,7 +310,7 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 	      switch (direction) {
 	      
 	      case SimpleGestureFilter.SWIPE_RIGHT : 
-	    	  Intent intent18 = new Intent(this, MainActivity.class);
+	    	  Intent intent18 = new Intent(this, ActivityOsnova.class);
 	          	 startActivity(intent18);
 
 	    		overridePendingTransition(center_to_right, center_to_right2);
@@ -380,7 +380,10 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 				// Получаем число из настроек
 	        	 Boolean bold = mSettings.getBoolean(APP_PREFERENCES_bold_text, true);
 				if (bold == true){
-					
+					Button01.setTypeface(typefaceBold);
+				    Button02.setTypeface(typefaceBold);
+				    Button03.setTypeface(typefaceBold);
+				    date.setTypeface(typefaceBold);
 				}
 	        }
 				
@@ -388,12 +391,28 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 				// Получаем число из настроек
 	        	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 				if (size .contains( "Small")){
+					Button01.setTextSize(13);
+					Button02.setTextSize(13);
+					Button03.setTextSize(13);
+					date.setTextSize(13);
 				}
 				if (size .contains( "Normal")){
+					Button01.setTextSize(16);
+					Button02.setTextSize(16);
+					Button03.setTextSize(16);
+					date.setTextSize(16);
 				}
 				if (size .contains( "Large")){
+					Button01.setTextSize(19);
+					Button02.setTextSize(19);
+					Button03.setTextSize(19);
+					date.setTextSize(19);
 				}
 				if (size .contains( "xLarge")){
+					Button01.setTextSize(21);
+					Button02.setTextSize(21);
+					Button03.setTextSize(21);
+					date.setTextSize(21);
 					
 				}
 	       }
@@ -487,7 +506,7 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 	    
 	    public void BackClick(View v)  
 	    {  
-	   	 Intent intent18 = new Intent(this, MainActivity.class);
+	   	 Intent intent18 = new Intent(this, ActivityOsnova.class);
 	         	 startActivity(intent18);
 
 	   		overridePendingTransition(center_to_right, center_to_right2);
@@ -520,7 +539,7 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 	           	 }
 	                return true;
 	            case KeyEvent.KEYCODE_BACK:
-	            	Intent intent18 = new Intent(this, MainActivity.class);
+	            	Intent intent18 = new Intent(this, ActivityOsnova.class);
 	             	 startActivity(intent18);
 
 	       		overridePendingTransition(center_to_right, center_to_right2);
