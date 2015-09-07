@@ -96,6 +96,8 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 			 tg24.setClickable(false);
 			 tgAuto = (ToggleButton) findViewById(R.id.ToggleButton01);
 			 tgAuto.setClickable(false);
+			 
+			 
 				
 				textStatus.setText(R.string.date_time);
 			    textStatus.setTypeface(typefaceBold);
@@ -145,15 +147,48 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 					}
 					public void onScrollingFinished(WheelView wheel) {
 						//timeScrolled = false;
-						String h = String.valueOf(hour.getCurrentItem());
-						String m = String.valueOf(min.getCurrentItem());
-						String d = String.valueOf(day.getCurrentItem() + 1);
+						String h = "";
+						if (hour.getCurrentItem() < 10){
+							h = "0" + String.valueOf(hour.getCurrentItem());
+						}
+						else{
+							h = String.valueOf(hour.getCurrentItem());
+						}
+						
+						
+						String m = "";
+						if (min.getCurrentItem() < 10){
+							m = "0" + String.valueOf(min.getCurrentItem());
+						}
+						else{
+							m = String.valueOf(min.getCurrentItem());
+						}
+						
+						
+						String d = "";
+						if ((day.getCurrentItem() + 1) < 10){
+							d = "0" + String.valueOf(day.getCurrentItem() + 1);
+						}
+						else{
+						d = String.valueOf(day.getCurrentItem() + 1);
+						} 
 						String y = String.valueOf(year.getCurrentItem() - 30 + 2000);
-						//String mo = String.valueOf(month.getCurrentItem());
+						
+						String mo0 ="";
+						if((month.getCurrentItem()+1) < 10){
+							mo0 = "0" + String.valueOf(month.getCurrentItem()+1);
+						}
+						else{
+							mo0 = String.valueOf(month.getCurrentItem()+1);
+						}
+						
 						
 						String mo = new DateFormatSymbols().getMonths()[month.getCurrentItem()];
 						
 						date.setText(d + " " + mo + " " + y + "                  " + h + ":" + m);
+						Log.d("SEND TIME", d+" "+mo0+" "+y+"-"+h+":"+m);
+						//changeSystemTime(y, mo0, d, h, m, "30");
+						changeSystemTime("2015","04","06","13","09","30");
 						
 					}
 				};
@@ -182,18 +217,22 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 				month.addChangingListener(listener);
 				
 			 ////////////////MIN
-				/*
-				int min_ar[] = new int[]{00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 10,
-						11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
-						26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
-						41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55,
-						56, 57, 58, 59};*/
-				min.setViewAdapter(new DateNumericAdapter(this, 00, 59, 0));
+				
+				String min_ar[] = new String[]{"00", "01", "02", "03", "04", "05", "06", "07", "08",
+						"09", "10",	"11", "12", "13", "14", "15", "16", "17", "18", "19", "20",
+						"21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32",
+						"33", "34", "35", "36", "37", "38", "39", "40",	"41", "42", "43", "44",
+						"45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56",
+						"57", "58", "59"};
+				min.setViewAdapter(new DateArrayAdapter(this, min_ar, 0));
 				min.setCurrentItem(calendar.get(Calendar.MINUTE));
 				
 				
 			///////////////HOUR
-				hour.setViewAdapter(new DateNumericAdapter(this, 00, 23, 0));
+				String hour_ar[] = new String[]{"00", "01", "02", "03", "04", "05", "06", "07", "08",
+						"09", "10",	"11", "12", "13", "14", "15", "16", "17", "18", "19", "20",
+						"21", "22", "23"};
+				hour.setViewAdapter(new DateArrayAdapter(this, hour_ar, 0));
 				hour.setCurrentItem(calendar.get(Calendar.HOUR_OF_DAY));
 			 
 			 
@@ -420,10 +459,24 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 	    }
 	    
 	    private void changeSystemTime(String year,String month,String day,String hour,String minute,String second){
-		    try {
+	    	Process loProcess;
+			try {
+				loProcess = Runtime.getRuntime().exec("su");
+				DataOutputStream loDataOutputStream = new       DataOutputStream(loProcess.getOutputStream());
+		    	loDataOutputStream.writeBytes("date -s " + year + month + day + "." + hour + minute + second + "; \n");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    	
+	    	/*try {
+		    	
+		    	
+		    	//loDataOutputStream.writeBytes("date -s" + theStringReturnedValue+ "; \n");
+		    	
 		        Process process = Runtime.getRuntime().exec("su");
 		        DataOutputStream os = new DataOutputStream(process.getOutputStream());
-		        String command = "date -s "+year+month+day+"."+hour+minute+second+"\n";
+		        String command = "date -s "+year+month+day+"."+hour+minute+second;
 		        Log.e("command",command);
 		        os.writeBytes(command);
 		        os.flush();
@@ -434,7 +487,7 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 		        e.printStackTrace();
 		    } catch (IOException e) {
 		        e.printStackTrace();
-		    }
+		    }*/
 		}
 	    
 	    @Override
@@ -442,13 +495,43 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 	        super.onPause();  // Always call the superclass method first
 
 	        if(timeScrolled){
-	        	String h = String.valueOf(hour.getCurrentItem());
-				String m = String.valueOf(min.getCurrentItem());
-				String d = String.valueOf(day.getCurrentItem() + 1);
+	        	String h = "";
+				if (hour.getCurrentItem() < 10){
+					h = "0" + String.valueOf(hour.getCurrentItem());
+				}
+				else{
+					h = String.valueOf(hour.getCurrentItem());
+				}
+	        	String m = "";
+				if (min.getCurrentItem() < 10){
+					m = "0" + String.valueOf(min.getCurrentItem());
+				}
+				else{
+					m = String.valueOf(min.getCurrentItem());
+				}
+				
+				String d = "";
+				if (day.getCurrentItem() + 1 < 10){
+					d = "0" + String.valueOf(day.getCurrentItem() + 1);
+				}
+				else{
+				d = String.valueOf(day.getCurrentItem() + 1);
+				} 
+				
 				String y = String.valueOf(year.getCurrentItem() - 30 + 2000);
-				String mo = String.valueOf(month.getCurrentItem());
+				String mo = "";
+				if(month.getCurrentItem() + 1 < 10){
+					mo = "0" + String.valueOf(month.getCurrentItem() + 1);
+				}
+				else{
+				mo = String.valueOf(month.getCurrentItem() + 1);
+				}
+				
 	        	changeSystemTime(y, mo, d, h, m, "00");
+				//changeSystemTime("2015","04","06","13","09","30");
 	        	timeScrolled = false;
+	        	
+	        	Log.e("TIME SEND", h + ":" + m + "  " + d + "-" + mo + "-" + y);
 	        }
 	    }
 	    
@@ -476,10 +559,10 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 	    public void checkRoot(){
 	    	if (isRooted() == true ){
 	        	//changeSystemTime("2015","04","06","13","09","30");
-
+	    		
 	        	}
 	        	else{
-	        		date.setClickable(false);
+	        		date.setClickable(true);
 	        	}
 	    }
 	    public static boolean findBinary(String binaryName) {
