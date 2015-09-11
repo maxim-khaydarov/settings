@@ -41,7 +41,7 @@
     <string name="button_update">Оновлення ПЗ</string>
     <string name="autor">Maxim Khaydarov</string>
     <string name="what_news">Що нового?</string>
-    <string name="what_news_text3">- Оновлення до iOS9 beta 5\n- Нові можливості в пункті \"Фон\"\n- Оновлення в пунктах \"Wi-Fi\" та \"Bluetooth\"\ n- Виправлення помилок у тексті, графіці та функціональності</string>
+    <string name="what_news_text3">- Оновлення до iOS 9.1 beta 1\n- Нові можливості в пункті \"Фон\"\n- Оновлення в пунктах \"Wi-Fi\" та \"Bluetooth\"\ n- Виправлення помилок у тексті, графіці та функціональності</string>
     <string name="button_license">Ліцензія</string>
     <string name="license_my">Усі права захищені.\n Програма захищена авторським правом, і будь-яке несанкціоноване використання може спричинити порушення законодавства про авторське право.
 Розміщення платної версії програми на будь-яких ресурсах, крім Яндекс.Store, заборонено.</string>
@@ -168,7 +168,7 @@
   	<string name="name_about">Ім\'я пристрою</string>
   	<string name="network_about">Мережа</string>
   	<string name="version_about">Версія</string>
-  	<string name="version_about_c">iOS 9.0 beta 5 (13A4254v)</string>
+  	<string name="version_about_c">iOS 9.1 beta 1 (13A4254v)</string>
   	<string name="serial_about">Серійний номер</string>
   	<string name="imei_about">IMEI</string>
   	<string name="phone_about">Номер телефону</string>
@@ -215,7 +215,7 @@
 	<string name="silence_call_disturb_text_always">Вхідні дзвонки та сповіщення будуть заглушені при разблокованому та заблокованому екрані.</string>
 	<string name="silence_call_disturb_text_lock">Вхідні дзвонки та сповіщення будуть заглушені при заблокованому екрані.</string>
   	<string name="proverka_ios">Перевірка наявності оновлення...</string>
-	<string name="proverka_ios_no">iOS 9.0\nВстановлено новітнє ПЗ</string>
+	<string name="proverka_ios_no">iOS 9.1\nВстановлено новітнє ПЗ</string>
 	<string name="proverka_ios_yes">Знайдено нове ПЗ</string>
 	<string name="PO_aboout">Прошика модему</string>
 	<string name="update_icloud">Натисніть для оновлення данних</string>

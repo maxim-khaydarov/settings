@@ -42,7 +42,7 @@
     <string name="button_update">Software update</string>
     <string name="autor">Maxim Khaydarov</string>
     <string name="what_news">What&quot;s new?</string>
-	<string name="what_news_text3">- Update to iOS9 beta 5\n- New features in \"Wallpaper\"\n- Update in points \"Wi-Fi\" and \"Bluetooth\"\n- Correction of errors in text, graphics and functionality</string>
+	<string name="what_news_text3">- Update to iOS 9.1 beta 1\n- New features in \"Wallpaper\"\n- Update in points \"Wi-Fi\" and \"Bluetooth\"\n- Correction of errors in text, graphics and functionality</string>
     <string name="button_license">License</string>
     <string name="license_my">All rights reserved.\nThe program is protected by copyright and any unauthorized use may be punished according to the law of copyright.
 Placing full version to any resources other than Yandex.Store prohibited.</string>
@@ -168,7 +168,7 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
   	<string name="name_about">The device name</string>
   	<string name="network_about">Network</string>
   	<string name="version_about">Version</string>
-  	<string name="version_about_c">iOS 9.0 beta 5 (13A4254v)</string>
+  	<string name="version_about_c">iOS 9.1 beta 1 (13A4254v)</string>
   	<string name="serial_about">Serial Number</string>
   	<string name="imei_about">IMEI</string>
   	<string name="phone_about">Telephone Number</string>
@@ -215,7 +215,7 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
 	<string name="silence_call_disturb_text_always">Входящие звонки и уведомления будут заглушены при разблокированом и заблокированом экране.</string>
 	<string name="silence_call_disturb_text_lock">Incoming calls and notifications will be silensed wile phone is locked.</string>
     <string name="proverka_ios">Check for updates...</string>
-	<string name="proverka_ios_no">iOS 9.0\nIt installs the latest software</string>
+	<string name="proverka_ios_no">iOS 9.1\nIt installs the latest software</string>
 	<string name="proverka_ios_yes">Found new software</string>
 	<string name="PO_aboout">Version Software</string>
 	<string name="update_icloud">Press for update</string>

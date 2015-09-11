@@ -39,6 +39,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.net.NetworkInfo.DetailedState;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
@@ -160,6 +161,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	   public static final String APP_PREFERENCES_tgb_menu = "tgb_menu";
 	   public static final String APP_PREFERENCES_NETWORK = "networkText";
 	   public static final String APP_PREFERENCES_ACTIVATION = "activation";
+	   public static final String APP_PREFERENCES_UPDATE = "update";
 	   
 	   public static final String APP_PREFERENCES_DATABASE = "ver_database";
 	   
@@ -1153,7 +1155,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	        Airmode();
 	        ButtonTextBth();
 	        operator();
-	        //check_pirat();
+	        check_pirat();
 	        zimowets();
 	       
 	       
@@ -1307,6 +1309,45 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	            e.putString("version", versionNow);
 	            e.apply(); // не забудьте подтвердить изменения
 	            
+	       }
+	       
+	       boolean m = mSettings.getBoolean(APP_PREFERENCES_UPDATE, false);
+	       if (m == true){
+	    	   final Dialog dialog = new Dialog(MainActivity.this,android.R.style.Theme_Translucent);
+     		     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+     				dialog.setContentView(R.layout.dialog_inform);
+     				
+     				// set the custom dialog components - text, image and button
+
+     				Button dialogButtone = (Button) dialog.findViewById(R.id.dialogButtonOK);
+     				TextView text1 = (TextView)dialog.findViewById(R.id.text);
+     				TextView textB = (TextView)dialog.findViewById(R.id.textBold);
+     				text1.setText(R.string.update_version);
+     				textB.setText(R.string.attention);
+     				
+     				dialogButtone.setTypeface(typefaceRoman);
+     				text1.setTypeface(typefaceRoman);
+     				textB.setTypeface(typefaceBold);
+     				// if button is clicked, close the custom dialog
+     				dialogButtone.setOnClickListener(new OnClickListener() {
+     					@Override
+     					public void onClick(View v) {
+     						dialog.dismiss();
+       						Intent intent = new Intent(Intent.ACTION_MAIN);
+    		            	intent.addCategory(Intent.CATEGORY_HOME);
+    		            	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    		            	startActivity(intent);
+     						 final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+     						  try {
+     						      startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("yastore://details?id=" + appPackageName)));
+     						  } catch (android.content.ActivityNotFoundException anfe) {
+     						      //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://khaydarov-studio.bl.ee/fineSettings/")));
+     						  }
+     				 	        	overridePendingTransition(center_to_left, center_to_left2);
+     				 	        	 }
+     					
+     				});
+     				dialog.show();
 	       }
 	        
 	       
@@ -2420,12 +2461,18 @@ SearchView.OnCloseListener, OnFocusChangeListener {
     	            if (versionCode >= Integer.parseInt(idd)){
 	    	            	//ImageView imageView2 = (ImageView) findViewById(R.id.imageView2);
 	    	            	//imageView2.setVisibility(View.VISIBLE);
+    	            	Editor e1 = mSettings.edit();
+			            e1.putBoolean(APP_PREFERENCES_UPDATE, false);
+			            e1.commit();
     	            }
 	    	            else {
 	    	            
 	    	            	ImageView imageView2 = (ImageView) findViewById(R.id.imageView2);
 	    	            	imageView2.setVisibility(View.VISIBLE);
 	    	            	VerIntent = 1;
+	    	            	Editor e1 = mSettings.edit();
+				            e1.putBoolean(APP_PREFERENCES_UPDATE, true);
+				            e1.commit(); // не забудьте подтвердить изменения
 	    	            }
     	            }
     	            catch (NumberFormatException e){

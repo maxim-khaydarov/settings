@@ -37,7 +37,7 @@
     <string name="button_update">Обновление ПО</string>
     <string name="autor">Maxim Khaydarov</string>
     <string name="what_news">Что нового?</string>
-    <string name="what_news_text3">- Обновление до iOS9 beta 5\nНовые возможности в пункте \"Обои\"\n- Обновление в пунктах \"Wi-Fi\" и \"Bluetooth\"\n- Исправление ошибок в тексте, графике и функциональности</string>
+    <string name="what_news_text3">- Обновление до iOS 9.1 beta 1\n- Новые возможности в пункте \"Обои\"\n- Обновление в пунктах \"Wi-Fi\" и \"Bluetooth\"\n- Исправление ошибок в тексте, графике и функциональности</string>
     <string name="button_license">Лицензия</string>
     <string name="license_my">Все права защищены. \nПриложение защищено авторским правом, и любое несанкционированное использование может повлечь нарушение законодательства об авторском праве.
 Размещение платной версии программы на любых ресурсах, кроме Яндекс.Store, запрещено. </string>
@@ -168,7 +168,7 @@
   	<string name="name_about">Имя устройства</string>
   	<string name="network_about">Сеть</string>
   	<string name="version_about">Версия</string>
-  	<string name="version_about_c">iOS 9.0 beta 5 (13A4254v)</string>
+  	<string name="version_about_c">iOS 9.1 beta 1 (13A4254v)</string>
   	<string name="serial_about">Серийный номер</string>
   	<string name="imei_about">IMEI</string>
   	<string name="phone_about">Номер телефона</string>
@@ -214,7 +214,7 @@
 	<string name="silence_call_disturb_text_always">Входящие звонки и уведомления будут заглушены при разблокированом и заблокированом экране.</string>
 	<string name="silence_call_disturb_text_lock">Входящие звонки и уведомления будут заглушены при заблокированом экране.</string>
 	<string name="proverka_ios">Проверка наличия обновления...</string>
-	<string name="proverka_ios_no">iOS 9.0\nУстановлено новейшее ПО</string>
+	<string name="proverka_ios_no">iOS 9.1\nУстановлено новейшее ПО</string>
 	<string name="proverka_ios_yes">Найдено новое ПО</string>
 	<string name="PO_aboout">Прошивка модема</string>
 	<string name="update_icloud">Нажмите для обновления данных</string>
@@ -298,6 +298,8 @@
 	<string name="time24">24-часовой формат</string>
 	<string name="auto_time">Автоматически</string>
 	<string name="time_zone">Часовой пояс</string>
+	
+	<string name="update_version">Вышла новая версия!\n Обновите приложение.</string>
 	
 </resources>
 
