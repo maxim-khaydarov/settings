@@ -5,8 +5,23 @@
         AppBaseTheme from BOTH res/values/styles.xml and
         res/values-v11/styles.xml on API 14+ devices.
     -->
-    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    <style name="AppBaseTheme" parent="@android:style/Theme.Holo">
         <!-- API 14 theme customizations can go here. -->
+        <item name="android:actionBarStyle">@style/MyActionBar2</item>
+          <item name="android:windowNoTitle">true</item> 
+        <item name="android:windowContentOverlay">@android:color/transparent</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+    
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- <item name="android:windowNoTitle">true</item>  -->
+        
+    </style>
+	
+     <style name="MyActionBar2" parent="android:style/Widget.Holo.ActionBar">
+        <item name="android:icon">@android:color/transparent</item>
+        <item name="android:background">#f8f8f8</item>
+        <item name="android:actionBarSize">40.0dip</item>
     </style>
 
 </resources>

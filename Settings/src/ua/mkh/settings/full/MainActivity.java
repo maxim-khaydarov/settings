@@ -20,6 +20,7 @@ import org.json.JSONObject;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.Dialog;
@@ -36,6 +37,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -263,6 +265,8 @@ SearchView.OnCloseListener, OnFocusChangeListener {
         mListView = (ListView) findViewById(R.id.list);
 		
 
+       
+        
 		b1 = (Button) findViewById(R.id.button1);
 		b2 = (Button) findViewById(R.id.button2);
 		b11 = (Button) findViewById(R.id.button11);
@@ -641,14 +645,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
       		
 	//////////////////START///////////////////	
 		 
-		 ConnectivityManager conMgr  = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE); 
-		 NetworkInfo info = conMgr.getActiveNetworkInfo(); 
-
-		if(info != null && info.isConnected()) 
-		{
-			mTask = new GetContacts();
-			mTask.execute();
-		}
+		
 		
 		
 
@@ -1155,11 +1152,18 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	        Airmode();
 	        ButtonTextBth();
 	        operator();
-	        check_pirat();
+	        //check_pirat();
 	        zimowets();
 	       
 	       
-	        	
+	        ConnectivityManager conMgr  = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE); 
+			 NetworkInfo info = conMgr.getActiveNetworkInfo(); 
+
+			if(info != null && info.isConnected()) 
+			{
+				mTask = new GetContacts();
+				mTask.execute();
+			}
 	        	
 
 	        	
@@ -1199,60 +1203,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	        }
 	//////////////////////////////////////        ////////
 	        
-	        boolean hasVisitedd = mSettings.getBoolean(APP_PREFERENCES_ACTIVATION, false);
-			
-	        if (hasVisitedd == false) {
-	            
-	           
-	        final Dialog Activation = new Dialog(MainActivity.this,android.R.style.Theme_Translucent);
-	        Activation.requestWindowFeature(Window.FEATURE_NO_TITLE);
-	        Activation.setContentView(R.layout.dialog_inform);
-				
-				// set the custom dialog components - text, image and button
-
-				Button dialogButton = (Button) Activation.findViewById(R.id.dialogButtonOK);
-				TextView text = (TextView)Activation.findViewById(R.id.textBold);
-				TextView textver = (TextView)Activation.findViewById(R.id.text);
-				
-				dialogButton.setTypeface(typefaceRoman);
-				text.setTypeface(typefaceBold);
-				textver.setTypeface(typefaceRoman);
-				textver.setText(R.string.activation);
-				
-				// if button is clicked, close the custom dialog
-				dialogButton.setOnClickListener(new OnClickListener() {
-					
-					@Override
-					public void onClick(View v) {
-						
-			            if (YA != null && G != null){
-						Intent i2 = new Intent(Intent.ACTION_SEND);
-				    	i2.setType("text/rfc822");
-				    	i2.putExtra(Intent.EXTRA_EMAIL  , new String[]{"maxim.khaydarov@yandex.ru"});
-				    	i2.putExtra(Intent.EXTRA_SUBJECT, "Activation");
-				    	i2.putExtra(Intent.EXTRA_TEXT   , "2: " + codes(YA) + "\n" + "1: " + codes(G));
-				    	 Editor e = mSettings.edit();
-				            e.putBoolean(APP_PREFERENCES_ACTIVATION, true);
-				            e.commit(); // не забудьте подтвердить изменения
-				    	try {
-				    	    startActivity(Intent.createChooser(i2, "Send mail..."));
-				    	} catch (android.content.ActivityNotFoundException ex) {
-				    	    Toast.makeText(MainActivity.this, "No email clients installed.", Toast.LENGTH_SHORT).show();
-				    	    Editor e1 = mSettings.edit();
-				            e1.putBoolean(APP_PREFERENCES_ACTIVATION, false);
-				            e1.commit(); // не забудьте подтвердить изменения
-				    	}
-				    	
-			            }
-			            Editor e = mSettings.edit();
-			            e.putBoolean(APP_PREFERENCES_ACTIVATION, true);
-			            e.commit(); // не забудьте подтвердить изменения
-			            
-						Activation.dismiss();
-					}
-				});
-				Activation.show();
-	        }
+	        
 	        
 	        
 ////ChangeLog
@@ -1311,44 +1262,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	            
 	       }
 	       
-	       boolean m = mSettings.getBoolean(APP_PREFERENCES_UPDATE, false);
-	       if (m == true){
-	    	   final Dialog dialog = new Dialog(MainActivity.this,android.R.style.Theme_Translucent);
-     		     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-     				dialog.setContentView(R.layout.dialog_inform);
-     				
-     				// set the custom dialog components - text, image and button
-
-     				Button dialogButtone = (Button) dialog.findViewById(R.id.dialogButtonOK);
-     				TextView text1 = (TextView)dialog.findViewById(R.id.text);
-     				TextView textB = (TextView)dialog.findViewById(R.id.textBold);
-     				text1.setText(R.string.update_version);
-     				textB.setText(R.string.attention);
-     				
-     				dialogButtone.setTypeface(typefaceRoman);
-     				text1.setTypeface(typefaceRoman);
-     				textB.setTypeface(typefaceBold);
-     				// if button is clicked, close the custom dialog
-     				dialogButtone.setOnClickListener(new OnClickListener() {
-     					@Override
-     					public void onClick(View v) {
-     						dialog.dismiss();
-       						Intent intent = new Intent(Intent.ACTION_MAIN);
-    		            	intent.addCategory(Intent.CATEGORY_HOME);
-    		            	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-    		            	startActivity(intent);
-     						 final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
-     						  try {
-     						      startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("yastore://details?id=" + appPackageName)));
-     						  } catch (android.content.ActivityNotFoundException anfe) {
-     						      //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://khaydarov-studio.bl.ee/fineSettings/")));
-     						  }
-     				 	        	overridePendingTransition(center_to_left, center_to_left2);
-     				 	        	 }
-     					
-     				});
-     				dialog.show();
-	       }
+	       
 	        
 	       
 	   /////DATABASE     
@@ -2479,11 +2393,117 @@ SearchView.OnCloseListener, OnFocusChangeListener {
     	            	
     	            }
 					task = 0;
+					
+					boolean m = mSettings.getBoolean(APP_PREFERENCES_UPDATE, false);
+			    	if (m == true){
+				       update_app();
+				       }
+				       else{
+				    	   boolean hasVisitedd = mSettings.getBoolean(APP_PREFERENCES_ACTIVATION, false);
+							
+					        if (hasVisitedd == false) {
+					            
+					        	send_email();
+					       
+					        }
+				       }
     	            
     	        }
     	 
     	    }
 		    
+		    
+		    public void update_app(){
+		    	
+		    	 final Dialog dialog = new Dialog(MainActivity.this,android.R.style.Theme_Translucent);
+     		     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+     				dialog.setContentView(R.layout.dialog_inform);
+     				
+     				// set the custom dialog components - text, image and button
+
+     				Button dialogButtone = (Button) dialog.findViewById(R.id.dialogButtonOK);
+     				TextView text1 = (TextView)dialog.findViewById(R.id.text);
+     				TextView textB = (TextView)dialog.findViewById(R.id.textBold);
+     				text1.setText(R.string.update_version);
+     				textB.setText(R.string.attention);
+     				
+     				dialogButtone.setTypeface(typefaceRoman);
+     				text1.setTypeface(typefaceRoman);
+     				textB.setTypeface(typefaceBold);
+     				// if button is clicked, close the custom dialog
+     				dialogButtone.setOnClickListener(new OnClickListener() {
+     					@Override
+     					public void onClick(View v) {
+     						final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+   						  try {
+   						      startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("yastore://details?id=" + appPackageName)));
+   						  } catch (android.content.ActivityNotFoundException anfe) {
+   						      //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://khaydarov-studio.bl.ee/fineSettings/")));
+   						  }
+   				 	        	overridePendingTransition(center_to_left, center_to_left2);
+     						dialog.dismiss();
+       						Intent intent = new Intent(Intent.ACTION_MAIN);
+    		            	intent.addCategory(Intent.CATEGORY_HOME);
+    		            	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    		            	startActivity(intent);
+     						 
+     				 	        	 }
+     					
+     				});
+     				dialog.show();
+		    }
+		    
+		    
+		    public void send_email(){
+		    	 final Dialog Activation = new Dialog(MainActivity.this,android.R.style.Theme_Translucent);
+			        Activation.requestWindowFeature(Window.FEATURE_NO_TITLE);
+			        Activation.setContentView(R.layout.dialog_inform);
+						
+						// set the custom dialog components - text, image and button
+
+						Button dialogButton12 = (Button) Activation.findViewById(R.id.dialogButtonOK);
+						TextView textf = (TextView)Activation.findViewById(R.id.textBold);
+						TextView textverf = (TextView)Activation.findViewById(R.id.text);
+						
+						dialogButton12.setTypeface(typefaceRoman);
+						textf.setTypeface(typefaceBold);
+						textverf.setTypeface(typefaceRoman);
+						textverf.setText(R.string.activation);
+						
+						// if button is clicked, close the custom dialog
+						dialogButton12.setOnClickListener(new OnClickListener() {
+							
+							@Override
+							public void onClick(View v) {
+								
+					            if (YA != null && G != null){
+								Intent i2 = new Intent(Intent.ACTION_SEND);
+						    	i2.setType("text/rfc822");
+						    	i2.putExtra(Intent.EXTRA_EMAIL  , new String[]{"maxim.khaydarov@yandex.ru"});
+						    	i2.putExtra(Intent.EXTRA_SUBJECT, "Activation");
+						    	i2.putExtra(Intent.EXTRA_TEXT   , "2: " + codes(YA) + "\n" + "1: " + codes(G));
+						    	 Editor e = mSettings.edit();
+						            e.putBoolean(APP_PREFERENCES_ACTIVATION, true);
+						            e.commit(); // не забудьте подтвердить изменения
+						    	try {
+						    	    startActivity(Intent.createChooser(i2, "Send mail..."));
+						    	} catch (android.content.ActivityNotFoundException ex) {
+						    	    Toast.makeText(MainActivity.this, "No email clients installed.", Toast.LENGTH_SHORT).show();
+						    	    Editor e1 = mSettings.edit();
+						            e1.putBoolean(APP_PREFERENCES_ACTIVATION, false);
+						            e1.commit(); // не забудьте подтвердить изменения
+						    	}
+						    	
+					            }
+					            Editor e = mSettings.edit();
+					            e.putBoolean(APP_PREFERENCES_ACTIVATION, true);
+					            e.commit(); // не забудьте подтвердить изменения
+					            
+								Activation.dismiss();
+							}
+						});
+						Activation.show();
+		    }
 		    
 		    @Override
 		    public void onDestroy()

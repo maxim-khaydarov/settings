@@ -8,4 +8,9 @@
         <!-- API 11 theme customizations can go here. -->
     </style>
 
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowNoTitle">true</item> 
+    </style>
+	
+   
 </resources>
