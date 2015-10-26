@@ -40,7 +40,7 @@ import android.widget.ToggleButton;
 
 public class ActivityOsnova extends Activity implements OnClickListener, SimpleGestureListener{
 
-	Button btn_back, btn_info, Button02, Button01, Button03, Button04, Button05, Button07, Button08,
+	Button btn_back, btn_info, Button02, Button01, Button03, Button04, Button05, Button06, Button07, Button08,
 	btn_setup_app, Button09, Button10, Button11, Button12, Button13;
 	TextView textStatus, textView1, textView2, textView3, textView4, textView5, textView6,
 	textView7, textView8, textView9, textView10, textView11, textView12, textView13, textView14,
@@ -174,7 +174,8 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 			 Button04 = (Button)findViewById(R.id.Button04);
 			 Button04.setOnClickListener(this);
 			 
-			 
+			 Button06 = (Button)findViewById(R.id.Button06);
+			 Button06.setOnClickListener(this);
 			 
 			 Button07 = (Button)findViewById(R.id.Button07);
 			 Button07.setOnClickListener(this);
@@ -236,6 +237,7 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 		     Button03.setTypeface(typefaceRoman);
 		     Button04.setTypeface(typefaceRoman);
 		     Button05.setTypeface(typefaceRoman);
+		     Button06.setTypeface(typefaceRoman);
 		     Button07.setTypeface(typefaceRoman);
 		     Button08.setTypeface(typefaceRoman);
 		     Button09.setTypeface(typefaceRoman);
@@ -668,8 +670,8 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 	  	        	overridePendingTransition(center_to_left, center_to_left2);
 	  	        	 }
 	    	else  if (id == R.id.Button06){
-	        	Intent intent = new Intent(this, ActivityApps.class);
-	        	 startActivity(intent);
+	    		Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
+	    		startActivity(intent);
 	  	        	overridePendingTransition(center_to_left, center_to_left2);
 	  	        	 }
 	    	else  if (id == R.id.Button05){

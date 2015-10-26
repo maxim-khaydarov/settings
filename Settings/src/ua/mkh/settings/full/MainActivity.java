@@ -2119,7 +2119,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
         			
         		}
         		else{
-		    	if (isStoreVersion(this) == null){
+		    	if (!isStoreVersion(this).contains("com.yandex.store")){
 		        	 //Toast.makeText(getApplication(), "NOT YANDEX", Toast.LENGTH_LONG).show();
 		        	 
 		        	 final Dialog dialog = new Dialog(MainActivity.this,android.R.style.Theme_Translucent);
@@ -2151,8 +2151,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	       				dialog.show();
 	       				
 		         }
-		         else if (isStoreVersion(this).contains("com.yandex.store")){
-		         }
+		         
         		}
 		    }
 		    

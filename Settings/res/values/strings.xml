@@ -74,7 +74,7 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
     <string name="hsupa">HSUPA</string>
     <string name="iden">iDen</string>
     <string name="lte">LTE</string>
-    <string name="umts">UMTS</string>
+    <string name="umts">3G</string>
     <string name="unknown">Unknown</string>
     <string name="hsdpa">HSDPA</string>
     <string name="button_enable_data">Cellular Data</string>
@@ -300,6 +300,8 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
 	<string name="time24">24-Hour Time</string>
 	<string name="auto_time">Set Automatically</string>
 	<string name="time_zone">Time Zone</string>
+	
+	<string name="accessibility">Accessibility</string>
 
 </resources>
 

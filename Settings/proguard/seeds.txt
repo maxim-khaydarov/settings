@@ -1240,11 +1240,11 @@ ua.mkh.settings.full.ActivityAbout
 ua.mkh.settings.full.ActivityAbout: ActivityAbout()
 ua.mkh.settings.full.ActivityAbout: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityAbout: void BackClick(android.view.View)
+ua.mkh.settings.full.ActivityAbout$1: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityAbout$2: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityAbout$3: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityAbout$4: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityAbout$5: void onClick(android.view.View)
-ua.mkh.settings.full.ActivityAbout$6: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityAllowDisturb
 ua.mkh.settings.full.ActivityAllowDisturb: ActivityAllowDisturb()
 ua.mkh.settings.full.ActivityAllowDisturb: void onClick(android.view.View)
@@ -1253,8 +1253,6 @@ ua.mkh.settings.full.ActivityAllowDisturb$1: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityAllowDisturb$2: void onClick(android.view.View)
 ua.mkh.settings.full.ActivityApps
 ua.mkh.settings.full.ActivityApps: ActivityApps()
-ua.mkh.settings.full.ActivityApps: void DelClick(android.view.View)
-ua.mkh.settings.full.ActivityApps: void CancelClick(android.view.View)
 ua.mkh.settings.full.ActivityApps: void BackClick(android.view.View)
 ua.mkh.settings.full.ActivityAppsCompass
 ua.mkh.settings.full.ActivityAppsCompass: ActivityAppsCompass()
@@ -1437,6 +1435,12 @@ ua.mkh.settings.full.ActivitySetRingtone: void BackClick(android.view.View)
 ua.mkh.settings.full.ActivitySetRingtone: void BackClick()
 ua.mkh.settings.full.ActivitySetRingtone$2: void onClick(android.view.View)
 ua.mkh.settings.full.ActivitySetRingtone$3: void onClick(android.view.View)
+ua.mkh.settings.full.ActivitySetTime
+ua.mkh.settings.full.ActivitySetTime: ActivitySetTime()
+ua.mkh.settings.full.ActivitySetTime: void BackClick(android.view.View)
+ua.mkh.settings.full.ActivitySetTime: void onClick(android.view.View)
+ua.mkh.settings.full.ActivitySetTime$4: void onClick(android.view.View)
+ua.mkh.settings.full.ActivitySetTime$5: void onClick(android.view.View)
 ua.mkh.settings.full.ActivitySota
 ua.mkh.settings.full.ActivitySota: ActivitySota()
 ua.mkh.settings.full.ActivitySota: void onClick(android.view.View)
@@ -1553,6 +1557,7 @@ ua.mkh.settings.full.R$anim: int slide_center_to_right2_short
 ua.mkh.settings.full.R$anim: int slide_center_to_right_long
 ua.mkh.settings.full.R$anim: int slide_center_to_right_medium
 ua.mkh.settings.full.R$anim: int slide_center_to_right_short
+ua.mkh.settings.full.R$array: int month
 ua.mkh.settings.full.R$attr: int adSize
 ua.mkh.settings.full.R$attr: int adSizes
 ua.mkh.settings.full.R$attr: int adUnitId
@@ -1777,6 +1782,7 @@ ua.mkh.settings.full.R$drawable: int styled_progress
 ua.mkh.settings.full.R$drawable: int sun_down
 ua.mkh.settings.full.R$drawable: int sun_on
 ua.mkh.settings.full.R$drawable: int sync
+ua.mkh.settings.full.R$drawable: int telegram
 ua.mkh.settings.full.R$drawable: int twitter
 ua.mkh.settings.full.R$drawable: int u1
 ua.mkh.settings.full.R$drawable: int u2
@@ -1991,6 +1997,7 @@ ua.mkh.settings.full.R$id: int ImageView96
 ua.mkh.settings.full.R$id: int ImageView97
 ua.mkh.settings.full.R$id: int ImageView98
 ua.mkh.settings.full.R$id: int ImageView99
+ua.mkh.settings.full.R$id: int ImageViewCenter
 ua.mkh.settings.full.R$id: int LayoutMain
 ua.mkh.settings.full.R$id: int LinearLayour122
 ua.mkh.settings.full.R$id: int LinearLayout01
@@ -2159,6 +2166,7 @@ ua.mkh.settings.full.R$id: int buy_with_google
 ua.mkh.settings.full.R$id: int cast_notification_id
 ua.mkh.settings.full.R$id: int classic
 ua.mkh.settings.full.R$id: int data
+ua.mkh.settings.full.R$id: int day
 ua.mkh.settings.full.R$id: int devicesfound
 ua.mkh.settings.full.R$id: int dialogButtonCancel
 ua.mkh.settings.full.R$id: int dialogButtonClean
@@ -2214,10 +2222,12 @@ ua.mkh.settings.full.R$id: int main
 ua.mkh.settings.full.R$id: int mainLayout
 ua.mkh.settings.full.R$id: int match_parent
 ua.mkh.settings.full.R$id: int menu_about
+ua.mkh.settings.full.R$id: int min
 ua.mkh.settings.full.R$id: int mins
 ua.mkh.settings.full.R$id: int mins1
 ua.mkh.settings.full.R$id: int mins2
 ua.mkh.settings.full.R$id: int monochrome
+ua.mkh.settings.full.R$id: int month
 ua.mkh.settings.full.R$id: int music
 ua.mkh.settings.full.R$id: int nameBT
 ua.mkh.settings.full.R$id: int none
@@ -2294,6 +2304,7 @@ ua.mkh.settings.full.R$id: int up
 ua.mkh.settings.full.R$id: int vibrationtoggle
 ua.mkh.settings.full.R$id: int voice
 ua.mkh.settings.full.R$id: int wrap_content
+ua.mkh.settings.full.R$id: int year
 ua.mkh.settings.full.R$integer: int google_play_services_version
 ua.mkh.settings.full.R$layout: int activity_about
 ua.mkh.settings.full.R$layout: int activity_allow_call
@@ -2317,6 +2328,7 @@ ua.mkh.settings.full.R$layout: int activity_operator
 ua.mkh.settings.full.R$layout: int activity_osnova
 ua.mkh.settings.full.R$layout: int activity_paired_devices
 ua.mkh.settings.full.R$layout: int activity_set_ringtone
+ua.mkh.settings.full.R$layout: int activity_set_time
 ua.mkh.settings.full.R$layout: int activity_settings
 ua.mkh.settings.full.R$layout: int activity_setwall
 ua.mkh.settings.full.R$layout: int activity_sota
@@ -2384,6 +2396,7 @@ ua.mkh.settings.full.R$string: int attention
 ua.mkh.settings.full.R$string: int auth_google_play_services_client_facebook_display_name
 ua.mkh.settings.full.R$string: int auth_google_play_services_client_google_display_name
 ua.mkh.settings.full.R$string: int auto
+ua.mkh.settings.full.R$string: int auto_time
 ua.mkh.settings.full.R$string: int autor
 ua.mkh.settings.full.R$string: int autorotation_text
 ua.mkh.settings.full.R$string: int back
@@ -2638,6 +2651,8 @@ ua.mkh.settings.full.R$string: int text_size
 ua.mkh.settings.full.R$string: int text_size_text
 ua.mkh.settings.full.R$string: int text_size_top
 ua.mkh.settings.full.R$string: int three_g_info
+ua.mkh.settings.full.R$string: int time24
+ua.mkh.settings.full.R$string: int time_zone
 ua.mkh.settings.full.R$string: int timeout
 ua.mkh.settings.full.R$string: int timeout_text
 ua.mkh.settings.full.R$string: int top_low_mode_dialog

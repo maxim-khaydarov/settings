@@ -300,6 +300,7 @@
 	<string name="time_zone">Часовой пояс</string>
 	
 	<string name="update_version">Вышла новая версия!\n Обновите приложение.</string>
+	<string name="accessibility">Универсальный доступ</string>
 	
 </resources>
 

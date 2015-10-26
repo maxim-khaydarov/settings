@@ -7487,7 +7487,6 @@ kankan.wheel.widget.adapters.AbstractWheelTextAdapter:
     99:99:public int getTextColor()
     107:108:public void setTextColor(int)
     115:115:public int getTextSize()
-    123:124:public void setTextSize(int)
     131:131:public int getItemResource()
     139:140:public void setItemResource(int)
     147:147:public int getItemTextResource()
@@ -7495,7 +7494,6 @@ kankan.wheel.widget.adapters.AbstractWheelTextAdapter:
     163:163:public int getEmptyItemResource()
     171:172:public void setEmptyItemResource(int)
 kankan.wheel.widget.adapters.AdapterWheel
-kankan.wheel.widget.adapters.ArrayWheelAdapter
 kankan.wheel.widget.adapters.NumericWheelAdapter:
     public static final int DEFAULT_MAX_VALUE
     private static final int DEFAULT_MIN_VALUE
@@ -7505,6 +7503,7 @@ ua.mkh.settings.full.AbstractGetNameTask:
 ua.mkh.settings.full.ActivityAbout:
     java.lang.String IMEI
     java.lang.String serialNumber
+    java.lang.String address
     public static final java.lang.String APP_PREFERENCES
     public static final java.lang.String APP_PREFERENCES_text_size
     public static final java.lang.String APP_PREFERENCES_bold_text
@@ -7522,9 +7521,13 @@ ua.mkh.settings.full.ActivityAllowDisturb:
     private android.widget.RadioButton always
     private android.widget.RadioButton locked
 ua.mkh.settings.full.ActivityApps:
-    android.widget.Button buttondel
     public static final java.lang.String APP_PREFERENCES
     public static final java.lang.String APP_PREFERENCES_ANIM_SPEED
+    public static final java.lang.String APP_PREFERENCES_text_size
+    public static final java.lang.String APP_PREFERENCES_bold_text
+    android.graphics.Typeface typefaceRoman
+    android.graphics.Typeface typefaceMedium
+    android.graphics.Typeface typefaceThin
 ua.mkh.settings.full.ActivityAppsCompass:
     public static final java.lang.String APP_PREFERENCES
     public static final java.lang.String APP_PREFERENCES_COMPASS
@@ -7849,6 +7852,13 @@ ua.mkh.settings.full.ActivitySetRingtone:
     public static final java.lang.String APP_PREFERENCES_tgb_menu
     200:207:public void playSong(int)
     324:336:private void CopyRAWtoSDCard(int,java.lang.String)
+ua.mkh.settings.full.ActivitySetTime:
+    public static final java.lang.String APP_PREFERENCES
+    public static final java.lang.String APP_PREFERENCES_text_size
+    public static final java.lang.String APP_PREFERENCES_bold_text
+    public static final java.lang.String APP_PREFERENCES_ANIM_SPEED
+    public static final java.lang.String APP_PREFERENCES_tgb_menu
+    48:48:static synthetic boolean access$0(ua.mkh.settings.full.ActivitySetTime)
 ua.mkh.settings.full.ActivitySota:
     android.widget.ToggleButton tb_roum
     android.widget.ToggleButton tb_3g
@@ -7892,6 +7902,11 @@ ua.mkh.settings.full.ActivityVPN:
     public static final java.lang.String APP_PREFERENCES_ANIM_SPEED
     public static final java.lang.String APP_PREFERENCES_tgb_menu
 ua.mkh.settings.full.ActivityWifi:
+    android.widget.TextView txtPercentage
+    android.widget.TextView textView3
+    android.widget.TextView textView4
+    android.widget.TextView textView5
+    android.widget.TextView textView6
     android.widget.Button Button04
     android.widget.TableLayout tableLayout
     public static final java.lang.String APP_PREFERENCES
@@ -8113,11 +8128,15 @@ ua.mkh.settings.full.MainActivity:
     android.view.animation.Animation animationFalling
     android.widget.LinearLayout ll11
     java.lang.String base
-    2737:2756:public static void setListViewHeightBasedOnChildren(android.widget.ListView)
+    2159:2202:public void check_pirat()
+    2205:2212:public static java.lang.String isStoreVersion(android.content.Context)
+    2750:2769:public static void setListViewHeightBasedOnChildren(android.widget.ListView)
+ua.mkh.settings.full.MainActivity$10
 ua.mkh.settings.full.Person
 ua.mkh.settings.full.R:
     10:10:public R()
 ua.mkh.settings.full.R$anim
+ua.mkh.settings.full.R$array
 ua.mkh.settings.full.R$attr
 ua.mkh.settings.full.R$color
 ua.mkh.settings.full.R$dimen
@@ -8130,7 +8149,7 @@ ua.mkh.settings.full.R$raw
 ua.mkh.settings.full.R$string
 ua.mkh.settings.full.R$style
 ua.mkh.settings.full.R$styleable:
-    1688:1688:public R$styleable()
+    1701:1701:public R$styleable()
 ua.mkh.settings.full.ServiceHandler:
     public static final int GET
     public static final int POST

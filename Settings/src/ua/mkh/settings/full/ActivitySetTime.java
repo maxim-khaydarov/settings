@@ -50,7 +50,7 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 	   int center_to_right, center_to_right2;
 	   int center_to_left, center_to_left2;
 	   
-	   Button btn_back, date, Button01, Button02, Button03;
+	   Button btn_back, date, Button01, Button02, Button03, ButtonSave;
 	   TextView  textStatus;
 	   ToggleButton tg24, tgAuto;
 	   RelativeLayout timerPic;
@@ -89,6 +89,9 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 			 Button01 = (Button) findViewById(R.id.Button01);
 			 Button02 = (Button) findViewById(R.id.Button02);
 			 Button03 = (Button) findViewById(R.id.Button03);
+			 ButtonSave = (Button) findViewById(R.id.buttonSave);
+			 ButtonSave.setVisibility(View.INVISIBLE);
+			 
 			 timerPic = (RelativeLayout) findViewById(R.id.RelativeLayout2);
 			 date.setOnClickListener(this);
 			 tg24 = (ToggleButton) findViewById(R.id.rotatetoggle);
@@ -106,7 +109,7 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 			    Button02.setTypeface(typefaceRoman);
 			    Button03.setTypeface(typefaceRoman);
 			    date.setTypeface(typefaceRoman);
-			    
+			    ButtonSave.setTypeface(typefaceMedium);
 			    
 			    
 			    
@@ -144,6 +147,7 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 				OnWheelScrollListener scrollListener1 = new OnWheelScrollListener() {
 					public void onScrollingStarted(WheelView wheel) {
 						timeScrolled = true;
+						ButtonSave.setVisibility(View.VISIBLE);
 					}
 					public void onScrollingFinished(WheelView wheel) {
 						//timeScrolled = false;
@@ -188,7 +192,7 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 						date.setText(d + " " + mo + " " + y + "                  " + h + ":" + m);
 						Log.d("SEND TIME", d+" "+mo0+" "+y+"-"+h+":"+m);
 						//changeSystemTime(y, mo0, d, h, m, "30");
-						changeSystemTime("2015","04","06","13","09","30");
+						//changeSystemTime("2015","04","06","13","09","30");
 						
 					}
 				};
@@ -490,50 +494,7 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 		    }*/
 		}
 	    
-	    @Override
-	    public void onPause() {
-	        super.onPause();  // Always call the superclass method first
-
-	        if(timeScrolled){
-	        	String h = "";
-				if (hour.getCurrentItem() < 10){
-					h = "0" + String.valueOf(hour.getCurrentItem());
-				}
-				else{
-					h = String.valueOf(hour.getCurrentItem());
-				}
-	        	String m = "";
-				if (min.getCurrentItem() < 10){
-					m = "0" + String.valueOf(min.getCurrentItem());
-				}
-				else{
-					m = String.valueOf(min.getCurrentItem());
-				}
-				
-				String d = "";
-				if (day.getCurrentItem() + 1 < 10){
-					d = "0" + String.valueOf(day.getCurrentItem() + 1);
-				}
-				else{
-				d = String.valueOf(day.getCurrentItem() + 1);
-				} 
-				
-				String y = String.valueOf(year.getCurrentItem() - 30 + 2000);
-				String mo = "";
-				if(month.getCurrentItem() + 1 < 10){
-					mo = "0" + String.valueOf(month.getCurrentItem() + 1);
-				}
-				else{
-				mo = String.valueOf(month.getCurrentItem() + 1);
-				}
-				
-	        	changeSystemTime(y, mo, d, h, m, "00");
-				//changeSystemTime("2015","04","06","13","09","30");
-	        	timeScrolled = false;
-	        	
-	        	Log.e("TIME SEND", h + ":" + m + "  " + d + "-" + mo + "-" + y);
-	        }
-	    }
+	   
 	    
 	    
 	    public void checkAUTOtime(){
@@ -589,6 +550,53 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 	    
 	    public void BackClick(View v)  
 	    {  
+	   	 Intent intent18 = new Intent(this, ActivityOsnova.class);
+	         	 startActivity(intent18);
+
+	   		overridePendingTransition(center_to_right, center_to_right2);
+	   	 }
+	    
+	    public void SaveClick(View v)  
+	    {  
+	    	if(timeScrolled){
+	        	String h = "";
+				if (hour.getCurrentItem() < 10){
+					h = "0" + String.valueOf(hour.getCurrentItem());
+				}
+				else{
+					h = String.valueOf(hour.getCurrentItem());
+				}
+	        	String m = "";
+				if (min.getCurrentItem() < 10){
+					m = "0" + String.valueOf(min.getCurrentItem());
+				}
+				else{
+					m = String.valueOf(min.getCurrentItem());
+				}
+				
+				String d = "";
+				if (day.getCurrentItem() + 1 < 10){
+					d = "0" + String.valueOf(day.getCurrentItem() + 1);
+				}
+				else{
+				d = String.valueOf(day.getCurrentItem() + 1);
+				} 
+				
+				String y = String.valueOf(year.getCurrentItem() - 30 + 2000);
+				String mo = "";
+				if(month.getCurrentItem() + 1 < 10){
+					mo = "0" + String.valueOf(month.getCurrentItem() + 1);
+				}
+				else{
+				mo = String.valueOf(month.getCurrentItem() + 1);
+				}
+				
+	        	changeSystemTime(y, mo, d, h, m, "00");
+				//changeSystemTime("2015","04","06","13","09","30");
+	        	timeScrolled = false;
+	        	
+	        	Log.e("TIME SEND", h + ":" + m + "  " + d + "-" + mo + "-" + y);
+	    	}
 	   	 Intent intent18 = new Intent(this, ActivityOsnova.class);
 	         	 startActivity(intent18);
 

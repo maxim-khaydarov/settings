@@ -300,6 +300,8 @@
 	<string name="auto_time">Автоматично</string>
 	<string name="time_zone">Часовий пояс</string>
 	
+	<string name="accessibility">Універсальний доступ</string>
+	
 </resources>
 
 
