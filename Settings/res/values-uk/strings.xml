@@ -77,8 +77,10 @@
     <string name="unknown">Unknown</string>
     <string name="hsdpa">HSDPA</string>
     <string name="button_enable_data">Cтільникові дані</string>
-    <string name="three_g_info">При використанні 3G дані завантажуються швидше, але час роботи акумулятора може зменшитись.</string>
-    <string name="button_network_type">Тип мережі</string>
+    <string name="three_g_info">Вимкніть передачу стільникових даних, щоб обмежитися передачею даних лише по Wi-Fi, включаючи e-mail, перегляд веб-сторінок і push-повідомлень.</string>
+    <string name="button_network_type">Голос та данні</string>
+    <string name="roaming">Роумінг даних</string>
+    <string name="apn_settings">Стільникова мережа передачі даних</string>
     <string name="network_type_info">Показ типу мережі не відображається в авіарежимі.</string>
     <string name="no_connections">Немає підключення</string>
     <string name="connection">Підключення</string>

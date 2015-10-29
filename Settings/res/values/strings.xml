@@ -78,8 +78,10 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
     <string name="unknown">Unknown</string>
     <string name="hsdpa">HSDPA</string>
     <string name="button_enable_data">Cellular Data</string>
-    <string name="three_g_info">When using 3G data loaded faster, but the battery life may be impaired.</string>
-    <string name="button_network_type">Network type</string>
+    <string name="three_g_info">Turn off cellular data to restrict all data to Wi-Fi, including email, web browsing, and push notification. Using LTE loads data faster.</string>
+    <string name="button_network_type">Voice &amp; Data</string>
+    <string name="roaming">Data Roaming</string>
+    <string name="apn_settings">Cellular Data Network</string>
     <string name="network_type_info">Showing the type of network does not appear in airplane mode.</string>
     <string name="no_connections">No connection</string>
     <string name="connection">Connect</string>

@@ -24,6 +24,8 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
+import android.telephony.PhoneStateListener;
+import android.telephony.ServiceState;
 import android.telephony.TelephonyManager;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -41,7 +43,7 @@ public class ActivitySota extends Activity implements OnClickListener, SimpleGes
 	ConnectivityManager dataManager;
 	Method dataMtd = null;
 	TelephonyManager manager;
-	Button Button01, Button02, btn_back, Button03;
+	Button Button01, Button02, btn_back, Button03, Button04;
 	TextView textView1, textView2, textStatus, type;
 	Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 	
@@ -79,14 +81,17 @@ public class ActivitySota extends Activity implements OnClickListener, SimpleGes
 			
 			
 			textView2 = (TextView)findViewById(R.id.textView02);
-			textView1 = (TextView)findViewById(R.id.textView1);
+			//textView1 = (TextView)findViewById(R.id.textView1);
 	        tb_data = (ToggleButton) findViewById(R.id.soundtoggle);
 	        tb_data.setOnClickListener(this);
+	        tb_roum = (ToggleButton) findViewById(R.id.ToggleButton01);
+	        
 	        
 	        Button01 = (Button)findViewById(R.id.Button01);
 	        Button02 = (Button)findViewById(R.id.Button02);
 	        Button03 = (Button)findViewById(R.id.Button03);
 	        Button03.setOnClickListener(this);
+	        Button04 = (Button)findViewById(R.id.Button04);
 	        
 	        textStatus = (TextView)findViewById(R.id.textOk);
 	        type = (TextView)findViewById(R.id.textView007);
@@ -97,10 +102,11 @@ public class ActivitySota extends Activity implements OnClickListener, SimpleGes
 	        btn_back.setTypeface(typefaceMedium);
 	        
 	        textView2.setTypeface(typefaceRoman);
-	        textView1.setTypeface(typefaceRoman);
+	        //textView1.setTypeface(typefaceRoman);
 	        Button01.setTypeface(typefaceRoman);
 	        Button02.setTypeface(typefaceRoman);
 	        Button03.setTypeface(typefaceRoman);
+	        Button04.setTypeface(typefaceRoman);
 	        type.setTypeface(typefaceRoman);
 }
 	  
@@ -145,6 +151,7 @@ public class ActivitySota extends Activity implements OnClickListener, SimpleGes
 	        super.onResume();
 	       ButtonData();
 	       state();
+	       check_roum();
 	       
 	       if (mSettings.contains(APP_PREFERENCES_tgb_menu)) {
 				// Получаем число из настроек
@@ -232,7 +239,29 @@ public class ActivitySota extends Activity implements OnClickListener, SimpleGes
 	       }
 	       
 	    }
-	  private void ButtonData () {
+	  private void check_roum() {
+		  final TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+	        PhoneStateListener phoneStateListener = new PhoneStateListener() {
+	            @Override
+	            public void onServiceStateChanged(ServiceState serviceState) {
+	                super.onServiceStateChanged(serviceState);
+	                if (telephonyManager.isNetworkRoaming()) {
+	                   tb_roum.setChecked(true);
+	                } else {
+	                    // Not in Roaming
+	                }
+	                // You can also check roaming state using this
+	                if (serviceState.getRoaming()) {
+	                	 tb_roum.setChecked(true);
+	                } else {
+	                    // Not in Roaming
+	                }
+	            }
+	        };
+		
+	}
+
+	private void ButtonData () {
 	    	dataManager  = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
 	    	android.net.NetworkInfo mobile = dataManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
 	    	if (mobile.isAvailable() && mobile.getDetailedState() == DetailedState.CONNECTED) {

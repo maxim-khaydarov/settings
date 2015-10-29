@@ -14,7 +14,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="5sp"
-            android:text="NAME" />
+            android:text="NAME"
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/sname"
@@ -22,7 +23,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/scustomer"
-            android:text="Adress" />
+            android:text="Adress"
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/saddress"

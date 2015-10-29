@@ -74,8 +74,10 @@
     <string name="unknown">Unknown</string>
     <string name="hsdpa">HSDPA</string>
     <string name="button_enable_data">Сотовые данные</string>
-    <string name="three_g_info">При использовании 3G данные загружаются быстрее, но время действия аккумулятора может сократиться.</string>
-    <string name="button_network_type">Тип сети</string>
+    <string name="apn_settings">Сотовая сеть передачи данных</string>
+    <string name="three_g_info">Выключите передачу сотовых данных, чтобы ограничиться передачей данных лишь по Wi-Fi, включая e-mail, просмотр веб-страниц и push-уведомлений.</string>
+    <string name="button_network_type">Голос и данные</string>
+    <string name="roaming">Роуминг данных</string>
     <string name="network_type_info">Отображение типа сети не доступно в авиарежиме.</string>
     <string name="no_connections">Нет подключений</string>
     <string name="connection">Подключения</string>

@@ -2095,7 +2095,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 		        	btn_operator.setTextColor(getResources().getColor(R.color.hint_text));
 		        	//btn_operator.setEnabled(false);
 		        	btn_sota.setTextColor(getResources().getColor(R.color.hint_text));
-		        	btn_sota.setEnabled(false);
+		        	//btn_sota.setEnabled(false);
 		        	btn_vpn.setTextColor(getResources().getColor(R.color.hint_text));
 		        	btn_vpn.setEnabled(false);
 		        	textVPN.setVisibility(View.GONE);
