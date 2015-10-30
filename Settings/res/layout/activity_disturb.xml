@@ -431,6 +431,15 @@
                             android:textColor="@color/black"
                             android:textSize="16sp" />
 
+                        <ImageView
+                            android:id="@+id/ImageView13"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1px"
+                            android:layout_marginLeft="15dp"
+                            android:ems="10"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/line_cray" />
+
                         <RadioButton
                             android:id="@+id/radio1"
                             android:layout_width="match_parent"

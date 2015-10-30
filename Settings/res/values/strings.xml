@@ -258,7 +258,7 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
 	<string name="storage_zanyato">Used</string>
 	<string name="storage_dostupno">Available</string>
 	<string name="manage_storage">Manage Storage</string>
-	<string name="button_usage">Usage</string>
+	<string name="button_usage">Storage &amp; iCloud Usage</string>
 	<string name="iccid">ICCID</string>
 	<string name="all_storage">Storage</string>
 	<string name="low_battery">Low Battery</string>

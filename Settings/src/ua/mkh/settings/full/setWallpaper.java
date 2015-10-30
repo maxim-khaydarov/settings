@@ -390,6 +390,12 @@ public void wall(final int promp){
     time.setTypeface(typefaceUltraLight);
     data.setTypeface(typefaceThin);
     textView1.setTypeface(typefaceThin);
+    
+    if (promp == 1 || promp == 2 || promp == 4){
+    	time.setTextColor(getResources().getColor(R.color.black));
+        data.setTextColor(getResources().getColor(R.color.black));
+        textView1.setTextColor(getResources().getColor(R.color.black));
+    }
 	 Button ButtonMenuCancel = (Button)dialog.getWindow().findViewById(R.id.button1);
     Button ButtonMenuSettings = (Button)dialog.getWindow().findViewById(R.id.button2);
     ButtonMenuSettings.setTypeface(typefaceRoman);

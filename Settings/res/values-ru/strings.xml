@@ -256,7 +256,7 @@
 	<string name="storage_zanyato">Занято</string>
 	<string name="storage_dostupno">Доступно</string>
 	<string name="manage_storage">Хранилище</string>
-	<string name="button_usage">Статистика</string>
+	<string name="button_usage">Хранилище и iCloud</string>
 	<string name="iccid">ICCID</string>
 	<string name="all_storage">Емкость</string>
 	<string name="low_battery">Батарея разряжена</string>
