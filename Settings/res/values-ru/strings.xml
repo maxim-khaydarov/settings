@@ -189,6 +189,7 @@
   	<string name="maps">Карты</string>
   	<string name="account">Аккаунты</string>
   	<string name="icloud_t">ICLOUD</string>
+  	<string name="wall_live">Живые</string>
   	<string name="wall_statik">Статистические</string>
   	<string name="wall_dynamik">Динамические</string>
   	<string name="wall_photo">ФОТОГРАФИИ</string>
@@ -252,10 +253,10 @@
 	<string name="battery_text">АККУМУЛЯТОР</string>
 	<string name="battery_manager">Использование аккумулятора</string>
 	<string name="battery_percent">Заряд в процентах</string>
-	<string name="storage_usage">МЕСТО ХРАНЕНИЯ</string>
+	<string name="storage_usage">ХРАНИЛИЩЕ</string>
 	<string name="storage_zanyato">Занято</string>
 	<string name="storage_dostupno">Доступно</string>
-	<string name="manage_storage">Хранилище</string>
+	<string name="manage_storage">Управлять</string>
 	<string name="button_usage">Хранилище и iCloud</string>
 	<string name="iccid">ICCID</string>
 	<string name="all_storage">Емкость</string>

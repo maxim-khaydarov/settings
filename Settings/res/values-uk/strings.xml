@@ -190,6 +190,7 @@
   	<string name="maps">Мапи</string>
   	<string name="account">Аккаунт</string>
   	<string name="icloud_t">ICLOUD</string>
+  	<string name="wall_live">Живі</string>
   	<string name="wall_statik">Статичні</string>
   	<string name="wall_dynamik">Динамічні</string>
   	<string name="wall_photo">СВІТЛИНИ</string>
@@ -253,10 +254,10 @@
 	<string name="battery_text">АКУМУЛЯТОР</string>
 	<string name="battery_manager">Використання акумулятора</string>
 	<string name="battery_percent">Заряд у процентах</string>
-	<string name="storage_usage">МІСЦЕ ЗБЕРІГАННЯ</string>
+	<string name="storage_usage">СХОВИЩЕ</string>
 	<string name="storage_zanyato">Занято</string>
 	<string name="storage_dostupno">Вільно</string>
-	<string name="manage_storage">Сховище</string>
+	<string name="manage_storage">Управляти</string>
 	<string name="button_usage">Сховище та iCloud</string>
 	<string name="iccid">ICCID</string>
 	<string name="all_storage">Емність</string>

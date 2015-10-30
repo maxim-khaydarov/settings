@@ -51,9 +51,9 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 	   
 	   private SimpleGestureFilter detector;
 	   
-	   TextView textStatus, textView1, TextView01, TextView07, TextView08;
-	   Button btn_back, Button01, Button02, Button06, Button08, Button09;
-	   ToggleButton tgb1;
+	   TextView textStatus, TextView01, TextView07, TextView08;
+	   Button btn_back, Button02, Button08, Button09;
+	   
 	
 	  public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
@@ -71,20 +71,20 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 			
 			detector = new SimpleGestureFilter(this,this);
 			
-			textView1 = (TextView) findViewById(R.id.textView1);
+			//textView1 = (TextView) findViewById(R.id.textView1);
 			TextView01 = (TextView) findViewById(R.id.TextView01);
 			TextView07 = (TextView) findViewById(R.id.TextView07);
 			TextView08 = (TextView) findViewById(R.id.TextView08);
 			
-			Button01 = (Button)findViewById(R.id.Button01);
+			//Button01 = (Button)findViewById(R.id.Button01);
 			Button02 = (Button)findViewById(R.id.Button02);
 			Button02.setOnClickListener(this);
-			Button06 = (Button)findViewById(R.id.Button06);
-			Button06.setOnClickListener(this);
+			//Button06 = (Button)findViewById(R.id.Button06);
+			//Button06.setOnClickListener(this);
 			Button08 = (Button)findViewById(R.id.Button08);
 			Button09 = (Button)findViewById(R.id.Button09);
-			tgb1 = (ToggleButton) findViewById(R.id.ToggleButton01);
-			tgb1.setChecked(true);
+			//tgb1 = (ToggleButton) findViewById(R.id.ToggleButton01);
+			//tgb1.setChecked(true);
 			
 			textStatus = (TextView)findViewById(R.id.textOk);
 			
@@ -95,12 +95,12 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 		        textStatus.setTypeface(typefaceBold);
 		        btn_back.setTypeface(typefaceMedium);
 		        
-		        Button01.setTypeface(typefaceRoman);
+		     //   Button01.setTypeface(typefaceRoman);
 		        Button02.setTypeface(typefaceRoman);
-		        Button06.setTypeface(typefaceRoman);
+		       // Button06.setTypeface(typefaceRoman);
 		        Button08.setTypeface(typefaceRoman);
 		        Button09.setTypeface(typefaceRoman);
-		        textView1.setTypeface(typefaceRoman);
+		       // textView1.setTypeface(typefaceRoman);
 		        TextView01.setTypeface(typefaceRoman);
 		        TextView07.setTypeface(typefaceRoman);
 		        TextView08.setTypeface(typefaceRoman);
@@ -186,12 +186,12 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 				// Получаем число из настроек
 	        	 Boolean bold = mSettings.getBoolean(APP_PREFERENCES_bold_text, true);
 				if (bold == true){
-					Button01.setTypeface(typefaceBold);
+				//	Button01.setTypeface(typefaceBold);
 			        Button02.setTypeface(typefaceBold);
-			        Button06.setTypeface(typefaceBold);
+			      //  Button06.setTypeface(typefaceBold);
 			        Button08.setTypeface(typefaceBold);
 			        Button09.setTypeface(typefaceBold);
-			        textView1.setTypeface(typefaceBold);
+			      //  textView1.setTypeface(typefaceBold);
 			        TextView01.setTypeface(typefaceBold);
 			        TextView07.setTypeface(typefaceBold);
 			        TextView08.setTypeface(typefaceBold);
@@ -202,46 +202,46 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 				// Получаем число из настроек
 	        	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 				if (size .contains( "Small")){
-					Button01.setTextSize(14);
+				//	Button01.setTextSize(14);
 			        Button02.setTextSize(14);
-			        Button06.setTextSize(14);
+			     //   Button06.setTextSize(14);
 			        Button08.setTextSize(14);
 			        Button09.setTextSize(14);
-			        textView1.setTextSize(14);
+			      //  textView1.setTextSize(14);
 					TextView01.setTextSize(14);
 					TextView07.setTextSize(14);
 					TextView08.setTextSize(14);
 			        
 				}
 				if (size .contains( "Normal")){
-					Button01.setTextSize(16);
+				//	Button01.setTextSize(16);
 			        Button02.setTextSize(16);
-			        Button06.setTextSize(16);
+			      //  Button06.setTextSize(16);
 			        Button08.setTextSize(16);
 			        Button09.setTextSize(16);
-			        textView1.setTextSize(16);
+			      //  textView1.setTextSize(16);
 					TextView01.setTextSize(16);
 					TextView07.setTextSize(16);
 					TextView08.setTextSize(16);
 				}
 				if (size .contains( "Large")){
-					Button01.setTextSize(19);
+				//	Button01.setTextSize(19);
 			        Button02.setTextSize(19);
-			        Button06.setTextSize(19);
+			      //  Button06.setTextSize(19);
 			        Button08.setTextSize(19);
 			        Button09.setTextSize(19);
-			        textView1.setTextSize(19);
+			     //   textView1.setTextSize(19);
 					TextView01.setTextSize(19);
 					TextView07.setTextSize(19);
 					TextView08.setTextSize(19);
 				}
 				if (size .contains( "xLarge")){
-					Button01.setTextSize(21);
+				//	Button01.setTextSize(21);
 			        Button02.setTextSize(21);
-			        Button06.setTextSize(21);
+			      //  Button06.setTextSize(21);
 			        Button08.setTextSize(21);
 			        Button09.setTextSize(21);
-			        textView1.setTextSize(21);
+			      //  textView1.setTextSize(21);
 					TextView01.setTextSize(21);
 					TextView07.setTextSize(21);
 					TextView08.setTextSize(21);

@@ -190,6 +190,7 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
   	<string name="maps">Maps</string>
   	<string name="account">Account</string>
   	<string name="icloud_t">ICLOUD</string>
+  	<string name="wall_live">Live</string>
   	<string name="wall_statik">Stills</string>
   	<string name="wall_dynamik">Dynamic</string>
   	<string name="wall_photo">PHOTO</string>

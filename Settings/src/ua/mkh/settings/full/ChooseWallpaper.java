@@ -49,7 +49,7 @@ public class ChooseWallpaper extends Activity implements OnClickListener, Simple
 	   
 	   Button btn_back, my_phot, button1;
 	   
-	   TextView din, stat, phot, textView4, textView5;
+	   TextView din, stat, phot, textView4, textView5 , textView6;
 	   ProgressBar pb1;
 	   MyTask mt;
 	   Bitmap scaledBitmapCamera;
@@ -76,6 +76,7 @@ public class ChooseWallpaper extends Activity implements OnClickListener, Simple
 			phot = (TextView) findViewById(R.id.textView3);
 			textView4 = (TextView) findViewById(R.id.textView4);
 			textView5 = (TextView) findViewById(R.id.textView5);
+			textView6 = (TextView) findViewById(R.id.textView6);
 			my_phot = (Button) findViewById(R.id.Button04);
 			button1 = (Button) findViewById(R.id.Button01);
 			button1.setOnClickListener(this);
@@ -92,12 +93,27 @@ public class ChooseWallpaper extends Activity implements OnClickListener, Simple
 	        phot.setTypeface(typefaceRoman);
 	        textView4.setTypeface(typefaceRoman);
 	        textView5.setTypeface(typefaceRoman);
+	        textView6.setTypeface(typefaceRoman);
 	        my_phot.setTypeface(typefaceRoman);
 	        button1.setTypeface(typefaceRoman);
 	        
 	       
 	        mt = new MyTask();
 	        mt.execute();
+	        
+	        RelativeLayout liveLayout = (RelativeLayout) findViewById(R.id.LiveLayout);
+	        liveLayout.setOnClickListener(new OnClickListener() {
+
+	            @Override
+	            public void onClick(View v) {
+	            	Intent intent = new Intent();
+		    		intent.setAction(WallpaperManager.ACTION_LIVE_WALLPAPER_CHOOSER);
+		    		startActivity(intent);
+		    		overridePendingTransition(center_to_left, center_to_left2);
+	                  
+	            }
+
+	        });
 	        
 	        RelativeLayout dynamikLayout = (RelativeLayout) findViewById(R.id.DynamikLayout);
 	        dynamikLayout.setOnClickListener(new OnClickListener() {
@@ -308,6 +324,7 @@ public class ChooseWallpaper extends Activity implements OnClickListener, Simple
 				my_phot.setTypeface(typefaceBold);
 				textView4.setTypeface(typefaceBold);
 				textView5.setTypeface(typefaceBold);
+				textView6.setTypeface(typefaceBold);
 				
 			}
         }
@@ -316,36 +333,40 @@ public class ChooseWallpaper extends Activity implements OnClickListener, Simple
 			// Получаем число из настроек
         	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 			if (size .contains( "Small")){
-				din.setTextSize(14);
-				stat.setTextSize(14);
+				din.setTextSize(11);
+				stat.setTextSize(11);
 				phot.setTextSize(11);
 				my_phot.setTextSize(14);
 				textView4.setTextSize(14);
 				textView5.setTextSize(14);
+				textView6.setTextSize(11);
 			}
 			if (size .contains( "Normal")){
-				din.setTextSize(16);
-				stat.setTextSize(16);
+				din.setTextSize(13);
+				stat.setTextSize(13);
 				phot.setTextSize(13);
 				my_phot.setTextSize(16);
 				textView4.setTextSize(16);
 				textView5.setTextSize(16);
+				textView6.setTextSize(13);
 			}
 			if (size .contains( "Large")){
-				din.setTextSize(19);
-				stat.setTextSize(19);
+				din.setTextSize(16);
+				stat.setTextSize(16);
 				phot.setTextSize(16);
 				my_phot.setTextSize(19);
 				textView4.setTextSize(19);
 				textView5.setTextSize(19);
+				textView6.setTextSize(16);
 			}
 			if (size .contains( "xLarge")){
-				din.setTextSize(21);
-				stat.setTextSize(21);
+				din.setTextSize(18);
+				stat.setTextSize(18);
 				phot.setTextSize(18);
 				my_phot.setTextSize(21);
 				textView4.setTextSize(21);
 				textView5.setTextSize(21);
+				textView6.setTextSize(18);
 			}
        }
         
