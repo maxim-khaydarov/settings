@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:text="Main"
+            android:textColor="@color/black"
             android:textSize="17sp" />
 
         <ImageView

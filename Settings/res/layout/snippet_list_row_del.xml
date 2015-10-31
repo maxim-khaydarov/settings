@@ -29,6 +29,7 @@
             android:layout_centerVertical="true"
             android:gravity="center_vertical"
             android:text="App"
+            android:textColor="@color/black"
             android:textSize="17sp" />
 
         <ImageView

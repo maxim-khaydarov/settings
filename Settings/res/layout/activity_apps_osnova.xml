@@ -103,7 +103,6 @@
                     android:id="@+id/ImageView12"
                     android:layout_width="fill_parent"
                     android:layout_height="1px"
-                    android:layout_alignLeft="@+id/Button09"
                     android:layout_alignParentBottom="true"
                     android:ems="10"
                     android:paddingLeft="15dp"
@@ -141,13 +140,32 @@
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ImageView02"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:scaleType="fitXY"
+        android:src="@drawable/line_cray" />
  
     <ListView
         android:id="@android:id/list"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="@color/white" />
+        android:background="@color/white"
+        android:divider="@color/hint_text"
+        android:drawSelectorOnTop="true" />
+
+    <ImageView
+        android:id="@+id/ImageView03"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:scaleType="fitXY"
+        android:src="@drawable/line_cray" />
     
      </LinearLayout>
 

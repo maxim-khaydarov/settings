@@ -23,7 +23,7 @@
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:text="Galaxy Nexus"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textSize="16sp" />
 	
     <TextView
@@ -34,6 +34,7 @@
         android:layout_below="@+id/tv_name"
         android:layout_marginTop="5dp"
         android:text="000000000"
+        android:textColor="@color/black"
         android:visibility="gone" />
     
 </RelativeLayout>

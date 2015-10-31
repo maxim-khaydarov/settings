@@ -523,7 +523,7 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 	    		
 	        	}
 	        	else{
-	        		date.setClickable(true);
+	        		date.setClickable(false);
 	        	}
 	    }
 	    public static boolean findBinary(String binaryName) {
