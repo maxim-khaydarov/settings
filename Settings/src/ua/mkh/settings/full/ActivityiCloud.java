@@ -84,6 +84,9 @@ public class ActivityiCloud extends Activity implements OnClickListener, SimpleG
 	   public static final String APP_PREFERENCES_ANIM_SPEED = "anim_speed";
 	   public static final String APP_PREFERENCES_tgb_menu = "tgb_menu";
 	   
+	   public static final String APP_PREFERENCES_SEARCH = "search";
+	   public static final String APP_PREFERENCES_GEO = "geo";
+	   
 	   public static final String APP_PREFERENCES_NAME = "name";
 	   public static final String APP_PREFERENCES_MAIL = "mail_app";
 	   public static final String APP_PREFERENCES_NOTES = "notes_app";
@@ -129,7 +132,8 @@ public class ActivityiCloud extends Activity implements OnClickListener, SimpleG
 	Button btn_mail, btn_notepad, btn_phone, btn_message, btn_safari, btn_music, btn_game,
 			btn_weather, btn_compass, btn_maps, btn_vk, btn_viber, btn_ok, btn_skype,
 			btn_whatsapp, btn_twitter, btn_facebook, btn_instagram, btn_newacc, btn_delacc,
-			btn_account, buttonBack, btn_menu_settings, btn_menu_cancel, button_update, button_sync, btn_appstore;
+			btn_account, buttonBack, btn_menu_settings, btn_menu_cancel, button_update, button_sync, btn_appstore,
+			btn_search;
 	
 	Intent notif_inoty, notif_espier, control_hi, control_espier, mail_ino, mail_stok, 
 	notes_any, notes_espier, phone_kuandroid, phone_espier, phone_phone_stok, phone_stok,
@@ -142,7 +146,7 @@ public class ActivityiCloud extends Activity implements OnClickListener, SimpleG
 	ToggleButton tb_sync;
 	
 	ToggleButton mail, notes, phone, messages, compass, safari, music, game, weather, maps, vk, viber, ok, skype, whatsapp, twitter, facebook, instagram,
-	appstore;
+	appstore, search;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -281,6 +285,11 @@ public class ActivityiCloud extends Activity implements OnClickListener, SimpleG
 		//btn_delacc = (Button) findViewById(R.id.Button19);
 		btn_account = (Button) findViewById(R.id.ButtonWifi);
 		
+		btn_search = (Button) findViewById(R.id.Button22);
+		btn_search.setOnClickListener(this);
+		
+		search = (ToggleButton) findViewById(R.id.ToggleButton01);
+		search.setOnClickListener(this);
 		mail = (ToggleButton) findViewById(R.id.ToggleButtonMail);
 		mail.setOnClickListener(this);
 		notes = (ToggleButton) findViewById(R.id.ToggleButtonNotes);
@@ -351,7 +360,7 @@ public class ActivityiCloud extends Activity implements OnClickListener, SimpleG
 		btn_newacc.setTypeface(typefaceRoman);
 		button_sync.setTypeface(typefaceRoman);
 		btn_appstore.setTypeface(typefaceRoman);
-		//btn_account.setTypeface(typefaceRoman);
+		btn_search.setTypeface(typefaceRoman);
 		acc.setTypeface(typefaceRoman);
 		name.setTypeface(typefaceRoman);
 		
@@ -680,7 +689,7 @@ pm = this.getPackageManager();
 				btn_facebook.setTypeface(typefaceBold);
 				btn_instagram.setTypeface(typefaceBold);
 				btn_newacc.setTypeface(typefaceBold);
-				//btn_delacc.setTypeface(typefaceBold);
+				btn_search.setTypeface(typefaceBold);
 				button_sync.setTypeface(typefaceBold);
 				btn_appstore.setTypeface(typefaceBold);
 				acc.setTypeface(typefaceBold);
@@ -718,6 +727,7 @@ pm = this.getPackageManager();
 				acc.setTextSize(14);
 				textView3.setTextSize(11);
 				name.setTextSize(16);
+				btn_search.setTextSize(14);
 			}
 			if (size .contains( "Normal")){
 				btn_mail.setTextSize(16);
@@ -744,6 +754,7 @@ pm = this.getPackageManager();
 				acc.setTextSize(16);
 				textView3.setTextSize(13);
 				name.setTextSize(18);
+				btn_search.setTextSize(16);
 			}
 			if (size .contains( "Large")){
 			     	btn_mail.setTextSize(19);
@@ -770,6 +781,7 @@ pm = this.getPackageManager();
 					acc.setTextSize(19);
 					textView3.setTextSize(16);
 					name.setTextSize(21);
+					btn_search.setTextSize(19);
 			}
 			if (size .contains( "xLarge")){
 				btn_mail.setTextSize(21);
@@ -796,8 +808,13 @@ pm = this.getPackageManager();
 				acc.setTextSize(21);
 				textView3.setTextSize(18);
 				name.setTextSize(23);
+				btn_search.setTextSize(21);
 			}
        }
+       
+       if (mSettings.contains(APP_PREFERENCES_SEARCH)) {
+			search.setChecked(true);
+			btn_search.setEnabled(true);}
        
        if (mSettings.contains(APP_PREFERENCES_MAIL)) {
 			// Получаем число из настроек
@@ -1525,7 +1542,13 @@ pm = this.getPackageManager();
 			 pg1.setVisibility(View.VISIBLE);
 			syncGoogleAccount();
         	textView3.setVisibility(View.GONE);
-
+        	break;
+        	
+		case R.id.Button22:
+			Intent intent22 = new Intent(this, ActivitySearchiPhone.class);
+	       	 startActivity(intent22);
+	        	overridePendingTransition(center_to_left, center_to_left2);
+			break;
 		}
 	}
 

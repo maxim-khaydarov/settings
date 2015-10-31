@@ -1313,13 +1313,15 @@
                         android:id="@+id/ToggleButtonAppstore"
                         android:layout_width="60dp"
                         android:layout_height="39dp"
-                        android:layout_alignParentRight="true"
+                        android:layout_alignParentRight="false"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/btn_toggle_bg"
+                        android:layout_toLeftOf="@+id/ImageView44"
+                        android:background="@color/transparent"
                         android:text="ToggleButton"
-                        android:textOff=" "
-                        android:textOn=" " />
+                        android:textColor="@color/hint_text"
+                        android:textOff="@string/off"
+                        android:textOn="@string/on"
+                        android:textSize="16sp" />
 
                     <ImageView
                         android:id="@+id/ImageView42"
@@ -1330,6 +1332,17 @@
                         android:ems="10"
                         android:scaleType="fitXY"
                         android:src="@drawable/line_cray" />
+
+                    <ImageView
+                        android:id="@+id/ImageView44"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/next" />
+
                 </RelativeLayout>
             </LinearLayout>
 
@@ -1337,7 +1350,6 @@
                 android:id="@+id/LinearLayout18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
                 android:background="@color/white"
                 android:ems="10"
                 android:orientation="vertical" >
@@ -1375,22 +1387,14 @@
                         android:id="@+id/synctoggle"
                         android:layout_width="60dp"
                         android:layout_height="44dp"
-                        android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/btn_toggle_bg"
+                        android:layout_toLeftOf="@+id/ImageView45"
+                        android:background="@color/transparent"
                         android:text="ToggleButton"
-                        android:textOff=" "
-                        android:textOn=" " />
-
-                    <ImageView
-                        android:id="@+id/ImageView40"
-                        android:layout_width="fill_parent"
-                        android:layout_height="1px"
-                        android:layout_alignParentBottom="true"
-                        android:ems="10"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/line_cray" />
+                        android:textColor="@color/hint_text"
+                        android:textOff="@string/off"
+                        android:textOn="@string/on"
+                        android:textSize="16sp" />
 
                     <ImageView
                         android:id="@+id/ImageView01"
@@ -1402,6 +1406,99 @@
                         android:scaleType="fitXY"
                         android:src="@drawable/line_cray" />
 
+                    <ImageView
+                        android:id="@+id/ImageView45"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/next" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:ems="10" >
+
+                    <ImageView
+                        android:id="@+id/ImageView47"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/search_iphone" />
+
+                    <Button
+                        android:id="@+id/Button22"
+                        android:layout_width="fill_parent"
+                        android:layout_height="39dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/transparent"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="65dp"
+                        android:text="@string/search_iphone"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ToggleButton
+                        android:id="@+id/ToggleButton01"
+                        android:layout_width="60dp"
+                        android:layout_height="44dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/ImageView49"
+                        android:background="@color/transparent"
+                        android:clickable="false"
+                        android:text="ToggleButton"
+                        android:textColor="@color/hint_text"
+                        android:textOff="@string/off"
+                        android:textOn="@string/on"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/ImageView48"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:ems="10"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/line_cray" />
+
+                    <ImageView
+                        android:id="@+id/ImageView46"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ImageView47"
+                        android:ems="10"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/line_cray" />
+
+                    <ImageView
+                        android:id="@+id/ImageView49"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/next" />
                 </RelativeLayout>
             </LinearLayout>
 

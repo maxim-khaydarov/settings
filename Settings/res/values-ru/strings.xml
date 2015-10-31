@@ -305,6 +305,11 @@
 	<string name="update_version">Вышла новая версия!\n Обновите приложение.</string>
 	<string name="accessibility">Универсальный доступ</string>
 	
+	<string name="search_iphone">Найти iPhone</string>
+	<string name="search_iphone_text_1_1">\"Найти iPhone\" позволяет Вам находить, блокировать или стирать свой iPhone, а также не допускает его стирание или повторную активацию без пароля.</string>
+	<string name="search_iphone_text_1_2">О \"Найти iPhone\" и Конфедициальности#8230;</string>
+	<string name="search_iphone_text_2">Автоматически отправлять в Apple геопозицию этого iPhone, когда аккумултор критически низок.</string>
+	<string name="search_iphone2">Последняя геопозиция</string>
 </resources>
 
 
