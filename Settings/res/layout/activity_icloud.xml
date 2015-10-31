@@ -1465,6 +1465,8 @@
                         android:layout_toLeftOf="@+id/ImageView49"
                         android:background="@color/transparent"
                         android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"
                         android:text="ToggleButton"
                         android:textColor="@color/hint_text"
                         android:textOff="@string/off"

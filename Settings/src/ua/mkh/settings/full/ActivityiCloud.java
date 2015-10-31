@@ -289,7 +289,7 @@ public class ActivityiCloud extends Activity implements OnClickListener, SimpleG
 		btn_search.setOnClickListener(this);
 		
 		search = (ToggleButton) findViewById(R.id.ToggleButton01);
-		search.setOnClickListener(this);
+		
 		mail = (ToggleButton) findViewById(R.id.ToggleButtonMail);
 		mail.setOnClickListener(this);
 		notes = (ToggleButton) findViewById(R.id.ToggleButtonNotes);
@@ -812,9 +812,13 @@ pm = this.getPackageManager();
 			}
        }
        
-       if (mSettings.contains(APP_PREFERENCES_SEARCH)) {
+       Boolean searchb = mSettings.getBoolean(APP_PREFERENCES_SEARCH, true);
+       if (searchb == true) {
 			search.setChecked(true);
-			btn_search.setEnabled(true);}
+			}
+       else {
+    	   search.setChecked(false);
+       }
        
        if (mSettings.contains(APP_PREFERENCES_MAIL)) {
 			// Получаем число из настроек

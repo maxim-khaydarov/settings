@@ -17,6 +17,7 @@ import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 import ua.mkh.settings.full.SimpleGestureFilter.SimpleGestureListener;
 
@@ -62,11 +63,15 @@ public class ActivitySearchiPhone  extends Activity implements OnClickListener, 
 		
 		
 		textStatus  = (TextView)findViewById(R.id.textOk);
+		 btn_back = (Button) findViewById(R.id.buttonBack);
+		 
 		
 		Button01 = (Button) findViewById(R.id.Button01);
 		Button02 = (Button) findViewById(R.id.Button02);
 		tb_search = (ToggleButton) findViewById(R.id.ToggleButton01);
+		tb_search.setOnClickListener(this);
 		tb_geo = (ToggleButton) findViewById(R.id.BTtoggle);
+		tb_geo.setOnClickListener(this);
 		textView1 = (TextView) findViewById(R.id.TextView01);
 		textView2 = (TextView) findViewById(R.id.textView2);
 		
@@ -76,6 +81,15 @@ public class ActivitySearchiPhone  extends Activity implements OnClickListener, 
         String t2 = "<font color=\"#0071ED\">" + t2s + "</font>";
         String t12 = t1 + " " + t2;
         textView1.setText(Html.fromHtml(t12), TextView.BufferType.SPANNABLE);
+        
+        textStatus.setTypeface(typefaceBold);
+		 textStatus.setText(R.string.search_iphone);
+	     btn_back.setTypeface(typefaceMedium);
+	     btn_back.setText(R.string.icloud);
+	     textView1.setTypeface(typefaceRoman);
+	     textView2.setTypeface(typefaceRoman);
+	     Button01.setTypeface(typefaceRoman);
+	     Button02.setTypeface(typefaceRoman);
 	}
 	
 	@Override
@@ -230,13 +244,11 @@ public class ActivitySearchiPhone  extends Activity implements OnClickListener, 
 		case R.id.ToggleButton01:
 			if((tb_search).isChecked()) {
 				Editor editor = mSettings.edit();
-			   	editor.putBoolean(APP_PREFERENCES_SEARCH, true);
-			   	editor.apply();
+			   	editor.putBoolean(APP_PREFERENCES_SEARCH, true).commit();
          	 }
          	 else {
          		Editor editor = mSettings.edit();
-			   	editor.putBoolean(APP_PREFERENCES_SEARCH, false);
-			   	editor.apply();
+			   	editor.putBoolean(APP_PREFERENCES_SEARCH, false).commit();
          	 }
 			break;
 			
@@ -266,7 +278,7 @@ public class ActivitySearchiPhone  extends Activity implements OnClickListener, 
 	           	 }
 	                return true;
 	            case KeyEvent.KEYCODE_BACK:
-	            	Intent intent18 = new Intent(this, MainActivity.class);
+	            	Intent intent18 = new Intent(this, ActivityiCloud.class);
 	             	 startActivity(intent18);
 
 	       		overridePendingTransition(center_to_right, center_to_right2);
