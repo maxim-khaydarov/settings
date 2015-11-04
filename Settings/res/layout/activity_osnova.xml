@@ -239,6 +239,55 @@
                     android:id="@+id/ImageView34"
                     android:layout_width="fill_parent"
                     android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:ems="10"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/line_cray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:overScrollMode="always" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:overScrollMode="always" >
+
+                    <Button
+                        android:id="@+id/Button05"
+                        android:layout_width="fill_parent"
+                        android:layout_height="39dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/button_bg"
+                        android:ems="10"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="15dp"
+                        android:text="@string/button_handoff"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/ImageView08"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/next" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/ImageView09"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
                     android:ems="10"
                     android:scaleType="fitXY"
                     android:src="@drawable/line_cray" />

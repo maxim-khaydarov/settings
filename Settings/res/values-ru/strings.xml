@@ -310,6 +310,14 @@
 	<string name="search_iphone_text_1_2">О \"Найти iPhone\" и Конфедициальности...</string>
 	<string name="search_iphone_text_2">Автоматически отправлять в Apple геопозицию этого iPhone, когда аккумултор критически низок.</string>
 	<string name="search_iphone2">Последняя геопозиция</string>
+	<string name="button_handoff">Handoff и предлагаемое ПО</string>
+	<string name="handoff">Handoff</string>
+	<string name="handoff_text">Handoff позволяет начать что-то на одном устройстве и мгновенно продолжить на других с помощью учетной записи iCloud. Нужная программа появится на заблокированном экране, в переключателе программ, а также на компьютере Mac в Dock.</string>
+	<string name="suggest_app_title">ПРЕДЛАГАЕМЫЕ ПРОГРАММЫ</string>
+	<string name="suggest_app_my">Мои программы</string>
+	<string name="suggest_app_store">App Store</string>
+	<string name="suggest_app_down">Показывать установленные программы или предлагаемые App Store программы, релевантные для Вашей геопозиции, на заблокированном экране и в переключателе программ.</string>
+	
 </resources>
 
 

@@ -164,6 +164,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
                         android:background="@drawable/button_bg"
+                        android:clickable="false"
                         android:ems="10"
                         android:gravity="left|center_vertical"
                         android:paddingLeft="15dp"
@@ -180,6 +181,17 @@
                         android:layout_marginRight="10dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/next" />
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/ImageView31"
+                        android:text="TextView"
+                        android:textColor="@color/hint_text"
+                        android:textSize="16sp" />
+
                 </RelativeLayout>
 
                 <ImageView

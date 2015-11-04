@@ -115,7 +115,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	TelephonyManager manager;
 	int OS = android.os.Build.VERSION.SDK_INT;
 	
-	
+	boolean sear = false;
 	
 	Intent notif_inoty, notif_espier, control_hi, control_espier, mail_ino, mail_stok, 
 	notes_any, notes_espier, phone_kuandroid, phone_espier, phone_phone_stok, phone_stok,
@@ -291,6 +291,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
             	LinearLayout list_res = (LinearLayout) findViewById(R.id.list_res);
             	list_res.setVisibility(View.GONE);
             	ll1.setVisibility(View.VISIBLE);
+            	sear = false;
 			}
 		});
 
@@ -305,6 +306,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	            	list_res_top.setVisibility(View.VISIBLE);
 	            	LinearLayout list_res = (LinearLayout) findViewById(R.id.list_res);
 	            	list_res.setVisibility(View.VISIBLE);
+	            	sear = true;
 	            	
 	            	
 	            	//ll1.setVisibility(View.INVISIBLE);
@@ -2095,7 +2097,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 		        	btn_operator.setTextColor(getResources().getColor(R.color.hint_text));
 		        	//btn_operator.setEnabled(false);
 		        	btn_sota.setTextColor(getResources().getColor(R.color.hint_text));
-		        	//btn_sota.setEnabled(false);
+		        	btn_sota.setEnabled(false);
 		        	btn_vpn.setTextColor(getResources().getColor(R.color.hint_text));
 		        	btn_vpn.setEnabled(false);
 		        	textVPN.setVisibility(View.GONE);
@@ -2176,10 +2178,28 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 		            	 }
 		                return true;
 		            case KeyEvent.KEYCODE_BACK:
+		            	if (sear == true){
+		            		b11.setVisibility(View.GONE);
+		    				b21.setVisibility(View.GONE);
+		    				ed11.clearFocus();
+		    				ed1.clearFocus();
+		    				InputMethodManager imm = (InputMethodManager)getSystemService(
+		    					      Context.INPUT_METHOD_SERVICE);
+		    					imm.hideSoftInputFromWindow(ed1.getWindowToken(), 0);
+		    				ed11.setText("");
+		    				ed1.setText("");
+		    				LinearLayout list_res_top = (LinearLayout) findViewById(R.id.list_res_top);
+		                	list_res_top.setVisibility(View.GONE);
+		                	LinearLayout list_res = (LinearLayout) findViewById(R.id.list_res);
+		                	list_res.setVisibility(View.GONE);
+		                	ll1.setVisibility(View.VISIBLE);
+		                	sear = false;
+		            	}
+		            	else{
 		            	Intent intent = new Intent(Intent.ACTION_MAIN);
 		            	intent.addCategory(Intent.CATEGORY_HOME);
 		            	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		            	startActivity(intent);
+		            	startActivity(intent); }
 		            	return true;
 		        }
 		        
@@ -2591,7 +2611,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 		                    String zipCode = cursor.getString(cursor.getColumnIndexOrThrow("zipCode"));
 		                
 		                    if (address.matches("1")){
-		                    	 Intent intent1 = new Intent(MainActivity.this, ActivityWifi.class);
+		                    	 Intent intent1 = new Intent(MainActivity.this, ActivityWifiInfo.class);
 		                    	 startActivity(intent1);
 		             	        	overridePendingTransition(center_to_left, center_to_left2);
 		                    }
@@ -2676,7 +2696,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 		             	        	overridePendingTransition(center_to_left, center_to_left2);
 		                    }
 		                    else if (address.matches("18")){
-		                    	Intent intent18 = new Intent(MainActivity.this, ActivityOsnova.class);
+		                    	Intent intent18 = new Intent(MainActivity.this, ActivityiCloud.class);
 		                    	 startActivity(intent18);
 		             	        	overridePendingTransition(center_to_left, center_to_left2);
 		                    }
@@ -2691,7 +2711,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 		             	        	overridePendingTransition(center_to_left, center_to_left2);
 		                    }
 		                    else if (address.matches("21")){
-		                    	Intent intent21 = new Intent(MainActivity.this, ActivityOsnova.class);
+		                    	Intent intent21 = new Intent(MainActivity.this, ActivitySetTime.class);
 		                    	 startActivity(intent21);
 		             	        	overridePendingTransition(center_to_left, center_to_left2);
 		                    }
@@ -2706,12 +2726,12 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 		             	        	overridePendingTransition(center_to_left, center_to_left2);
 		                    }
 		                    else if (address.matches("24")){
-		                    	Intent intent24 = new Intent(MainActivity.this, ActivityApps.class);
+		                    	Intent intent24 = new Intent(MainActivity.this, ActivityUsage.class);
 		                    	 startActivity(intent24);
 		             	        	overridePendingTransition(center_to_left, center_to_left2);
 		                    }
 		                    else if (address.matches("25")){
-		                    	Intent intent25 = new Intent(MainActivity.this, ActivityStorage.class);
+		                    	Intent intent25 = new Intent(MainActivity.this, ActivityOsnova.class);
 		                    	 startActivity(intent25);
 		             	        	overridePendingTransition(center_to_left, center_to_left2);
 		                    }
@@ -2776,12 +2796,27 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 		             	        	overridePendingTransition(center_to_left, center_to_left2);
 		                    }
 		                    else if (address.matches("38")){
-		                    	Intent intent37 = new Intent(MainActivity.this, ActivityUsage.class);
+		                    	Intent intent37 = new Intent(MainActivity.this, ActivityOsnova.class);
 		                    	 startActivity(intent37);
 		             	        	overridePendingTransition(center_to_left, center_to_left2);
 		                    }
 		                    else if (address.matches("39")){
-		                    	Intent intent37 = new Intent(MainActivity.this, ActivityBattery.class);
+		                    	Intent intent37 = new Intent(MainActivity.this, ActivityHandoff.class);
+		                    	 startActivity(intent37);
+		             	        	overridePendingTransition(center_to_left, center_to_left2);
+		                    }
+		                    else if (address.matches("40")){
+		                    	Intent intent37 = new Intent(MainActivity.this, ActivityOsnova.class);
+		                    	 startActivity(intent37);
+		             	        	overridePendingTransition(center_to_left, center_to_left2);
+		                    }
+		                    else if (address.matches("41")){
+		                    	Intent intent37 = new Intent(MainActivity.this, ActivityHandoff.class);
+		                    	 startActivity(intent37);
+		             	        	overridePendingTransition(center_to_left, center_to_left2);
+		                    }
+		                    else if (address.matches("42")){
+		                    	Intent intent37 = new Intent(MainActivity.this, ActivityHandoff.class);
 		                    	 startActivity(intent37);
 		             	        	overridePendingTransition(center_to_left, center_to_left2);
 		                    }
@@ -2844,25 +2879,25 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 			        mDbHelper.createCustomer_ru("Сопряжение устройства", "Bluetooth", "4", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Включение сотовых данных", "Сотовая связь", "5", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Тип сети", "Сотовая связь", "6", "", "", "", "");
-			        mDbHelper.createCustomer_ru("Настройки APN", "Сотовая связь", "7", "", "", "", "");
+			        mDbHelper.createCustomer_ru("Сотовая сеть передачи данных", "Сотовая связь", "7", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Включение режима модема", "Режим модема", "8", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Настройки режима модема", "Режим модема", "9", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Сеть", "Оператор", "10", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Оператор", "Оператор", "11", "", "", "", "");
-			        mDbHelper.createCustomer_ru("Включение Не беспокоить", "Не беспокоить", "12", "", "", "", "");
+			        mDbHelper.createCustomer_ru("Включение \"Не беспокоить\"", "Не беспокоить", "12", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Допуск вызовов", "Не беспокоить - Допуск вызовов", "13", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Повторные вызовы", "Не беспокоить - Повторные вызовы", "14", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Об этом устройстве", "Общие - Об этом устройстве", "15", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Обновление ПО", "Общее - Обновление ПО", "16", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Аккумулятора", "Общее - Использование аккумулятора", "17", "", "", "", "");
-			        mDbHelper.createCustomer_ru("Синхронизация", "Общее - Синхронизация", "18", "", "", "", "");
+			        mDbHelper.createCustomer_ru("Синхронизация", "iCloud - Синхронизация", "18", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Авторотация экрана", "Общее - Авторотация экрана", "19", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Автоблокировка", "Общее - Автоблокировка", "20", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Дата и время", "Общее - Дата и время", "21", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Клавиатуры", "Общее - Клавиатуры", "22", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Язык и регион", "Общее - Язык и регион", "23", "", "", "", "");
-			        mDbHelper.createCustomer_ru("Приложения", "Общее - Приложения", "24", "", "", "", "");
-			        mDbHelper.createCustomer_ru("Память", "Общее - Память", "25", "", "", "", "");
+			        mDbHelper.createCustomer_ru("Хранилище и iCloud", "Общее - Хранилище и iCloud", "24", "", "", "", "");
+			        mDbHelper.createCustomer_ru("Универсальный доступ", "Общее - Универсальный доступ", "25", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Сброс всех настроек", "Общее - Сброс всех настроек", "26", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Автояркость", "Экран и яркость - Автояркость", "27", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Размер текста", "Экран и яркость - Размер текста", "28", "", "", "", "");
@@ -2875,9 +2910,11 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 			        mDbHelper.createCustomer_ru("Рингтон", "Звуки - Рингтон", "35", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Будильник", "Звуки - Будильник", "36", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Аккаунт", "iCloud - Аккаунт", "37", "", "", "", "");
-			        mDbHelper.createCustomer_ru("Статистика", "Общие - Статистика", "38", "", "", "", "");
+			        mDbHelper.createCustomer_ru("Siri", "Общие - Siri", "38", "", "", "", "");
 			        mDbHelper.createCustomer_ru("Режим низкого питания", "Аккумулятор - Режим низкого питания", "39", "", "", "", "");
-			        
+			        mDbHelper.createCustomer_ru("Поиск Spotlight", "Общее - Поиск Spotlight", "40", "", "", "", "");
+			        mDbHelper.createCustomer_ru("Handoff", "Общее - HandOff и предлагаемое ПО", "41", "", "", "", "");
+			        mDbHelper.createCustomer_ru("Предлагаемое ПО", "Общее - HandOff и предлагаемое ПО", "42", "", "", "", "");
 			        
 			        
 			  //UK      

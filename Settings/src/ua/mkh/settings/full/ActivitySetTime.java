@@ -7,6 +7,7 @@ import java.text.DateFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -51,7 +52,7 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 	   int center_to_left, center_to_left2;
 	   
 	   Button btn_back, date, Button01, Button02, Button03, ButtonSave;
-	   TextView  textStatus;
+	   TextView  textStatus, textView1;
 	   ToggleButton tg24, tgAuto;
 	   RelativeLayout timerPic;
 	   
@@ -85,6 +86,7 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 			
 			 btn_back = (Button) findViewById(R.id.buttonBack);
 			 textStatus  = (TextView)findViewById(R.id.textOk);
+			 textView1 = (TextView) findViewById(R.id.textView1);
 			 btn_back.setText(R.string.button_general);
 			 Button01 = (Button) findViewById(R.id.Button01);
 			 Button02 = (Button) findViewById(R.id.Button02);
@@ -103,6 +105,7 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 			 
 				
 				textStatus.setText(R.string.date_time);
+				textView1.setTypeface(typefaceRoman);
 			    textStatus.setTypeface(typefaceBold);
 			    btn_back.setTypeface(typefaceMedium);
 			    Button01.setTypeface(typefaceRoman);
@@ -427,6 +430,7 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 				    Button02.setTypeface(typefaceBold);
 				    Button03.setTypeface(typefaceBold);
 				    date.setTypeface(typefaceBold);
+				    textView1.setTypeface(typefaceBold);
 				}
 	        }
 				
@@ -438,24 +442,28 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 					Button02.setTextSize(13);
 					Button03.setTextSize(13);
 					date.setTextSize(13);
+					textView1.setTextSize(13);
 				}
 				if (size .contains( "Normal")){
 					Button01.setTextSize(16);
 					Button02.setTextSize(16);
 					Button03.setTextSize(16);
 					date.setTextSize(16);
+					textView1.setTextSize(16);
 				}
 				if (size .contains( "Large")){
 					Button01.setTextSize(19);
 					Button02.setTextSize(19);
 					Button03.setTextSize(19);
 					date.setTextSize(19);
+					textView1.setTextSize(19);
 				}
 				if (size .contains( "xLarge")){
 					Button01.setTextSize(21);
 					Button02.setTextSize(21);
 					Button03.setTextSize(21);
 					date.setTextSize(21);
+					textView1.setTextSize(21);
 					
 				}
 	       }
@@ -515,6 +523,9 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 	    	if (android.text.format.DateFormat.is24HourFormat(this)){
 	        	tg24.setChecked(true);
 	        }
+	    	TimeZone tz = TimeZone.getDefault();
+	    	textView1.setText(tz.getID());
+	    	
 	    }
 	    
 	    public void checkRoot(){

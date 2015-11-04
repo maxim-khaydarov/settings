@@ -40,7 +40,7 @@ import android.widget.ToggleButton;
 
 public class ActivityOsnova extends Activity implements OnClickListener, SimpleGestureListener{
 
-	Button btn_back, btn_info, Button02, Button01, Button03, Button04, Button06, Button07, Button08,
+	Button btn_back, btn_info, Button02, Button01, Button03, Button04, Button05, Button06, Button07, Button08,
 	btn_setup_app, Button09, Button10, Button11, Button12, Button13;
 	TextView textStatus, textView2, textView3, textView4, textView5, textView6,
 	textView7, textView8, textView9, textView10, textView11, textView12, textView14,
@@ -174,6 +174,8 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 			 Button04 = (Button)findViewById(R.id.Button04);
 			 Button04.setOnClickListener(this);
 			 
+			 
+			 
 			 Button06 = (Button)findViewById(R.id.Button06);
 			 Button06.setOnClickListener(this);
 			 
@@ -186,8 +188,8 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 			 Button09 = (Button)findViewById(R.id.Button09);
 			 Button09.setOnClickListener(this);
 			 
-			// Button05 = (Button)findViewById(R.id.Button05);
-			// Button05.setOnClickListener(this);
+			 Button05 = (Button)findViewById(R.id.Button05);
+			 Button05.setOnClickListener(this);
 			 
 			 Button10 = (Button)findViewById(R.id.Button10);
 			 Button10.setOnClickListener(this);
@@ -236,7 +238,7 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 		     Button02.setTypeface(typefaceRoman);
 		     Button03.setTypeface(typefaceRoman);
 		     Button04.setTypeface(typefaceRoman);
-		  //   Button05.setTypeface(typefaceRoman);
+		     Button05.setTypeface(typefaceRoman);
 		     Button06.setTypeface(typefaceRoman);
 		     Button07.setTypeface(typefaceRoman);
 		     Button08.setTypeface(typefaceRoman);
@@ -444,7 +446,7 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				     Button03.setTypeface(typefaceBold);
 				     Button01.setTypeface(typefaceBold);
 				     Button04.setTypeface(typefaceBold);
-				   //  Button05.setTypeface(typefaceBold);
+				     Button05.setTypeface(typefaceBold);
 				     Button07.setTypeface(typefaceBold);
 				     Button08.setTypeface(typefaceBold);
 				     Button09.setTypeface(typefaceBold);
@@ -482,7 +484,7 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				     Button03.setTextSize(14);
 				     Button01.setTextSize(14);
 				     Button04.setTextSize(14);
-				   //  Button05.setTextSize(14);
+				     Button05.setTextSize(14);
 				     Button07.setTextSize(14);
 				     Button08.setTextSize(14);
 				     Button09.setTextSize(14);
@@ -514,7 +516,7 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				     Button03.setTextSize(16);
 				     Button01.setTextSize(16);
 				     Button04.setTextSize(16);
-				  //   Button05.setTextSize(16);
+				     Button05.setTextSize(16);
 				     Button07.setTextSize(16);
 				     Button08.setTextSize(16);
 				     Button09.setTextSize(16);
@@ -545,7 +547,7 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				     Button03.setTextSize(19);
 				     Button01.setTextSize(19);
 				     Button04.setTextSize(19);
-				  //   Button05.setTextSize(19);
+				     Button05.setTextSize(19);
 				     Button07.setTextSize(19);
 				     Button08.setTextSize(19);
 				     Button09.setTextSize(19);
@@ -577,7 +579,7 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				     Button03.setTextSize(21);
 				     Button01.setTextSize(21);
 				     Button04.setTextSize(21);
-				  //   Button05.setTextSize(21);
+				     Button05.setTextSize(21);
 				     Button07.setTextSize(21);
 				     Button08.setTextSize(21);
 				     Button09.setTextSize(21);
@@ -669,11 +671,11 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 	    		startActivity(intent);
 	  	        	overridePendingTransition(center_to_left, center_to_left2);
 	  	        	 }
-	    	/*else  if (id == R.id.Button05){
-	        	Intent intent = new Intent(this, ActivityStorage.class);
+	    	else  if (id == R.id.Button05){
+	        	Intent intent = new Intent(this, ActivityHandoff.class);
 	        	 startActivity(intent);
 	  	        	overridePendingTransition(center_to_left, center_to_left2);
-	  	        	 }*/
+	  	        	 }
 	    	else if (id == R.id.Button07){
 	    		Intent intent8 = new Intent(ActivityOsnova.this, ActivitySetTime.class);
 	           	 startActivity(intent8);

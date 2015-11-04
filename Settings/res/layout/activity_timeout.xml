@@ -35,14 +35,13 @@
                 android:id="@+id/radioGroup1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:background="@color/white" >
 
                 <RadioButton
                     android:id="@+id/radio0"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
                     android:button="@null"
                     android:checked="true"
                     android:drawableRight="@drawable/radio_btn_selector"
@@ -55,6 +54,7 @@
                     android:id="@+id/ImageView01"
                     android:layout_width="fill_parent"
                     android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
                     android:ems="10"
                     android:scaleType="fitXY"
                     android:src="@drawable/line_cray" />
@@ -63,6 +63,7 @@
                     android:id="@+id/radio1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
                     android:button="@null"
                     android:drawableRight="@drawable/radio_btn_selector"
                     android:padding="10dp"
@@ -74,6 +75,7 @@
                     android:id="@+id/ImageView02"
                     android:layout_width="fill_parent"
                     android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
                     android:ems="10"
                     android:scaleType="fitXY"
                     android:src="@drawable/line_cray" />
@@ -82,6 +84,7 @@
                     android:id="@+id/radio2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
                     android:button="@null"
                     android:drawableRight="@drawable/radio_btn_selector"
                     android:padding="10dp"
@@ -93,6 +96,7 @@
                     android:id="@+id/ImageView03"
                     android:layout_width="fill_parent"
                     android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
                     android:ems="10"
                     android:scaleType="fitXY"
                     android:src="@drawable/line_cray" />
@@ -101,6 +105,7 @@
                     android:id="@+id/radio3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
                     android:button="@null"
                     android:drawableRight="@drawable/radio_btn_selector"
                     android:padding="10dp"
@@ -112,6 +117,7 @@
                     android:id="@+id/ImageView04"
                     android:layout_width="fill_parent"
                     android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
                     android:ems="10"
                     android:scaleType="fitXY"
                     android:src="@drawable/line_cray" />
@@ -120,6 +126,7 @@
                     android:id="@+id/radio4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
                     android:button="@null"
                     android:drawableRight="@drawable/radio_btn_selector"
                     android:padding="10dp"
@@ -131,6 +138,7 @@
                     android:id="@+id/ImageView05"
                     android:layout_width="fill_parent"
                     android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
                     android:ems="10"
                     android:scaleType="fitXY"
                     android:src="@drawable/line_cray" />
@@ -139,6 +147,7 @@
                     android:id="@+id/radio5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
                     android:button="@null"
                     android:drawableRight="@drawable/radio_btn_selector"
                     android:padding="10dp"
