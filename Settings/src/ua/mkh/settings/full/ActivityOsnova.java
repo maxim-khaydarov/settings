@@ -699,7 +699,7 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 	 	        	 }
 	    	
 	    	else if (id == R.id.Button10){
-	    		Intent intent = new Intent(this, ActivityAbout.class);
+	    		Intent intent = new Intent(this, ActivityRegion.class);
 	        	startActivity(intent);
 	 	        	overridePendingTransition(center_to_left, center_to_left2);/*
 	        	startActivity(new Intent("android.settings.LOCALE_SETTINGS"));

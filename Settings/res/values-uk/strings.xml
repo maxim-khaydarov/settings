@@ -306,6 +306,19 @@
 	<string name="accessibility">Універсальний доступ</string>
 	<string name="search_iphone">Знайти iPhone</string>
 	
+	<string name="region_lang">Мова iPhone</string>
+	<string name="region_other">Інші мови...</string>
+	<string name="region_format">ФОРМАТИ РЕГІОНІВ</string>
+	<string name="region_region">Регіон</string>
+	<string name="region_calendar">Календар</string>
+	<string name="region_calendar_gregor">Григоріанський</string>
+	<string name="region_addition">Додатково</string>
+	<string name="region_example">Приклад формату регіону</string>
+	
+	<string name="region_date">Понеділок, 5 січня 2015 р.\n1234,56</string>
+	
+	
+	
 </resources>
 
 

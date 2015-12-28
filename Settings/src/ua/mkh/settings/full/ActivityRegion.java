@@ -1,5 +1,6 @@
 package ua.mkh.settings.full;
 
+import java.util.Currency;
 import java.util.Locale;
 
 import android.app.Activity;
@@ -9,6 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.format.DateFormat;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -40,7 +42,7 @@ public class ActivityRegion extends Activity implements OnClickListener, SimpleG
 	   
 	   public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
-	        setContentView(R.layout.activity_brightness);
+	        setContentView(R.layout.activity_region);
 	        String roman = "fonts/Regular.otf";
 			String medium = "fonts/Medium.otf";
 			String thin = "fonts/Thin.otf";
@@ -55,6 +57,8 @@ public class ActivityRegion extends Activity implements OnClickListener, SimpleG
 			TextView02 = (TextView) findViewById(R.id.TextView02);
 			TextView07 = (TextView) findViewById(R.id.TextView07);
 			TextView08 = (TextView) findViewById(R.id.TextView08);
+			textView1 = (TextView) findViewById(R.id.textView1);
+			textView2 = (TextView) findViewById(R.id.textView2);
 			
 			Button01 = (Button) findViewById(R.id.Button01);
 			Button02 = (Button) findViewById(R.id.Button02);
@@ -82,6 +86,8 @@ public class ActivityRegion extends Activity implements OnClickListener, SimpleG
 			TextView02.setTypeface(typefaceRoman);
 			TextView07.setTypeface(typefaceRoman);
 			TextView08.setTypeface(typefaceRoman);
+			textView1.setTypeface(typefaceRoman);
+			textView2.setTypeface(typefaceRoman);
 			
 	   }
 	   
@@ -192,23 +198,40 @@ public class ActivityRegion extends Activity implements OnClickListener, SimpleG
 		 
 		 private void get_lang() {
 			
-			 
-			 
-			 if(Locale.getDefault().getLanguage().contains("ru")){
-				 TextView02.setText("Русский");
-				 TextView07.setText(Locale.getDefault().getISO3Country());
-			 }
-			 else if(Locale.getDefault().getLanguage().contains("uk")){
-				 TextView02.setText("Українська");
-				 TextView07.setText(Locale.getDefault().getISO3Country());
-			 }
-			 else{
 				 TextView02.setText(Locale.getDefault().getDisplayLanguage());
-				 TextView07.setText(Locale.getDefault().getISO3Country());
-			 }
+				 TextView07.setText(Locale.getDefault().getDisplayCountry());
+			 
+				 String str;
+				 str = getText(R.string.region_time).toString();
+				 
+				 if (!DateFormat.is24HourFormat(this)){
+					 str = str + getText(R.string.am).toString();
+				 }
+				 
+				 Locale defaultLocale = Locale.getDefault();
+				 Currency currency = Currency.getInstance(defaultLocale);
+				 
+				 str = str + "\n" + getText(R.string.region_date).toString() +  " " + currency.getSymbol() + "      " + getText(R.string.region_number).toString();;
+				 
+				 textView2.setText(str);
 			
 		}
 
+		 public static void main(String[] args) throws Exception {
+				Locale defaultLocale = Locale.getDefault();
+				displayCurrencyInfoForLocale(defaultLocale);
+
+			}
+
+			public static void displayCurrencyInfoForLocale(Locale locale) {
+				System.out.println("Locale: " + locale.getDisplayName());
+				Currency currency = Currency.getInstance(locale);
+				System.out.println("Currency Code: " + currency.getCurrencyCode());
+				System.out.println("Symbol: " + currency.getSymbol());
+				System.out.println("Default Fraction Digits: " + currency.getDefaultFractionDigits());
+				System.out.println();
+			}
+			
 
 		public void onClick(View v) {
 			 switch(v.getId()){

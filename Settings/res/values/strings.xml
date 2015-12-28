@@ -314,6 +314,25 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
 	<string name="suggest_app_my">My Apps</string>
 	<string name="suggest_app_store">App Store</string>
 	<string name="suggest_app_down">Show installed apps or App Store suggestions for apps relevant to your current location, on the lock screen and in the app switcher.</string>
+
+	
+	<string name="region_lang">iPhone Language</string>
+	<string name="region_other">Add Language...</string>
+	<string name="region_format">REGION FORMATS</string>
+	<string name="region_region">Region</string>
+	<string name="region_calendar">Calendar</string>
+	<string name="region_calendar_gregor">Gregorian</string>
+	<string name="region_addition">Additionally</string>
+	<string name="region_example">An example of the format of the region</string>
+	
+	
+	<string name="region_time">0:34</string>
+	<string name="am">AM</string>
+	<string name="region_date">Monday, January 5, 2015\n1234,56</string>
+	<string name="region_number">4567,89</string>
+	
+
+
 </resources>
 
 

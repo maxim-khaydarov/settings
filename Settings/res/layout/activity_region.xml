@@ -6,7 +6,7 @@
     android:layout_height="fill_parent"
     android:background="@color/background_fon"
     android:orientation="vertical"
-    tools:context=".ActivityGeo" >
+    tools:context=".ActivityRegion" >
 
     <ua.mkh.settings.full.EdgeEffectScrollView
         android:id="@+id/scrollView1"
@@ -78,7 +78,7 @@
                         android:ems="10"
                         android:gravity="left|center_vertical"
                         android:paddingLeft="15dp"
-                        android:text="Язык iPhone"
+                        android:text="@string/region_lang"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -117,7 +117,7 @@
                         android:ems="10"
                         android:gravity="left|center_vertical"
                         android:paddingLeft="15dp"
-                        android:text="Другие языки..."
+                        android:text="@string/region_other"
                         android:textColor="@color/blue"
                         android:textSize="16sp" />
 
@@ -150,7 +150,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="30dp"
                 android:hint="Входящие вызовы или сообщения не будут заглушены."
-                android:text="ФОРМАТЫ РЕГИОНОВ"
+                android:text="@string/region_format"
                 android:textColor="@color/hint_text"
                 android:textSize="13sp" />
 
@@ -209,7 +209,7 @@
                         android:ems="10"
                         android:gravity="left|center_vertical"
                         android:paddingLeft="15dp"
-                        android:text="Регион"
+                        android:text="@string/region_region"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -256,7 +256,7 @@
                         android:layout_toLeftOf="@+id/ImageView10"
                         android:gravity="right"
                         android:hint="TextView"
-                        android:text="Unknow"
+                        android:text="@string/region_calendar_gregor"
                         android:textColor="@color/hint_text"
                         android:textSize="16sp" />
 
@@ -272,7 +272,7 @@
                         android:ems="10"
                         android:gravity="left|center_vertical"
                         android:paddingLeft="15dp"
-                        android:text="Календарь"
+                        android:text="@string/region_calendar"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -312,7 +312,7 @@
                         android:ems="10"
                         android:gravity="left|center_vertical"
                         android:paddingLeft="15dp"
-                        android:text="Дополнительно"
+                        android:text="@string/region_addition"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -342,7 +342,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
-                android:text="Пример формата региона"
+                android:text="@string/region_example"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 

@@ -384,7 +384,7 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 	        
 	        checkAUTOtime();
 	        check24time();
-	        checkRoot();
+	        //checkRoot();
 	        
 	        
 	        if (mSettings.contains(APP_PREFERENCES_tgb_menu)) {
@@ -527,16 +527,16 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 	    	textView1.setText(tz.getID());
 	    	
 	    }
-	    
+	    /*
 	    public void checkRoot(){
 	    	if (isRooted() == true ){
 	        	//changeSystemTime("2015","04","06","13","09","30");
 	    		
 	        	}
 	        	else{
-	        		date.setClickable(false);
+	        		//date.setClickable(false);
 	        	}
-	    }
+	    }*/
 	    public static boolean findBinary(String binaryName) {
 	        boolean found = false;
 	        if (!found) {
@@ -618,6 +618,7 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 			 switch (v.getId()){
 			 
 			 case R.id.Button04:
+				 if (isRooted() == true ){
 				 if(timer == 0){
 					 timerPic.setVisibility(View.VISIBLE);
 					 timer = 1;
@@ -627,6 +628,13 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 					 timer = 0;
 				 }
 			 }
+				 else{
+					 Intent settingsIntent = new Intent(android.provider.Settings.ACTION_DATE_SETTINGS);
+			        	startActivity(settingsIntent);
+			 	        	overridePendingTransition(center_to_left, center_to_left2); 
+				 }
+			 }
+			
 			 
 			 
 	    }

@@ -318,6 +318,20 @@
 	<string name="suggest_app_store">App Store</string>
 	<string name="suggest_app_down">Показывать установленные программы или предлагаемые App Store программы, релевантные для Вашей геопозиции, на заблокированном экране и в переключателе программ.</string>
 	
+	
+	
+	<string name="region_lang">Язык iPhone</string>
+	<string name="region_other">Другие языки...</string>
+	<string name="region_format">ФОРМАТЫ РЕГИОНОВ</string>
+	<string name="region_region">Регион</string>
+	<string name="region_calendar">Календарь</string>
+	<string name="region_calendar_gregor">Григорианский</string>
+	<string name="region_addition">Дополнительно</string>
+	<string name="region_example">Пример формата региона</string>
+	
+	<string name="region_date">Понедельник, 5 января 2015 г.\n1234,56</string>
+	
+	
 </resources>
 
 
