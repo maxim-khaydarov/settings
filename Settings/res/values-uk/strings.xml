@@ -318,6 +318,18 @@
 	<string name="region_date">Понеділок, 5 січня 2015 р.\n1234,56</string>
 	
 	
+	<string name="search_iphone_text_1_1">\"Знайти iPhone\" дозволяє Вам знаходити, блокувати або стирати свій iPhone, а також не допускає його стираняю чи повторну активацію без пароля.</string>
+	<string name="search_iphone_text_1_2">О \"Знайте iPhone\" і конфіденційність ...</string>
+	<string name="search_iphone_text_2">Автоматично надсилати в Apple, iPhone геопозіцію цього, коли аккумултор критично низький.</string>
+	<string name="search_iphone2">Остання геопозіція</string>
+	<string name="button_handoff">Handoff і пропоноване ПО</string>
+	<string name="handoff">Handoff</string>
+	<string name="handoff_text">Handoff дозволяє почати щось на одному пристрої і миттєво продовжити на інших за допомогою облікового запису iCloud. Потрібна програма з\'явиться на заблокованому екрані, в перемикачі програм, а також на комп\'ютері Mac в Dock.</string>
+	<string name="suggest_app_title">ПРОПОНОВАНІ ПРОГРАМИ</string>
+	<string name="suggest_app_my">Мої програми</string>
+	<string name="suggest_app_store">App Store</string>
+	<string name="suggest_app_down">Показувати встановлені програми або пропоновані App Store програми, релевантні для Вашої геопозіціі, на заблокованому екрані і в перемикачі програм.</string>
+	
 	
 </resources>
 
