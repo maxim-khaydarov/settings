@@ -40,7 +40,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <ImageView
@@ -64,7 +64,7 @@
                         android:hint="TextView"
                         android:text="Unknow"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button01"
@@ -80,12 +80,12 @@
                         android:paddingLeft="15dp"
                         android:text="@string/region_lang"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView08"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
@@ -103,7 +103,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <Button
@@ -119,12 +119,12 @@
                         android:paddingLeft="15dp"
                         android:text="@string/region_other"
                         android:textColor="@color/blue"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView07"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
@@ -171,7 +171,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <ImageView
@@ -195,7 +195,7 @@
                         android:hint="TextView"
                         android:text="Unknow"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button08"
@@ -211,12 +211,12 @@
                         android:paddingLeft="15dp"
                         android:text="@string/region_region"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView09"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
@@ -234,7 +234,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <ImageView
@@ -258,7 +258,7 @@
                         android:hint="TextView"
                         android:text="@string/region_calendar_gregor"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button09"
@@ -274,12 +274,12 @@
                         android:paddingLeft="15dp"
                         android:text="@string/region_calendar"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView10"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
@@ -297,7 +297,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <Button
@@ -314,12 +314,12 @@
                         android:paddingLeft="15dp"
                         android:text="@string/region_addition"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView02"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
@@ -344,7 +344,7 @@
                 android:layout_marginTop="40dp"
                 android:text="@string/region_example"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -355,7 +355,7 @@
                 android:gravity="center"
                 android:text="0:34\nПонедельник, 5 января 2015 г.\n1234,56 р     4567,89"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
         </LinearLayout>
 

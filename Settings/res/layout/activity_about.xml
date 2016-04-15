@@ -42,13 +42,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/ButtonName"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -58,12 +58,12 @@
                         android:paddingLeft="15dp"
                         android:text="@string/name_about"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/imageView1"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
@@ -82,7 +82,7 @@
                         android:singleLine="true"
                         android:text="iOS"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                 </RelativeLayout>
 
@@ -111,7 +111,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <ImageView
@@ -136,7 +136,7 @@
                         android:hint="Unknow"
                         android:text="Unknow"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button02"
@@ -152,7 +152,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/network_about"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -164,7 +164,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <ImageView
@@ -189,7 +189,7 @@
                         android:hint="TextView"
                         android:text="Unknow"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button11"
@@ -205,7 +205,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/song"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -217,7 +217,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <ImageView
@@ -242,7 +242,7 @@
                         android:hint="TextView"
                         android:text="Unknow"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button12"
@@ -258,7 +258,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/video"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -270,7 +270,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <ImageView
@@ -295,7 +295,7 @@
                         android:hint="TextView"
                         android:text="Unknow"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button13"
@@ -311,7 +311,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/photo"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -323,7 +323,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <ImageView
@@ -348,7 +348,7 @@
                         android:hint="TextView"
                         android:text="Unknow"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button14"
@@ -364,7 +364,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/apps"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -377,7 +377,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <ImageView
@@ -402,7 +402,7 @@
                         android:hint="TextView"
                         android:text="Unknow"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button08"
@@ -418,7 +418,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/all_storage"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -430,7 +430,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <ImageView
@@ -455,7 +455,7 @@
                         android:hint="TextView"
                         android:text="Unknow"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button09"
@@ -471,7 +471,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/storage_dostupno"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -483,7 +483,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <ImageView
@@ -508,7 +508,7 @@
                         android:gravity="right"
                         android:hint="TextView"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button01"
@@ -524,7 +524,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/version_about"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -537,7 +537,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <ImageView
@@ -563,7 +563,7 @@
                         android:hint="TextView"
                         android:text="Unknow"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button05"
@@ -579,7 +579,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/button_operator"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -591,7 +591,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <ImageView
@@ -619,7 +619,7 @@
                         android:maxWidth="150dp"
                         android:text="5434545334534543554655442"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button03"
@@ -635,7 +635,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/serial_about"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -648,7 +648,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <ImageView
@@ -673,7 +673,7 @@
                         android:hint="TextView"
                         android:text="Unknow"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button06"
@@ -689,7 +689,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/mac_wifi"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -702,7 +702,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <ImageView
@@ -727,7 +727,7 @@
                         android:hint="TextView"
                         android:text="Unknow"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button07"
@@ -743,7 +743,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/mac_bluetooth"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -755,7 +755,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <TextView
@@ -769,7 +769,7 @@
                         android:hint="TextView"
                         android:text="Unknow"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button04"
@@ -785,7 +785,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/imei_about"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
                 </RelativeLayout>
 
                 <ImageView
@@ -807,7 +807,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <TextView
@@ -821,7 +821,7 @@
                         android:hint="TextView"
                         android:text="8938001987654321098"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button15"
@@ -837,7 +837,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/iccid"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
                 </RelativeLayout>
 
                 <ImageView
@@ -859,7 +859,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:background="@color/white" >
 
                     <TextView
@@ -872,7 +872,7 @@
                         android:hint="TextView"
                         android:text="Unknow"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/Button10"
@@ -888,12 +888,12 @@
                         android:paddingLeft="15dp"
                         android:text="@string/PO_aboout"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView14"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"

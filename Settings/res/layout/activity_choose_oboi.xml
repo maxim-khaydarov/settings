@@ -163,8 +163,8 @@
                     
                     <ProgressBar
                         android:id="@+id/progressBar1"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
@@ -184,7 +184,7 @@
                         android:gravity="left|center_vertical"
                         android:text="@string/camera"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView0613"
@@ -197,8 +197,8 @@
 
                     <ImageView
                         android:id="@+id/ImageView07"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
@@ -226,8 +226,8 @@
 
                     <ProgressBar
                         android:id="@+id/ProgressBar01"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
@@ -245,7 +245,7 @@
                         android:gravity="left|center_vertical"
                         android:paddingLeft="110dp"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <LinearLayout
                         android:layout_width="fill_parent"
@@ -262,7 +262,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/all_camera"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/textView5"
@@ -293,8 +293,8 @@
 
                     <ImageView
                         android:id="@+id/ImageView05"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"

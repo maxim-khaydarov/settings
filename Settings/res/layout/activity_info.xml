@@ -34,7 +34,7 @@
                     android:background="@drawable/button"
                     android:text="@string/down_install"
                     android:textColor="@color/blue"
-                    android:textSize="16sp" />
+                    android:textSize="15sp" />
 
                 <LinearLayout
                     android:id="@+id/LinearLayout1"
@@ -51,12 +51,12 @@
                         android:gravity="center"
                         android:text="@string/proverka_ios"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ProgressBar
                         android:id="@+id/progressBar1"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_marginLeft="10dp"
                         android:indeterminateDrawable="@drawable/progress_well" />
                 </LinearLayout>

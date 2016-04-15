@@ -15,6 +15,7 @@
     
    <style name="AppTheme" parent="AppBaseTheme">
         <item name="android:windowNoTitle">true</item> 
+         
         
     </style>
 	
@@ -46,6 +47,9 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:backgroundDimEnabled">false</item>
     </style>
+    
+	 
+	 
 
 	
 	

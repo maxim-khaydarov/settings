@@ -138,7 +138,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/vk"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView08"
@@ -152,8 +152,8 @@
 
                     <ImageView
                         android:id="@+id/ImageView09"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_alignParentLeft="false"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="false"
@@ -179,12 +179,12 @@
                         android:paddingLeft="15dp"
                         android:text="@string/mail"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView11"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_alignParentLeft="false"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="false"
@@ -218,7 +218,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <ImageView
@@ -232,7 +232,7 @@
                     <Button
                         android:id="@+id/Button02"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -243,7 +243,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/button_license"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView04"

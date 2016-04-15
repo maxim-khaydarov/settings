@@ -34,7 +34,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <ImageView
@@ -48,7 +48,7 @@
                     <Button
                         android:id="@+id/ButtonWifi"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -59,7 +59,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/fogot_wifi"
                         android:textColor="@color/blue"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                 </RelativeLayout>
             </LinearLayout>
@@ -105,7 +105,7 @@
                         android:background="@drawable/button_wifi_on"
                         android:text="DCHP"
                         android:textColor="@color/white"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/button2"
@@ -117,7 +117,7 @@
                         android:background="@drawable/button_wifi_off_center"
                         android:text="BootP"
                         android:textColor="@color/blue"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/button3"
@@ -131,7 +131,7 @@
                         android:background="@drawable/button_wifi_off_left"
                         android:text="@string/static_ip"
                         android:textColor="@color/blue"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 
@@ -142,7 +142,7 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:ems="10" >
 
                         <TextView
@@ -154,12 +154,12 @@
                             android:layout_marginRight="15dp"
                             android:text="TextView"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
 
                         <Button
                             android:id="@+id/Button02"
                             android:layout_width="fill_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
@@ -170,7 +170,7 @@
                             android:paddingLeft="15dp"
                             android:text="@string/adress_ip"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
                     </RelativeLayout>
 
                     <ImageView
@@ -183,7 +183,7 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:ems="10" >
 
                         <TextView
@@ -195,12 +195,12 @@
                             android:layout_marginRight="15dp"
                             android:text="TextView"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
 
                         <Button
                             android:id="@+id/Button01"
                             android:layout_width="fill_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
@@ -211,7 +211,7 @@
                             android:paddingLeft="15dp"
                             android:text="@string/mask_wifi"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
                     </RelativeLayout>
 
                     <ImageView
@@ -224,7 +224,7 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:ems="10" >
 
                         <TextView
@@ -236,12 +236,12 @@
                             android:layout_marginRight="15dp"
                             android:text="TextView"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
 
                         <Button
                             android:id="@+id/Button03"
                             android:layout_width="fill_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
@@ -252,7 +252,7 @@
                             android:paddingLeft="15dp"
                             android:text="@string/marsh_wifi"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
                     </RelativeLayout>
 
                     <ImageView
@@ -265,7 +265,7 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:ems="10" >
 
                         <TextView
@@ -277,12 +277,12 @@
                             android:layout_marginRight="15dp"
                             android:text="TextView"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
 
                         <Button
                             android:id="@+id/Button04"
                             android:layout_width="fill_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
@@ -293,7 +293,7 @@
                             android:paddingLeft="15dp"
                             android:text="DNS"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
                     </RelativeLayout>
 
                     <ImageView
@@ -334,7 +334,7 @@
                     android:background="@drawable/button_wifi_on"
                     android:text="@string/off"
                     android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    android:textSize="15sp" />
 
                 <Button
                     android:id="@+id/Button06"
@@ -346,7 +346,7 @@
                     android:background="@drawable/button_wifi_off_center"
                     android:text="@string/manual"
                     android:textColor="@color/blue"
-                    android:textSize="16sp" />
+                    android:textSize="15sp" />
 
                 <Button
                     android:id="@+id/Button07"
@@ -360,7 +360,7 @@
                     android:background="@drawable/button_wifi_off_left"
                     android:text="@string/auto"
                     android:textColor="@color/blue"
-                    android:textSize="16sp" />
+                    android:textSize="15sp" />
             </LinearLayout>
 
         </LinearLayout>

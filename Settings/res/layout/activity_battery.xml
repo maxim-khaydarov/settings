@@ -42,13 +42,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/ButtonLowMode"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -59,7 +59,7 @@
                         android:gravity="left|center_vertical"
                         android:text="@string/low_battery_mode"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ToggleButton
                         android:id="@+id/ToggleButtonLowBattery"
@@ -114,7 +114,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:overScrollMode="always" >
 
                     <Button
@@ -130,7 +130,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/more"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView03"
@@ -152,8 +152,8 @@
 
                     <ImageView
                         android:id="@+id/ImageView04"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="15dp"

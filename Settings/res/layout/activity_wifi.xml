@@ -34,7 +34,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <ImageView
@@ -48,7 +48,7 @@
                     <Button
                         android:id="@+id/ButtonWifi"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -59,7 +59,7 @@
                         android:gravity="left|center_vertical"
                         android:text="@string/button_wifi"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ToggleButton
                         android:id="@+id/ToggleButton01"
@@ -84,12 +84,12 @@
                 <RelativeLayout
                     android:id="@+id/LayoutMain"
                     android:layout_width="match_parent"
-                    android:layout_height="39dp" >
+                    android:layout_height="36dp" >
 
                     <Button
                         android:id="@+id/Connected"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -100,7 +100,7 @@
                         android:paddingLeft="35dp"
                         android:text="@string/connection"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/button1"
@@ -158,7 +158,7 @@
 
                     <ImageView
                         android:id="@+id/imageView1"
-                        android:layout_width="20dp"
+                        android:layout_width="18dp"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"

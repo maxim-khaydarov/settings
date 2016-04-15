@@ -43,13 +43,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/Button08"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -60,7 +60,7 @@
                         android:gravity="left|center_vertical"
                         android:text="@string/button_vibration_call"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ToggleButton
                         android:id="@+id/vibrationtoggle"
@@ -108,13 +108,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/Button10"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -125,7 +125,7 @@
                         android:gravity="left|center_vertical"
                         android:text="@string/button_vibration_silence"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ToggleButton
                         android:id="@+id/ToggleButton01"
@@ -260,13 +260,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/Button01"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -277,7 +277,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/button_volume"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView18"
@@ -675,13 +675,13 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:overScrollMode="always" >
 
                         <Button
                             android:id="@+id/Button07"
                             android:layout_width="fill_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
@@ -691,7 +691,7 @@
                             android:paddingLeft="15dp"
                             android:text="@string/ringtone"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/textView10"
@@ -703,7 +703,7 @@
                             android:singleLine="true"
                             android:text="TextView"
                             android:textColor="@color/hint_text"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/ImageView13"
@@ -716,8 +716,8 @@
 
                         <ImageView
                             android:id="@+id/ImageView01"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
                             android:layout_marginRight="10dp"
@@ -735,13 +735,13 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:overScrollMode="always" >
 
                         <Button
                             android:id="@+id/Button11"
                             android:layout_width="fill_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
@@ -751,7 +751,7 @@
                             android:paddingLeft="15dp"
                             android:text="@string/notifications"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/ImageView21"
@@ -765,8 +765,8 @@
 
                         <ImageView
                             android:id="@+id/ImageView20"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
                             android:layout_marginRight="10dp"
@@ -785,7 +785,7 @@
                             android:singleLine="true"
                             android:text="TextView"
                             android:textColor="@color/hint_text"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
 
                     </RelativeLayout>
                 </LinearLayout>
@@ -798,13 +798,13 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:overScrollMode="always" >
 
                         <Button
                             android:id="@+id/Button12"
                             android:layout_width="fill_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
@@ -814,7 +814,7 @@
                             android:paddingLeft="15dp"
                             android:text="@string/alarm"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/ImageView24"
@@ -827,8 +827,8 @@
 
                         <ImageView
                             android:id="@+id/ImageView23"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
                             android:layout_marginRight="10dp"
@@ -848,7 +848,7 @@
                             android:singleLine="true"
                             android:text="TextView"
                             android:textColor="@color/hint_text"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/ImageView22"
@@ -875,13 +875,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:overScrollMode="always" >
 
                     <Button
                         android:id="@+id/Button09"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -891,7 +891,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/more"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView12"
@@ -913,8 +913,8 @@
 
                     <ImageView
                         android:id="@+id/ImageView14"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
