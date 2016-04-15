@@ -7,14 +7,14 @@
     -->
     
     <style name="AppTheme" parent="AppBaseTheme">
-        <!-- <item name="android:windowNoTitle">true</item>  -->
+        
         
     </style>
     
     
     <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- API 14 theme customizations can go here. -->
-        <item name="android:actionBarStyle">@style/MyActionBar2</item>
+        <item name="android:actionBarStyle">@style/MyActionBar2</item>  
           <item name="android:windowNoTitle">true</item> 
         <item name="android:windowContentOverlay">@android:color/transparent</item>
         <item name="android:windowActionBarOverlay">true</item>
@@ -26,7 +26,7 @@
         <item name="android:icon">@android:color/transparent</item>
         <item name="android:background">@color/color_statusbar</item>
        
-        <item name="android:actionBarSize">40.0dip</item>
+        <!-- <item name="android:actionBarSize">40.0dip</item> -->
     </style>
 
 </resources>

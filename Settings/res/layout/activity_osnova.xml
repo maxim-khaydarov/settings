@@ -32,13 +32,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:overScrollMode="always" >
 
                     <Button
                         android:id="@+id/Button09"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -48,7 +48,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/button_about_this"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView23"
@@ -91,13 +91,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:overScrollMode="always" >
 
                     <Button
                         android:id="@+id/Button04"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -107,7 +107,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/button_update"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView07"
@@ -147,13 +147,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:overScrollMode="always" >
 
                     <Button
                         android:id="@+id/Button12"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -163,7 +163,7 @@
                         android:paddingLeft="15dp"
                         android:text="Siri"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView32"
@@ -206,13 +206,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:overScrollMode="always" >
 
                     <Button
                         android:id="@+id/Button13"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -222,7 +222,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/search_spotlight"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView35"
@@ -255,13 +255,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:overScrollMode="always" >
 
                     <Button
                         android:id="@+id/Button05"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -271,7 +271,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/button_handoff"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView08"
@@ -312,13 +312,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/Button06"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -328,7 +328,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/accessibility"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView11"
@@ -369,13 +369,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/Button02"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -385,7 +385,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/button_usage"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView31"
@@ -418,7 +418,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <ImageView
@@ -432,7 +432,7 @@
                     <Button
                         android:id="@+id/Button01"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -443,7 +443,7 @@
                         android:gravity="left|center_vertical"
                         android:text="@string/button_autorotation"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ToggleButton
                         android:id="@+id/rotatetoggle"
@@ -480,13 +480,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/Button11"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -496,7 +496,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/timeout"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/timeOutsT"
@@ -507,7 +507,7 @@
                         android:layout_toLeftOf="@+id/ImageView29"
                         android:text="TextView"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView29"
@@ -539,7 +539,7 @@
                 android:orientation="vertical" >
 
                 <ImageView
-                    android:id="@+id/ImageView16"
+                    android:id="@+id/ImageView15"
                     android:layout_width="fill_parent"
                     android:layout_height="1px"
                     android:ems="10"
@@ -548,13 +548,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/Button07"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -564,7 +564,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/date_time"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView14"
@@ -597,13 +597,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/Button08"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -613,7 +613,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/input_metod"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView19"
@@ -646,13 +646,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/Button10"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -662,7 +662,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/language_region"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView26"
@@ -714,13 +714,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/Button03"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -730,7 +730,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/reset_all_settings"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView05"
@@ -773,7 +773,7 @@
                 android:orientation="vertical" >
 
                 <ImageView
-                    android:id="@+id/ImageView15"
+                    android:id="@+id/ImageView153"
                     android:layout_width="fill_parent"
                     android:layout_height="1px"
                     android:ems="10"
@@ -782,13 +782,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/ButtonSetupApp"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -798,7 +798,7 @@
                         android:paddingLeft="15dp"
                         android:text="@string/settings_app"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView21"

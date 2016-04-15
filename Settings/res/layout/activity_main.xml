@@ -5,6 +5,8 @@
     android:background="@color/background_fon"
     android:ems="10"
     tools:context=".MainActivity" >
+    
+   
 
     <ua.mkh.settings.full.EdgeEffectScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -26,8 +28,8 @@
             <LinearLayout
                 android:id="@+id/ll1"
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
-                android:layout_marginTop="39dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="38dp"
                 android:background="#CBCACF"
                 android:descendantFocusability="beforeDescendants"
                 android:focusableInTouchMode="true"
@@ -35,13 +37,13 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="49dp" >
+                    android:layout_height="45dp" >
 
                     <RelativeLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="49dp"
+                        android:layout_height="45dp"
                         android:layout_weight="1"
-                        android:padding="10dp" >
+                        android:padding="8dp" >
 
                         <EditText
                             android:id="@+id/EditText01"
@@ -50,7 +52,7 @@
                             android:layout_weight="1"
                             android:background="@drawable/back_search"
                             android:ems="10"
-                            android:gravity="center"
+                            android:gravity="center_vertical|center_horizontal"
                             android:inputType="textCapSentences"
                             android:textSize="13sp" />
 
@@ -62,8 +64,8 @@
 
                             <ImageView
                                 android:id="@+id/imageView29"
-                                android:layout_width="18dp"
-                                android:layout_height="18dp"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
                                 android:layout_gravity="center"
                                 android:layout_marginRight="10dp"
                                 android:src="@drawable/icon_search" />
@@ -75,7 +77,7 @@
                                 android:gravity="center"
                                 android:text="@string/app_name"
                                 android:textColor="@color/hint_text"
-                                android:textSize="14sp" />
+                                android:textSize="12sp" />
 
                         </LinearLayout>
 
@@ -116,7 +118,7 @@
                 android:id="@+id/ImageView01"
                 android:layout_width="fill_parent"
                 android:layout_height="1px"
-                android:layout_marginTop="39dp"
+                android:layout_marginTop="36dp"
                 android:ems="10"
                 android:scaleType="fitXY"
                 android:src="@drawable/line_cray" />
@@ -131,13 +133,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/Button01"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -149,12 +151,12 @@
                         android:paddingLeft="65dp"
                         android:text="@string/button_avia"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/imageView3"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
                         android:background="@color/transparent"
@@ -164,8 +166,8 @@
 
                     <ToggleButton
                         android:id="@+id/ToggleButton01"
-                        android:layout_width="60dp"
-                        android:layout_height="39dp"
+                        android:layout_width="58dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
@@ -187,13 +189,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/ButtonWifi"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -204,7 +206,7 @@
                         android:paddingLeft="65dp"
                         android:text="@string/button_wifi"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/imageView1"
@@ -218,8 +220,8 @@
 
                     <ImageView
                         android:id="@+id/imageView4"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
                         android:scaleType="fitXY"
@@ -249,7 +251,7 @@
                         android:singleLine="true"
                         android:text="TextView"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                 </RelativeLayout>
             </LinearLayout>
@@ -264,13 +266,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/ButtonBluetooth"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -281,7 +283,7 @@
                         android:paddingLeft="65dp"
                         android:text="@string/button_bluetooth"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView03"
@@ -295,8 +297,8 @@
 
                     <ImageView
                         android:id="@+id/imageView5"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
                         android:scaleType="fitXY"
@@ -320,7 +322,7 @@
                         android:layout_toLeftOf="@+id/ImageView03"
                         android:text="TextView"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                 </RelativeLayout>
             </LinearLayout>
@@ -335,13 +337,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/ButtonSota"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -352,7 +354,7 @@
                         android:paddingLeft="65dp"
                         android:text="@string/button_sota"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView05"
@@ -366,8 +368,8 @@
 
                     <ImageView
                         android:id="@+id/imageView6"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
                         android:scaleType="fitXY"
@@ -389,20 +391,20 @@
             <LinearLayout
                 android:id="@+id/LinearLayoutApn"
                 android:layout_width="match_parent"
-                android:layout_height="39dp"
+                android:layout_height="36dp"
                 android:background="@color/white"
                 android:ems="10"
                 android:orientation="vertical" >
 
                 <RelativeLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/Button06"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -414,7 +416,7 @@
                         android:paddingLeft="65dp"
                         android:text="@string/apn"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView73"
@@ -429,8 +431,8 @@
 
                     <ImageView
                         android:id="@+id/ImageView72"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
                         android:scaleType="fitXY"
@@ -464,7 +466,7 @@
                         android:layout_toLeftOf="@+id/ImageView75"
                         android:text="@string/off"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                 </RelativeLayout>
             </LinearLayout>
@@ -479,13 +481,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/ButtonOperator"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -497,7 +499,7 @@
                         android:paddingLeft="65dp"
                         android:text="@string/button_operator"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView07"
@@ -521,8 +523,8 @@
 
                     <ImageView
                         android:id="@+id/imageView7"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
                         android:scaleType="fitXY"
@@ -536,7 +538,7 @@
                         android:layout_toLeftOf="@+id/ImageView07"
                         android:text="22"
                         android:textColor="@color/hint_text"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView16"
@@ -555,7 +557,7 @@
                 android:id="@+id/LinearLayoutCenter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="39dp"
+                android:layout_marginTop="36dp"
                 android:orientation="vertical" >
 
                 <ImageView
@@ -576,13 +578,13 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:ems="10" >
 
                         <Button
                             android:id="@+id/ButtonNotification"
                             android:layout_width="fill_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
@@ -593,7 +595,7 @@
                             android:paddingLeft="65dp"
                             android:text="@string/notification"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/ImageView22"
@@ -607,8 +609,8 @@
 
                         <ImageView
                             android:id="@+id/ImageView20"
-                            android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="20dp"
                             android:scaleType="fitXY"
@@ -637,13 +639,13 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:ems="10" >
 
                         <Button
                             android:id="@+id/ButtonControl"
                             android:layout_width="fill_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
@@ -654,7 +656,7 @@
                             android:paddingLeft="65dp"
                             android:text="@string/control_center"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/ImageView26"
@@ -668,8 +670,8 @@
 
                         <ImageView
                             android:id="@+id/ImageView28"
-                            android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="20dp"
                             android:scaleType="fitXY"
@@ -698,13 +700,13 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:ems="10" >
 
                         <Button
                             android:id="@+id/ButtonDisturb"
                             android:layout_width="fill_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
@@ -716,7 +718,7 @@
                             android:paddingLeft="65dp"
                             android:text="@string/disturb"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/ImageView24"
@@ -730,8 +732,8 @@
 
                         <ImageView
                             android:id="@+id/ImageView23"
-                            android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="20dp"
                             android:scaleType="fitXY"
@@ -755,7 +757,7 @@
                 android:id="@+id/LinearLayoutOsnova"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="39dp"
+                android:layout_marginTop="36dp"
                 android:background="@color/white"
                 android:ems="10"
                 android:orientation="vertical" >
@@ -770,13 +772,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/ButtonOsnova"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -787,7 +789,7 @@
                         android:paddingLeft="65dp"
                         android:text="@string/button_general"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView09"
@@ -801,8 +803,8 @@
 
                     <ImageView
                         android:id="@+id/imageView8"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
                         android:scaleType="fitXY"
@@ -810,8 +812,8 @@
 
                     <ImageView
                         android:id="@+id/imageView2"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="5dp"
                         android:layout_toLeftOf="@+id/ImageView09"
@@ -830,13 +832,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/ButtonDisplay"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -847,7 +849,7 @@
                         android:paddingLeft="65dp"
                         android:text="@string/button_brightness"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView77"
@@ -861,8 +863,8 @@
 
                     <ImageView
                         android:id="@+id/ImageView76"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
                         android:scaleType="fitXY"
@@ -891,13 +893,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/ButtonOboi"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -908,7 +910,7 @@
                         android:paddingLeft="65dp"
                         android:text="@string/button_wallpaper"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView128"
@@ -922,8 +924,8 @@
 
                     <ImageView
                         android:id="@+id/imageView16"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
                         android:scaleType="fitXY"
@@ -952,13 +954,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/ButtonGeo"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -969,7 +971,7 @@
                         android:paddingLeft="65dp"
                         android:text="@string/button_geolocatoin"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView17"
@@ -993,8 +995,8 @@
 
                     <ImageView
                         android:id="@+id/imageView19"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
                         android:src="@drawable/gps" />
@@ -1011,13 +1013,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/ButtonZvuki"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -1028,7 +1030,7 @@
                         android:paddingLeft="65dp"
                         android:text="@string/button_sounds"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView11"
@@ -1042,8 +1044,8 @@
 
                     <ImageView
                         android:id="@+id/imageView9"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
                         android:scaleType="fitXY"
@@ -1073,13 +1075,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/ButtonPasscode"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -1090,7 +1092,7 @@
                         android:paddingLeft="65dp"
                         android:text="@string/passcode"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView47"
@@ -1104,8 +1106,8 @@
 
                     <ImageView
                         android:id="@+id/ImageView56"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
                         android:scaleType="fitXY"
@@ -1134,13 +1136,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/ButtonBattery"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -1151,7 +1153,7 @@
                         android:paddingLeft="65dp"
                         android:text="@string/button_battery"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView108"
@@ -1165,8 +1167,8 @@
 
                     <ImageView
                         android:id="@+id/ImageView110"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
                         android:scaleType="fitXY"
@@ -1194,13 +1196,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="36dp"
                     android:ems="10" >
 
                     <Button
                         android:id="@+id/ButtonPrivacy"
                         android:layout_width="fill_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
@@ -1211,7 +1213,7 @@
                         android:paddingLeft="65dp"
                         android:text="@string/privacy"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="15sp" />
 
                     <ImageView
                         android:id="@+id/ImageView59"
@@ -1225,8 +1227,8 @@
 
                     <ImageView
                         android:id="@+id/ImageView60"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
                         android:scaleType="fitXY"
@@ -1258,8 +1260,8 @@
                 android:id="@+id/LinearLayoutStore"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="39dp"
-                android:layout_marginTop="39dp"
+                android:layout_marginBottom="36dp"
+                android:layout_marginTop="36dp"
                 android:orientation="vertical" >
 
                 <ImageView
@@ -1278,19 +1280,19 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:ems="10" >
 
                         <Button
                             android:id="@+id/ButtonCloud"
                             android:layout_width="fill_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:background="@drawable/button_bg"
                             android:ems="10"
                             android:gravity="left|center_vertical"
                             android:paddingLeft="65dp"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -1307,7 +1309,7 @@
                                 android:layout_marginTop="1dp"
                                 android:text="@string/icloud"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <TextView
                                 android:id="@+id/textView2"
@@ -1331,8 +1333,8 @@
 
                         <ImageView
                             android:id="@+id/ImageView79"
-                            android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="20dp"
                             android:scaleType="fitXY"
@@ -1349,13 +1351,13 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="39dp"
+                        android:layout_height="36dp"
                         android:ems="10" >
 
                         <Button
                             android:id="@+id/ButtonTunes"
                             android:layout_width="fill_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
@@ -1366,7 +1368,7 @@
                             android:paddingLeft="65dp"
                             android:text="@string/itunes_appstore"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/ImageView40"
@@ -1380,8 +1382,8 @@
 
                         <ImageView
                             android:id="@+id/ImageView161"
-                            android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="20dp"
                             android:scaleType="fitXY"
@@ -1415,7 +1417,7 @@
                 android:id="@+id/LinearLayoutApp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="39dp"
+                android:layout_marginBottom="36dp"
                 android:orientation="vertical" >
 
                 <LinearLayout
@@ -1443,13 +1445,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/ButtonMail"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -1460,7 +1462,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/mail"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView38"
@@ -1474,8 +1476,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView36"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -1493,13 +1495,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/ButtonNotes"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -1510,7 +1512,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/notes"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView35"
@@ -1524,8 +1526,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView272"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -1553,13 +1555,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/ButtonPhone"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -1570,7 +1572,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/phone"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView43"
@@ -1584,8 +1586,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView42"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -1613,13 +1615,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/ButtonMessages"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -1631,7 +1633,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/messages"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView39"
@@ -1645,8 +1647,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView392"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -1674,13 +1676,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/ButtonCompass"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -1691,7 +1693,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/compass"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView52"
@@ -1705,8 +1707,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView51"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -1734,13 +1736,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/ButtonSafari"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -1751,7 +1753,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/safari"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView46"
@@ -1765,8 +1767,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView45"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -1818,13 +1820,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/ButtonMusic"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -1835,7 +1837,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/music"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView49"
@@ -1849,8 +1851,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView48"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -1868,13 +1870,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/ButtonGameCenter"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -1885,7 +1887,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/game_center"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView54"
@@ -1899,8 +1901,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView53"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -1928,13 +1930,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/ButtonWeather"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -1945,7 +1947,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/weather"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView546"
@@ -1959,8 +1961,8 @@
 
                             <ImageView
                                 android:id="@+id/imageView53"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -1988,13 +1990,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/ButtonMaps"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -2005,7 +2007,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/maps"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView103"
@@ -2019,8 +2021,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView104"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -2048,13 +2050,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/Button02"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -2065,7 +2067,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/compass"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView57"
@@ -2079,8 +2081,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView62"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -2108,13 +2110,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/Button03"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -2125,7 +2127,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/compass"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView65"
@@ -2139,8 +2141,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView63"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -2168,13 +2170,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/Button04"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -2185,7 +2187,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/compass"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView68"
@@ -2199,8 +2201,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView66"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -2228,13 +2230,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/Button05"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -2245,7 +2247,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/compass"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView71"
@@ -2259,8 +2261,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView69"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -2312,13 +2314,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/ButtonVk"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -2329,7 +2331,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/vk"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView100"
@@ -2343,8 +2345,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView101"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -2362,13 +2364,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/ButtonViber"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -2379,7 +2381,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/viber"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView97"
@@ -2393,8 +2395,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView98"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -2422,13 +2424,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/ButtonOk"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -2439,7 +2441,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/odnoklassniki"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView94"
@@ -2453,8 +2455,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView95"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -2482,13 +2484,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/ButtonSkype"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -2499,7 +2501,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/skype"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView91"
@@ -2513,8 +2515,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView92"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -2542,13 +2544,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/ButtonWhatsapp"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -2559,7 +2561,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/whatsapp"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView88"
@@ -2573,8 +2575,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView89"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -2608,7 +2610,7 @@
                             <Button
                                 android:id="@+id/ButtonTwitter"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -2619,7 +2621,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/twitter"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView85"
@@ -2633,8 +2635,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView86"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -2661,13 +2663,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/ButtonFacebook"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -2678,7 +2680,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/facebook"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView44"
@@ -2692,8 +2694,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView83"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"
@@ -2720,13 +2722,13 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
+                            android:layout_height="36dp"
                             android:ems="10" >
 
                             <Button
                                 android:id="@+id/ButtonInstagram"
                                 android:layout_width="fill_parent"
-                                android:layout_height="39dp"
+                                android:layout_height="36dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_alignParentTop="true"
@@ -2737,7 +2739,7 @@
                                 android:paddingLeft="65dp"
                                 android:text="@string/instagram"
                                 android:textColor="@color/black"
-                                android:textSize="16sp" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:id="@+id/ImageView18"
@@ -2751,8 +2753,8 @@
 
                             <ImageView
                                 android:id="@+id/ImageView30"
-                                android:layout_width="27dp"
-                                android:layout_height="27dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="20dp"
                                 android:scaleType="fitXY"

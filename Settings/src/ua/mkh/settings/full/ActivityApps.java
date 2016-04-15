@@ -17,7 +17,6 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager.LayoutParams;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +27,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar.LayoutParams;
  
 public class ActivityApps extends ListActivity implements  SimpleGestureListener{
     private PackageManager packageManager = null;
