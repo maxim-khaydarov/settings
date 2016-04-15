@@ -42,6 +42,14 @@
             android:scaleType="fitCenter"
             android:src="@drawable/next" />
 
+        <TextView
+            android:id="@+id/textSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ImageView02"
+            android:layout_toLeftOf="@+id/ImageView02"
+            android:text="TextView" />
+
     </RelativeLayout>
 
 </LinearLayout>

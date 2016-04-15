@@ -38,6 +38,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     
      <uses-permission android:name="android.permission.SET_TIME"/>
+     <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
  
     <application
         android:allowBackup="false"

@@ -1,5 +1,6 @@
 package ua.mkh.settings.full;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +14,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -301,6 +303,11 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
 		
 	}
 	
+	public static long getApkSize(Context context, String packageName)
+	        throws NameNotFoundException {
+	    return new File(context.getPackageManager().getApplicationInfo(
+	            packageName, 0).publicSourceDir).length();
+	}
 	
 	public static void setListViewHeightBasedOnChildren(ListView lv) {
         ListAdapter listAdapter = lv.getAdapter();
