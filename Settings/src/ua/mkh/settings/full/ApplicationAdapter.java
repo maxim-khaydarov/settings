@@ -3,9 +3,13 @@ package ua.mkh.settings.full;
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.List;
 
+import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -15,6 +19,8 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.PackageStats;
 import android.graphics.Typeface;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Message;
 import android.os.RemoteException;
 import android.os.UserHandle;
 import android.util.Log;
@@ -31,6 +37,10 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
     private Context context;
     private PackageManager packageManager;
     private Context mCtx;
+    
+    
+    
+    
     
     public ApplicationAdapter(Context context, int textViewResourceId,
             List<ApplicationInfo> appsList) {
@@ -111,7 +121,7 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
                         throws RemoteException {
 
                         Log.i("TAG", "codeSize: " + pStats.codeSize);
-                        appSize.setText(String.valueOf(pStats.codeSize/2048L/1024L));
+                        appSize.setText(getFileSize(pStats.codeSize));
                     }
                 });
 
@@ -129,6 +139,8 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
 				e.printStackTrace();
 			}
         }
+            
+           
         return view;
     }
     
@@ -137,6 +149,16 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
 	    return new File(context.getPackageManager().getApplicationInfo(
 	            packageName3, 0).publicSourceDir).length();
 	}
+    
+    public static String getFileSize(long size) {
+        if (size <= 0)
+            return "0";
+        final String[] units = new String[] { "B", "KB", "MB", "GB", "TB" };
+        int digitGroups = (int) (Math.log10(size) / Math.log10(1024));
+        return new DecimalFormat("#,##0.#").format(size / Math.pow(1024, digitGroups)) + " " + units[digitGroups];
+    }
+    
+    
     
 };
 

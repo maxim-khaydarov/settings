@@ -303,11 +303,7 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
 		
 	}
 	
-	public static long getApkSize(Context context, String packageName)
-	        throws NameNotFoundException {
-	    return new File(context.getPackageManager().getApplicationInfo(
-	            packageName, 0).publicSourceDir).length();
-	}
+	
 	
 	public static void setListViewHeightBasedOnChildren(ListView lv) {
         ListAdapter listAdapter = lv.getAdapter();
