@@ -153,22 +153,22 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
 	    		      Button09.setTextSize(13);
 				}
 				if (size .contains( "Normal")){
-					usage.setTextSize(16);
-	    		      aviable.setTextSize(16);
-	    		      Button08.setTextSize(16);
-	    		      Button09.setTextSize(16);
+					usage.setTextSize(15);
+	    		      aviable.setTextSize(15);
+	    		      Button08.setTextSize(15);
+	    		      Button09.setTextSize(15);
 				}
 				if (size .contains( "Large")){
-					usage.setTextSize(19);
-	    		      aviable.setTextSize(19);
-	    		      Button08.setTextSize(19);
-	    		      Button09.setTextSize(19);
+					usage.setTextSize(18);
+	    		      aviable.setTextSize(18);
+	    		      Button08.setTextSize(18);
+	    		      Button09.setTextSize(18);
 				}
 				if (size .contains( "xLarge")){
-					usage.setTextSize(21);
-	    		      aviable.setTextSize(21);
-	    		      Button08.setTextSize(21);
-	    		      Button09.setTextSize(21);
+					usage.setTextSize(20);
+	    		      aviable.setTextSize(20);
+	    		      Button08.setTextSize(20);
+	    		      Button09.setTextSize(20);
 				}
 	       }
        

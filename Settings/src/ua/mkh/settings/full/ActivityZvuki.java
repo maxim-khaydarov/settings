@@ -361,9 +361,9 @@ public class ActivityZvuki extends Activity implements OnClickListener, SimpleGe
 					// Получаем число из настроек
 		        	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 					if (size .contains( "Small")){
-						ringtone.setTextSize(14);
-						notif.setTextSize(14);
-						alarms.setTextSize(14);
+						ringtone.setTextSize(13);
+						notif.setTextSize(13);
+						alarms.setTextSize(13);
 						textView6.setTextSize(11);
 					    textView7.setTextSize(11);
 					    textView8.setTextSize(11);
@@ -372,17 +372,17 @@ public class ActivityZvuki extends Activity implements OnClickListener, SimpleGe
 					    textView4.setTextSize(11);
 					    textView5.setTextSize(11);
 					    textView9.setTextSize(11);
-					    Button07.setTextSize(14);
-					    Button08.setTextSize(14);
-					    Button10.setTextSize(14);
-					    Button11.setTextSize(14);
-					    Button12.setTextSize(14);
-					    Button01.setTextSize(14);
+					    Button07.setTextSize(13);
+					    Button08.setTextSize(13);
+					    Button10.setTextSize(13);
+					    Button11.setTextSize(13);
+					    Button12.setTextSize(13);
+					    Button01.setTextSize(13);
 					}
 					if (size.contains( "Normal")){
-						ringtone.setTextSize(16);
-						notif.setTextSize(16);
-						alarms.setTextSize(16);
+						ringtone.setTextSize(15);
+						notif.setTextSize(15);
+						alarms.setTextSize(15);
 						textView6.setTextSize(13);
 					    textView7.setTextSize(13);
 					    textView8.setTextSize(13);
@@ -391,36 +391,36 @@ public class ActivityZvuki extends Activity implements OnClickListener, SimpleGe
 					    textView4.setTextSize(13);
 					    textView5.setTextSize(13);
 					    textView9.setTextSize(13);
-					    Button07.setTextSize(16);
-					    Button08.setTextSize(16);
-					    Button10.setTextSize(16);
-					    Button11.setTextSize(16);
-					    Button12.setTextSize(16);
-					    Button01.setTextSize(16);
+					    Button07.setTextSize(15);
+					    Button08.setTextSize(15);
+					    Button10.setTextSize(15);
+					    Button11.setTextSize(15);
+					    Button12.setTextSize(15);
+					    Button01.setTextSize(15);
 					}
 					if (size .contains( "Large")){
-						ringtone.setTextSize(19);
-						notif.setTextSize(19);
-						alarms.setTextSize(19);
-						textView6.setTextSize(16);
-					    textView7.setTextSize(16);
-					    textView8.setTextSize(16);
-					    textView2.setTextSize(16);
-					    textView3.setTextSize(16);
-					    textView4.setTextSize(16);
-					    textView5.setTextSize(16);
-					    textView9.setTextSize(16);
-					    Button07.setTextSize(19);
-					    Button08.setTextSize(19);
-					    Button10.setTextSize(19);
-					    Button11.setTextSize(19);
-					    Button12.setTextSize(19);
-					    Button01.setTextSize(19);
+						ringtone.setTextSize(18);
+						notif.setTextSize(18);
+						alarms.setTextSize(18);
+						textView6.setTextSize(15);
+					    textView7.setTextSize(15);
+					    textView8.setTextSize(15);
+					    textView2.setTextSize(15);
+					    textView3.setTextSize(15);
+					    textView4.setTextSize(15);
+					    textView5.setTextSize(15);
+					    textView9.setTextSize(15);
+					    Button07.setTextSize(18);
+					    Button08.setTextSize(18);
+					    Button10.setTextSize(18);
+					    Button11.setTextSize(18);
+					    Button12.setTextSize(18);
+					    Button01.setTextSize(18);
 					}
 					if (size .contains( "xLarge")){
-						ringtone.setTextSize(21);
-						notif.setTextSize(21);
-						alarms.setTextSize(21);
+						ringtone.setTextSize(20);
+						notif.setTextSize(20);
+						alarms.setTextSize(20);
 						textView6.setTextSize(18);
 					    textView7.setTextSize(18);
 					    textView8.setTextSize(18);
@@ -429,12 +429,12 @@ public class ActivityZvuki extends Activity implements OnClickListener, SimpleGe
 					    textView4.setTextSize(18);
 					    textView5.setTextSize(18);
 					    textView9.setTextSize(18);
-					    Button07.setTextSize(21);
-					    Button08.setTextSize(21);
-					    Button10.setTextSize(21);
-					    Button11.setTextSize(21);
-					    Button12.setTextSize(21);
-					    Button01.setTextSize(21);
+					    Button07.setTextSize(20);
+					    Button08.setTextSize(20);
+					    Button10.setTextSize(20);
+					    Button11.setTextSize(20);
+					    Button12.setTextSize(20);
+					    Button01.setTextSize(20);
 					}
 		       }
 		       

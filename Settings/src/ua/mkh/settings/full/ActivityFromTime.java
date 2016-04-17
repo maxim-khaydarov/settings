@@ -420,20 +420,20 @@ timePicker2.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
 		// Получаем число из настроек
     	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 		if (size .contains( "Small")){
-	        Button01.setTextSize(14);
-	        Button02.setTextSize(14);
+	        Button01.setTextSize(13);
+	        Button02.setTextSize(13);
 		}
 		if (size .contains( "Normal")){
-	        Button01.setTextSize(16);
-	        Button02.setTextSize(16);
+	        Button01.setTextSize(15);
+	        Button02.setTextSize(15);
 		}
 		if (size .contains( "Large")){
-	        Button01.setTextSize(19);
-	        Button02.setTextSize(19);
+	        Button01.setTextSize(18);
+	        Button02.setTextSize(18);
 		}
 		if (size .contains( "xLarge")){
-	        Button01.setTextSize(21);
-	        Button02.setTextSize(21);
+	        Button01.setTextSize(20);
+	        Button02.setTextSize(20);
 		}
    }
 	}

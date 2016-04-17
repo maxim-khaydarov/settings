@@ -41,7 +41,7 @@ import android.widget.ToggleButton;
 public class ActivityOsnova extends Activity implements OnClickListener, SimpleGestureListener{
 
 	Button btn_back, btn_info, Button02, Button01, Button03, Button04, Button05, Button06, Button07, Button08,
-	btn_setup_app, Button09, Button10, Button11, Button12, Button13;
+	btn_setup_app, Button09, Button10, Button11, Button12, Button13, Button14;
 	TextView textStatus, textView2, textView3, textView4, textView5, textView6,
 	textView7, textView8, textView9, textView10, textView11, textView12, textView14,
 	  TextView03, TextView04, timeOutsT;
@@ -203,6 +203,9 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 			 Button13 = (Button)findViewById(R.id.Button13);
 			 Button13.setOnClickListener(this);
 			 
+			 Button14 = (Button)findViewById(R.id.Button14);
+			 Button14.setOnClickListener(this);
+			 
 			
 			 
 			 btn_setup_app = (Button) findViewById(R.id.ButtonSetupApp);
@@ -247,6 +250,7 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 		     Button11.setTypeface(typefaceRoman);
 		     Button12.setTypeface(typefaceRoman);
 		     Button13.setTypeface(typefaceRoman);
+		     Button14.setTypeface(typefaceRoman);
 		     btn_setup_app.setTypeface(typefaceRoman);
 		    // textView1.setTypeface(typefaceRoman);
 		   //  textView2.setTypeface(typefaceThin);
@@ -454,6 +458,7 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				     Button11.setTypeface(typefaceBold);
 				     Button12.setTypeface(typefaceBold);
 				     Button13.setTypeface(typefaceBold);
+				     Button14.setTypeface(typefaceBold);
 				     btn_setup_app.setTypeface(typefaceBold);
 				  //   textView1.setTypeface(typefaceBold);
 				  //   textView2.setTypeface(typefaceRoman);
@@ -480,19 +485,20 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				// Получаем число из настроек
 	        	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 				if (size .contains( "Small")){
-				     Button02.setTextSize(14);
-				     Button03.setTextSize(14);
-				     Button01.setTextSize(14);
-				     Button04.setTextSize(14);
-				     Button05.setTextSize(14);
-				     Button07.setTextSize(14);
-				     Button08.setTextSize(14);
-				     Button09.setTextSize(14);
-				     Button10.setTextSize(14);
-				     Button11.setTextSize(14);
-				     Button12.setTextSize(14);
-				     Button13.setTextSize(14);
-				     btn_setup_app.setTextSize(14);
+				     Button02.setTextSize(13);
+				     Button03.setTextSize(13);
+				     Button01.setTextSize(13);
+				     Button04.setTextSize(13);
+				     Button05.setTextSize(13);
+				     Button07.setTextSize(13);
+				     Button08.setTextSize(13);
+				     Button09.setTextSize(13);
+				     Button10.setTextSize(13);
+				     Button11.setTextSize(13);
+				     Button12.setTextSize(13);
+				     Button13.setTextSize(13);
+				     Button14.setTextSize(13);
+				     btn_setup_app.setTextSize(13);
 				  //   textView1.setTextSize(11);
 				  //   textView2.setTextSize(15);
 				  //   textView3.setTextSize(15);
@@ -509,22 +515,23 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				    // textView14.setTextSize(10);
 				  //   TextView01.setTextSize(11);
 				     TextView03.setTextSize(11);
-				     timeOutsT.setTextSize(14);
+				     timeOutsT.setTextSize(13);
 				}
 				if (size .contains( "Normal")){
-				     Button02.setTextSize(16);
-				     Button03.setTextSize(16);
-				     Button01.setTextSize(16);
-				     Button04.setTextSize(16);
-				     Button05.setTextSize(16);
-				     Button07.setTextSize(16);
-				     Button08.setTextSize(16);
-				     Button09.setTextSize(16);
-				     Button10.setTextSize(16);
-				     Button11.setTextSize(16);
-				     Button12.setTextSize(16);
-				     Button13.setTextSize(16);
-				     btn_setup_app.setTextSize(16);
+				     Button02.setTextSize(15);
+				     Button03.setTextSize(15);
+				     Button01.setTextSize(15);
+				     Button04.setTextSize(15);
+				     Button05.setTextSize(15);
+				     Button07.setTextSize(15);
+				     Button08.setTextSize(15);
+				     Button09.setTextSize(15);
+				     Button10.setTextSize(15);
+				     Button11.setTextSize(15);
+				     Button12.setTextSize(15);
+				     Button13.setTextSize(15);
+				     Button14.setTextSize(15);
+				     btn_setup_app.setTextSize(15);
 				   //  textView1.setTextSize(13);
 				   //  textView2.setTextSize(17);
 				   //  textView3.setTextSize(17);
@@ -540,23 +547,24 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				  //   textView13.setTextSize(13);
 				   //  textView14.setTextSize(12);
 				   //  TextView01.setTextSize(13);
-				     timeOutsT.setTextSize(16);
+				     timeOutsT.setTextSize(15);
 				}
 				if (size .contains( "Large")){
-				     Button02.setTextSize(19);
-				     Button03.setTextSize(19);
-				     Button01.setTextSize(19);
-				     Button04.setTextSize(19);
-				     Button05.setTextSize(19);
-				     Button07.setTextSize(19);
-				     Button08.setTextSize(19);
-				     Button09.setTextSize(19);
-				     Button10.setTextSize(19);
-				     Button11.setTextSize(19);
-				     Button12.setTextSize(19);
-				     Button13.setTextSize(19);
-				     btn_setup_app.setTextSize(19);
-				  //   textView1.setTextSize(16);
+				     Button02.setTextSize(18);
+				     Button03.setTextSize(18);
+				     Button01.setTextSize(18);
+				     Button04.setTextSize(18);
+				     Button05.setTextSize(18);
+				     Button07.setTextSize(18);
+				     Button08.setTextSize(18);
+				     Button09.setTextSize(18);
+				     Button10.setTextSize(18);
+				     Button11.setTextSize(18);
+				     Button12.setTextSize(18);
+				     Button13.setTextSize(18);
+				     Button14.setTextSize(18);
+				     btn_setup_app.setTextSize(18);
+				  //   textView1.setTextSize(15);
 				 //    textView2.setTextSize(20);
 				  //   textView3.setTextSize(20);
 				  //   textView4.setTextSize(20);
@@ -568,26 +576,27 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				   //  textView10.setTextSize(20);
 				   //  textView11.setTextSize(20);
 				    // textView12.setTextSize(20);
-				   //  textView13.setTextSize(16);
+				   //  textView13.setTextSize(15);
 				  //   textView14.setTextSize(15);
-				 //    TextView01.setTextSize(16);
-				     TextView03.setTextSize(16);
-				     timeOutsT.setTextSize(19);
+				 //    TextView01.setTextSize(15);
+				     TextView03.setTextSize(15);
+				     timeOutsT.setTextSize(18);
 				}
 				if (size .contains( "xLarge")){
-				     Button02.setTextSize(21);
-				     Button03.setTextSize(21);
-				     Button01.setTextSize(21);
-				     Button04.setTextSize(21);
-				     Button05.setTextSize(21);
-				     Button07.setTextSize(21);
-				     Button08.setTextSize(21);
-				     Button09.setTextSize(21);
-				     Button10.setTextSize(21);
-				     Button11.setTextSize(21);
-				     Button12.setTextSize(21);
-				     Button13.setTextSize(21);
-				     btn_setup_app.setTextSize(21);
+				     Button02.setTextSize(20);
+				     Button03.setTextSize(20);
+				     Button01.setTextSize(20);
+				     Button04.setTextSize(20);
+				     Button05.setTextSize(20);
+				     Button07.setTextSize(20);
+				     Button08.setTextSize(20);
+				     Button09.setTextSize(20);
+				     Button10.setTextSize(20);
+				     Button11.setTextSize(20);
+				     Button12.setTextSize(20);
+				     Button13.setTextSize(20);
+				     Button14.setTextSize(20);
+				     btn_setup_app.setTextSize(20);
 				 //    textView1.setTextSize(18);
 				 //    textView2.setTextSize(22);
 				  //   textView3.setTextSize(22);
@@ -604,7 +613,7 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 				   //  textView14.setTextSize(17);
 				  //   TextView01.setTextSize(18);
 				     TextView03.setTextSize(18);
-				     timeOutsT.setTextSize(21);
+				     timeOutsT.setTextSize(20);
 				}
 	       }
 	       
@@ -761,6 +770,13 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 		    		}
 	 	        	 
 	    	}
+	    	
+	    	else if (id == R.id.Button14){
+	    		Intent intent = new Intent(this, ActivityRegulatory.class);
+	        	startActivity(intent);
+	 	        	overridePendingTransition(center_to_left, center_to_left2);
+	    		
+	    	}
 
 	    	
 	        }
@@ -783,6 +799,7 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 	      case SimpleGestureFilter.SWIPE_RIGHT : 
 	    	  Intent intent18 = new Intent(this, MainActivity.class);
 	          	 startActivity(intent18);
+	          	overridePendingTransition(center_to_right, center_to_right2);
 	          	break;
 	      /*case SimpleGestureFilter.SWIPE_LEFT :  str = "Swipe Left";
 	                                                     break;

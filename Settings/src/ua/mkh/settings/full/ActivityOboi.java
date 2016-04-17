@@ -238,22 +238,22 @@ public class ActivityOboi extends Activity implements OnClickListener, SimpleGes
 	        	 String size = mSettings.getString(APP_PREFERENCES_text_size, "16");
 				if (size .contains( "Small")){
 					textView2.setTextSize(11);
-			        Button03.setTextSize(14);
+			        Button03.setTextSize(13);
 			        TextView01.setTextSize(11);
 				}
 				if (size .contains( "Normal")){
 					textView2.setTextSize(13);
-			        Button03.setTextSize(16);
+			        Button03.setTextSize(15);
 			        TextView01.setTextSize(13);
 				}
 				if (size .contains( "Large")){
-					textView2.setTextSize(16);
-			        Button03.setTextSize(19);
-			        TextView01.setTextSize(16);
+					textView2.setTextSize(15);
+			        Button03.setTextSize(18);
+			        TextView01.setTextSize(15);
 				}
 				if (size .contains( "xLarge")){
 					textView2.setTextSize(18);
-			        Button03.setTextSize(21);
+			        Button03.setTextSize(20);
 			        TextView01.setTextSize(18);
 				}
 	       }

@@ -231,56 +231,56 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
 				// Получаем число из настроек
 	        	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 				if (size .contains( "Small")){
-					foget.setTextSize(14);
+					foget.setTextSize(13);
 	    			textView1.setTextSize(11);
 	    			textView2.setTextSize(11);
-	    			Button01.setTextSize(14);
-	    			Button02.setTextSize(14);
-	    			Button03.setTextSize(14);
-	    			Button04.setTextSize(14);
-	    			txtip.setTextSize(14);
-	    			txtmask.setTextSize(14);
-	    			txtmarsh.setTextSize(14);
-	    			txtdns.setTextSize(14);
+	    			Button01.setTextSize(13);
+	    			Button02.setTextSize(13);
+	    			Button03.setTextSize(13);
+	    			Button04.setTextSize(13);
+	    			txtip.setTextSize(13);
+	    			txtmask.setTextSize(13);
+	    			txtmarsh.setTextSize(13);
+	    			txtdns.setTextSize(13);
 				}
 				if (size .contains( "Normal")){
-					foget.setTextSize(16);
+					foget.setTextSize(15);
 	    			textView1.setTextSize(13);
 	    			textView2.setTextSize(13);
-	    			Button01.setTextSize(16);
-	    			Button02.setTextSize(16);
-	    			Button03.setTextSize(16);
-	    			Button04.setTextSize(16);
-	    			txtip.setTextSize(16);
-	    			txtmask.setTextSize(16);
-	    			txtmarsh.setTextSize(16);
-	    			txtdns.setTextSize(16);
+	    			Button01.setTextSize(15);
+	    			Button02.setTextSize(15);
+	    			Button03.setTextSize(15);
+	    			Button04.setTextSize(15);
+	    			txtip.setTextSize(15);
+	    			txtmask.setTextSize(15);
+	    			txtmarsh.setTextSize(15);
+	    			txtdns.setTextSize(15);
 				}
 				if (size .contains( "Large")){
-					foget.setTextSize(19);
-	    			textView1.setTextSize(16);
-	    			textView2.setTextSize(16);
-	    			Button01.setTextSize(19);
-	    			Button02.setTextSize(19);
-	    			Button03.setTextSize(19);
-	    			Button04.setTextSize(19);
-	    			txtip.setTextSize(19);
-	    			txtmask.setTextSize(19);
-	    			txtmarsh.setTextSize(19);
-	    			txtdns.setTextSize(19);
+					foget.setTextSize(18);
+	    			textView1.setTextSize(15);
+	    			textView2.setTextSize(15);
+	    			Button01.setTextSize(18);
+	    			Button02.setTextSize(18);
+	    			Button03.setTextSize(18);
+	    			Button04.setTextSize(18);
+	    			txtip.setTextSize(18);
+	    			txtmask.setTextSize(18);
+	    			txtmarsh.setTextSize(18);
+	    			txtdns.setTextSize(18);
 				}
 				if (size .contains( "xLarge")){
-					foget.setTextSize(21);
+					foget.setTextSize(20);
 	    			textView1.setTextSize(18);
 	    			textView2.setTextSize(18);
-	    			Button01.setTextSize(21);
-	    			Button02.setTextSize(21);
-	    			Button03.setTextSize(21);
-	    			Button04.setTextSize(21);
-	    			txtip.setTextSize(21);
-	    			txtmask.setTextSize(21);
-	    			txtmarsh.setTextSize(21);
-	    			txtdns.setTextSize(21);
+	    			Button01.setTextSize(20);
+	    			Button02.setTextSize(20);
+	    			Button03.setTextSize(20);
+	    			Button04.setTextSize(20);
+	    			txtip.setTextSize(20);
+	    			txtmask.setTextSize(20);
+	    			txtmarsh.setTextSize(20);
+	    			txtdns.setTextSize(20);
 				}
 	       }
 

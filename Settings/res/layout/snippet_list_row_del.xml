@@ -30,7 +30,7 @@
             android:gravity="center_vertical"
             android:text="App"
             android:textColor="@color/black"
-            android:textSize="17sp" />
+            android:textSize="15sp" />
 
         <ImageView
             android:id="@+id/ImageView02"
@@ -48,7 +48,8 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/ImageView02"
             android:layout_toLeftOf="@+id/ImageView02"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textSize="15sp" />
 
     </RelativeLayout>
 

@@ -386,23 +386,23 @@ public class ActivityInfo extends Activity implements OnClickListener, SimpleGes
 				// Получаем число из настроек
 	        	 String size = mSettings.getString(APP_PREFERENCES_text_size, null);
 				if (size .contains( "Small")){
-					 textView1.setTextSize(14);
-					 button1.setTextSize(14);
+					 textView1.setTextSize(13);
+					 button1.setTextSize(13);
 				     
 				}
 				if (size .contains( "Normal")){
-					 textView1.setTextSize(16);
-					 button1.setTextSize(16);
+					 textView1.setTextSize(15);
+					 button1.setTextSize(15);
 				     
 				}
 				if (size .contains( "Large")){
-					 textView1.setTextSize(19);
-					 button1.setTextSize(19);
+					 textView1.setTextSize(18);
+					 button1.setTextSize(18);
 				     
 				}
 				if (size .contains( "xLarge")){
-					 textView1.setTextSize(21);
-					 button1.setTextSize(21);
+					 textView1.setTextSize(20);
+					 button1.setTextSize(20);
 				     
 				}
 	       }

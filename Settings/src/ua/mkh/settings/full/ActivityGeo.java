@@ -177,25 +177,25 @@ public class ActivityGeo extends Activity implements OnClickListener, SimpleGest
 					textView1.setTextSize(11);
 			        textView2.setTextSize(13);
 			        textView3.setTextSize(11);
-			        bt_geo.setTextSize(14);
+			        bt_geo.setTextSize(13);
 				}
 				if (size .contains( "Normal")){
 					textView1.setTextSize(13);
 			        textView2.setTextSize(15);
 			        textView3.setTextSize(12);
-			        bt_geo.setTextSize(16);
+			        bt_geo.setTextSize(15);
 				}
 				if (size .contains( "Large")){
-					textView1.setTextSize(16);
+					textView1.setTextSize(15);
 			        textView2.setTextSize(18);
-			        textView3.setTextSize(16);
-			        bt_geo.setTextSize(19); 
+			        textView3.setTextSize(15);
+			        bt_geo.setTextSize(18); 
 				}
 				if (size .contains( "xLarge")){
 					textView1.setTextSize(18);
 			        textView2.setTextSize(20);
 			        textView3.setTextSize(18);
-			        bt_geo.setTextSize(21);
+			        bt_geo.setTextSize(20);
 				}
 	       }
 	    }

@@ -257,34 +257,34 @@ public class ActivityBrightness extends Activity implements OnClickListener, Sim
 				if (size .contains( "Small")){
 				textView1.setTextSize(11);
 				textView2.setTextSize(11);
-				brtn1.setTextSize(14);
-				btn_textSize.setTextSize(14);
-				btn_textBold.setTextSize(14);
-				Button01.setTextSize(14);
+				brtn1.setTextSize(13);
+				btn_textSize.setTextSize(13);
+				btn_textBold.setTextSize(13);
+				Button01.setTextSize(13);
 				}
 				if (size .contains( "Normal")){
 					textView1.setTextSize(13);
 					textView2.setTextSize(13);
-					brtn1.setTextSize(16);
-					btn_textSize.setTextSize(16);
-					btn_textBold.setTextSize(16);
-					Button01.setTextSize(16);
+					brtn1.setTextSize(15);
+					btn_textSize.setTextSize(15);
+					btn_textBold.setTextSize(15);
+					Button01.setTextSize(15);
 				}
 				if (size .contains( "Large")){
-					textView1.setTextSize(16);
-					textView2.setTextSize(16);
-					brtn1.setTextSize(19);
-					btn_textSize.setTextSize(19);
-					btn_textBold.setTextSize(19);
-					Button01.setTextSize(19);
+					textView1.setTextSize(15);
+					textView2.setTextSize(15);
+					brtn1.setTextSize(18);
+					btn_textSize.setTextSize(18);
+					btn_textBold.setTextSize(18);
+					Button01.setTextSize(18);
 				}
 				if (size .contains( "xLarge")){
 					textView1.setTextSize(18);
 					textView2.setTextSize(18);
-					brtn1.setTextSize(21);
-					btn_textSize.setTextSize(21);
-					btn_textBold.setTextSize(21);
-					Button01.setTextSize(21);
+					brtn1.setTextSize(20);
+					btn_textSize.setTextSize(20);
+					btn_textBold.setTextSize(20);
+					Button01.setTextSize(20);
 				}
 	    }
 	       

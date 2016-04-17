@@ -165,20 +165,20 @@ public class ActivityBattery extends Activity implements OnClickListener, Simple
 				    usage_battery.setTextSize(11);
 				}
 				if (size .contains( "Normal")){
-				    btn_low.setTextSize(16);
-				    button01.setTextSize(16);
+				    btn_low.setTextSize(15);
+				    button01.setTextSize(15);
 				    text_low.setTextSize(13);
 				    usage_battery.setTextSize(13);
 				}
 				if (size .contains( "Large")){
-					btn_low.setTextSize(19);
-				    button01.setTextSize(19);
-				    text_low.setTextSize(16);
-				    usage_battery.setTextSize(16);
+					btn_low.setTextSize(18);
+				    button01.setTextSize(18);
+				    text_low.setTextSize(15);
+				    usage_battery.setTextSize(15);
 				}
 				if (size .contains( "xLarge")){
-					btn_low.setTextSize(21);
-				    button01.setTextSize(21);
+					btn_low.setTextSize(20);
+				    button01.setTextSize(20);
 				    text_low.setTextSize(18);
 				    usage_battery.setTextSize(18);
 				}

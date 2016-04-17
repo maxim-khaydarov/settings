@@ -296,33 +296,33 @@ public class ActivityOperator extends Activity implements OnClickListener, Simpl
 				// Получаем число из настроек
 	        	 String size = mSettings.getString(APP_PREFERENCES_text_size, null);
 				if (size .contains( "Small")){
-				TextView01.setTextSize(14);
-				operator.setTextSize(14);
-				Button02.setTextSize(14);
-				Button01.setTextSize(14);
-				Button1.setTextSize(14);
+				TextView01.setTextSize(13);
+				operator.setTextSize(13);
+				Button02.setTextSize(13);
+				Button01.setTextSize(13);
+				Button1.setTextSize(13);
 
 				}
 				if (size .contains( "Normal")){
-					TextView01.setTextSize(16);
-					operator.setTextSize(16);
-					Button02.setTextSize(16);
-					Button01.setTextSize(16);
-					Button1.setTextSize(16);
+					TextView01.setTextSize(15);
+					operator.setTextSize(15);
+					Button02.setTextSize(15);
+					Button01.setTextSize(15);
+					Button1.setTextSize(15);
 				}
 				if (size .contains( "Large")){
-					TextView01.setTextSize(19);
-					operator.setTextSize(19);
-					Button02.setTextSize(19);
-					Button01.setTextSize(19);
-					Button1.setTextSize(19);
+					TextView01.setTextSize(18);
+					operator.setTextSize(18);
+					Button02.setTextSize(18);
+					Button01.setTextSize(18);
+					Button1.setTextSize(18);
 				}
 				if (size .contains( "xLarge")){
-					TextView01.setTextSize(21);
-					operator.setTextSize(21);
-					Button02.setTextSize(21);
-					Button01.setTextSize(21);
-					Button1.setTextSize(21);
+					TextView01.setTextSize(20);
+					operator.setTextSize(20);
+					Button02.setTextSize(20);
+					Button01.setTextSize(20);
+					Button1.setTextSize(20);
 				}
 	       }
 	 }

@@ -195,32 +195,32 @@ public class ActivityVPN extends Activity implements OnClickListener, SimpleGest
 				// Получаем число из настроек
 	        	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 				if (size .contains( "Small")){
-					Button07.setTextSize(14);
-					Buttongeo.setTextSize(14);
+					Button07.setTextSize(13);
+					Buttongeo.setTextSize(13);
 					textView1.setTextSize(11);
 					textView2.setTextSize(11);
 					textView3.setTextSize(11);
 					textView4.setTextSize(11);
 				}
 				if (size .contains( "Normal")){
-					Button07.setTextSize(16);
-					Buttongeo.setTextSize(16);
+					Button07.setTextSize(15);
+					Buttongeo.setTextSize(15);
 					textView1.setTextSize(13);
 					textView2.setTextSize(13);
 					textView3.setTextSize(13);
 					textView4.setTextSize(13);
 				}
 				if (size .contains( "Large")){
-					Button07.setTextSize(19);
-					Buttongeo.setTextSize(19);
-					textView1.setTextSize(16);
-					textView2.setTextSize(16);
-					textView3.setTextSize(16);
-					textView4.setTextSize(16);
+					Button07.setTextSize(18);
+					Buttongeo.setTextSize(18);
+					textView1.setTextSize(15);
+					textView2.setTextSize(15);
+					textView3.setTextSize(15);
+					textView4.setTextSize(15);
 				}
 				if (size .contains( "xLarge")){
-					Button07.setTextSize(21);
-					Buttongeo.setTextSize(21);
+					Button07.setTextSize(20);
+					Buttongeo.setTextSize(20);
 					textView1.setTextSize(18);
 					textView2.setTextSize(18);
 					textView3.setTextSize(18);

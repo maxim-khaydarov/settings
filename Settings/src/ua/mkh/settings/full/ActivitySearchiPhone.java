@@ -202,29 +202,29 @@ public class ActivitySearchiPhone  extends Activity implements OnClickListener, 
 					textView1.setTextSize(11);
 				    textView2.setTextSize(11);
 				    
-				    Button01.setTextSize(14);
-				    Button02.setTextSize(14);
+				    Button01.setTextSize(13);
+				    Button02.setTextSize(13);
 				}
 				if (size.contains( "Normal")){
 					textView1.setTextSize(13);
 				    textView2.setTextSize(13);
 				    
-				    Button01.setTextSize(16);
-				    Button02.setTextSize(16);
+				    Button01.setTextSize(15);
+				    Button02.setTextSize(15);
 				}
 				if (size .contains( "Large")){
-					textView1.setTextSize(16);
-				    textView2.setTextSize(16);
+					textView1.setTextSize(15);
+				    textView2.setTextSize(15);
 				    
-				    Button01.setTextSize(19);
-				    Button02.setTextSize(19);
+				    Button01.setTextSize(18);
+				    Button02.setTextSize(18);
 				}
 				if (size .contains( "xLarge")){
 					textView1.setTextSize(18);
 				    textView2.setTextSize(18);
 				    
-				    Button01.setTextSize(21);
-				    Button02.setTextSize(21);
+				    Button01.setTextSize(20);
+				    Button02.setTextSize(20);
 				}
 	       }
 	       

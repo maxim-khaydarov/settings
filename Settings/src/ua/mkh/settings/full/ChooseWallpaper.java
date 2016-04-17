@@ -336,36 +336,36 @@ public class ChooseWallpaper extends Activity implements OnClickListener, Simple
 				din.setTextSize(11);
 				stat.setTextSize(11);
 				phot.setTextSize(11);
-				my_phot.setTextSize(14);
-				textView4.setTextSize(14);
-				textView5.setTextSize(14);
+				my_phot.setTextSize(13);
+				textView4.setTextSize(13);
+				textView5.setTextSize(13);
 				textView6.setTextSize(11);
 			}
 			if (size .contains( "Normal")){
 				din.setTextSize(13);
 				stat.setTextSize(13);
 				phot.setTextSize(13);
-				my_phot.setTextSize(16);
-				textView4.setTextSize(16);
-				textView5.setTextSize(16);
+				my_phot.setTextSize(15);
+				textView4.setTextSize(15);
+				textView5.setTextSize(15);
 				textView6.setTextSize(13);
 			}
 			if (size .contains( "Large")){
-				din.setTextSize(16);
-				stat.setTextSize(16);
-				phot.setTextSize(16);
-				my_phot.setTextSize(19);
-				textView4.setTextSize(19);
-				textView5.setTextSize(19);
-				textView6.setTextSize(16);
+				din.setTextSize(15);
+				stat.setTextSize(15);
+				phot.setTextSize(15);
+				my_phot.setTextSize(18);
+				textView4.setTextSize(18);
+				textView5.setTextSize(18);
+				textView6.setTextSize(15);
 			}
 			if (size .contains( "xLarge")){
 				din.setTextSize(18);
 				stat.setTextSize(18);
 				phot.setTextSize(18);
-				my_phot.setTextSize(21);
-				textView4.setTextSize(21);
-				textView5.setTextSize(21);
+				my_phot.setTextSize(20);
+				textView4.setTextSize(20);
+				textView5.setTextSize(20);
 				textView6.setTextSize(18);
 			}
        }

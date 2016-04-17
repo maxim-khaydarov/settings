@@ -433,60 +433,60 @@ public class SettingsActivity extends Activity implements OnClickListener, Simpl
 				// Получаем число из настроек
 	        	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 				if (size .contains( "Small")){
-					Button01.setTextSize(14);
-		            Button12.setTextSize(14);
-		            Button13.setTextSize(14);
-		            Button14.setTextSize(14);
-		            Button15.setTextSize(14);
-		            Button16.setTextSize(14);
-		            Button17.setTextSize(14);
+					Button01.setTextSize(13);
+		            Button12.setTextSize(13);
+		            Button13.setTextSize(13);
+		            Button14.setTextSize(13);
+		            Button15.setTextSize(13);
+		            Button16.setTextSize(13);
+		            Button17.setTextSize(13);
 		            txt1.setTextSize(11);
 		            TextView01.setTextSize(11);
-		            Button19.setTextSize(14);
-		            Button20.setTextSize(14);
-		            Button23.setTextSize(14);
+		            Button19.setTextSize(13);
+		            Button20.setTextSize(13);
+		            Button23.setTextSize(13);
 				}
 				if (size .contains( "Normal")){
-					Button01.setTextSize(16);
-		            Button12.setTextSize(16);
-		            Button13.setTextSize(16);
-		            Button14.setTextSize(16);
-		            Button15.setTextSize(16);
-		            Button16.setTextSize(16);
-		            Button17.setTextSize(16);
+					Button01.setTextSize(15);
+		            Button12.setTextSize(15);
+		            Button13.setTextSize(15);
+		            Button14.setTextSize(15);
+		            Button15.setTextSize(15);
+		            Button16.setTextSize(15);
+		            Button17.setTextSize(15);
 		            txt1.setTextSize(13);
 		            TextView01.setTextSize(13);
-		            Button19.setTextSize(16);
-		            Button20.setTextSize(16);
-		            Button23.setTextSize(16);
+		            Button19.setTextSize(15);
+		            Button20.setTextSize(15);
+		            Button23.setTextSize(15);
 				}
 				if (size .contains( "Large")){
-					Button01.setTextSize(19);
-		            Button12.setTextSize(19);
-		            Button13.setTextSize(19);
-		            Button14.setTextSize(19);
-		            Button15.setTextSize(19);
-		            Button16.setTextSize(19);
-		            Button17.setTextSize(19);
-		            txt1.setTextSize(16);
-		            TextView01.setTextSize(16);
-		            Button19.setTextSize(19);
-		            Button20.setTextSize(19);
-		            Button23.setTextSize(19);
+					Button01.setTextSize(18);
+		            Button12.setTextSize(18);
+		            Button13.setTextSize(18);
+		            Button14.setTextSize(18);
+		            Button15.setTextSize(18);
+		            Button16.setTextSize(18);
+		            Button17.setTextSize(18);
+		            txt1.setTextSize(15);
+		            TextView01.setTextSize(15);
+		            Button19.setTextSize(18);
+		            Button20.setTextSize(18);
+		            Button23.setTextSize(18);
 				}
 				if (size .contains( "xLarge")){
-					Button01.setTextSize(21);
-		            Button12.setTextSize(21);
-		            Button13.setTextSize(21);
-		            Button14.setTextSize(21);
-		            Button15.setTextSize(21);
-		            Button16.setTextSize(21);
-		            Button17.setTextSize(21);
+					Button01.setTextSize(20);
+		            Button12.setTextSize(20);
+		            Button13.setTextSize(20);
+		            Button14.setTextSize(20);
+		            Button15.setTextSize(20);
+		            Button16.setTextSize(20);
+		            Button17.setTextSize(20);
 		            txt1.setTextSize(18);
 		            TextView01.setTextSize(18);
-		            Button19.setTextSize(21);
-		            Button20.setTextSize(21);
-		            Button23.setTextSize(21);
+		            Button19.setTextSize(20);
+		            Button20.setTextSize(20);
+		            Button23.setTextSize(20);
 				}
 	       }
 	       

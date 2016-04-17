@@ -445,25 +445,25 @@ public class ActivitySetTime extends Activity implements OnClickListener, Simple
 					textView1.setTextSize(13);
 				}
 				if (size .contains( "Normal")){
-					Button01.setTextSize(16);
-					Button02.setTextSize(16);
-					Button03.setTextSize(16);
-					date.setTextSize(16);
-					textView1.setTextSize(16);
+					Button01.setTextSize(15);
+					Button02.setTextSize(15);
+					Button03.setTextSize(15);
+					date.setTextSize(15);
+					textView1.setTextSize(15);
 				}
 				if (size .contains( "Large")){
-					Button01.setTextSize(19);
-					Button02.setTextSize(19);
-					Button03.setTextSize(19);
-					date.setTextSize(19);
-					textView1.setTextSize(19);
+					Button01.setTextSize(18);
+					Button02.setTextSize(18);
+					Button03.setTextSize(18);
+					date.setTextSize(18);
+					textView1.setTextSize(18);
 				}
 				if (size .contains( "xLarge")){
-					Button01.setTextSize(21);
-					Button02.setTextSize(21);
-					Button03.setTextSize(21);
-					date.setTextSize(21);
-					textView1.setTextSize(21);
+					Button01.setTextSize(20);
+					Button02.setTextSize(20);
+					Button03.setTextSize(20);
+					date.setTextSize(20);
+					textView1.setTextSize(20);
 					
 				}
 	       }

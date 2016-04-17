@@ -586,24 +586,24 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 				// Получаем число из настроек
 	        	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 				if (size .contains( "Small")){
-					btn_1.setTextSize(14);
+					btn_1.setTextSize(13);
 	    			textView1.setTextSize(11);
-	    			textConnected.setTextSize(14);
+	    			textConnected.setTextSize(13);
 				}
 				if (size .contains( "Normal")){
-					btn_1.setTextSize(16);
+					btn_1.setTextSize(15);
 	    			textView1.setTextSize(13);
-	    			textConnected.setTextSize(16);
+	    			textConnected.setTextSize(15);
 				}
 				if (size .contains( "Large")){
-					btn_1.setTextSize(19);
-	    			textView1.setTextSize(16);
-	    			textConnected.setTextSize(19);
+					btn_1.setTextSize(18);
+	    			textView1.setTextSize(15);
+	    			textConnected.setTextSize(18);
 				}
 				if (size .contains( "xLarge")){
-					btn_1.setTextSize(21);
+					btn_1.setTextSize(20);
 	    			textView1.setTextSize(18);
-	    			textConnected.setTextSize(21);
+	    			textConnected.setTextSize(20);
 				}
 	       }
 	    }

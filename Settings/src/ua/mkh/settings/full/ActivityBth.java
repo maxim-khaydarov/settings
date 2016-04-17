@@ -260,7 +260,7 @@ public class ActivityBth extends Activity implements OnClickListener, SimpleGest
 				text.setText(R.string.information);
 				textver.setTypeface(typefaceRoman);
 				textver.setText(getString(R.string.name_about) + ": " + name + "\n" + getString(R.string.mac) + " " + mac);
-				textver.setTextSize(16);
+				textver.setTextSize(15);
 				
 				// if button is clicked, close the custom dialog
 				dialogButton.setOnClickListener(new OnClickListener() {
@@ -558,28 +558,28 @@ public class ActivityBth extends Activity implements OnClickListener, SimpleGest
 					nameBT.setTextSize(13);
 					textView2.setTextSize(11);
 			        textView1.setTextSize(11);
-			        btn_Bth.setTextSize(14);
+			        btn_Bth.setTextSize(13);
 				}
 				if (size .contains( "Normal")){
 					textView4.setTextSize(13);
 					nameBT.setTextSize(13);
 					textView2.setTextSize(13);
 			        textView1.setTextSize(13);
-			        btn_Bth.setTextSize(16);
+			        btn_Bth.setTextSize(15);
 				}
 				if (size .contains( "Large")){
-					textView4.setTextSize(16);
-					nameBT.setTextSize(16);
+					textView4.setTextSize(15);
+					nameBT.setTextSize(15);
 					textView2.setTextSize(15);
 			        textView1.setTextSize(15);
-			        btn_Bth.setTextSize(19);
+			        btn_Bth.setTextSize(18);
 				}
 				if (size .contains( "xLarge")){
 					textView4.setTextSize(18);
 					nameBT.setTextSize(18);
 					textView2.setTextSize(17);
 			        textView1.setTextSize(17);
-			        btn_Bth.setTextSize(21);
+			        btn_Bth.setTextSize(20);
 				}
 	       }
 	       

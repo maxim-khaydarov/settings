@@ -196,28 +196,28 @@ public class ActivityHandoff extends Activity implements OnClickListener, Simple
 					textView2.setTextSize(11);
 				}
 				if (size .contains( "Normal")){
-					Button01.setTextSize(16);
-					Button02.setTextSize(16);
-					Button03.setTextSize(16);
+					Button01.setTextSize(15);
+					Button02.setTextSize(15);
+					Button03.setTextSize(15);
 					TextView01.setTextSize(13);
 					TextView02.setTextSize(13);
 					textView2.setTextSize(13);
 				}
 				if (size .contains( "Large")){
-					Button01.setTextSize(19);
-					Button02.setTextSize(19);
-					Button03.setTextSize(19);
-					TextView01.setTextSize(16);
-					TextView02.setTextSize(16);
-					textView2.setTextSize(16);
+					Button01.setTextSize(18);
+					Button02.setTextSize(18);
+					Button03.setTextSize(18);
+					TextView01.setTextSize(15);
+					TextView02.setTextSize(15);
+					textView2.setTextSize(15);
 				}
 				if (size .contains( "xLarge")){
 					Button01.setTextSize(18);
 					Button02.setTextSize(18);
 					Button03.setTextSize(18);
-					TextView01.setTextSize(21);
-					TextView02.setTextSize(21);
-					textView2.setTextSize(21);
+					TextView01.setTextSize(20);
+					TextView02.setTextSize(20);
+					textView2.setTextSize(20);
 				}
 	       }
 	       

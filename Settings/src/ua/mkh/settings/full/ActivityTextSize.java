@@ -113,16 +113,16 @@ public class ActivityTextSize extends Activity implements  SimpleGestureListener
 
 	                if(progress == 3)
 	                {
-	                    textView1.setTextSize(21);
+	                    textView1.setTextSize(20);
 	                    
 	                }
 	                else if (progress == 2) 
 	                {
-	                	textView1.setTextSize(19);
+	                	textView1.setTextSize(18);
 	                    
 	                }
 	                else if (progress == 1){
-	                	textView1.setTextSize(16);
+	                	textView1.setTextSize(15);
 	                }
 	                
 	                else if (progress == 0){
@@ -239,18 +239,18 @@ public class ActivityTextSize extends Activity implements  SimpleGestureListener
 					}
 					if (size .contains( "Normal")){
 						textsize.setProgress(1);
-						textView1.setTextSize(16);
-						textView2.setTextSize(16);
+						textView1.setTextSize(15);
+						textView2.setTextSize(15);
 					}
 					if (size .contains( "Large")){
 						textsize.setProgress(2);
-						textView1.setTextSize(19);
-						textView2.setTextSize(19);
+						textView1.setTextSize(18);
+						textView2.setTextSize(18);
 					}
 					if (size .contains( "xLarge")){
 						textsize.setProgress(3);
-						textView1.setTextSize(21);
-						textView2.setTextSize(21);
+						textView1.setTextSize(20);
+						textView2.setTextSize(20);
 					}
 		       
 		       

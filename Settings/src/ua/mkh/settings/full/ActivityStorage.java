@@ -101,11 +101,11 @@ public class ActivityStorage extends Activity implements SimpleGestureListener{
         		txt3.setTextColor(getResources().getColor(R.color.black));
         		txt4.setTextColor(getResources().getColor(R.color.black));
         		txt5.setTextColor(getResources().getColor(R.color.black));
-        		txt1.setTextSize(16);
-        		txt2.setTextSize(16);
-        		txt3.setTextSize(16);
-        		txt4.setTextSize(16);
-        		txt5.setTextSize(16);
+        		txt1.setTextSize(15);
+        		txt2.setTextSize(15);
+        		txt3.setTextSize(15);
+        		txt4.setTextSize(15);
+        		txt5.setTextSize(15);
         		LinearLayout1.setBackgroundColor(Color.parseColor("#ffffff"));
         		
         		txt5. setGravity(Gravity.CENTER);
@@ -240,32 +240,32 @@ public class ActivityStorage extends Activity implements SimpleGestureListener{
 				// Получаем число из настроек
 	        	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 				if (size .contains( "Small")){
-					txt1.setTextSize(14);
-	        		txt2.setTextSize(14);
-	        		txt3.setTextSize(14);
-	        		txt4.setTextSize(14);
-	        		txt5.setTextSize(14);
+					txt1.setTextSize(13);
+	        		txt2.setTextSize(13);
+	        		txt3.setTextSize(13);
+	        		txt4.setTextSize(13);
+	        		txt5.setTextSize(13);
 				}
 				if (size .contains( "Normal")){
-					txt1.setTextSize(16);
-	        		txt2.setTextSize(16);
-	        		txt3.setTextSize(16);
-	        		txt4.setTextSize(16);
-	        		txt5.setTextSize(16);
+					txt1.setTextSize(15);
+	        		txt2.setTextSize(15);
+	        		txt3.setTextSize(15);
+	        		txt4.setTextSize(15);
+	        		txt5.setTextSize(15);
 				}
 				if (size .contains( "Large")){
-					txt1.setTextSize(19);
-	        		txt2.setTextSize(19);
-	        		txt3.setTextSize(19);
-	        		txt4.setTextSize(19);
-	        		txt5.setTextSize(19);
+					txt1.setTextSize(18);
+	        		txt2.setTextSize(18);
+	        		txt3.setTextSize(18);
+	        		txt4.setTextSize(18);
+	        		txt5.setTextSize(18);
 				}
 				if (size .contains( "xLarge")){
-					txt1.setTextSize(21);
-	        		txt2.setTextSize(21);
-	        		txt3.setTextSize(21);
-	        		txt4.setTextSize(21);
-	        		txt5.setTextSize(21);
+					txt1.setTextSize(20);
+	        		txt2.setTextSize(20);
+	        		txt3.setTextSize(20);
+	        		txt4.setTextSize(20);
+	        		txt5.setTextSize(20);
 				}
 	       }
 	 }

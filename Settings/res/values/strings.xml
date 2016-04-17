@@ -331,6 +331,9 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
 	<string name="region_date">Monday, January 5, 2015\n1234,56</string>
 	<string name="region_number">4567,89</string>
 	
+	
+	<string name="regulatory">Regulatory</string>
+	
 
 
 </resources>

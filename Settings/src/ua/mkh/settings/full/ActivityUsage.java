@@ -13,7 +13,10 @@ import android.content.SharedPreferences;
 import android.content.pm.ResolveInfo;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.StatFs;
 import android.support.v4.view.ViewPager.LayoutParams;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -202,49 +205,49 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 				// Получаем число из настроек
 	        	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 				if (size .contains( "Small")){
-				//	Button01.setTextSize(14);
-			        Button02.setTextSize(14);
-			     //   Button06.setTextSize(14);
-			        Button08.setTextSize(14);
-			        Button09.setTextSize(14);
-			      //  textView1.setTextSize(14);
-					TextView01.setTextSize(14);
-					TextView07.setTextSize(14);
-					TextView08.setTextSize(14);
+				//	Button01.setTextSize(13);
+			        Button02.setTextSize(13);
+			     //   Button06.setTextSize(13);
+			        Button08.setTextSize(13);
+			        Button09.setTextSize(13);
+			      //  textView1.setTextSize(13);
+					TextView01.setTextSize(13);
+					TextView07.setTextSize(13);
+					TextView08.setTextSize(13);
 			        
 				}
 				if (size .contains( "Normal")){
-				//	Button01.setTextSize(16);
-			        Button02.setTextSize(16);
-			      //  Button06.setTextSize(16);
-			        Button08.setTextSize(16);
-			        Button09.setTextSize(16);
-			      //  textView1.setTextSize(16);
-					TextView01.setTextSize(16);
-					TextView07.setTextSize(16);
-					TextView08.setTextSize(16);
+				//	Button01.setTextSize(15);
+			        Button02.setTextSize(15);
+			      //  Button06.setTextSize(15);
+			        Button08.setTextSize(15);
+			        Button09.setTextSize(15);
+			      //  textView1.setTextSize(15);
+					TextView01.setTextSize(15);
+					TextView07.setTextSize(15);
+					TextView08.setTextSize(15);
 				}
 				if (size .contains( "Large")){
-				//	Button01.setTextSize(19);
-			        Button02.setTextSize(19);
-			      //  Button06.setTextSize(19);
-			        Button08.setTextSize(19);
-			        Button09.setTextSize(19);
-			     //   textView1.setTextSize(19);
-					TextView01.setTextSize(19);
-					TextView07.setTextSize(19);
-					TextView08.setTextSize(19);
+				//	Button01.setTextSize(18);
+			        Button02.setTextSize(18);
+			      //  Button06.setTextSize(18);
+			        Button08.setTextSize(18);
+			        Button09.setTextSize(18);
+			     //   textView1.setTextSize(18);
+					TextView01.setTextSize(18);
+					TextView07.setTextSize(18);
+					TextView08.setTextSize(18);
 				}
 				if (size .contains( "xLarge")){
-				//	Button01.setTextSize(21);
-			        Button02.setTextSize(21);
-			      //  Button06.setTextSize(21);
-			        Button08.setTextSize(21);
-			        Button09.setTextSize(21);
-			      //  textView1.setTextSize(21);
-					TextView01.setTextSize(21);
-					TextView07.setTextSize(21);
-					TextView08.setTextSize(21);
+				//	Button01.setTextSize(20);
+			        Button02.setTextSize(20);
+			      //  Button06.setTextSize(20);
+			        Button08.setTextSize(20);
+			        Button09.setTextSize(20);
+			      //  textView1.setTextSize(20);
+					TextView01.setTextSize(20);
+					TextView07.setTextSize(20);
+					TextView08.setTextSize(20);
 				}
 	       }
 	       
@@ -282,6 +285,9 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 	  }
 	  
 	  public void memory (){
+		  
+		  
+		    
 		   Float ios = 0f;
 		   Float iss = 0f;
 		   
@@ -298,9 +304,71 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 		    DecimalFormat twoDForm = new DecimalFormat("#.##");
 		    
 		    float p = ios - iss;
-		    TextView07.setText(twoDForm.format(p/1073741824f) +" " + getResources().getString(R.string.GigaByte));
-	    	TextView08.setText(twoDForm.format(iss/1073741824f) +" " + getResources().getString(R.string.GigaByte));
-	   }
+		    //TextView07.setText(twoDForm.format(p/1073741824f) +" " + getResources().getString(R.string.GigaByte));
+	    	//TextView08.setText(twoDForm.format(iss/1073741824f) +" " + getResources().getString(R.string.GigaByte));
+	  
+		    TextView07.setText(getTotalInternalMemorySize());
+		    TextView08.setText(getAvailableInternalMemorySize());
+		    
+		    
+	  }
+	  
+	  public static boolean externalMemoryAvailable() {
+	        return android.os.Environment.getExternalStorageState().equals(
+	                android.os.Environment.MEDIA_MOUNTED);
+	    }
+
+	    public static String getAvailableInternalMemorySize() {
+	        File path = Environment.getDataDirectory();
+	        StatFs stat = new StatFs(path.getPath());
+	        long blockSize = stat.getBlockSize();
+	        long availableBlocks = stat.getAvailableBlocks();
+	        return getFileSize(availableBlocks * blockSize);
+	    }
+
+	    public static String getTotalInternalMemorySize() {
+	        File path = Environment.getDataDirectory();
+	        StatFs stat = new StatFs(path.getPath());
+	        long blockSize = stat.getBlockSize();
+	        long totalBlocks = stat.getBlockCount();
+	        return getFileSize(totalBlocks * blockSize);
+	    }
+
+	    static long ERROR = 0;
+	    
+	    public static String getAvailableExternalMemorySize() {
+	        if (externalMemoryAvailable()) {
+	            File path = Environment.getExternalStorageDirectory();
+	            StatFs stat = new StatFs(path.getPath());
+	            long blockSize = stat.getBlockSize();
+	            long availableBlocks = stat.getAvailableBlocks();
+	            return getFileSize(availableBlocks * blockSize);
+	        } else {
+	            return  getFileSize(ERROR);
+	        }
+	    }
+
+	    public static String getTotalExternalMemorySize() {
+	        if (externalMemoryAvailable()) {
+	            File path = Environment.getExternalStorageDirectory();
+	            StatFs stat = new StatFs(path.getPath());
+	            long blockSize = stat.getBlockSize();
+	            long totalBlocks = stat.getBlockCount();
+	            return getFileSize(totalBlocks * blockSize);
+	        } else {
+	            return  getFileSize(ERROR);
+	        }
+	    }
+
+	    
+	  
+	  public static String getFileSize(long size) {
+	        if (size <= 0)
+	            return "0";
+	        final String[] units = new String[] { "B", "KB", "MB", "GB", "TB" };
+	        int digitGroups = (int) (Math.log10(size) / Math.log10(1024));
+	        return new DecimalFormat("#,##0.#").format(size / Math.pow(1024, digitGroups)) + " " + units[digitGroups];
+	    }
 	  
 	  @Override
 	    public boolean onKeyDown(int keycode, KeyEvent e) {

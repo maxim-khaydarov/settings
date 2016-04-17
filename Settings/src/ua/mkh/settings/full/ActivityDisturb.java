@@ -254,72 +254,72 @@ public class ActivityDisturb extends Activity implements OnClickListener, Simple
 			// Получаем число из настроек
        	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 			if (size .contains( "Small")){
-				Button01.setTextSize(14);
-		        Button03.setTextSize(14);
-		        Button04.setTextSize(14);
-		        Button05.setTextSize(14);
-		        Button02.setTextSize(14);
+				Button01.setTextSize(13);
+		        Button03.setTextSize(13);
+		        Button04.setTextSize(13);
+		        Button05.setTextSize(13);
+		        Button02.setTextSize(13);
 		        textView1.setTextSize(11);
 		        TextView01.setTextSize(11);
 		        TextView02.setTextSize(11);
 		        TextView03.setTextSize(11);
 		        TextView04.setTextSize(11);
-		        textView4.setTextSize(14);
-		        text_from.setTextSize(14);
-		        text_to.setTextSize(14);
-		        always.setTextSize(14);
-		        locked.setTextSize(14);
+		        textView4.setTextSize(13);
+		        text_from.setTextSize(13);
+		        text_to.setTextSize(13);
+		        always.setTextSize(13);
+		        locked.setTextSize(13);
 			}
 			if (size .contains( "Normal")){
-				Button01.setTextSize(16);
-		        Button03.setTextSize(16);
-		        Button04.setTextSize(16);
-		        Button05.setTextSize(16);
-		        Button02.setTextSize(16);
+				Button01.setTextSize(15);
+		        Button03.setTextSize(15);
+		        Button04.setTextSize(15);
+		        Button05.setTextSize(15);
+		        Button02.setTextSize(15);
 		        textView1.setTextSize(13);
 		        TextView01.setTextSize(13);
 		        TextView02.setTextSize(13);
 		        TextView03.setTextSize(13);
 		        TextView04.setTextSize(13);
-		        textView4.setTextSize(16);
-		        text_from.setTextSize(16);
-		        text_to.setTextSize(16);
-		        always.setTextSize(16);
-		        locked.setTextSize(16);
+		        textView4.setTextSize(15);
+		        text_from.setTextSize(15);
+		        text_to.setTextSize(15);
+		        always.setTextSize(15);
+		        locked.setTextSize(15);
 			}
 			if (size .contains( "Large")){
-				Button01.setTextSize(19);
-		        Button03.setTextSize(19);
-		        Button04.setTextSize(19);
-		        Button05.setTextSize(19);
-		        Button02.setTextSize(19);
-		        TextView01.setTextSize(16);
-		        TextView02.setTextSize(16);
-		        TextView03.setTextSize(16);
-		        TextView04.setTextSize(16);
-		        textView1.setTextSize(16);
-		        textView4.setTextSize(19);
-		        text_from.setTextSize(19);
-		        text_to.setTextSize(19);
-		        always.setTextSize(19);
-		        locked.setTextSize(19);
+				Button01.setTextSize(18);
+		        Button03.setTextSize(18);
+		        Button04.setTextSize(18);
+		        Button05.setTextSize(18);
+		        Button02.setTextSize(18);
+		        TextView01.setTextSize(15);
+		        TextView02.setTextSize(15);
+		        TextView03.setTextSize(15);
+		        TextView04.setTextSize(15);
+		        textView1.setTextSize(15);
+		        textView4.setTextSize(18);
+		        text_from.setTextSize(18);
+		        text_to.setTextSize(18);
+		        always.setTextSize(18);
+		        locked.setTextSize(18);
 			}
 			if (size .contains( "xLarge")){
-				Button01.setTextSize(21);
-		        Button03.setTextSize(21);
-		        Button04.setTextSize(21);
-		        Button05.setTextSize(21);
-		        Button02.setTextSize(21);
+				Button01.setTextSize(20);
+		        Button03.setTextSize(20);
+		        Button04.setTextSize(20);
+		        Button05.setTextSize(20);
+		        Button02.setTextSize(20);
 		        textView1.setTextSize(18);
 		        TextView01.setTextSize(18);
 		        TextView02.setTextSize(18);
 		        TextView03.setTextSize(18);
 		        TextView04.setTextSize(18);
-		        textView4.setTextSize(21);
-		        text_from.setTextSize(21);
-		        text_to.setTextSize(21);
-		        always.setTextSize(21);
-		        locked.setTextSize(21);
+		        textView4.setTextSize(20);
+		        text_from.setTextSize(20);
+		        text_to.setTextSize(20);
+		        always.setTextSize(20);
+		        locked.setTextSize(20);
 			}
 			
       }

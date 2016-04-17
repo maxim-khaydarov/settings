@@ -330,9 +330,9 @@ if (mSettings.contains(APP_PREFERENCES_text_size)) {
 		// Получаем число из настроек
  	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 		if (size .contains( "Small")){
-			Button02.setTextSize(14);
-			button1.setTextSize(14);
-			button2.setTextSize(14);
+			Button02.setTextSize(13);
+			button1.setTextSize(13);
+			button2.setTextSize(13);
 		    textView1.setTextSize(18);
 		    textView2.setTextSize(11);
 		    textView3.setTextSize(11);
@@ -343,40 +343,40 @@ if (mSettings.contains(APP_PREFERENCES_text_size)) {
 		    textView8.setTextSize(10);
 		}
 		if (size .contains( "Normal")){
-			Button02.setTextSize(16);
-			button1.setTextSize(16);
-			button2.setTextSize(16);
+			Button02.setTextSize(15);
+			button1.setTextSize(15);
+			button2.setTextSize(15);
 		    textView1.setTextSize(20);
-		    textView2.setTextSize(14);
-		    textView3.setTextSize(14);
-		    textView4.setTextSize(14);
-		    textView5.setTextSize(14);
+		    textView2.setTextSize(13);
+		    textView3.setTextSize(13);
+		    textView4.setTextSize(13);
+		    textView5.setTextSize(13);
 		    textView6.setTextSize(13);
 		    textView7.setTextSize(12);
 		    textView8.setTextSize(12);
 		}
 		if (size .contains( "Large")){
-			Button02.setTextSize(19);
-			button1.setTextSize(19);
-			button2.setTextSize(19);
+			Button02.setTextSize(18);
+			button1.setTextSize(18);
+			button2.setTextSize(18);
 		    textView1.setTextSize(23);
 		    textView2.setTextSize(17);
 		    textView3.setTextSize(17);
 		    textView4.setTextSize(17);
 		    textView5.setTextSize(17);
-		    textView6.setTextSize(16);
+		    textView6.setTextSize(15);
 		    textView7.setTextSize(15);
 		    textView8.setTextSize(15);
 		}
 		if (size .contains( "xLarge")){
-			Button02.setTextSize(21);
-			button1.setTextSize(21);
-			button2.setTextSize(21);
+			Button02.setTextSize(20);
+			button1.setTextSize(20);
+			button2.setTextSize(20);
 		    textView1.setTextSize(25);
-		    textView2.setTextSize(19);
-		    textView3.setTextSize(19);
-		    textView4.setTextSize(19);
-		    textView5.setTextSize(19);
+		    textView2.setTextSize(18);
+		    textView3.setTextSize(18);
+		    textView4.setTextSize(18);
+		    textView5.setTextSize(18);
 		    textView6.setTextSize(18);
 		    textView7.setTextSize(17);
 		    textView8.setTextSize(17);

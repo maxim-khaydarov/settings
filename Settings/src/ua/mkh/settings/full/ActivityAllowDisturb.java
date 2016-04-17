@@ -293,24 +293,24 @@ public class ActivityAllowDisturb extends Activity implements OnClickListener, S
 	    			// Получаем число из настроек
 	           	 String size = mSettings.getString(APP_PREFERENCES_text_size, "19");
 	    			if (size .contains( "Small")){
-	    				everyone.setTextSize(14);
-	    				noone.setTextSize(14);
-	    				contacts.setTextSize(14);
+	    				everyone.setTextSize(13);
+	    				noone.setTextSize(13);
+	    				contacts.setTextSize(13);
 	    			}
 	    			if (size .contains( "Normal")){
-	    				everyone.setTextSize(16);
-	    				noone.setTextSize(16);
-	    				contacts.setTextSize(16);
+	    				everyone.setTextSize(15);
+	    				noone.setTextSize(15);
+	    				contacts.setTextSize(15);
 	    			}
 	    			if (size .contains( "Large")){
-	    				everyone.setTextSize(19);
-	    				noone.setTextSize(19);
-	    				contacts.setTextSize(19);
+	    				everyone.setTextSize(18);
+	    				noone.setTextSize(18);
+	    				contacts.setTextSize(18);
 	    			}
 	    			if (size .contains( "xLarge")){
-	    				everyone.setTextSize(21);
-	    				noone.setTextSize(21);
-	    				contacts.setTextSize(21);
+	    				everyone.setTextSize(20);
+	    				noone.setTextSize(20);
+	    				contacts.setTextSize(20);
 	    			}
 	    			
 	          }
