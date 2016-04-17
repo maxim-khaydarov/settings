@@ -314,8 +314,9 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 	  }
 	  
 	  public static boolean externalMemoryAvailable() {
-	        return android.os.Environment.getExternalStorageState().equals(
-	                android.os.Environment.MEDIA_MOUNTED);
+	        return //android.os.Environment.getExternalStorageState().equals(
+	               // android.os.Environment.MEDIA_MOUNTED);
+	        android.os.Environment.getRootDirectory().equals(android.os.Environment.MEDIA_MOUNTED);
 	    }
 
 	    public static String getAvailableInternalMemorySize() {
