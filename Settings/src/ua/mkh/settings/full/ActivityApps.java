@@ -13,12 +13,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +29,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar.LayoutParams;
@@ -51,6 +54,7 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
 	   
 	   Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 	   
+	   ProgressBar pg1;
 	   
 	   ListView u;
     
@@ -78,6 +82,8 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
 	      
 	      u = getListView();
 	      
+	      pg1 = (ProgressBar) findViewById(R.id.progressBar1);
+	      pg1.setVisibility(View.GONE);
 	      
 	      btn_back.setTypeface(typefaceMedium);
 	      text_app_main.setTypeface(typefaceBold);
@@ -232,8 +238,15 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
         for (ApplicationInfo info : list) {
             try {
                 if (null != packageManager.getLaunchIntentForPackage(info.packageName)) {
-                    applist.add(info);
+                	if(isSystemPackage(packageManager.getPackageInfo(info.packageName, PackageManager.GET_ACTIVITIES)) == false){
+                    	applist.add(info);
+                    }
                 }
+                
+                
+                
+                
+                
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -242,9 +255,22 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
         return applist;
     }
  
+    private boolean isSystemPackage(PackageInfo pkgInfo) {
+        return ((pkgInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0) ? true
+                : false;
+    }
+    
+    
     private class LoadApplications extends AsyncTask<Void, Void, Void> {
-        private ProgressDialog progress = null;
+       // private ProgressDialog progress = null;
  
+        @Override
+        protected void onPreExecute() {
+            //progress = ProgressDialog.show(ActivityApps.this, null,"Download");
+            super.onPreExecute();
+            pg1.setVisibility(View.VISIBLE);
+        }
+        
         @Override
         protected Void doInBackground(Void... params) {
             applist = checkForLaunchIntent(packageManager.getInstalledApplications(PackageManager.GET_META_DATA));
@@ -264,19 +290,13 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
-            
-            
             setListAdapter(listadaptor);
             setListViewHeightBasedOnChildren(u);
-            progress.dismiss();
-            
+            //progress.dismiss();
+            pg1.setVisibility(View.GONE);
         }
  
-        @Override
-        protected void onPreExecute() {
-            progress = ProgressDialog.show(ActivityApps.this, null,"Download");
-            super.onPreExecute();
-        }
+       
  
         @Override
         protected void onProgressUpdate(Void... values) {

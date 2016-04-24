@@ -36,7 +36,7 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
     private List<ApplicationInfo> appsList = null;
     private Context context;
     private PackageManager packageManager;
-    private Context mCtx;
+    private static Context mCtx;
     
     
     
@@ -153,9 +153,10 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
     public static String getFileSize(long size) {
         if (size <= 0)
             return "0";
-        final String[] units = new String[] { "B", "KB", "MB", "GB", "TB" };
+        //final String[] units = new String[] { "B", "KB", "MB", "GB", "TB" };
+        final String[] unit = mCtx.getResources().getStringArray(R.array.units);
         int digitGroups = (int) (Math.log10(size) / Math.log10(1024));
-        return new DecimalFormat("#,##0.#").format(size / Math.pow(1024, digitGroups)) + " " + units[digitGroups];
+        return new DecimalFormat("#,##0.#").format(size / Math.pow(1024, digitGroups)) + " " + unit[digitGroups];
     }
     
     

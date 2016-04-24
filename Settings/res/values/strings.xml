@@ -335,6 +335,14 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
 	<string name="regulatory">Regulatory</string>
 	
 
+	<string-array name="units">
+    <item>B</item>
+    <item>KB</item>
+    <item>MB</item>
+    <item>GB</item>
+    <item>TB</item>
+</string-array>
+
 
 </resources>
 

@@ -334,6 +334,14 @@
 	
 	<string name="regulatory">Нормативы</string>
 	
+	<string-array name="units">
+    <item>Б</item>
+    <item>КБ</item>
+    <item>МБ</item>
+    <item>ГБ</item>
+    <item>ТБ</item>
+</string-array>
+	
 </resources>
 
 
