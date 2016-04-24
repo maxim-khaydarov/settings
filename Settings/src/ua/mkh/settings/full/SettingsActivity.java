@@ -54,10 +54,6 @@ public class SettingsActivity extends Activity implements OnClickListener, Simpl
 
 	 View toggleCircle, background_oval_off, background_oval_on;
 	 int dimen;
-	 private Boolean _crossfadeRunning = false;
-	    private SharedPreferences _sp;
-	    private ObjectAnimator _oaLeft, _oaRight;
-	    private String _prefName;
 	 
 	 SharedPreferences mSettings;
 	 

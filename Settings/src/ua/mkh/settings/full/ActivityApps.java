@@ -224,6 +224,13 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
         ApplicationInfo data = applist.get(position);
         
         
+        
+     // TODO Add extras or a data URI to this intent as appropriate.
+     
+     
+        Intent databackIntent = new Intent(); 
+        databackIntent.putExtra("key title", "String data"); 
+        setResult(this.RESULT_OK, databackIntent);
         	
         
         
