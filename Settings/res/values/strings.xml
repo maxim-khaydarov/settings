@@ -256,6 +256,7 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
 	<string name="battery_manager">Battery Usage</string>
 	<string name="battery_percent">Battery Percentage</string>
 	<string name="storage_usage">STORAGE</string>
+	<string name="storage_usage2">Storage</string>
 	<string name="storage_zanyato">Used</string>
 	<string name="storage_dostupno">Available</string>
 	<string name="manage_storage">Manage Storage</string>
@@ -343,6 +344,12 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
     <item>TB</item>
 </string-array>
 
+	<string name="version">Version</string>
+	<string name="size">App Size\:</string>
+	<string name="data_cache">Documents &amp; Data</string>
+	<string name="delete_app">Delete App</string>
+	<string name="usage_info">%2$s available on \"%1$s\"</string>
+	<string name="delete_app_info">Deleting \"%1$s\" will also delete all of its documents &amp; data</string>
 
 </resources>
 

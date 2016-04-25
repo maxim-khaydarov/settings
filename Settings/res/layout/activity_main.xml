@@ -512,16 +512,6 @@
                         android:src="@drawable/next" />
 
                     <ImageView
-                        android:id="@+id/ImageView08"
-                        android:layout_width="fill_parent"
-                        android:layout_height="1px"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentLeft="true"
-                        android:ems="10"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/line_cray" />
-
-                    <ImageView
                         android:id="@+id/imageView7"
                         android:layout_width="26dp"
                         android:layout_height="26dp"
@@ -552,6 +542,14 @@
 
                 </RelativeLayout>
             </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ImageView111"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:ems="10"
+                android:scaleType="fitXY"
+                android:src="@drawable/line_cray" />
 
             <LinearLayout
                 android:id="@+id/LinearLayoutCenter"

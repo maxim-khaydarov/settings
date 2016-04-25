@@ -254,6 +254,7 @@
 	<string name="battery_manager">Использование аккумулятора</string>
 	<string name="battery_percent">Заряд в процентах</string>
 	<string name="storage_usage">ХРАНИЛИЩЕ</string>
+	<string name="storage_usage2">Хранилище</string>
 	<string name="storage_zanyato">Занято</string>
 	<string name="storage_dostupno">Доступно</string>
 	<string name="manage_storage">Управлять</string>
@@ -341,6 +342,14 @@
     <item>ГБ</item>
     <item>ТБ</item>
 </string-array>
+
+	<string name="version">Версия</string>
+	<string name="size">Размер\:</string>
+	<string name="data_cache">Документы и данные</string>
+	<string name="delete_app">Удалить программу</string>
+	<string name="usage_info">На \"%1$s\" доступно %2$s</string>
+	<string name="delete_app_info">При удалении \"%1$s\" также удалятся все документы и данные</string>
+	
 	
 </resources>
 

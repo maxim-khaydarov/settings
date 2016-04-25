@@ -632,9 +632,9 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 		textVPN.setTypeface(typefaceRoman);
 		
 	
-		LinearLayoutPrivacy.setVisibility(View.GONE);
+		//LinearLayoutPrivacy.setVisibility(View.GONE);
 		//LinearLayoutApn.setVisibility(View.GONE);
-		LinearLayoutPasscode.setVisibility(View.GONE);
+		//LinearLayoutPasscode.setVisibility(View.GONE);
 		//layoutTunes.setVisibility(View.GONE);
 		
       		
@@ -1526,7 +1526,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 				else
 					LinearLayoutApn.setVisibility(View.GONE);
 				}
-	        */
+	        
 	        if (mSettings.contains(APP_PREFERENCES_tgb_passcode)) {
 				// Получаем число из настроек
 				Boolean passcode = mSettings.getBoolean(APP_PREFERENCES_tgb_passcode, true);
@@ -1544,7 +1544,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 				else
 					LinearLayoutPrivacy.setVisibility(View.GONE);
 				}
-	        
+	        */
 	        if (mSettings.contains(APP_PREFERENCES_bold_text)) {
 				// Получаем число из настроек
 	        	 Boolean bold = mSettings.getBoolean(APP_PREFERENCES_bold_text, true);
@@ -2087,6 +2087,15 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 		        
 		        
 		        if (TextOper.getText().toString().length() == 0){
+		        	LinearLayout LinearLayoutSotSvyaz = (LinearLayout) findViewById(R.id.LinearLayoutSotSvyaz);
+		        	LinearLayout LinearLayoutApn = (LinearLayout) findViewById(R.id.LinearLayoutApn);
+		        	LinearLayout LinearLayoutOperator = (LinearLayout) findViewById(R.id.LinearLayoutOperator);
+		        	
+		        	LinearLayoutSotSvyaz.setVisibility(View.GONE);
+		        	LinearLayoutApn.setVisibility(View.GONE);
+		        	LinearLayoutOperator.setVisibility(View.GONE);
+		        	
+		        	
 		        	btn_operator.setTextColor(getResources().getColor(R.color.hint_text));
 		        	//btn_operator.setEnabled(false);
 		        	btn_sota.setTextColor(getResources().getColor(R.color.hint_text));

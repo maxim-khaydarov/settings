@@ -5,8 +5,9 @@
  
     <ImageView
         android:id="@+id/app_icon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
         android:padding="3dp"
         android:scaleType="centerCrop" />
  
@@ -24,15 +25,7 @@
             android:gravity="center_vertical"
             android:text="Main"
             android:textColor="@color/black"
-            android:textSize="17sp" />
-
-        <ImageView
-            android:id="@+id/ImageView02"
-            android:layout_width="18dp"
-            android:layout_height="18dp"
-            android:layout_marginRight="10dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/next" />
+            android:textSize="15sp" />
 
     </LinearLayout>
  

@@ -32,7 +32,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
  
-public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
+public class ApplicationAdapterUsage extends ArrayAdapter<ApplicationInfo> {
     private List<ApplicationInfo> appsList = null;
     private Context context;
     private PackageManager packageManager;
@@ -42,7 +42,7 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
     
     
     
-    public ApplicationAdapter(Context context, int textViewResourceId,
+    public ApplicationAdapterUsage(Context context, int textViewResourceId,
             List<ApplicationInfo> appsList) {
         super(context, textViewResourceId, appsList);
         this.context = context;
@@ -73,7 +73,7 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
         if (null == view) {
             LayoutInflater layoutInflater = (LayoutInflater) context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = layoutInflater.inflate(R.layout.snippet_list_row, null);
+            view = layoutInflater.inflate(R.layout.snippet_list_row_del, null);
             
         }
  
@@ -83,9 +83,9 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
         	Typeface typefaceRoman = Typeface.createFromAsset(mCtx.getAssets(), roman);
         	
             TextView appName = (TextView) view.findViewById(R.id.app_name);
-            //appSize = (TextView) view.findViewById(R.id.textSize);
+            appSize = (TextView) view.findViewById(R.id.textSize);
             appName.setTypeface(typefaceRoman);
-            //appSize.setTypeface(typefaceRoman);
+            appSize.setTypeface(typefaceRoman);
             ImageView iconview = (ImageView) view.findViewById(R.id.app_icon);
  
             appName.setText(data.loadLabel(packageManager));
@@ -103,7 +103,7 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-            
+            */
             
             PackageManager pm = mCtx.getPackageManager();
 
@@ -121,7 +121,7 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
                         throws RemoteException {
 
                         Log.i("TAG", "codeSize: " + pStats.codeSize);
-                        //appSize.setText(getFileSize(pStats.codeSize));
+                        appSize.setText(getFileSize(pStats.codeSize));
                     }
                 });
 
@@ -137,7 +137,7 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
 			} catch (InvocationTargetException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}*/
+			}
         }
             
            

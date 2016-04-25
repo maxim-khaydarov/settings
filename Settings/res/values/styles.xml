@@ -25,6 +25,8 @@
     <color name="background_fon">#eeeef3</color>
     <color name="background_title">#99f9f9f9</color>
     
+    <color name="red">#E6382F</color>
+    
 	<color name="transparent">@android:color/transparent </color>
 	<color name="black">#000000 </color>
 	<color name="hint_text">#808080</color>

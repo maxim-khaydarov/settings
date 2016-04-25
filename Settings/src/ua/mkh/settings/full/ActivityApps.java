@@ -1,6 +1,7 @@
 package ua.mkh.settings.full;
 
 import java.io.File;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +21,8 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.StatFs;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -37,7 +40,7 @@ import android.widget.Toolbar.LayoutParams;
 public class ActivityApps extends ListActivity implements  SimpleGestureListener{
     private PackageManager packageManager = null;
     private List<ApplicationInfo> applist = null;
-    private ApplicationAdapter listadaptor = null;
+    private ApplicationAdapterUsage listadaptor = null;
     Button Button08, Button09, btn_back;
     TextView text_app_main, usage, aviable;
     int number = 0;
@@ -112,7 +115,7 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
         super.onResume();
         
         
-       
+        memory();
         
 			// Получаем число из настроек
         	 int speed = mSettings.getInt(APP_PREFERENCES_ANIM_SPEED, 1);
@@ -228,17 +231,68 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
      // TODO Add extras or a data URI to this intent as appropriate.
      
      
-        Intent databackIntent = new Intent(); 
-        databackIntent.putExtra("key title", "String data"); 
-        setResult(this.RESULT_OK, databackIntent);
+        
+       
+       
+        
+        
+        
+        ///////////////////////VERSION
         	
+        PackageInfo pInfo = null;
+		try {
+			pInfo = getPackageManager().getPackageInfo(app.packageName, 0);
+		} catch (NameNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        String version = pInfo.versionName;
         
         
-            Intent intent = packageManager
+        
+        //////////////////////////SIZE APK
+        
+        ApplicationInfo tmpInfo = null;
+		try {
+			tmpInfo = getPackageManager().getApplicationInfo(app.packageName,-1);
+		} catch (NameNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        long size = new File(tmpInfo.sourceDir).length();
+        
+        
+        //////////////////////////
+        
+       
+        
+        Intent intent18 = new Intent(this, ActivityUsageInfo.class);
+        intent18.putExtra("title", getString(app.labelRes));
+        intent18.putExtra("version", version);
+        intent18.putExtra("apk_size", size);
+        intent18.putExtra("code", app.packageName);
+    	 startActivity(intent18);
+    	 
+    	
+
+		overridePendingTransition(center_to_left, center_to_left2);
+        
+        /*
+          Intent intent = packageManager
                     .getLaunchIntentForPackage(app.packageName);
                 startActivity(intent);
-            
+            */
     }
+    
+    public  String getFileSize(long size) {
+        if (size <= 0)
+            return "0";
+        //final String[] units = new String[] { "B", "KB", "MB", "GB", "TB" };
+        final String[] unit = getResources().getStringArray(R.array.units);
+        int digitGroups = (int) (Math.log10(size) / Math.log10(1024));
+        return new DecimalFormat("#,##0.#").format(size / Math.pow(1024, digitGroups)) + " " + unit[digitGroups];
+    }
+    
  
     private List<ApplicationInfo> checkForLaunchIntent(List<ApplicationInfo> list) {
         ArrayList<ApplicationInfo> applist = new ArrayList<ApplicationInfo>();
@@ -281,7 +335,7 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
         @Override
         protected Void doInBackground(Void... params) {
             applist = checkForLaunchIntent(packageManager.getInstalledApplications(PackageManager.GET_META_DATA));
-            listadaptor = new ApplicationAdapter(ActivityApps.this,
+            listadaptor = new ApplicationAdapterUsage(ActivityApps.this,
                     R.layout.snippet_list_row_del, applist);
  
             
@@ -330,7 +384,61 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
 		
 	}
 	
-	
+	public void memory (){
+		  
+		    usage.setText(getFileSize(getTotalInternalMemorySize()));
+		    aviable.setText(getFileSize(getAvailableInternalMemorySize()));
+		     
+	  }
+	  
+	  public static boolean externalMemoryAvailable() {
+	        return //android.os.Environment.getExternalStorageState().equals(
+	               // android.os.Environment.MEDIA_MOUNTED);
+	        android.os.Environment.getRootDirectory().equals(android.os.Environment.MEDIA_MOUNTED);
+	    }
+
+	    public static long getAvailableInternalMemorySize() {
+	        File path = Environment.getDataDirectory();
+	        StatFs stat = new StatFs(path.getPath());
+	        long blockSize = stat.getBlockSize();
+	        long availableBlocks = stat.getAvailableBlocks();
+	        return availableBlocks * blockSize;
+	    }
+
+	    public static long getTotalInternalMemorySize() {
+	        File path = Environment.getDataDirectory();
+	        StatFs stat = new StatFs(path.getPath());
+	        long blockSize = stat.getBlockSize();
+	        long totalBlocks = stat.getBlockCount();
+	        return totalBlocks * blockSize;
+	    }
+
+	    static long ERROR = 0;
+	    
+	    public static long getAvailableExternalMemorySize() {
+	        if (externalMemoryAvailable()) {
+	            File path = Environment.getExternalStorageDirectory();
+	            StatFs stat = new StatFs(path.getPath());
+	            long blockSize = stat.getBlockSize();
+	            long availableBlocks = stat.getAvailableBlocks();
+	            return availableBlocks * blockSize;
+	        } else {
+	            return  ERROR;
+	        }
+	    }
+
+	    public static long getTotalExternalMemorySize() {
+	        if (externalMemoryAvailable()) {
+	            File path = Environment.getExternalStorageDirectory();
+	            StatFs stat = new StatFs(path.getPath());
+	            long blockSize = stat.getBlockSize();
+	            long totalBlocks = stat.getBlockCount();
+	            return totalBlocks * blockSize;
+	        } else {
+	            return  ERROR;
+	        }
+	    }
+
 	
 	public static void setListViewHeightBasedOnChildren(ListView lv) {
         ListAdapter listAdapter = lv.getAdapter();

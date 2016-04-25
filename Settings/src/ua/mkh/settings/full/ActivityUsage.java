@@ -286,30 +286,8 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 	  
 	  public void memory (){
 		  
-		  
-		    
-		   Float ios = 0f;
-		   Float iss = 0f;
-		   
-		   List<StorageUtils.StorageInfo> storageList = StorageUtils.getStorageList();
-		    for (StorageUtils.StorageInfo storageInfo : storageList) {
-		    	
-		    	Float o = Float.parseFloat(String.valueOf(new File(storageInfo.path).getTotalSpace()));
-		    	Float s = Float.parseFloat(String.valueOf(new File(storageInfo.path).getFreeSpace()));
-		    		
-		    	ios = o + ios;
-		    	iss = s + iss;
-
-		    }
-		    DecimalFormat twoDForm = new DecimalFormat("#.##");
-		    
-		    float p = ios - iss;
-		    //TextView07.setText(twoDForm.format(p/1073741824f) +" " + getResources().getString(R.string.GigaByte));
-	    	//TextView08.setText(twoDForm.format(iss/1073741824f) +" " + getResources().getString(R.string.GigaByte));
-	  
 		    TextView07.setText(getTotalInternalMemorySize());
 		    TextView08.setText(getAvailableInternalMemorySize());
-		    
 		    
 	  }
 	  
@@ -363,10 +341,11 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 
 	    
 	  
-	  public static String getFileSize(long size) {
+	  public static  String getFileSize(long size) {
 	        if (size <= 0)
 	            return "0";
 	        final String[] units = new String[] { "B", "KB", "MB", "GB", "TB" };
+	        
 	        int digitGroups = (int) (Math.log10(size) / Math.log10(1024));
 	        return new DecimalFormat("#,##0.#").format(size / Math.pow(1024, digitGroups)) + " " + units[digitGroups];
 	    }
