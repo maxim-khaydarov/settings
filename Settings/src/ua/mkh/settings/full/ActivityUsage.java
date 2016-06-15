@@ -291,13 +291,13 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 		    
 	  }
 	  
-	  public static boolean externalMemoryAvailable() {
+	  public  boolean externalMemoryAvailable() {
 	        return //android.os.Environment.getExternalStorageState().equals(
 	               // android.os.Environment.MEDIA_MOUNTED);
 	        android.os.Environment.getRootDirectory().equals(android.os.Environment.MEDIA_MOUNTED);
 	    }
 
-	    public static String getAvailableInternalMemorySize() {
+	    public  String getAvailableInternalMemorySize() {
 	        File path = Environment.getDataDirectory();
 	        StatFs stat = new StatFs(path.getPath());
 	        long blockSize = stat.getBlockSize();
@@ -305,7 +305,7 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 	        return getFileSize(availableBlocks * blockSize);
 	    }
 
-	    public static String getTotalInternalMemorySize() {
+	    public  String getTotalInternalMemorySize() {
 	        File path = Environment.getDataDirectory();
 	        StatFs stat = new StatFs(path.getPath());
 	        long blockSize = stat.getBlockSize();
@@ -315,7 +315,7 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 
 	    static long ERROR = 0;
 	    
-	    public static String getAvailableExternalMemorySize() {
+	    public  String getAvailableExternalMemorySize() {
 	        if (externalMemoryAvailable()) {
 	            File path = Environment.getExternalStorageDirectory();
 	            StatFs stat = new StatFs(path.getPath());
@@ -327,7 +327,7 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 	        }
 	    }
 
-	    public static String getTotalExternalMemorySize() {
+	    public  String getTotalExternalMemorySize() {
 	        if (externalMemoryAvailable()) {
 	            File path = Environment.getExternalStorageDirectory();
 	            StatFs stat = new StatFs(path.getPath());
@@ -341,13 +341,13 @@ Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 
 	    
 	  
-	  public static  String getFileSize(long size) {
+	  public  String getFileSize(long size) {
 	        if (size <= 0)
 	            return "0";
-	        final String[] units = new String[] { "B", "KB", "MB", "GB", "TB" };
+	        final String[] unit = getResources().getStringArray(R.array.units);
 	        
 	        int digitGroups = (int) (Math.log10(size) / Math.log10(1024));
-	        return new DecimalFormat("#,##0.#").format(size / Math.pow(1024, digitGroups)) + " " + units[digitGroups];
+	        return new DecimalFormat("#,##0.#").format(size / Math.pow(1024, digitGroups)) + " " + unit[digitGroups];
 	    }
 	  
 	  @Override

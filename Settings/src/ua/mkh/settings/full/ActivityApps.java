@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.StatFs;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -224,18 +225,6 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
         super.onListItemClick(l, v, position, id);
  
         ApplicationInfo app = applist.get(position);
-        ApplicationInfo data = applist.get(position);
-        
-        
-        
-     // TODO Add extras or a data URI to this intent as appropriate.
-     
-     
-        
-       
-       
-        
-        
         
         ///////////////////////VERSION
         	
@@ -262,12 +251,22 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
         long size = new File(tmpInfo.sourceDir).length();
         
         
-        //////////////////////////
+        //////////////////////////NAME APK
         
-       
+        
+        PackageManager packageManager= getApplicationContext().getPackageManager();
+        String appName = "Unknow";
+        try {
+			appName = (String) packageManager.getApplicationLabel(packageManager.getApplicationInfo(app.packageName, PackageManager.GET_META_DATA));
+		} catch (NameNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}        
+        
+       /////////////////////////////
         
         Intent intent18 = new Intent(this, ActivityUsageInfo.class);
-        intent18.putExtra("title", getString(app.labelRes));
+        intent18.putExtra("title", appName);
         intent18.putExtra("version", version);
         intent18.putExtra("apk_size", size);
         intent18.putExtra("code", app.packageName);
@@ -303,11 +302,6 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
                     	applist.add(info);
                     }
                 }
-                
-                
-                
-                
-                
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -462,4 +456,19 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
         lv.requestLayout();
     }
 
+	 @Override
+	    public boolean onKeyDown(int keycode, KeyEvent e) {
+	        switch(keycode) {
+	           
+	            case KeyEvent.KEYCODE_BACK:
+	            	Intent intent18 = new Intent(this, ActivityUsage.class);
+	             	 startActivity(intent18);
+
+	       		overridePendingTransition(center_to_right, center_to_right2);
+	                return true;
+	            
+	        }
+	        return super.onKeyDown(keycode, e);
+	   }
+	 
 }

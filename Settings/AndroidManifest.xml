@@ -2,8 +2,8 @@
 <manifest android:installLocation="auto" 
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="ua.mkh.settings.full"
-    android:versionCode="36"
-    android:versionName="4.1.13" >
+    android:versionCode="37"
+    android:versionName="4.1.14" >
 
     <uses-sdk
         android:minSdkVersion="14"

@@ -336,6 +336,12 @@ public class ActivityBth extends Activity implements OnClickListener, SimpleGest
     	        	mDeviceListScan.add(device);
     	        	scan_number = 1;
     	        	
+    	        	mAdapter_scan.setData(mDeviceListScan);
+    	        	scan.setAdapter(mAdapter_scan);
+    	        	setListViewHeightBasedOnChildren(scan);
+    	        	scan.setVisibility(View.VISIBLE);
+    	        	scan.setVisibility(View.VISIBLE);
+    	        	
     	        	//showToast("Found device " + device.getName());
     	        }
     	    }
@@ -595,7 +601,7 @@ public class ActivityBth extends Activity implements OnClickListener, SimpleGest
 	 	        nameBT.setVisibility(View.VISIBLE);
 	 	       nameBT.setText(getLocalBluetoothName());
 	 	      bluetoothAdapter.startDiscovery();
-	 	    // pair();
+	 	     pair();
 
 	    	} 
 	    	else {

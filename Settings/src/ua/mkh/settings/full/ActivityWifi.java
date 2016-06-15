@@ -1,7 +1,10 @@
 package ua.mkh.settings.full;
 
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.BitSet;
 import java.util.HashMap;
 import java.util.List;
 
@@ -18,6 +21,7 @@ import android.net.DhcpInfo;
 import android.net.NetworkInfo;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiConfiguration.KeyMgmt;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
@@ -126,7 +130,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 			
 			
 			
-				
+			
 				
 			
 			tb_wifi = (ToggleButton) findViewById(R.id.ToggleButton01);
@@ -679,11 +683,17 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	      info.setVisibility(View.VISIBLE);
 			tb_ch.setVisibility(View.VISIBLE);
 			img2.setVisibility(View.VISIBLE);
-	      
+			
+			
+			
+			
+			
+			WifiConfiguration wifiConfiguration = new WifiConfiguration();
 	       
-	     
+			Log.e("QQ", getSecurityType(wifiConfiguration) );
 	     
 	       String wi = myWifiInfo.getSSID().replace('"',' ');
+	       
 	     
 	      textConnected.setText(wi);
 	     
@@ -698,8 +708,34 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	     
 	    }
 
-		
-		
+	    public static final int SECURITY_NONE = 0;
+	    public static final int SECURITY_WEP = 1;
+	    public static final int SECURITY_PSK = 2;
+	    public static final int SECURITY_EAP = 3;
+	    
+	    public static int getSecurity(WifiConfiguration config) {
+	        if (config.allowedKeyManagement.get(KeyMgmt.WPA_PSK)) 
+	            return SECURITY_PSK;
+
+	        if (config.allowedKeyManagement.get(KeyMgmt.WPA_EAP) || config.allowedKeyManagement.get(KeyMgmt.IEEE8021X)) 
+	            return SECURITY_EAP;
+
+	        return (config.wepKeys[0] != null) ? SECURITY_WEP : SECURITY_NONE;
+	    }
+	    
+	    public static String getSecurityType(WifiConfiguration config) {
+	        switch (getSecurity(config)) {
+	            case SECURITY_WEP:
+	                return "WEP";
+	            case SECURITY_PSK:
+	                if (config.allowedProtocols.get(WifiConfiguration.Protocol.RSN))
+	                    return "WPA2";
+	                else
+	                    return "WPA";
+	            default:
+	                return "NONE";
+	        }
+	    }
 		
 		 public void onClick(View v) {
 			 int id = v.getId();

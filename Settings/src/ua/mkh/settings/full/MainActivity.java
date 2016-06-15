@@ -1147,7 +1147,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	        Airmode();
 	        ButtonTextBth();
 	        operator();
-	        //check_pirat();
+	        check_pirat();
 	        zimowets();
 	       
 	       
@@ -1213,30 +1213,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 				e1.printStackTrace();
 			}
 	        
-	        final Dialog dialogC = new Dialog(MainActivity.this,android.R.style.Theme_Translucent);
-		     dialogC.requestWindowFeature(Window.FEATURE_NO_TITLE);
-				dialogC.setContentView(R.layout.dialog_inform_changelog);
-				
-				// set the custom dialog components - text, image and button
-
-				Button dialogButton = (Button) dialogC.findViewById(R.id.dialogButtonOK);
-				TextView text = (TextView)dialogC.findViewById(R.id.text);
-				TextView textver = (TextView)dialogC.findViewById(R.id.textver);
-				
-				dialogButton.setTypeface(typefaceRoman);
-				text.setTypeface(typefaceRoman);
-				textver.setTypeface(typefaceBold);
-				textver.setText("Version " + versionNow + ":");
-				// if button is clicked, close the custom dialog
-				dialogButton.setOnClickListener(new OnClickListener() {
-					@Override
-					public void onClick(View v) {
-						dialogC.dismiss();
-					}
-				});
-				
 	       
-			
 			Log.d("HEY!", versionNow);
 			
 	       String changeLog = sp.getString("version", "1.0");
@@ -2091,9 +2068,9 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 		        	LinearLayout LinearLayoutApn = (LinearLayout) findViewById(R.id.LinearLayoutApn);
 		        	LinearLayout LinearLayoutOperator = (LinearLayout) findViewById(R.id.LinearLayoutOperator);
 		        	
-		        	LinearLayoutSotSvyaz.setVisibility(View.GONE);
-		        	LinearLayoutApn.setVisibility(View.GONE);
-		        	LinearLayoutOperator.setVisibility(View.GONE);
+		        	//LinearLayoutSotSvyaz.setVisibility(View.GONE);
+		        	//LinearLayoutApn.setVisibility(View.GONE);
+		        	//LinearLayoutOperator.setVisibility(View.GONE);
 		        	
 		        	
 		        	btn_operator.setTextColor(getResources().getColor(R.color.hint_text));
@@ -2115,61 +2092,80 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 		    
 		   
 		    public void check_pirat(){
+		    	
 		    	Account[] accounts2 = AccountManager.get(this).getAccountsByType("com.google");
         		for (Account account : accounts2) {
         			svoi = account.name;
         		}
-        		if (svoi.contains("maxim.khaydarov@gmail.com") || svoi.contains("vikysya1650@gmail.com")){
+        		if (svoi.contains("maxim.khaydarov@gmail.com") || svoi.contains("foxtrot2015foxtrot@gmail.com")){
         			
         		}
         		else{
-		    	if (!isStoreVersion(this).contains("com.yandex.store")){
-		        	 //Toast.makeText(getApplication(), "NOT YANDEX", Toast.LENGTH_LONG).show();
-		        	 
-		        	 final Dialog dialog = new Dialog(MainActivity.this,android.R.style.Theme_Translucent);
-	       		     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-	       				dialog.setContentView(R.layout.dialog_inform);
-	       				
-	       				// set the custom dialog components - text, image and button
-
-	       				Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
-	       				TextView text = (TextView)dialog.findViewById(R.id.text);
-	       				TextView textB = (TextView)dialog.findViewById(R.id.textBold);
-	       				text.setText(R.string.block_license);
-	       				textB.setText(R.string.attention);
-	       				
-	       				dialogButton.setTypeface(typefaceRoman);
-	       				text.setTypeface(typefaceRoman);
-	       				textB.setTypeface(typefaceBold);
-	       				// if button is clicked, close the custom dialog
-	       				dialogButton.setOnClickListener(new OnClickListener() {
-	       					@Override
-	       					public void onClick(View v) {
-	       						dialog.dismiss();
-	       						Intent intent = new Intent(Intent.ACTION_MAIN);
-	    		            	intent.addCategory(Intent.CATEGORY_HOME);
-	    		            	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-	    		            	startActivity(intent);
-	       					}
-	       				});
-	       				dialog.show();
-	       				
-		         }
+        			if(isStoreVersion(this) == null){
+        				lock();
+        			}
+        			else{
+        				if (!isStoreVersion(this).contains("com.yandex.store")){
+       		        	 //Toast.makeText(getApplication(), "NOT YANDEX", Toast.LENGTH_LONG).show();
+       		        	 lock();
+       		         }
+        			}
+		    	
 		         
         		}
+        		
+		    	
+        		
+		    	
+		    	
 		    }
 		    
-		    public static String isStoreVersion(Context context) {
-		        String installer = null;
+		    public  String isStoreVersion(Context context) {
+		    	
+		        String installer;
 		        try {
 		            installer = context.getPackageManager().getInstallerPackageName(context.getPackageName());
 		            
-		        } catch (Throwable e) {          
+		        } catch (Exception e) {    
+		        	installer = "null";
+		        	Log.e("!", e.toString());
 		        }
-
+		        
 		        return installer;
 		    }
 		    
+	    	public void lock(){
+	    		final Dialog dialog = new Dialog(MainActivity.this,android.R.style.Theme_Translucent);
+      		     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+      				dialog.setContentView(R.layout.dialog_inform);
+      				
+      				// set the custom dialog components - text, image and button
+
+      				Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+      				TextView text = (TextView)dialog.findViewById(R.id.text);
+      				TextView textB = (TextView)dialog.findViewById(R.id.textBold);
+      				text.setText(R.string.block_license);
+      				textB.setText(R.string.attention);
+      				
+      				dialogButton.setTypeface(typefaceRoman);
+      				text.setTypeface(typefaceRoman);
+      				textB.setTypeface(typefaceBold);
+      				
+      				dialogButton.setOnClickListener(new OnClickListener() {
+      					@Override
+      					public void onClick(View v) {
+      						dialog.dismiss();
+      						Intent intent = new Intent(Intent.ACTION_MAIN);
+   		            	intent.addCategory(Intent.CATEGORY_HOME);
+   		            	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+   		            	startActivity(intent);
+      					}
+      				});
+      				dialog.show();
+	    	}
+	    	
+	    	
+	    	
 	    	
 		    @Override
 		    public boolean onKeyDown(int keycode, KeyEvent e) {

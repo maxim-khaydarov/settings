@@ -106,15 +106,15 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="fill_parent"
+        android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/tableLayout1"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:background="@color/transparent"
+        android:background="@drawable/button_blue"
         android:onClick="onClick"
         android:text="@string/button_start_next"
-        android:textColor="@color/blue"
+        android:textColor="@color/white"
         android:textSize="20sp" />
 
 </RelativeLayout>

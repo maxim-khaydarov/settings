@@ -3,7 +3,7 @@
     tools:ignore="MissingTranslation">
 
     <string name="app_name">Settings</string>
-    <string name="app_name_orig">fineSettings|FULL</string>
+    <string name="app_name_orig">fineSettings</string>
     <string name="app_name_desk">Settings</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>

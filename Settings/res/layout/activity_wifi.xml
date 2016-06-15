@@ -104,8 +104,8 @@
 
                     <Button
                         android:id="@+id/button1"
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="15dp"
@@ -211,7 +211,9 @@
                         android:id="@+id/list"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/white" >
+                        android:background="@color/white"
+                        android:paddingLeft="20dp" >
+
                     </ListView>
 
                     <ImageView

@@ -161,8 +161,10 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:divider="@color/hint_text"
-            android:drawSelectorOnTop="true" >
+            android:divider="?android:attr/listDivider"
+            android:drawSelectorOnTop="true"
+            android:paddingLeft="20dp" >
+
         </ListView>
 
         <ProgressBar

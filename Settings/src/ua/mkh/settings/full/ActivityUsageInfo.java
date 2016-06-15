@@ -23,6 +23,7 @@ import android.os.Environment;
 import android.os.RemoteException;
 import android.os.StatFs;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -50,7 +51,7 @@ public class ActivityUsageInfo extends Activity implements OnClickListener, Simp
 	   public static final String APP_PREFERENCES_bold_text = "bold_txt";
 	   public static final String APP_PREFERENCES_tgb_menu = "tgb_menu";
 	  
-
+	   int UNINSTALL_REQUEST_CODE = 1;
 		
 	   int menui = 0;
 		
@@ -88,7 +89,7 @@ public class ActivityUsageInfo extends Activity implements OnClickListener, Simp
 		Button01.setOnClickListener(this);
 		Button03 = (Button) findViewById(R.id.Button03);
 		 
-        
+		try {
 		Intent intent = getIntent();
 		title = intent.getStringExtra("title");
   	  String version = intent.getStringExtra("version");
@@ -102,7 +103,10 @@ public class ActivityUsageInfo extends Activity implements OnClickListener, Simp
   	String strMeatMsg = String.format(strMeatFormat, getLocalBluetoothName(), getFileSize(getAvailableInternalMemorySize()));
   	  textView4.setText(strMeatMsg);
   	  
-  	try {
+  	 textView02.setText( title );
+ 	  textView2.setText(getString(R.string.version) + " " + version);
+ 	  textView3.setText(getString(R.string.size) + ": " + getFileSize(apk_size));
+  	
 		Drawable icon = getPackageManager().getApplicationIcon(code);
 		ImageView imageView1 = (ImageView) findViewById(R.id.imageView1);
 	  	imageView1.setImageDrawable(icon);
@@ -112,9 +116,7 @@ public class ActivityUsageInfo extends Activity implements OnClickListener, Simp
 	}
   	
   	
-  	  textView02.setText( title );
-  	  textView2.setText(getString(R.string.version) + " " + version);
-  	  textView3.setText(getString(R.string.size) + ": " + getFileSize(apk_size));
+  	 
 		
         btn_back = (Button) findViewById(R.id.buttonBack);
         btn_back.setText(R.string.storage_usage2);
@@ -287,16 +289,36 @@ public class ActivityUsageInfo extends Activity implements OnClickListener, Simp
 
 		  	   @Override
 		  	   public void onClick(View v) {
-		  		 Intent intent = new Intent(Intent.ACTION_DELETE);
-		    		 intent.setData(Uri.parse("package:" + code));
-		    		 startActivity(intent);
-		    		 
+		  		   
+		  		 Intent intent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE);  
+		  		intent.setData(Uri.parse("package:" + code));  
+		  		intent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
+		  		startActivityForResult(intent, UNINSTALL_REQUEST_CODE);
+		  		
+		  		 
 		  	   }});
 		     
 		     dialog.show();
 		    }
 	   	
-	     
+	     @Override
+	     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	         super.onActivityResult(requestCode, resultCode, data);
+	         if (requestCode == UNINSTALL_REQUEST_CODE) {
+	             if (resultCode == RESULT_OK) {
+	                 Log.d("TAG", "onActivityResult: user accepted the (un)install");
+	                 Intent intent18 = new Intent(this, ActivityApps.class);
+	             	 startActivity(intent18);
+	       		overridePendingTransition(center_to_right, center_to_right2);
+	       		
+	             } else if (resultCode == RESULT_CANCELED) {
+	            	 Log.d("TAG", "onActivityResult: user canceled the (un)install");
+	                 
+	             } else if (resultCode == RESULT_FIRST_USER) {
+	                 Log.d("TAG", "onActivityResult: failed to (un)install");
+	             }
+	         }
+	     }
 	
 	     protected void onResume() {
 		        super.onResume();
@@ -393,6 +415,23 @@ public class ActivityUsageInfo extends Activity implements OnClickListener, Simp
 		       }
 		       
 		    }
+	     
+	     
+	     
+	     @Override
+		    public boolean onKeyDown(int keycode, KeyEvent e) {
+		        switch(keycode) {
+		           
+		            case KeyEvent.KEYCODE_BACK:
+		            	Intent intent18 = new Intent(this, ActivityApps.class);
+		             	 startActivity(intent18);
+
+		       		overridePendingTransition(center_to_right, center_to_right2);
+		                return true;
+		            
+		        }
+		        return super.onKeyDown(keycode, e);
+		   }
 	     
 	  }
 	
