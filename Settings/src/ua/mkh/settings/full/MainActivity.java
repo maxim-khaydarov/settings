@@ -1150,7 +1150,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	        Airmode();
 	        ButtonTextBth();
 	        operator();
-	        check_pirat();
+	        //check_pirat();
 	        zimowets();
 	       
 	       

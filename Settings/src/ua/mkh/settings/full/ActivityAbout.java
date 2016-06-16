@@ -250,6 +250,7 @@ public class ActivityAbout extends Activity implements OnClickListener, SimpleGe
 	    
 	    
 	    private void getAudioList() {
+	    	try{
 	    	 int music_col = 0;
 	  	  
 	        final Cursor mCursor = getContentResolver().query(
@@ -269,11 +270,14 @@ public class ActivityAbout extends Activity implements OnClickListener, SimpleGe
 	        mCursor.close();
 	        
 	        TextView10.setText(String.valueOf(music_col));
-	        
+	    	}catch(NullPointerException e){
+	    		 TextView10.setText("Unknow");
+	    	}
 	        
 	    }
 	    
 	    private void getPhotoList() {
+	    	try{
 	    	 int photo_col = 0;
 	    	 
 	        final Cursor mCursor = getContentResolver().query(
@@ -293,11 +297,14 @@ public class ActivityAbout extends Activity implements OnClickListener, SimpleGe
 	        mCursor.close();
 	        
 	        TextView12.setText(String.valueOf(photo_col));
-	        
+	    	}catch(NullPointerException e){
+	    		TextView12.setText("Unknow");
+	    	}
 	        
 	    }
 	    
 	    private void getVideoList() {
+	    	try{
 	    	int video_col = 0;
 		  	  
 		  	  
@@ -317,6 +324,9 @@ public class ActivityAbout extends Activity implements OnClickListener, SimpleGe
 
 	        mCursor.close();
 	        TextView11.setText(String.valueOf(video_col));
+	    	}catch(NullPointerException e){
+	    		TextView11.setText("Unknow");
+	    	}
 	    }
 	    
 	    private void getAppsList() {
