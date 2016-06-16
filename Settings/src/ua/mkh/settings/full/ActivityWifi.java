@@ -21,11 +21,13 @@ import android.net.DhcpInfo;
 import android.net.NetworkInfo;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiConfiguration.GroupCipher;
 import android.net.wifi.WifiConfiguration.KeyMgmt;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager.LayoutParams;
+import android.text.Html;
 import android.text.InputType;
 import android.text.format.Formatter;
 import android.util.Log;
@@ -78,6 +80,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	   int center_to_right, center_to_right2;
 	   int center_to_left, center_to_left2;
 	   
+	   int pass = 0;
 	   
 	   SharedPreferences mSettings;
 	   private SimpleGestureFilter detector;
@@ -95,6 +98,13 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	  String ITEM_KEY = "key", WIFI_KEY = "wifi_key", RSSI_KEY = "rssi_key";
 	  ArrayList<HashMap<String, String>> arraylist = new ArrayList<HashMap<String, String>>();
 	  SimpleAdapter adapter;
+	  
+	  WifiInfo myWifiInfo;
+	  ConnectivityManager myConnManager;
+	  NetworkInfo myNetworkInfo;
+	  WifiManager myWifiManager;
+	  
+	  int wifi_state = 0;
 	
 	    /* Called when the activity is first created. */
 	    @Override
@@ -111,6 +121,11 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 			typefaceBold = Typeface.createFromAsset(getAssets(), bold);
 			typefaceThin = Typeface.createFromAsset(getAssets(), thin);
 			
+			
+			 myConnManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+		     myNetworkInfo = myConnManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+		     myWifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+			myWifiInfo = myWifiManager.getConnectionInfo();
 			
 			mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 			
@@ -185,19 +200,12 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		               connectToWifi(arg2);
 		           }
 		           
-		           
-
 		           private void connectToWifi(final int position)
 		           {
-
 		                   final int value = results.size()-1 - position;
-
-
 
 		                   Capabilities =  results.get(value).capabilities;
 		                  
-		                  
-
 		                   //Then you could add some code to check for a specific security type. 
 		                   if(Capabilities.contains("WPA"))
 
@@ -439,6 +447,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		                      HashMap<String, String> item = new HashMap<String, String>(); 
 		                      int result = results.get(size).level;
 		                      
+		                      
 		                      if(results.get(size).SSID.length() != 0){
 		                    	  item.put(ITEM_KEY, results.get(size).SSID);
 		                      }
@@ -473,6 +482,18 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 			                    {
 		                    	  item.put(WIFI_KEY, Integer.toString(R.drawable.lock_wifi));
 			                    }
+		                      
+		                      String wi = myWifiInfo.getSSID();
+		                      String wi_scan = "\"" + results.get(size).SSID + "\"";
+		                      String wi3 = myWifiInfo.getSSID().replace('"',' ');
+		                      
+		                      if (wi_scan.contains(wi)){
+		                    	  if(!Capabilities.contains("WPA") && !Capabilities.contains("WEP")){
+		                    	  String t2 = wi3 + "<br />" + "<font color=\"#808080\" >" + "<small><small>" +  getString(R.string.wifi_no_pass) + "</small></small>" + "</font>";
+		           		       textConnected.setText(Html.fromHtml(t2), TextView.BufferType.SPANNABLE);
+		                    	  wifi_state = 1;
+		                    	  }
+		                      }
 		                      
 		                      
 		                      arraylist.add(item);
@@ -672,14 +693,13 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	     ConnectivityManager myConnManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
 	     NetworkInfo myNetworkInfo = myConnManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
 	     WifiManager myWifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
-	   WifiInfo myWifiInfo = myWifiManager.getConnectionInfo();
+	   //WifiInfo myWifiInfo = myWifiManager.getConnectionInfo();
 	   
 	   
 	  
 	   
 	     if (myNetworkInfo.isConnected()){
 	     
-	      
 	      info.setVisibility(View.VISIBLE);
 			tb_ch.setVisibility(View.VISIBLE);
 			img2.setVisibility(View.VISIBLE);
@@ -687,15 +707,17 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 			
 			
 			
+	       
 			
-			WifiConfiguration wifiConfiguration = new WifiConfiguration();
+			if (wifi_state == 0){
+				String wi = myWifiInfo.getSSID().replace('"',' ');
+		    	   textConnected.setText(wi);
+			}
 	       
-			Log.e("QQ", getSecurityType(wifiConfiguration) );
-	     
-	       String wi = myWifiInfo.getSSID().replace('"',' ');
 	       
 	     
-	      textConnected.setText(wi);
+	      
+	       
 	     
 	     }
 	     else{
@@ -708,35 +730,8 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	     
 	    }
 
-	    public static final int SECURITY_NONE = 0;
-	    public static final int SECURITY_WEP = 1;
-	    public static final int SECURITY_PSK = 2;
-	    public static final int SECURITY_EAP = 3;
+	   
 	    
-	    public static int getSecurity(WifiConfiguration config) {
-	        if (config.allowedKeyManagement.get(KeyMgmt.WPA_PSK)) 
-	            return SECURITY_PSK;
-
-	        if (config.allowedKeyManagement.get(KeyMgmt.WPA_EAP) || config.allowedKeyManagement.get(KeyMgmt.IEEE8021X)) 
-	            return SECURITY_EAP;
-
-	        return (config.wepKeys[0] != null) ? SECURITY_WEP : SECURITY_NONE;
-	    }
-	    
-	    public static String getSecurityType(WifiConfiguration config) {
-	        switch (getSecurity(config)) {
-	            case SECURITY_WEP:
-	                return "WEP";
-	            case SECURITY_PSK:
-	                if (config.allowedProtocols.get(WifiConfiguration.Protocol.RSN))
-	                    return "WPA2";
-	                else
-	                    return "WPA";
-	            default:
-	                return "NONE";
-	        }
-	    }
-		
 		 public void onClick(View v) {
 			 int id = v.getId();
 			 /*
@@ -784,6 +779,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		        	WifiManager myWifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
 		        	WifiInfo myWifiInfo = myWifiManager.getConnectionInfo();
  					DhcpInfo info = wifi.getDhcpInfo();
+ 					WifiConfiguration wifiConfiguration = new WifiConfiguration();
  					
  					
  					
@@ -801,7 +797,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		        	settingsIntent.putExtra("mask", s_netmask);
 		        	settingsIntent.putExtra("marsh", s_serverAddress);
 		        	settingsIntent.putExtra("name", wi);
-		        	
+		        	settingsIntent.putExtra("pass1", wifi_state);
 		        	
 		        	
 		        	startActivity(settingsIntent);
@@ -813,7 +809,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		        	WifiManager myWifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
 		        	WifiInfo myWifiInfo = myWifiManager.getConnectionInfo();
  					DhcpInfo info = wifi.getDhcpInfo();
- 					
+ 					WifiConfiguration wifiConfiguration = new WifiConfiguration();
  					
  					
  					String s_netmask = Formatter.formatIpAddress(info.netmask);
@@ -830,6 +826,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		        	settingsIntent.putExtra("mask", s_netmask);
 		        	settingsIntent.putExtra("marsh", s_serverAddress);
 		        	settingsIntent.putExtra("name", wi);
+		        	settingsIntent.putExtra("pass1", wifi_state);
 		        	startActivity(settingsIntent);
 			        	overridePendingTransition(center_to_left, center_to_left2);
 			        	
@@ -919,6 +916,10 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		        
 		        
 		       
+		        
+		        
+		      
+		        
 		        
 }
 

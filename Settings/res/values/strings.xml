@@ -351,6 +351,7 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
 	<string name="usage_info">%2$s available on \"%1$s\"</string>
 	<string name="delete_app_info">Deleting \"%1$s\" will also delete all of its documents &amp; data</string>
 
+	<string name="wifi_no_pass">Safety Recommendation</string>
 </resources>
 
 

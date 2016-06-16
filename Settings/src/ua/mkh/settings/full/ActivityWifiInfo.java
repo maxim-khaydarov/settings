@@ -6,14 +6,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
+import android.net.wifi.WifiConfiguration.KeyMgmt;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import ua.mkh.settings.full.SimpleGestureFilter.SimpleGestureListener;
 
@@ -42,6 +46,7 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
 	   TextView textStatus, txtip, txtdns, txtmask, txtmarsh, textView1, textView2;
 	   Button btn_back, foget, b1, b2, b3, Button01, Button02, Button03, Button04, b5, b6, b7;
 	   String ip, dns, marsh, mask;
+	   LinearLayout nopass;
 	   
 	   @Override
 	    public void onCreate(Bundle savedInstanceState) 
@@ -79,6 +84,7 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
 			 Button02 = (Button) findViewById(R.id.Button02);
 			 Button03 = (Button) findViewById(R.id.Button03);
 			 Button04 = (Button) findViewById(R.id.Button04);
+			 nopass = (LinearLayout) findViewById(R.id.Layout_no_pass);
 			 
 			 
 			 foget = (Button) findViewById(R.id.ButtonWifi);
@@ -95,12 +101,18 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
 				        txtmask.setText(bundle.getString("mask"));
 				        txtmarsh.setText(bundle.getString("marsh"));
 				        txtdns.setText(bundle.getString("dns1") + ", " + bundle.getString("dns2"));
-				        
 				        textStatus.setText(bundle.getString("name"));
+				        
+				        if (bundle.getInt("pass1") == 0){
+				        	nopass.setVisibility(View.GONE);
+			        		Log.e("PASS_REACTION", "GONE");
+			        	}
+			       
+			        	  Log.e("PASS", String.valueOf(bundle.getInt("pass1")));
+				        
 				    }
 				    
-				    
-				
+				   
 				textStatus.setTypeface(typefaceBold);
     			btn_back.setTypeface(typefaceMedium);
     			foget.setTypeface(typefaceRoman);
@@ -124,6 +136,7 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
 			 
     			 wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE); 
 	    }
+	   
 	   
 	   
 	   @Override

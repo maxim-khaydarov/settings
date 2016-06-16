@@ -350,7 +350,7 @@
 	<string name="usage_info">На \"%1$s\" доступно %2$s</string>
 	<string name="delete_app_info">При удалении \"%1$s\" также удалятся все документы и данные</string>
 	
-	
+	<string name="wifi_no_pass">Рекомендация по безопасности</string>
 </resources>
 
 

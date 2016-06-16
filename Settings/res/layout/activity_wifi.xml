@@ -126,11 +126,11 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonChek"
-                        android:layout_width="18dp"
-                        android:layout_height="16dp"
+                        android:layout_width="15dp"
+                        android:layout_height="13dp"
                         android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="12dp"
                         android:background="@drawable/checked_image_radio_button"
                         android:text="ToggleButton"
                         android:textOff=" "
