@@ -350,6 +350,11 @@
 	<string name="delete_app_info">При видаленні \"%1$s\" також видаляються всі документи та дані</string>
 
 	<string name="wifi_no_pass">Рекомендація з безпеки</string>
+	<string name="wifi_no_pass_head">Небезпечна мережа</string>
+	<string name="wifi_no_pass_body">Відкриті мережі не є безпечними і розкривають весь мережевий трафік.\n\nНалаштуйте свій маршрутизатор на використання для цієї мережі типу безпеки Особистий WPA2 (AES).</string>
+	<string name="wifi_no_pass_end">Детальніше про рекомендовані настройках для Wi-Fi</string>
+	<string name="wifi_recomend_site">https://support.apple.com/ru-ru/HT202068</string>
+	
 </resources>
 
 

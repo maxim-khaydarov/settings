@@ -352,6 +352,13 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
 	<string name="delete_app_info">Deleting \"%1$s\" will also delete all of its documents &amp; data</string>
 
 	<string name="wifi_no_pass">Safety Recommendation</string>
+	<string name="wifi_no_pass_head">Unsafe network</string>
+	<string name="wifi_no_pass_body">Open networks are not secure and open all network traffic.\n\nSet up your router to use for this type of network security Personal WPA2 (AES).</string>
+	<string name="wifi_no_pass_end">For more information about the recommended settings for Wi-Fi</string>
+	<string name="wifi_recomend_site">https://support.apple.com/en-us/HT202068</string>
+	<string name="forget_wifi_head">Forget Wi-Fi  network</string>
+	<string name="forget_wifi_body">Your iPhone will no longer join this wifi network.</string>
+	<string name="forget_button">Forget</string>
 </resources>
 
 

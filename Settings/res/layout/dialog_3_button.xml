@@ -66,7 +66,7 @@
                 android:padding="5dp"
                 android:text="@string/ok"
                 android:textColor="#FF007AFF"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
             <ImageView
                 android:id="@+id/ImageView02"
@@ -87,7 +87,7 @@
                 android:padding="5dp"
                 android:text="@string/clean"
                 android:textColor="#FF007AFF"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
             <ImageView
                 android:id="@+id/ImageView03"
@@ -108,7 +108,7 @@
                 android:padding="5dp"
                 android:text="@string/cancel"
                 android:textColor="#FF007AFF"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 

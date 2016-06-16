@@ -351,6 +351,13 @@
 	<string name="delete_app_info">При удалении \"%1$s\" также удалятся все документы и данные</string>
 	
 	<string name="wifi_no_pass">Рекомендация по безопасности</string>
+	<string name="wifi_no_pass_head">Небезопасная сеть</string>
+	<string name="wifi_no_pass_body">Открытые сети не являются безопасными и раскрывают весь сетевой трафик. \n\nНастройте свой маршрутизатор на использование для этой сети типа безопасности Личный WPA2 (AES).</string>
+	<string name="wifi_no_pass_end">Подробнее о рекомендуемых настройках для Wi-Fi</string>
+	<string name="wifi_recomend_site">https://support.apple.com/ru-ru/HT202068</string>
+	<string name="forget_wifi_head">Забыть Wi-Fi сеть</string>
+	<string name="forget_wifi_body">Ваш iPhone больше не будет присоединяться к этой сети Wi-Fi.</string>
+	<string name="forget_button">Забыть</string>
 </resources>
 
 

@@ -43,6 +43,7 @@ import android.provider.Settings;
 import android.support.v4.view.ViewPager.LayoutParams;
 import android.telephony.TelephonyManager;
 import android.text.Editable;
+import android.text.Html;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -106,6 +107,8 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	int OS = android.os.Build.VERSION.SDK_INT;
 	
 	boolean sear = false;
+	
+	String account_name;
 	
 	Intent notif_inoty, notif_espier, control_hi, control_espier, mail_ino, mail_stok, 
 	notes_any, notes_espier, phone_kuandroid, phone_espier, phone_phone_stok, phone_stok,
@@ -580,7 +583,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
     	 
     	text_app_main.setTypeface(typefaceBold);
 		btn_avia.setTypeface(typefaceRoman);
-		textView1.setTypeface(typefaceRoman);
+		//textView1.setTypeface(typefaceRoman);
 		textView3.setTypeface(typefaceRoman);
 		btn_wifi.setTypeface(typefaceRoman);
 		btn_bluetooth.setTypeface(typefaceRoman);
@@ -1167,11 +1170,15 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	       
 	        
 	        /////////////////Проверка есть ли аккаунт Google
-	        if (textView2.getText().length() == 0) {
+	        if (account_name.length() == 0) {
         		btn_iCloud.setText(R.string.icloud);
-        		textView2.setText("");
-        		textView1.setText("");
+        		//textView2.setText("");
+        		//textView1.setText("");
 				}
+	        else{
+	        	String t2 = getString(R.string.icloud) + "<br />" + "<font color=\"#808080\" >" + "<small><small>" + account_name +  "</small></small>" + "</font>";
+	        	btn_iCloud.setText(Html.fromHtml(t2), TextView.BufferType.SPANNABLE);
+	        }
 	        
 	        
 	        if (isSharingWiFi(wifi) == true){
@@ -1705,8 +1712,8 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 					TextOper.setTextSize(15);
 					btn_iCloud.setTextSize(15);
 					btn_iTunes.setTextSize(15);
-					textView1.setTextSize(15);
-					textView2.setTextSize(11);
+					//textView1.setTextSize(15);
+					//textView2.setTextSize(11);
 					textView3.setTextSize(13);
 					textVPN.setTextSize(15);
 					btn_maps.setTextSize(15);
@@ -1759,8 +1766,8 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 					TextOper.setTextSize(18);
 					btn_iCloud.setTextSize(18);
 					btn_iTunes.setTextSize(18);
-					textView1.setTextSize(18);
-					textView2.setTextSize(13);
+					//textView1.setTextSize(18);
+					//textView2.setTextSize(13);
 					textView3.setTextSize(17);
 					textVPN.setTextSize(18);
 					btn_maps.setTextSize(18);
@@ -1813,8 +1820,8 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 					TextOper.setTextSize(20);
 					btn_iCloud.setTextSize(20);
 					btn_iTunes.setTextSize(20);
-					textView1.setTextSize(20);
-					textView2.setTextSize(15);
+					//textView1.setTextSize(20);
+					//textView2.setTextSize(15);
 					textView3.setTextSize(18);
 					textVPN.setTextSize(20);
 					btn_maps.setTextSize(20);
@@ -2296,7 +2303,8 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	        		Account[] accounts2 = AccountManager.get(this).getAccountsByType("com.google");
 	        		for (Account account : accounts2) {
 	        			G = account.name;
-	        		textView2.setText(account.name);	        		
+	        		//textView2.setText(account.name);	  
+	        			account_name = account.name;
 	        		}
 
 	        		}

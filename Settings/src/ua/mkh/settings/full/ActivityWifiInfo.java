@@ -2,10 +2,12 @@ package ua.mkh.settings.full;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.net.wifi.WifiConfiguration.KeyMgmt;
@@ -34,6 +36,8 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
 	   WifiManager wifi;
 	   
 	   int menui= 0;
+	   
+	   TextView textView3, textView4, textView5;
 		
 	   int center_to_right, center_to_right2;
 	   int center_to_left, center_to_left2;
@@ -74,6 +78,19 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
 			 
 			 textView1 = (TextView) findViewById(R.id.textView1);
 			 textView2 = (TextView) findViewById(R.id.textView2);
+			 textView3 = (TextView) findViewById(R.id.textView3);
+			 textView4 = (TextView) findViewById(R.id.textView4);
+			 textView5 = (TextView) findViewById(R.id.textView5);
+			 textView5.setOnClickListener(new View.OnClickListener() {
+				    @Override
+				    public void onClick(View v) {
+				    	
+				    	Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.wifi_recomend_site)));
+				    	startActivity(browserIntent);
+				        
+				    }
+				});
+			 
 			 b1 = (Button) findViewById(R.id.button1);
 			 b2 = (Button) findViewById(R.id.button2);
 			 b3 = (Button) findViewById(R.id.button3);
@@ -118,6 +135,9 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
     			foget.setTypeface(typefaceRoman);
     			textView1.setTypeface(typefaceRoman);
     			textView2.setTypeface(typefaceRoman);
+    			textView3.setTypeface(typefaceBold);
+    			textView4.setTypeface(typefaceRoman);
+    			textView5.setTypeface(typefaceRoman);
     			b1.setTypeface(typefaceRoman);
     			b2.setTypeface(typefaceRoman);
     			b3.setTypeface(typefaceRoman);
@@ -312,15 +332,60 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
 	    	switch (v.getId()){
 	    	
 	    	case R.id.ButtonWifi:
-	    		wifi.disconnect();
-	    		 Intent intent18 = new Intent(this, ActivityWifi.class);
-	         	 startActivity(intent18);
-
-	   		overridePendingTransition(center_to_right, center_to_right2);
+	    		
+	    		forget_wifi();
 	    		break;
 	    	}
 	    	
 	    }
+	    
+	    public void forget_wifi (){
+	    	final Dialog Activation = new Dialog(ActivityWifiInfo.this,android.R.style.Theme_Translucent);
+	        Activation.requestWindowFeature(Window.FEATURE_NO_TITLE);
+	        Activation.setContentView(R.layout.dialog_2_button);
+				
+				// set the custom dialog components - text, image and button
+
+				Button dialogButton = (Button) Activation.findViewById(R.id.dialogButtonOK);
+				Button dialogButtonCancel = (Button) Activation.findViewById(R.id.dialogButtonCancel);
+				TextView text = (TextView)Activation.findViewById(R.id.textView1);
+				TextView textver = (TextView)Activation.findViewById(R.id.textView2);
+				
+				dialogButton.setTypeface(typefaceMedium);
+				dialogButtonCancel.setTypeface(typefaceRoman);
+				dialogButton.setText(R.string.forget_button);
+				text.setTypeface(typefaceBold);
+				text.setText(getString(R.string.forget_wifi_head) + "\n" + "\"" + textStatus.getText() + "\"");
+				textver.setTypeface(typefaceRoman);
+				textver.setText(R.string.forget_wifi_body);
+				textver.setTextSize(15);
+				text.setTextSize(15);
+				
+				// if button is clicked, close the custom dialog
+				dialogButton.setOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						
+						wifi.disconnect();
+			    		 Intent intent18 = new Intent(ActivityWifiInfo.this, ActivityWifi.class);
+			         	 startActivity(intent18);
+
+			   		overridePendingTransition(center_to_right, center_to_right2);
+			            
+						Activation.dismiss();
+					}
+				});
+				dialogButtonCancel.setOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						Activation.dismiss();
+					}
+				});
+				Activation.show();
+	    }
+	    
 	    
 	    
 	    @Override
