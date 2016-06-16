@@ -1170,6 +1170,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	       
 	        
 	        /////////////////Проверка есть ли аккаунт Google
+			try{
 	        if (account_name.length() == 0) {
         		btn_iCloud.setText(R.string.icloud);
         		//textView2.setText("");
@@ -1179,7 +1180,9 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 	        	String t2 = getString(R.string.icloud) + "<br />" + "<font color=\"#808080\" >" + "<small><small>" + account_name +  "</small></small>" + "</font>";
 	        	btn_iCloud.setText(Html.fromHtml(t2), TextView.BufferType.SPANNABLE);
 	        }
-	        
+			}catch(NullPointerException e){
+				btn_iCloud.setText(R.string.icloud);
+			}
 	        
 	        if (isSharingWiFi(wifi) == true){
 	        	textVPN.setText(R.string.on);
@@ -2103,26 +2106,30 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 		    	Account[] accounts2 = AccountManager.get(this).getAccountsByType("com.google");
         		for (Account account : accounts2) {
         			svoi = account.name;
-        		}
-        		if (svoi.contains("maxim.khaydarov@gmail.com") || svoi.contains("foxtrot2015foxtrot@gmail.com")){
         			
         		}
-        		else{
-        			if(isStoreVersion(this) == null){
-        				lock();
-        			}
-        			else{
-        				if (!isStoreVersion(this).contains("com.yandex.store")){
-       		        	 //Toast.makeText(getApplication(), "NOT YANDEX", Toast.LENGTH_LONG).show();
-       		        	 lock();
-       		         }
-        			}
+        		
 		    	
-		         
+        		if(isStoreVersion(this) == null){
+        			if(svoi == null){
+        				svoi = "!";
+        			}
+        			if (svoi.contains("maxim.khaydarov@gmail.com") || svoi.contains("foxtrot2015foxtrot@gmail.com")){
+            			
+            		}
+            		else{
+            			lock();
+            			}
+    			}
+    			else{
+    				if (!isStoreVersion(this).contains("com.yandex.store")){
+   		        	 //Toast.makeText(getApplication(), "NOT YANDEX", Toast.LENGTH_LONG).show();
+   		        	 lock();
+   		         }
         		}
         		
 		    	
-        		
+		    	
 		    	
 		    	
 		    }
