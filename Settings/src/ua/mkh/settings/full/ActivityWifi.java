@@ -32,6 +32,7 @@ import android.text.InputType;
 import android.text.format.Formatter;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.MeasureSpec;
@@ -41,6 +42,7 @@ import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -51,7 +53,10 @@ import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
+import android.widget.AdapterView.OnItemClickListener;
+
 import ua.mkh.settings.full.SimpleGestureFilter.SimpleGestureListener;
 
 public class ActivityWifi extends Activity implements OnClickListener, SimpleGestureListener {
@@ -67,7 +72,12 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	LinearLayout LinearLayoutCon, MainLayout2;
 	RelativeLayout LayoutMain;
 	
+	Wifi_Info_Adapter studentArrayAdapter;
 	
+	 ArrayList<Wifi_Info> studentArray = new ArrayList<Wifi_Info>();
+	 
+
+
 	
 	public static final String APP_PREFERENCES = "mysettings"; 
 	public static final String APP_PREFERENCES_text_size = "txt_size";
@@ -95,7 +105,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	  private String m_Text = "";
 
 
-	  String ITEM_KEY = "key", WIFI_KEY = "wifi_key", RSSI_KEY = "rssi_key";
+	  String ITEM_KEY = "key", WIFI_KEY = "wifi_key", RSSI_KEY = "rssi_key", MAC_KEY = "mac_key", CAP_KEY = "cap_key";
 	  ArrayList<HashMap<String, String>> arraylist = new ArrayList<HashMap<String, String>>();
 	  SimpleAdapter adapter;
 	  
@@ -121,6 +131,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 			typefaceBold = Typeface.createFromAsset(getAssets(), bold);
 			typefaceThin = Typeface.createFromAsset(getAssets(), thin);
 			
+			 
 			
 			 myConnManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
 		     myNetworkInfo = myConnManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
@@ -189,254 +200,47 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		       
 		      
 		       
-	       
-		       lv = (ListView)findViewById(R.id.list);	 
-		       lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+		       studentArrayAdapter = new Wifi_Info_Adapter(ActivityWifi.this, R.layout.row_wifi, studentArray);
+		       lv = (ListView)findViewById(R.id.list);	
+		       lv.setItemsCanFocus(false);
+		       lv.setAdapter(studentArrayAdapter);
 
-		           @Override
-		           public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-		                   long arg3) 
-		           {
-		               connectToWifi(arg2);
-		           }
-		           
-		           private void connectToWifi(final int position)
-		           {
-		                   final int value = results.size()-1 - position;
-
-		                   Capabilities =  results.get(value).capabilities;
-		                  
-		                   //Then you could add some code to check for a specific security type. 
-		                   if(Capabilities.contains("WPA"))
-
-		                {/*
-		                       AlertDialog.Builder builder = new AlertDialog.Builder(ActivityWifi.this);
-		                       builder.setTitle("Password:");
-
-		                       // Set up the input
-		                       final EditText input = new EditText(ActivityWifi.this);
-		                       // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
-		                       input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-		                       builder.setView(input);
-
-		                       // Set up the buttons
-		                       builder.setPositiveButton("OK", new DialogInterface.OnClickListener() { 
-		                           @Override
-		                           public void onClick(DialogInterface dialog, int which) {
-		                               m_Text = input.getText().toString();
-		                               WifiConfiguration wifiConfiguration = new WifiConfiguration(); 
-		                               wifiConfiguration.SSID = "\"" + results.get(value).SSID + "\"";
-		                               wifiConfiguration.preSharedKey = "\""+ m_Text +"\"";
-		                               wifiConfiguration.hiddenSSID = true;
-		                               wifiConfiguration.status = WifiConfiguration.Status.ENABLED;        
-		                               wifiConfiguration.allowedProtocols.set(WifiConfiguration.Protocol.WPA); // For WPA
-		                               wifiConfiguration.allowedProtocols.set(WifiConfiguration.Protocol.RSN); // For WPA2
-		                               wifiConfiguration.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
-		                               wifiConfiguration.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_EAP);
-		                               wifiConfiguration.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
-		                               wifiConfiguration.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
-		                               wifiConfiguration.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
-		                               wifiConfiguration.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
-		                               wifiConfiguration.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
-		                               wifiConfiguration.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
-		                               int res = wifi.addNetwork(wifiConfiguration);
-		                               Log.d("WifiPreference", "add Network returned " + res );
-		                               boolean b = wifi.enableNetwork(res, true);        
-		                               Log.d("WifiPreference", "enableNetwork returned " + b );
-
-		                           }
-		                       });
-		                       builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-		                           @Override
-		                           public void onClick(DialogInterface dialog, int which) {
-		                               dialog.cancel();
-		                           }
-		                       });
-
-		                       builder.show();
-		                 	*/
-		                	   
-		                	   final Dialog dialog = new Dialog(ActivityWifi.this,android.R.style.Theme_Translucent);
-			          		     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-			          		     dialog.setContentView(R.layout.dialog_3_button);
-			          		     
-			          		     
-			          		     Button ButtonMenuCancel = (Button)dialog.getWindow().findViewById(R.id.dialogButtonCancel);
-			          		     Button ButtonMenuContinue = (Button)dialog.getWindow().findViewById(R.id.dialogButtonOK);
-			          		     Button ButtonMenuClean = (Button)dialog.getWindow().findViewById(R.id.dialogButtonClean);
-			          		     final EditText Ed = (EditText) dialog.getWindow().findViewById(R.id.editText1);
-			          	     
-			          		     ButtonMenuCancel.setTypeface(typefaceRoman);
-			          		     ButtonMenuClean.setTypeface(typefaceRoman);
-			          		     ButtonMenuContinue.setTypeface(typefaceRoman);
-			          		     Ed.setTypeface(typefaceRoman);
-			          		     Ed.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-			          		     
-			          		     ButtonMenuCancel.setOnClickListener(new OnClickListener(){
-
-			          		   @Override
-			          		   public void onClick(View v) {
-			          		    dialog.dismiss();
-			          		   }});
-			          		     
-			          		     ButtonMenuContinue.setOnClickListener(new OnClickListener(){
-
-			          				   @Override
-			          				   public void onClick(View v) {
-			          					 m_Text = Ed.getText().toString();
-			                               WifiConfiguration wifiConfiguration = new WifiConfiguration(); 
-			                               wifiConfiguration.SSID = "\"" + results.get(value).SSID + "\"";
-			                               wifiConfiguration.preSharedKey = "\""+ m_Text +"\"";
-			                               wifiConfiguration.hiddenSSID = true;
-			                               wifiConfiguration.status = WifiConfiguration.Status.ENABLED;        
-			                               wifiConfiguration.allowedProtocols.set(WifiConfiguration.Protocol.WPA); // For WPA
-			                               wifiConfiguration.allowedProtocols.set(WifiConfiguration.Protocol.RSN); // For WPA2
-			                               wifiConfiguration.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
-			                               wifiConfiguration.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_EAP);
-			                               wifiConfiguration.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
-			                               wifiConfiguration.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
-			                               wifiConfiguration.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
-			                               wifiConfiguration.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
-			                               wifiConfiguration.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
-			                               wifiConfiguration.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
-			                               int res = wifi.addNetwork(wifiConfiguration);
-			                               Log.d("WifiPreference", "add Network returned " + res );
-			                               boolean b = wifi.enableNetwork(res, true);        
-			                               Log.d("WifiPreference", "enableNetwork returned " + b );
-			          					   	dialog.dismiss();
-			          				   }
-			          				});
-			          		     
-			          		     ButtonMenuClean.setOnClickListener(new OnClickListener(){
-
-			          				   @Override
-			          				   public void onClick(View v) {
-			          					   	Ed.setText("");
-			          				   }
-			          				});
-			          		     dialog.show();
-		                    }
-
-
-		                   else if(Capabilities.contains("WEP"))
-		                    {
-		                	   final Dialog dialog = new Dialog(ActivityWifi.this,android.R.style.Theme_Translucent);
-		          		     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		          		     dialog.setContentView(R.layout.dialog_3_button);
-		          		     
-		          		     
-		          		     Button ButtonMenuCancel = (Button)dialog.getWindow().findViewById(R.id.dialogButtonCancel);
-		          		     Button ButtonMenuContinue = (Button)dialog.getWindow().findViewById(R.id.dialogButtonOK);
-		          		     Button ButtonMenuClean = (Button)dialog.getWindow().findViewById(R.id.dialogButtonClean);
-		          		     final EditText Ed = (EditText) dialog.getWindow().findViewById(R.id.editText1);
-		          	     
-		          		     ButtonMenuCancel.setTypeface(typefaceRoman);
-		          		     ButtonMenuClean.setTypeface(typefaceRoman);
-		          		     ButtonMenuContinue.setTypeface(typefaceRoman);
-		          		     Ed.setTypeface(typefaceRoman);
-		          		     Ed.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-		          		     
-		          		     ButtonMenuCancel.setOnClickListener(new OnClickListener(){
-
-		          		   @Override
-		          		   public void onClick(View v) {
-		          		    dialog.dismiss();
-		          		   }});
-		          		     
-		          		     ButtonMenuContinue.setOnClickListener(new OnClickListener(){
-
-		          				   @Override
-		          				   public void onClick(View v) {
-		          					 m_Text = Ed.getText().toString();
-		                               WifiConfiguration wifiConfiguration = new WifiConfiguration(); 
-		                               wifiConfiguration.SSID = "\"" + results.get(value).SSID + "\"";
-		                               wifiConfiguration.wepKeys[0] = "\"" + m_Text + "\""; 
-		                               wifiConfiguration.wepTxKeyIndex = 0;
-		                               wifiConfiguration.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
-		                               wifiConfiguration.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
-		                               int res = wifi.addNetwork(wifiConfiguration);
-		                               Log.d("WifiPreference", "add Network returned " + res );
-		                               boolean b = wifi.enableNetwork(res, true);        
-		                               Log.d("WifiPreference", "enableNetwork returned " + b );
-		          					   	dialog.dismiss();
-		          				   }
-		          				});
-		          		     
-		          		     ButtonMenuClean.setOnClickListener(new OnClickListener(){
-
-		          				   @Override
-		          				   public void onClick(View v) {
-		          					   	Ed.setText("");
-		          				   }
-		          				});
-		          		     dialog.show();
-		          		     
-		          		     //////////////////////////////////////////////////////////
-		          		     /*
-		                       AlertDialog.Builder builder = new AlertDialog.Builder(ActivityWifi.this);
-		                       builder.setTitle("Title");
-
-		                       // Set up the input
-		                       final EditText input = new EditText(ActivityWifi.this);
-		                       // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
-		                       input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-		                       builder.setView(input);
-
-		                       // Set up the buttons
-		                       builder.setPositiveButton("OK", new DialogInterface.OnClickListener() { 
-		                           @Override
-		                           public void onClick(DialogInterface dialog, int which) {
-		                               m_Text = input.getText().toString();
-		                               WifiConfiguration wifiConfiguration = new WifiConfiguration(); 
-		                               wifiConfiguration.SSID = "\"" + results.get(value).SSID + "\"";
-		                               wifiConfiguration.wepKeys[0] = "\"" + m_Text + "\""; 
-		                               wifiConfiguration.wepTxKeyIndex = 0;
-		                               wifiConfiguration.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
-		                               wifiConfiguration.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
-		                               int res = wifi.addNetwork(wifiConfiguration);
-		                               Log.d("WifiPreference", "add Network returned " + res );
-		                               boolean b = wifi.enableNetwork(res, true);        
-		                               Log.d("WifiPreference", "enableNetwork returned " + b );
-		                               
-		                               
-		                           }
-		                       });
-		                       builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-		                           @Override
-		                           public void onClick(DialogInterface dialog, int which) {
-		                               dialog.cancel();
-		                           }
-		                       });
-
-		                       builder.show();
-
-		          		      */
-		                    }
-		                   else
-		                    { 
-		                       WifiConfiguration wifiConfiguration = new WifiConfiguration(); 
-		                       wifiConfiguration.SSID = "\"" + results.get(value).SSID + "\"";
-		                       wifiConfiguration.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
-		                       int res = wifi.addNetwork(wifiConfiguration);
-		                       Log.d("WifiPreference", "add Network returned " + res );
-		                       boolean b = wifi.enableNetwork(res, true);        
-		                       Log.d("WifiPreference", "enableNetwork returned " + b );
-		                    }
-
-		                   	
-
-		           }
+		       lv.setOnItemClickListener(new OnItemClickListener() {
+		    	   
+		    	   @Override
+		    	   public void onItemClick(AdapterView<?> parent, View v,
+		    	     final int position, long id) {
+		    		   connectToWifi(position);
+		    	    Toast.makeText(ActivityWifi.this,
+		    	      "List Item Clicked:" + position, Toast.LENGTH_LONG)
+		    	      .show();
+		    	   }
+		    	   
+		    	  
 		       });
-		       
-		       this.adapter = new SimpleAdapter(ActivityWifi.this, arraylist, R.layout.row_wifi, new String[] { ITEM_KEY, WIFI_KEY, RSSI_KEY }, new int[] { R.id.list_value, R.id.imageView1111, R.id.imageView1 });
-		       lv.setAdapter(this.adapter);
 
+		    	 
+	    
+		       
+		      
+		       
+		       
+		       
+		     
+
+		       //this.adapter = new SimpleAdapter(ActivityWifi.this, arraylist, R.layout.row_wifi, new String[] { ITEM_KEY, WIFI_KEY, RSSI_KEY }, new int[] { R.id.list_value, R.id.imageView1111, R.id.imageView1 });
+		       //lv.setAdapter(this.adapter);
+		       
+		       
+		       
+		       
+		       
 		       registerReceiver(new BroadcastReceiver()
 		       {
 		           @Override
 		           public void onReceive(Context c, Intent intent) 
 		           {
-		           arraylist.clear(); 
+		        	   studentArray.clear(); 
 		              results = wifi.getScanResults();
 		              size = results.size();
 		              try 
@@ -444,43 +248,53 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		                  size = size - 1;
 		                  while (size >= 0) 
 		                  {   
-		                      HashMap<String, String> item = new HashMap<String, String>(); 
+		                	   RSSI_KEY = null;
+		                	   WIFI_KEY = null;
+		                	   ITEM_KEY = null;
+		                      //HashMap<String, String> item = new HashMap<String, String>(); 
 		                      int result = results.get(size).level;
 		                      
 		                      
 		                      if(results.get(size).SSID.length() != 0){
-		                    	  item.put(ITEM_KEY, results.get(size).SSID);
+		                    	  //item.put(ITEM_KEY, results.get(size).SSID);
+		                    	  ITEM_KEY = results.get(size).SSID;
 		                      }
 		                      else{
-		                    	  item.put(ITEM_KEY, getString(R.string.bluetooth_hidden)); }
-		                      
+		                    	  //item.put(ITEM_KEY, getString(R.string.bluetooth_hidden)); 
+		                      		ITEM_KEY = getString(R.string.bluetooth_hidden); }
 		                      
 		                      
 		                      int w = result;
 		                      
 		                      if (w > -67){
-		                    	  item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_4));
+		                    	  //item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_4));
+		                    	  RSSI_KEY = Integer.toString(R.drawable.wifi_signal_4);
 		                      }
 		                      else if (w > -79){
-		                    	  item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_3));
+		                    	  //item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_3));
+		                    	  RSSI_KEY = Integer.toString(R.drawable.wifi_signal_3);
 		                      }
 		                      else if (w > -91){
-		                    	  item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_2));
+		                    	  //item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_2));
+		                    	  RSSI_KEY = Integer.toString(R.drawable.wifi_signal_2);
 		                      }
 		                      else {
-		                    	  item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_1));
+		                    	  //item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_1));
+		                    	  RSSI_KEY = Integer.toString(R.drawable.wifi_signal_1);
 		                      }
 		                      		                      
 		                      Capabilities =  results.get(size).capabilities;
 		                      if(Capabilities.contains("WPA"))
 
 				                {
-		                    	  item.put(WIFI_KEY, Integer.toString(R.drawable.lock_wifi));
+		                    	 // item.put(WIFI_KEY, Integer.toString(R.drawable.lock_wifi));
+		                    	  WIFI_KEY = Integer.toString(R.drawable.lock_wifi);
 				                }
 		                      
 		                      if(Capabilities.contains("WEP"))
 			                    {
-		                    	  item.put(WIFI_KEY, Integer.toString(R.drawable.lock_wifi));
+		                    	//  item.put(WIFI_KEY, Integer.toString(R.drawable.lock_wifi));
+		                    	  WIFI_KEY = Integer.toString(R.drawable.lock_wifi);
 			                    }
 		                      
 		                      String wi = myWifiInfo.getSSID();
@@ -495,10 +309,13 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		                    	  }
 		                      }
 		                      
+		                     CAP_KEY = results.get(size).capabilities;
+		                      MAC_KEY = results.get(size).BSSID;
 		                      
-		                      arraylist.add(item);
+		                      studentArray.add(new Wifi_Info(ITEM_KEY, RSSI_KEY, WIFI_KEY, MAC_KEY, CAP_KEY));
+		                      //arraylist.add(item);
 		                      size--;
-		                      adapter.notifyDataSetChanged();                 
+		                      studentArrayAdapter.notifyDataSetChanged();                 
 		                  } 
 		              }
 		              catch (Exception e)
@@ -509,6 +326,150 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		       
 		       
 	    }
+	    
+	    
+	    public void connectToWifi(final int position)
+        {
+                final int value = results.size()-1 - position;
+
+                Capabilities =  results.get(value).capabilities;
+               
+                //Then you could add some code to check for a specific security type. 
+                if(Capabilities.contains("WPA"))
+
+             {
+             	   
+             	   final Dialog dialog = new Dialog(ActivityWifi.this,android.R.style.Theme_Translucent);
+	          		     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+	          		     dialog.setContentView(R.layout.dialog_3_button);
+	          		     
+	          		     
+	          		     Button ButtonMenuCancel = (Button)dialog.getWindow().findViewById(R.id.dialogButtonCancel);
+	          		     Button ButtonMenuContinue = (Button)dialog.getWindow().findViewById(R.id.dialogButtonOK);
+	          		     Button ButtonMenuClean = (Button)dialog.getWindow().findViewById(R.id.dialogButtonClean);
+	          		     final EditText Ed = (EditText) dialog.getWindow().findViewById(R.id.editText1);
+	          	     
+	          		     ButtonMenuCancel.setTypeface(typefaceRoman);
+	          		     ButtonMenuClean.setTypeface(typefaceRoman);
+	          		     ButtonMenuContinue.setTypeface(typefaceRoman);
+	          		     Ed.setTypeface(typefaceRoman);
+	          		     Ed.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+	          		     
+	          		     ButtonMenuCancel.setOnClickListener(new OnClickListener(){
+
+	          		   @Override
+	          		   public void onClick(View v) {
+	          		    dialog.dismiss();
+	          		   }});
+	          		     
+	          		     ButtonMenuContinue.setOnClickListener(new OnClickListener(){
+
+	          				   @Override
+	          				   public void onClick(View v) {
+	          					 m_Text = Ed.getText().toString();
+	                               WifiConfiguration wifiConfiguration = new WifiConfiguration(); 
+	                               wifiConfiguration.SSID = "\"" + results.get(value).SSID + "\"";
+	                               wifiConfiguration.preSharedKey = "\""+ m_Text +"\"";
+	                               wifiConfiguration.hiddenSSID = true;
+	                               wifiConfiguration.status = WifiConfiguration.Status.ENABLED;        
+	                               wifiConfiguration.allowedProtocols.set(WifiConfiguration.Protocol.WPA); // For WPA
+	                               wifiConfiguration.allowedProtocols.set(WifiConfiguration.Protocol.RSN); // For WPA2
+	                               wifiConfiguration.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
+	                               wifiConfiguration.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_EAP);
+	                               wifiConfiguration.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
+	                               wifiConfiguration.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
+	                               wifiConfiguration.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
+	                               wifiConfiguration.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
+	                               wifiConfiguration.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
+	                               wifiConfiguration.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
+	                               int res = wifi.addNetwork(wifiConfiguration);
+	                               Log.d("WifiPreference", "add Network returned " + res );
+	                               boolean b = wifi.enableNetwork(res, true);        
+	                               Log.d("WifiPreference", "enableNetwork returned " + b );
+	          					   	dialog.dismiss();
+	          				   }
+	          				});
+	          		     
+	          		     ButtonMenuClean.setOnClickListener(new OnClickListener(){
+
+	          				   @Override
+	          				   public void onClick(View v) {
+	          					   	Ed.setText("");
+	          				   }
+	          				});
+	          		     dialog.show();
+                 }
+
+
+                else if(Capabilities.contains("WEP"))
+                 {
+             	   final Dialog dialog = new Dialog(ActivityWifi.this,android.R.style.Theme_Translucent);
+       		     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+       		     dialog.setContentView(R.layout.dialog_3_button);
+       		     
+       		     
+       		     Button ButtonMenuCancel = (Button)dialog.getWindow().findViewById(R.id.dialogButtonCancel);
+       		     Button ButtonMenuContinue = (Button)dialog.getWindow().findViewById(R.id.dialogButtonOK);
+       		     Button ButtonMenuClean = (Button)dialog.getWindow().findViewById(R.id.dialogButtonClean);
+       		     final EditText Ed = (EditText) dialog.getWindow().findViewById(R.id.editText1);
+       	     
+       		     ButtonMenuCancel.setTypeface(typefaceRoman);
+       		     ButtonMenuClean.setTypeface(typefaceRoman);
+       		     ButtonMenuContinue.setTypeface(typefaceRoman);
+       		     Ed.setTypeface(typefaceRoman);
+       		     Ed.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+       		     
+       		     ButtonMenuCancel.setOnClickListener(new OnClickListener(){
+
+       		   @Override
+       		   public void onClick(View v) {
+       		    dialog.dismiss();
+       		   }});
+       		     
+       		     ButtonMenuContinue.setOnClickListener(new OnClickListener(){
+
+       				   @Override
+       				   public void onClick(View v) {
+       					 m_Text = Ed.getText().toString();
+                            WifiConfiguration wifiConfiguration = new WifiConfiguration(); 
+                            wifiConfiguration.SSID = "\"" + results.get(value).SSID + "\"";
+                            wifiConfiguration.wepKeys[0] = "\"" + m_Text + "\""; 
+                            wifiConfiguration.wepTxKeyIndex = 0;
+                            wifiConfiguration.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+                            wifiConfiguration.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
+                            int res = wifi.addNetwork(wifiConfiguration);
+                            Log.d("WifiPreference", "add Network returned " + res );
+                            boolean b = wifi.enableNetwork(res, true);        
+                            Log.d("WifiPreference", "enableNetwork returned " + b );
+       					   	dialog.dismiss();
+       				   }
+       				});
+       		     
+       		     ButtonMenuClean.setOnClickListener(new OnClickListener(){
+
+       				   @Override
+       				   public void onClick(View v) {
+       					   	Ed.setText("");
+       				   }
+       				});
+       		     dialog.show();
+       		     
+       		     
+                 }
+                else
+                 { 
+                    WifiConfiguration wifiConfiguration = new WifiConfiguration(); 
+                    wifiConfiguration.SSID = "\"" + results.get(value).SSID + "\"";
+                    wifiConfiguration.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+                    int res = wifi.addNetwork(wifiConfiguration);
+                    Log.d("WifiPreference", "add Network returned " + res );
+                    boolean b = wifi.enableNetwork(res, true);        
+                    Log.d("WifiPreference", "enableNetwork returned " + b );
+                 }
+
+                	
+
+        }
 	    
 	    @Override
 		public void onPause() {
@@ -915,7 +876,21 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		        }
 		        
 		        
+////////////////////////////////////////////////////////////////////
+		        
 		       
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+		        
 		        
 		        
 		      
