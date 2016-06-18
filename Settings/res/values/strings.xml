@@ -359,6 +359,10 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
 	<string name="forget_wifi_head">Forget Wi-Fi  network</string>
 	<string name="forget_wifi_body">Your iPhone will no longer join this wifi network.</string>
 	<string name="forget_button">Forget</string>
+	
+	<string name="level_signal">Signal level</string>
+	<string name="security">Security</string>
+	<string name="mac_wifi_">MAC address</string>
 </resources>
 
 

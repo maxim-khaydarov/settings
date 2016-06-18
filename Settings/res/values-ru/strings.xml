@@ -358,6 +358,10 @@
 	<string name="forget_wifi_head">Забыть Wi-Fi сеть</string>
 	<string name="forget_wifi_body">Ваш iPhone больше не будет присоединяться к этой сети Wi-Fi.</string>
 	<string name="forget_button">Забыть</string>
+	
+	<string name="level_signal">Уровень сигнала</string>
+	<string name="security">Безопасность</string>
+	<string name="mac_wifi_">MAC адрес</string>
 </resources>
 
 

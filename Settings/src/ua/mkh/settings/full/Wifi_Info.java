@@ -20,17 +20,19 @@ import android.widget.Toast;
 public class Wifi_Info {
 	private String name;
 	private String rssi;
+	private String rssilevel;
 	private String lock;
 	private String mac;
 	private String capabilities;
 
-	public Wifi_Info(String name, String rssi, String lock, String mac, String capabilities) {
+	public Wifi_Info(String name, String rssi, String lock, String mac, String capabilities, String rssilevel) {
 		super();
 		this.name = name;
 		this.lock = lock;
 		this.rssi = rssi;
 		this.mac = mac;
 		this.capabilities = capabilities;
+		this.rssilevel = rssilevel;
 	}
 
 	public String getName() {
@@ -71,5 +73,13 @@ public class Wifi_Info {
 
 	public void setCapabilities(String capabilities) {
 		this.capabilities = capabilities;
+	}
+	
+	public String getRssilevel() {
+		return rssilevel;
+	}
+
+	public void setRssilevel(String rssilevel) {
+		this.rssilevel = rssilevel;
 	}
 }

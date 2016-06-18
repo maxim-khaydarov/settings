@@ -7,9 +7,15 @@ import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import com.google.android.gms.ads.formats.NativeCustomTemplateAd;
+import com.google.android.gms.ads.formats.NativeCustomTemplateAd.OnCustomClickListener;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -26,11 +32,13 @@ import android.net.wifi.WifiConfiguration.KeyMgmt;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.view.ViewPager.LayoutParams;
 import android.text.Html;
 import android.text.InputType;
 import android.text.format.Formatter;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -105,7 +113,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	  private String m_Text = "";
 
 
-	  String ITEM_KEY = "key", WIFI_KEY = "wifi_key", RSSI_KEY = "rssi_key", MAC_KEY = "mac_key", CAP_KEY = "cap_key";
+	  String ITEM_KEY = "key", WIFI_KEY = "wifi_key", RSSI_KEY = "rssi_key", MAC_KEY = "mac_key", CAP_KEY = "cap_key", RSSILEVEL_KEY;
 	  ArrayList<HashMap<String, String>> arraylist = new ArrayList<HashMap<String, String>>();
 	  SimpleAdapter adapter;
 	  
@@ -195,138 +203,91 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
     			
     			
     			
-		       DisplayWifiState();
+		       //DisplayWifiState();
 		       
 		       
 		      
 		       
 		       studentArrayAdapter = new Wifi_Info_Adapter(ActivityWifi.this, R.layout.row_wifi, studentArray);
 		       lv = (ListView)findViewById(R.id.list);	
-		       lv.setItemsCanFocus(false);
+		       lv.setItemsCanFocus(true);
 		       lv.setAdapter(studentArrayAdapter);
 
-		       lv.setOnItemClickListener(new OnItemClickListener() {
-		    	   
-		    	   @Override
-		    	   public void onItemClick(AdapterView<?> parent, View v,
-		    	     final int position, long id) {
-		    		   connectToWifi(position);
-		    	    Toast.makeText(ActivityWifi.this,
-		    	      "List Item Clicked:" + position, Toast.LENGTH_LONG)
-		    	      .show();
-		    	   }
-		    	   
-		    	  
-		       });
-
-		    	 
+		       
+		       studentArrayAdapter.setListener(new Wifi_Info_Adapter.OnPairButtonClickListener() {			
+					@Override
+					public void onPairButtonClick(int position) {
+						
+						Toast.makeText(ActivityWifi.this,
+					    	      "List Item Clicked:" + position, Toast.LENGTH_LONG)
+					    	      .show();
+					}
+				});
+		       
+		       
+		       
 	    
 		       
-		      
 		       
-		       
-		       
-		     
-
-		       //this.adapter = new SimpleAdapter(ActivityWifi.this, arraylist, R.layout.row_wifi, new String[] { ITEM_KEY, WIFI_KEY, RSSI_KEY }, new int[] { R.id.list_value, R.id.imageView1111, R.id.imageView1 });
-		       //lv.setAdapter(this.adapter);
-		       
-		       
-		       
-		       
-		       
-		       registerReceiver(new BroadcastReceiver()
-		       {
-		           @Override
-		           public void onReceive(Context c, Intent intent) 
-		           {
-		        	   studentArray.clear(); 
-		              results = wifi.getScanResults();
-		              size = results.size();
-		              try 
-		              {
-		                  size = size - 1;
-		                  while (size >= 0) 
-		                  {   
-		                	   RSSI_KEY = null;
-		                	   WIFI_KEY = null;
-		                	   ITEM_KEY = null;
-		                      //HashMap<String, String> item = new HashMap<String, String>(); 
-		                      int result = results.get(size).level;
-		                      
-		                      
-		                      if(results.get(size).SSID.length() != 0){
-		                    	  //item.put(ITEM_KEY, results.get(size).SSID);
-		                    	  ITEM_KEY = results.get(size).SSID;
-		                      }
-		                      else{
-		                    	  //item.put(ITEM_KEY, getString(R.string.bluetooth_hidden)); 
-		                      		ITEM_KEY = getString(R.string.bluetooth_hidden); }
-		                      
-		                      
-		                      int w = result;
-		                      
-		                      if (w > -67){
-		                    	  //item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_4));
-		                    	  RSSI_KEY = Integer.toString(R.drawable.wifi_signal_4);
-		                      }
-		                      else if (w > -79){
-		                    	  //item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_3));
-		                    	  RSSI_KEY = Integer.toString(R.drawable.wifi_signal_3);
-		                      }
-		                      else if (w > -91){
-		                    	  //item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_2));
-		                    	  RSSI_KEY = Integer.toString(R.drawable.wifi_signal_2);
-		                      }
-		                      else {
-		                    	  //item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_1));
-		                    	  RSSI_KEY = Integer.toString(R.drawable.wifi_signal_1);
-		                      }
-		                      		                      
-		                      Capabilities =  results.get(size).capabilities;
-		                      if(Capabilities.contains("WPA"))
-
-				                {
-		                    	 // item.put(WIFI_KEY, Integer.toString(R.drawable.lock_wifi));
-		                    	  WIFI_KEY = Integer.toString(R.drawable.lock_wifi);
-				                }
-		                      
-		                      if(Capabilities.contains("WEP"))
-			                    {
-		                    	//  item.put(WIFI_KEY, Integer.toString(R.drawable.lock_wifi));
-		                    	  WIFI_KEY = Integer.toString(R.drawable.lock_wifi);
-			                    }
-		                      
-		                      String wi = myWifiInfo.getSSID();
-		                      String wi_scan = "\"" + results.get(size).SSID + "\"";
-		                      String wi3 = myWifiInfo.getSSID().replace('"',' ');
-		                      
-		                      if (wi_scan.contains(wi)){
-		                    	  if(!Capabilities.contains("WPA") && !Capabilities.contains("WEP")){
-		                    	  String t2 = wi3 + "<br />" + "<font color=\"#808080\" >" + "<small><small>" +  getString(R.string.wifi_no_pass) + "</small></small>" + "</font>";
-		           		       textConnected.setText(Html.fromHtml(t2), TextView.BufferType.SPANNABLE);
-		                    	  wifi_state = 1;
-		                    	  }
-		                      }
-		                      
-		                     CAP_KEY = results.get(size).capabilities;
-		                      MAC_KEY = results.get(size).BSSID;
-		                      
-		                      studentArray.add(new Wifi_Info(ITEM_KEY, RSSI_KEY, WIFI_KEY, MAC_KEY, CAP_KEY));
-		                      //arraylist.add(item);
-		                      size--;
-		                      studentArrayAdapter.notifyDataSetChanged();                 
-		                  } 
-		              }
-		              catch (Exception e)
-		              {  }  
-		              setListViewHeightBasedOnChildren(lv);
-		           }
-		       }, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
 		       
 		       
 	    }
 	    
+	    public void info_wifi(int position, String name, String rssi, String mac, String cap, String rssilevel){
+	    	final Dialog Activation = new Dialog(ActivityWifi.this,android.R.style.Theme_Translucent);
+	        Activation.requestWindowFeature(Window.FEATURE_NO_TITLE);
+	        Activation.setContentView(R.layout.dialog_inform);
+				
+				// set the custom dialog components - text, image and button
+
+				Button dialogButton = (Button) Activation.findViewById(R.id.dialogButtonOK);
+				TextView text = (TextView)Activation.findViewById(R.id.text);
+				TextView textBold = (TextView)Activation.findViewById(R.id.textBold);
+				
+				dialogButton.setTypeface(typefaceRoman);
+				textBold.setTypeface(typefaceBold);
+				dialogButton.setText(R.string.ok);
+				text.setTypeface(typefaceRoman);
+				//text.setText("Уровень сигнала\n" + rssi + "\nБезопасность\n" + cap + "\nМАС адрес\n" + mac);
+				String cape = null;
+				
+				if(cap.contains("WPA")){
+					cape = "WPA/WPA2 PSK";
+				}
+				else if(cap.contains("WEP")){
+					cape = "WEP PSK";
+				}
+				else{
+					cape = "Нет";
+				}
+				
+				String t2 = getString(R.string.level_signal) +"<br>"+ "<font color=\"#808080\"><small>"  + rssilevel + "</small></font>"
+						+ "<br><br>" + getString(R.string.security) + "<br>" + "<font color=\"#808080\"><small>"  + cape + "</small></font>"
+						+ "<br><br>" + getString(R.string.mac_wifi_) + "<br>" + "<font color=\"#808080\"><small>"  + mac + "</small></font>";
+			        
+				text.setText(Html.fromHtml(t2), TextView.BufferType.SPANNABLE);
+			        
+				text.setPadding(30,10,10,10);
+				
+				textBold.setText("\"" + name + "\"");
+				textBold.setTextSize(16);
+				text.setTextSize(15);
+				text.setGravity(Gravity.LEFT);
+				
+				// if button is clicked, close the custom dialog
+				dialogButton.setOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						
+						
+			            
+						Activation.dismiss();
+					}
+				});
+				
+				Activation.show();
+	    }
 	    
 	    public void connectToWifi(final int position)
         {
@@ -514,12 +475,120 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	     }
 	     
 	    protected void onResume() {
+	    	/*
+	    	registerReceiver(new BroadcastReceiver()
+		       {
+		           @Override
+		           public void onReceive(Context c, Intent intent) 
+		           {
+		        	   studentArray.clear(); 
+		              results = wifi.getScanResults();
+		              size = results.size();
+		              try 
+		              {
+		                  size = size - 1;
+		                  while (size >= 0) 
+		                  {   
+		                	   RSSI_KEY = null;
+		                	   WIFI_KEY = null;
+		                	   ITEM_KEY = null;
+		                      //HashMap<String, String> item = new HashMap<String, String>(); 
+		                      int result = results.get(size).level;
+		                      
+		                      
+		                      if(results.get(size).SSID.length() != 0){
+		                    	  //item.put(ITEM_KEY, results.get(size).SSID);
+		                    	  ITEM_KEY = results.get(size).SSID;
+		                      }
+		                      else{
+		                    	  //item.put(ITEM_KEY, getString(R.string.bluetooth_hidden)); 
+		                      		ITEM_KEY = getString(R.string.bluetooth_hidden); }
+		                      
+		                      
+		                      int w = result;
+		                      
+		                      if (w > -67){
+		                    	  //item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_4));
+		                    	  RSSI_KEY = Integer.toString(R.drawable.wifi_signal_4);
+		                    	  RSSILEVEL_KEY = "Очень сильный";
+		                      }
+		                      else if (w > -79){
+		                    	  //item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_3));
+		                    	  RSSI_KEY = Integer.toString(R.drawable.wifi_signal_3);
+		                    	  RSSILEVEL_KEY = "Cильный";
+		                      }
+		                      else if (w > -91){
+		                    	  //item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_2));
+		                    	  RSSI_KEY = Integer.toString(R.drawable.wifi_signal_2);
+		                    	  RSSILEVEL_KEY = "Средний";
+		                      }
+		                      else {
+		                    	  //item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_1));
+		                    	  RSSI_KEY = Integer.toString(R.drawable.wifi_signal_1);
+		                    	  RSSILEVEL_KEY = "Слабый";
+		                      }
+		                      		                      
+		                      Capabilities =  results.get(size).capabilities;
+		                      if(Capabilities.contains("WPA"))
+
+				                {
+		                    	 // item.put(WIFI_KEY, Integer.toString(R.drawable.lock_wifi));
+		                    	  WIFI_KEY = Integer.toString(R.drawable.lock_wifi);
+				                }
+		                      
+		                      if(Capabilities.contains("WEP"))
+			                    {
+		                    	//  item.put(WIFI_KEY, Integer.toString(R.drawable.lock_wifi));
+		                    	  WIFI_KEY = Integer.toString(R.drawable.lock_wifi);
+			                    }
+		                      
+		                      String wi = myWifiInfo.getSSID();
+		                      String wi_scan = "\"" + results.get(size).SSID + "\"";
+		                      String wi3 = myWifiInfo.getSSID().replace('"',' ');
+		                      
+		                      Log.e("WI_SCAN", wi_scan);
+		                      Log.e("WI", wi);
+		                      
+		                     // if(wi == null){
+		                      if (wi.contains(wi_scan)){
+		                    	  if(!Capabilities.contains("WPA") && !Capabilities.contains("WEP")){
+		                    		  wifi_state = 1;
+		                    		  DisplayWifiState(wi3);
+		                    	  }
+		                      }
+		                    //  }
+		                     CAP_KEY = results.get(size).capabilities;
+		                      MAC_KEY = results.get(size).BSSID;
+		                      //RSSILEVEL_KEY = String.valueOf(results.get(size).level);
+		                      
+		                      studentArray.add(new Wifi_Info(ITEM_KEY, RSSI_KEY, WIFI_KEY, MAC_KEY, CAP_KEY, RSSILEVEL_KEY));
+		                      //arraylist.add(item);
+		                      size--;
+		                      studentArrayAdapter.notifyDataSetChanged();                 
+		                  } 
+		              }
+		              catch (Exception e)
+		              {  }  
+		              setListViewHeightBasedOnChildren(lv);
+		           }
+		       }, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));*/
+	    	
 	        super.onResume();
 	        wifi.startScan();
 	       ButtonWifi();
 	       ButtonWifi1();
-	       this.registerReceiver(this.myWifiReceiver,
-			         new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
+	       DisplayWifiState();
+	      // this.registerReceiver(this.myWifiReceiver,
+			//         new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
+	       
+	       IntentFilter  mIntentFilter = new IntentFilter();
+	        mIntentFilter.addAction(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION);
+	        mIntentFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
+	        registerReceiver(myWifiReceiver, mIntentFilter);
+	        
+	        IntentFilter  mIntentFilter2 = new IntentFilter();
+	        mIntentFilter2.addAction(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION);
+	        registerReceiver(myWifiReceiver2, mIntentFilter2);
 	       
 	       
 	       if (mSettings.contains(APP_PREFERENCES_tgb_menu)) {
@@ -636,52 +705,181 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		overridePendingTransition(center_to_right, center_to_right2);
 	 }
 
-	    private BroadcastReceiver myWifiReceiver
-	    = new BroadcastReceiver(){
+ private BroadcastReceiver myWifiReceiver = new BroadcastReceiver(){
 
 	   @Override
-	   public void onReceive(Context arg0, Intent arg1) {
+	   public void onReceive(Context arg0, Intent arg1) {/*
 	    // TODO Auto-generated method stub
 	    NetworkInfo networkInfo = (NetworkInfo) arg1.getParcelableExtra(ConnectivityManager.EXTRA_NETWORK_INFO);
 	    if(networkInfo.getType() == ConnectivityManager.TYPE_WIFI){
 	     DisplayWifiState();
 	     
-	    }
+	    }*/
+		   if (arg1.getAction().equals(WifiManager.NETWORK_STATE_CHANGED_ACTION)) {
+	            Log.d("G_TAG", "network state was changed");
+	            NetworkInfo networkInfo = arg1.getParcelableExtra(WifiManager.EXTRA_NETWORK_INFO);
+	            //DisplayWifiState();
+	            if (networkInfo.getState() == NetworkInfo.State.CONNECTED) {
+	                Log.d("LOG_TAG", "network connection has been established");
+	                // the receiver is no longer needed, so unregist it immediately.
+	                //unregisterReceiver(this);
+	                //reload();
+	                DisplayWifiState();
+	                WifiManager wifiManager = (WifiManager) getSystemService (Context.WIFI_SERVICE);
+	                WifiInfo info = wifiManager.getConnectionInfo ();
+	                if(info.getSSID ().contains("unknown ssid")){
+	                	textConnected.setText(R.string.no_connections);
+	                }
+	                else{
+	                	textConnected.setText(info.getSSID().replace('"',' ') );
+	                }
+//	                public void schedule (TimerTask task, long delay, long period) 
+//	                Schedule a task for repeated fixed-delay execution after a specific delay.
+	        //
+//	                Parameters
+//	                task  the task to schedule. 
+//	                delay  amount of time in milliseconds before first execution. 
+//	                period  amount of time in milliseconds between subsequent executions. 
+	         
+	               
+	                // do something...
+
+	            }
+	        }
+	   }};
+	   
+	   
+	   private BroadcastReceiver myWifiReceiver2 = new BroadcastReceiver(){
+		   @Override
+           public void onReceive(Context c, Intent intent) 
+           {
+        	   studentArray.clear(); 
+              results = wifi.getScanResults();
+              size = results.size();
+              try 
+              {
+                  size = size - 1;
+                  while (size >= 0) 
+                  {   
+                	   RSSI_KEY = null;
+                	   WIFI_KEY = null;
+                	   ITEM_KEY = null;
+                      //HashMap<String, String> item = new HashMap<String, String>(); 
+                      int result = results.get(size).level;
+                      
+                      
+                      if(results.get(size).SSID.length() != 0){
+                    	  //item.put(ITEM_KEY, results.get(size).SSID);
+                    	  ITEM_KEY = results.get(size).SSID;
+                      }
+                      else{
+                    	  //item.put(ITEM_KEY, getString(R.string.bluetooth_hidden)); 
+                      		ITEM_KEY = getString(R.string.bluetooth_hidden); }
+                      
+                      
+                      int w = result;
+                      
+                      if (w > -67){
+                    	  //item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_4));
+                    	  RSSI_KEY = Integer.toString(R.drawable.wifi_signal_4);
+                    	  RSSILEVEL_KEY = "Очень сильный";
+                      }
+                      else if (w > -79){
+                    	  //item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_3));
+                    	  RSSI_KEY = Integer.toString(R.drawable.wifi_signal_3);
+                    	  RSSILEVEL_KEY = "Cильный";
+                      }
+                      else if (w > -91){
+                    	  //item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_2));
+                    	  RSSI_KEY = Integer.toString(R.drawable.wifi_signal_2);
+                    	  RSSILEVEL_KEY = "Средний";
+                      }
+                      else {
+                    	  //item.put(RSSI_KEY, Integer.toString(R.drawable.wifi_signal_1));
+                    	  RSSI_KEY = Integer.toString(R.drawable.wifi_signal_1);
+                    	  RSSILEVEL_KEY = "Слабый";
+                      }
+                      		                      
+                      Capabilities =  results.get(size).capabilities;
+                      if(Capabilities.contains("WPA"))
+
+		                {
+                    	 // item.put(WIFI_KEY, Integer.toString(R.drawable.lock_wifi));
+                    	  WIFI_KEY = Integer.toString(R.drawable.lock_wifi);
+		                }
+                      
+                      if(Capabilities.contains("WEP"))
+	                    {
+                    	//  item.put(WIFI_KEY, Integer.toString(R.drawable.lock_wifi));
+                    	  WIFI_KEY = Integer.toString(R.drawable.lock_wifi);
+	                    }
+                      
+                      String wi = myWifiInfo.getSSID();
+                      String wi_scan = "\"" + results.get(size).SSID + "\"";
+                      String wi3 = myWifiInfo.getSSID().replace('"',' ');
+                      
+                      Log.e("WI_SCAN", wi_scan);
+                      Log.e("WI", wi);
+                      
+                     // if(wi == null){
+                      if (wi.contains(wi_scan)){
+                    	  if(!Capabilities.contains("WPA") && !Capabilities.contains("WEP")){
+                    		  wifi_state = 1;
+                    		  //DisplayWifiState();
+                    		  String t2 = wi3 + "<br />" + "<font color=\"#808080\" >" + "<small><small>" +  getString(R.string.wifi_no_pass) + "</small></small>" + "</font>";
+                		       textConnected.setText(Html.fromHtml(t2), TextView.BufferType.SPANNABLE);
+                    	  }
+                      }
+                    //  }
+                     CAP_KEY = results.get(size).capabilities;
+                      MAC_KEY = results.get(size).BSSID;
+                      //RSSILEVEL_KEY = String.valueOf(results.get(size).level);
+                      
+                      studentArray.add(new Wifi_Info(ITEM_KEY, RSSI_KEY, WIFI_KEY, MAC_KEY, CAP_KEY, RSSILEVEL_KEY));
+                      //arraylist.add(item);
+                      size--;
+                      studentArrayAdapter.notifyDataSetChanged();                 
+                  } 
+              }
+              catch (Exception e)
+              {  }  
+              setListViewHeightBasedOnChildren(lv);
+           
 	   }};
 	   
 	    private void DisplayWifiState(){
 	     
 	     ConnectivityManager myConnManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
 	     NetworkInfo myNetworkInfo = myConnManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-	     WifiManager myWifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
 	   //WifiInfo myWifiInfo = myWifiManager.getConnectionInfo();
-	   
-	   
-	  
+	     Log.d("LOG_TAG", "wifi_display start");
 	   
 	     if (myNetworkInfo.isConnected()){
-	     
+	    	 Log.d("LOG_TAG", "wifi_display isConnected");
 	      info.setVisibility(View.VISIBLE);
 			tb_ch.setVisibility(View.VISIBLE);
 			img2.setVisibility(View.VISIBLE);
 			
 			
-			
-			
-	       
-			
 			if (wifi_state == 0){
 				String wi = myWifiInfo.getSSID().replace('"',' ');
 		    	   textConnected.setText(wi);
+		    	   Log.d("LOG_TAG", "wifi_display isConnected - wifi_state = 0");
+		    	  
+		    	   
+			}/*
+			else{
+				 String t2 = capa + "<br />" + "<font color=\"#808080\" >" + "<small><small>" +  getString(R.string.wifi_no_pass) + "</small></small>" + "</font>";
+     		       textConnected.setText(Html.fromHtml(t2), TextView.BufferType.SPANNABLE);
+     		      Log.d("LOG_TAG", "wifi_display isConnected - else wifi_state = 0");
+			}*/
+			
+			if(textConnected.getText().toString().contains("<unknown ssid>")){
+				reload();
 			}
-	       
-	       
-	     
-	      
-	       
-	     
 	     }
 	     else{
+	    	 Log.d("LOG_TAG", "wifi_display no isConnected");
 	      textConnected.setText(R.string.no_connections);
 	      info.setVisibility(View.INVISIBLE);
 			tb_ch.setVisibility(View.INVISIBLE);
@@ -876,23 +1074,21 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		        }
 		        
 		        
+		        
+		        
+		        public void reload() {
+		            Intent intent = getIntent();
+		            overridePendingTransition(0, 0);
+		            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+		            finish();
+		            overridePendingTransition(0, 0);
+		            startActivity(intent);
+		        }
+		        
 ////////////////////////////////////////////////////////////////////
 		        
 		       
-		        
-		        
-		        
-		        
-		        
-		        
-		        
-		        
-		        
-		        
-		        
-		        
-		        
-		        
+		     
 		      
 		        
 		        

@@ -2,6 +2,7 @@ package ua.mkh.settings.full;
 
 import java.util.ArrayList;
 
+
 import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
@@ -14,12 +15,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import ua.mkh.settings.full.DeviceListAdapter.OnPairButtonClickListener;
 
 public class Wifi_Info_Adapter extends ArrayAdapter<Wifi_Info> {
 
 	Context context;
 	int layoutResourceId;
 	ArrayList<Wifi_Info> wifi_infoq = new ArrayList<Wifi_Info>();
+	private OnPairButtonClickListener mListener;
+	
 
 	public Wifi_Info_Adapter(Context context, int layoutResourceId,
 			ArrayList<Wifi_Info> wifi_info) {
@@ -28,6 +32,8 @@ public class Wifi_Info_Adapter extends ArrayAdapter<Wifi_Info> {
 		this.context = context;
 		this.wifi_infoq = wifi_info;
 	}
+	
+	
 
 	@Override
 	public View getView(final int position, View convertView, ViewGroup parent) {
@@ -47,7 +53,7 @@ public class Wifi_Info_Adapter extends ArrayAdapter<Wifi_Info> {
 			StudentWrapper = (StudentWrapper) item.getTag();
 		}
 
-		Wifi_Info wifi_info2 = wifi_infoq.get(position);
+		final Wifi_Info wifi_info2 = wifi_infoq.get(position);
 		StudentWrapper.name.setText(wifi_info2.getName());
 		
 		
@@ -59,19 +65,30 @@ public class Wifi_Info_Adapter extends ArrayAdapter<Wifi_Info> {
 		
 		//StudentWrapper.mac.setText(wifi_info2.getMac());
 		//StudentWrapper.capabilities.setText(wifi_info2.getCapabilities());
-		
-		//Log.e("CAP", wifi_info2.getCapabilities());
-
+		/*
+		if(wifi_info2.getCapabilities().contains("WEP")){
+		Log.e("CAP", wifi_info2.getCapabilities());
+	}*/
 		StudentWrapper.info.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(context, "Edit", Toast.LENGTH_LONG).show();
-				((ActivityWifi)context).connectToWifi(position);
+				((ActivityWifi)context).info_wifi(position, wifi_info2.getName(), wifi_info2.getRssilevel(), wifi_info2.getMac(), wifi_info2.getCapabilities(), wifi_info2.getRssilevel());
+				
+			}
+		});
+		
+		item.setOnClickListener(new View.OnClickListener() {			
+			@Override
+			public void onClick(View v) {
+				if (mListener != null) {
+					mListener.onPairButtonClick(position);
+					((ActivityWifi)context).connectToWifi(position);
+				}
 			}
 		});
 
-	
+		
 		return item;
 
 	}
@@ -83,6 +100,14 @@ public class Wifi_Info_Adapter extends ArrayAdapter<Wifi_Info> {
 		TextView mac;
 		TextView capabilities;
 		Button info;
+		String rssilevel;
 	}
-
+	
+	public interface OnPairButtonClickListener {
+		public abstract void onPairButtonClick(int position);
+	}
+	
+	public void setListener(OnPairButtonClickListener listener) {
+		mListener = listener;
+	}
 }

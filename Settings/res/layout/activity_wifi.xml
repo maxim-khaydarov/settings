@@ -109,7 +109,8 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="15dp"
-                        android:background="@drawable/info" />
+                        android:background="@drawable/info"
+                        android:visibility="gone" />
 
                     <ToggleButton
                         android:id="@+id/toggleButtonInfo"
@@ -134,7 +135,8 @@
                         android:background="@drawable/checked_image_radio_button"
                         android:text="ToggleButton"
                         android:textOff=" "
-                        android:textOn=" " />
+                        android:textOn=" "
+                        android:visibility="gone" />
 
                     <ImageView
                         android:id="@+id/ImageView18"
@@ -163,7 +165,8 @@
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
                         android:layout_toLeftOf="@+id/button1"
-                        android:src="@drawable/wifi_signal_4" />
+                        android:src="@drawable/wifi_signal_4"
+                        android:visibility="gone" />
 
                 </RelativeLayout>
             </LinearLayout>

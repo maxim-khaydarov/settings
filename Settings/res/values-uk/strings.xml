@@ -355,6 +355,9 @@
 	<string name="wifi_no_pass_end">Детальніше про рекомендовані настройках для Wi-Fi</string>
 	<string name="wifi_recomend_site">https://support.apple.com/ru-ru/HT202068</string>
 	
+	<string name="level_signal">Рівень сигналу</string>
+	<string name="security">Безпека</string>
+	<string name="mac_wifi_">MAC адрес</string>
 </resources>
 
 
