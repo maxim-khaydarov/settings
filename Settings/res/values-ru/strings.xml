@@ -131,7 +131,7 @@
     <string name="choose">Выбор</string>
     <string name="about_title">about_title</string>
 	<string name="about_desc">about_desc</string>
-	<string name="cancel">Отмена</string>
+	<string name="cancel">Отменить</string>
 	<string name="menu_info">Настройки программы</string>
 	<string name="app_settings">Приложения</string>
 	<string name="reset_all_settings">Сброс всех настроек</string>
@@ -362,6 +362,14 @@
 	<string name="level_signal">Уровень сигнала</string>
 	<string name="security">Безопасность</string>
 	<string name="mac_wifi_">MAC адрес</string>
+	
+	<string name="wifi_title_connect">Ввод пароля</string>
+	<string name="wifi_connect_title">Подкл.</string>
+	<string name="password">Пароль</string>
+	<string name="wifi_connect_to">Введите пароль для \"%1$s\"</string>
+	
+	<string name="bluetooth_on_off">При включенном Bluetooth улучшаются точность определения геопозиции и эффективность предложения услуг поблизости.</string>
+	<string name="wifi_on_off">Точность геопозиции улучшается, если включить Wi-Fi.</string>
 </resources>
 
 

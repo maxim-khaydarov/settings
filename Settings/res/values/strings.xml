@@ -363,6 +363,14 @@ Placing full version to any resources other than Yandex.Store prohibited.</strin
 	<string name="level_signal">Signal level</string>
 	<string name="security">Security</string>
 	<string name="mac_wifi_">MAC address</string>
+	
+	<string name="wifi_title_connect">Enter the password</string>
+	<string name="wifi_connect_title">Сonn.</string>
+	<string name="password">Password</string>
+	<string name="wifi_connect_to">Enter the password for \"%1$s\"</string>
+	
+	<string name="bluetooth_on_off">With the improved accuracy of the Bluetooth geolocation and efficiency of the supply of services nearby.</string>
+	<string name="wifi_on_off">Geolocation accuracy improves if you turn Wi-Fi.</string>
 </resources>
 
 

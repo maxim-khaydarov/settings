@@ -119,7 +119,7 @@ public class ActivityBth extends Activity implements OnClickListener, SimpleGest
 	        
 	       
 	        nameBT = (TextView) findViewById(R.id.nameBT);
-	        nameBT.setVisibility(View.GONE);
+	        //nameBT.setVisibility(View.GONE);
 	        btn_Bth = (Button) findViewById(R.id.ButtonBth);
 	        textView4 = (TextView) findViewById(R.id.textView4);
 	        textView2 = (TextView) findViewById(R.id.textView2);
@@ -598,7 +598,7 @@ public class ActivityBth extends Activity implements OnClickListener, SimpleGest
 	    	if (bluetoothAdapter.isEnabled()) {
 				mainLayout.setVisibility(View.VISIBLE);
 	    	     tb_bt.setChecked(true);
-	 	        nameBT.setVisibility(View.VISIBLE);
+	 	        //nameBT.setVisibility(View.VISIBLE);
 	 	       nameBT.setText(getLocalBluetoothName());
 	 	      bluetoothAdapter.startDiscovery();
 	 	     pair();
@@ -607,7 +607,8 @@ public class ActivityBth extends Activity implements OnClickListener, SimpleGest
 	    	else {
 				mainLayout.setVisibility(View.GONE);
 	    		tb_bt.setChecked(false);
-		        nameBT.setVisibility(View.GONE);
+		        //nameBT.setVisibility(View.GONE);
+	    		nameBT.setText(R.string.bluetooth_on_off);
 
 	    	}
 	    
@@ -637,7 +638,7 @@ public class ActivityBth extends Activity implements OnClickListener, SimpleGest
 	    			bluetoothAdapter.disable();
 	        		//textView2.setText(R.string.bluetooth_search_off);
 	        		progressBarScan.setVisibility(View.INVISIBLE);
-	    	        nameBT.setVisibility(View.GONE);
+	        		nameBT.setText(R.string.bluetooth_on_off);
 	    	        
 	        	}
 	        }

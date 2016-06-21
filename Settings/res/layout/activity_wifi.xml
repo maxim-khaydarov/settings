@@ -63,7 +63,7 @@
 
                     <ToggleButton
                         android:id="@+id/ToggleButton01"
-                        android:layout_width="60dp"
+                        android:layout_width="54dp"
                         android:layout_height="44dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
@@ -160,8 +160,8 @@
 
                     <ImageView
                         android:id="@+id/imageView1"
-                        android:layout_width="18dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="19dp"
+                        android:layout_height="13dp"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
                         android:layout_toLeftOf="@+id/button1"
@@ -178,6 +178,15 @@
                 android:ems="10"
                 android:scaleType="fitXY"
                 android:src="@drawable/line_cray" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/wifi_on_off"
+                android:textColor="@color/hint_text"
+                android:textSize="13sp" />
 
             <LinearLayout
                 android:id="@+id/MainLayout2"
