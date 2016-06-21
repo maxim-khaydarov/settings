@@ -151,7 +151,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 			
 			 detector = new SimpleGestureFilter(this,this);
 			
-			LinearLayoutCon = (LinearLayout) findViewById(R.id.LinearLayoutCon);
+			//LinearLayoutCon = (LinearLayout) findViewById(R.id.LinearLayoutCon);
 			LayoutMain = (RelativeLayout) findViewById(R.id.LayoutMain);
 			MainLayout2 = (LinearLayout) findViewById(R.id.MainLayout2);
 			LayoutMain.setVisibility(View.GONE);
@@ -708,7 +708,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	        }
 	    	else {
 	    		textView2.setVisibility(View.VISIBLE);
-	    		LinearLayoutCon.setVisibility(View.GONE);
+	    		//LinearLayoutCon.setVisibility(View.GONE);
 	    		LayoutMain.setVisibility(View.GONE);
            		MainLayout2.setVisibility(View.GONE);
 	    	}
@@ -918,21 +918,94 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		        	if((tb_wifi).isChecked())
 	               	 {
 	               		 wifi.setWifiEnabled(true);
-	               		LinearLayoutCon.setVisibility(View.VISIBLE);
-	               		LayoutMain.setVisibility(View.VISIBLE);
-	               		MainLayout2.setVisibility(View.VISIBLE);
-	               		textView2.setVisibility(View.GONE);
+	               		//LayoutMain.setVisibility(View.VISIBLE);
+	               		//MainLayout2.setVisibility(View.VISIBLE);
+	               		Animation animationOUT = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadeout);
+	               		Animation animationIN = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadein);
+	               		
+	               		textView2.startAnimation(animationOUT);
+	               		LayoutMain.startAnimation(animationIN);
+	               		MainLayout2.startAnimation(animationIN);
+	               		
+	               		//textView2.setVisibility(View.GONE);
+	               		
+	               		animationIN.setAnimationListener(new Animation.AnimationListener(){
+	               		    @Override
+	               		    public void onAnimationStart(Animation arg0) {
+	               		    	LayoutMain.setVisibility(View.VISIBLE);
+	    	               		MainLayout2.setVisibility(View.VISIBLE);
+	               		    }           
+	               		    @Override
+	               		    public void onAnimationRepeat(Animation arg0) {
+	               		    }           
+	               		    @Override
+	               		    public void onAnimationEnd(Animation arg0) {
+	               		    }
+	               		});
+	               		
+	               		animationOUT.setAnimationListener(new Animation.AnimationListener(){
+	               		    @Override
+	               		    public void onAnimationStart(Animation arg0) {
+	               		    	
+	               		    }           
+	               		    @Override
+	               		    public void onAnimationRepeat(Animation arg0) {
+	               		    }           
+	               		    @Override
+	               		    public void onAnimationEnd(Animation arg0) {
+	               		    	textView2.setVisibility(View.GONE);
+	               		    }
+	               		});
+	               		
+	               		
 	               		
 	               	 }
 	               	 else {
 	               		 wifi.setWifiEnabled(false);
-	               		LinearLayoutCon.setVisibility(View.GONE);
-	               		textView2.setVisibility(View.VISIBLE);
+	               		
+	               		
 	               		info.setVisibility(View.INVISIBLE);
 	               		tb_ch.setVisibility(View.INVISIBLE);
-	               		LayoutMain.setVisibility(View.GONE);
-	               		MainLayout2.setVisibility(View.GONE);
 	               		img2.setVisibility(View.INVISIBLE);
+	               		
+	               		Animation animationIN = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadein);
+	               		Animation animationOUT = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadeout);
+	               		
+	               		animationIN.setAnimationListener(new Animation.AnimationListener(){
+	               		    @Override
+	               		    public void onAnimationStart(Animation arg0) {
+	               		    	textView2.setVisibility(View.VISIBLE);
+	               		    }           
+	               		    @Override
+	               		    public void onAnimationRepeat(Animation arg0) {
+	               		    }           
+	               		    @Override
+	               		    public void onAnimationEnd(Animation arg0) {
+	               		    }
+	               		});
+	               		
+	               		animationOUT.setAnimationListener(new Animation.AnimationListener(){
+	               		    @Override
+	               		    public void onAnimationStart(Animation arg0) {
+	               		    	
+	               		    }           
+	               		    @Override
+	               		    public void onAnimationRepeat(Animation arg0) {
+	               		    }           
+	               		    @Override
+	               		    public void onAnimationEnd(Animation arg0) {
+	               		    	MainLayout2.setVisibility(View.GONE);
+	    	               		//LayoutMain.setVisibility(View.GONE);
+	               		    }
+	               		});
+	               		
+	               		MainLayout2.startAnimation(animationOUT);
+	               		LayoutMain.startAnimation(animationOUT);
+	               		//textView2.setVisibility(View.VISIBLE);
+	               		textView2.startAnimation(animationIN);
+	               		
+	               		//MainLayout2.setVisibility(View.GONE);
+	               		LayoutMain.setVisibility(View.GONE);
 	               	 }
 		        }
 		        	
@@ -1052,65 +1125,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		     dialog.show();
 		    }
 		 
-		 String PASS_KEY = null;
 		 
-		 private String Dialog_wifi_connect(){
-			 
-		     final Dialog dialog = new Dialog(this,android.R.style.Theme_Translucent);
-		     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		     dialog.setContentView(R.layout.pass_wifi);
-		     dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
-		     
-		     Button ButtonOK = (Button)dialog.getWindow().findViewById(R.id.buttonSave1);
-		     Button ButtonMenuCancel = (Button)dialog.getWindow().findViewById(R.id.buttonBack1);
-		     TextView top = (TextView)dialog.getWindow(). findViewById(R.id.textView1);
-		     TextView title = (TextView) dialog.getWindow().findViewById(R.id.textOk);
-		     TextView title_pass = (TextView) dialog.getWindow().findViewById(R.id.textView2);
-		     final EditText ed1 = (EditText) dialog.getWindow().findViewById(R.id.editText1);
-		     /*
-		     ButtonMenuCancel.setTypeface(typefaceMedium);
-		     ButtonOK.setTypeface(typefaceRoman);
-		     top.setTypeface(typefaceMedium);
-		     title.setTypeface(typefaceMedium);
-		     title_pass.setTypeface(typefaceMedium);*/
-		     //ButtonOK.setText(R.string.menu_info_main);
-		     
-		     
-		     
-		     ButtonMenuCancel.setOnClickListener(new OnClickListener(){
-
-		   @Override
-		   public void onClick(View v) {
-		    dialog.dismiss();
-		   }});
-		     
-		     ButtonOK.setOnClickListener(new OnClickListener(){
-
-		  	   @Override
-		  	   public void onClick(View v) {
-		  		// launchIntent();
-		  		
-		  		
-		  		 //Log.e("!!!!", ed123.getText().toString() );
-		  		 try{
-		  		 
-		  		   if(ed1.getText().toString().length() == 0){
-		  			   Log.e("!!!!", "ED1 is NULL" );
-		  		   }
-		  		   else
-		  		    PASS_KEY = ed1.getText().toString();
-		  		
-		  		 }catch (NullPointerException e){
-		  			 Log.e("!!!!", "ED1 is NULL" );
-		  		 }
-		  		dialog.dismiss();
-		  	   }});
-		     
-		     dialog.show();
-		     
-		     return PASS_KEY;
-		    }
-		   	
 		        private void launchIntent() {
 		            Intent it = new Intent(ActivityWifi.this, SettingsActivity.class);
 		            it.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);  
