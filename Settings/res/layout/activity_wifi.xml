@@ -78,13 +78,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
                 android:orientation="vertical" >
 
                 <RelativeLayout
                     android:id="@+id/LayoutMain"
                     android:layout_width="match_parent"
-                    android:layout_height="36dp" >
+                    android:layout_height="36dp"
+                    android:background="@color/white" >
 
                     <Button
                         android:id="@+id/Connected"

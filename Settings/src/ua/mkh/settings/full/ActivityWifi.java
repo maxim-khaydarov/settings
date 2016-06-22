@@ -26,6 +26,7 @@ import android.net.ConnectivityManager;
 import android.net.DhcpInfo;
 import android.net.NetworkInfo;
 import android.net.wifi.ScanResult;
+import android.net.wifi.SupplicantState;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiConfiguration.GroupCipher;
 import android.net.wifi.WifiConfiguration.KeyMgmt;
@@ -292,11 +293,41 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 				Activation.show();
 	    }
 	    
+	    private void doIt2 (){
+	    	
+	    }
+	    private void doIt (final String name){
+	    	
+	    	LayoutMain.setVisibility(View.VISIBLE);
+        	textConnected.setText(name);
+       
+        	
+	    	
+	    	new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run()
+                {
+                	NetworkInfo myNetworkInfo = myConnManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+                	if(!myNetworkInfo.isConnected()){
+                		LayoutMain.setVisibility(View.GONE);
+                	}
+                    // TODO Auto-generated method stub
+                	
+                	//textConnected.setText(name);
+                    
+                }
+            }, 7000);
+	    }
+	    
 	    public void connectToWifi(final int position)
         {
                 final int value = results.size()-1 - position;
 
                 Capabilities =  results.get(value).capabilities;
+                
+                
+                
                
                 //Then you could add some code to check for a specific security type. 
                 if(Capabilities.contains("WPA"))
@@ -341,6 +372,8 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
         		  			   Log.e("!!!!", "ED1 is NULL" );
         		  		   }
         		  		   else {
+        		  			   doIt(results.get(value).SSID);
+        		  			   
         		  			 WifiConfiguration wifiConfiguration = new WifiConfiguration(); 
                              wifiConfiguration.SSID = "\"" + results.get(value).SSID + "\"";
                              wifiConfiguration.preSharedKey = "\""+ ed1.getText().toString() +"\"";
@@ -590,7 +623,10 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		       }, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));*/
 	    	
 	        super.onResume();
-	        wifi.startScan();
+	        
+	        if (wifi.isWifiEnabled()){
+	        	wifi.startScan();
+	        }
 	       ButtonWifi();
 	       ButtonWifi1();
 	       DisplayWifiState();
@@ -733,7 +769,32 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	     DisplayWifiState();
 	     
 	    }*/
+		   String action = arg1.getAction();
+
+           if (action.equals(WifiManager.SUPPLICANT_STATE_CHANGED_ACTION)) {
+               if (arg1.getParcelableExtra(WifiManager.EXTRA_NEW_STATE) == SupplicantState.COMPLETED) {
+                   Log.e("!!!MY!!!", "WiFi is associated");//
+                   WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+                   WifiInfo wi = wifiManager.getConnectionInfo();
+                   if (wi != null) {
+                	   Log.e("!!!MY!!!", "Wifi info available (should be, we are associated)");//// 
+                       if (wi.getIpAddress() != 0) {
+                    	   Log.e("!!!MY!!!", " Lucky us, we already have an ip address. This happens when a connection is complete, e.g. after rekeying");//// 
+                           
+                           if (wi.getBSSID().equals("c0:ff:ee:c0:ff:ee")) {
+                               // ... Do your stuff here
+                               // ...
+                               // ...
+                           }
+                       } 
+                       } 
+                   }
+                                           };
+                                   
+                       
 		   if (arg1.getAction().equals(WifiManager.NETWORK_STATE_CHANGED_ACTION)) {
+			   
+			   
 	            Log.d("G_TAG", "network state was changed");
 	            NetworkInfo networkInfo = arg1.getParcelableExtra(WifiManager.EXTRA_NETWORK_INFO);
 	            //DisplayWifiState();
@@ -743,6 +804,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	                //unregisterReceiver(this);
 	                //reload();
 	                DisplayWifiState();
+	              LayoutMain.setVisibility(View.VISIBLE);
 	                WifiManager wifiManager = (WifiManager) getSystemService (Context.WIFI_SERVICE);
 	                WifiInfo info = wifiManager.getConnectionInfo ();
 	                if(info.getSSID ().contains("unknown ssid")){
@@ -877,6 +939,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	      info.setVisibility(View.VISIBLE);
 			tb_ch.setVisibility(View.VISIBLE);
 			img2.setVisibility(View.VISIBLE);
+			LayoutMain.setVisibility(View.VISIBLE);
 			
 			
 			if (wifi_state == 0){
@@ -902,6 +965,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	      info.setVisibility(View.INVISIBLE);
 			tb_ch.setVisibility(View.INVISIBLE);
 	      img2.setVisibility(View.INVISIBLE);
+	    LayoutMain.setVisibility(View.GONE);
 	      
 	     }
 	     
@@ -918,13 +982,14 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		        	if((tb_wifi).isChecked())
 	               	 {
 	               		 wifi.setWifiEnabled(true);
+	               		 wifi.startScan();
 	               		//LayoutMain.setVisibility(View.VISIBLE);
 	               		//MainLayout2.setVisibility(View.VISIBLE);
 	               		Animation animationOUT = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadeout);
 	               		Animation animationIN = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadein);
 	               		
 	               		textView2.startAnimation(animationOUT);
-	               		LayoutMain.startAnimation(animationIN);
+	               		//LayoutMain.startAnimation(animationIN);
 	               		MainLayout2.startAnimation(animationIN);
 	               		
 	               		//textView2.setVisibility(View.GONE);
@@ -932,7 +997,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	               		animationIN.setAnimationListener(new Animation.AnimationListener(){
 	               		    @Override
 	               		    public void onAnimationStart(Animation arg0) {
-	               		    	LayoutMain.setVisibility(View.VISIBLE);
+	               		    	//LayoutMain.setVisibility(View.VISIBLE);
 	    	               		MainLayout2.setVisibility(View.VISIBLE);
 	               		    }           
 	               		    @Override
@@ -970,6 +1035,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	               		
 	               		Animation animationIN = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadein);
 	               		Animation animationOUT = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadeout);
+	               		Animation animationOUTalpha = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alphaout);
 	               		
 	               		animationIN.setAnimationListener(new Animation.AnimationListener(){
 	               		    @Override
@@ -995,17 +1061,18 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	               		    @Override
 	               		    public void onAnimationEnd(Animation arg0) {
 	               		    	MainLayout2.setVisibility(View.GONE);
-	    	               		//LayoutMain.setVisibility(View.GONE);
+	               		    	LayoutMain.setVisibility(View.GONE);
+	    	               		
 	               		    }
 	               		});
 	               		
 	               		MainLayout2.startAnimation(animationOUT);
-	               		LayoutMain.startAnimation(animationOUT);
+	               		LayoutMain.startAnimation(animationOUTalpha);
 	               		//textView2.setVisibility(View.VISIBLE);
 	               		textView2.startAnimation(animationIN);
 	               		
 	               		//MainLayout2.setVisibility(View.GONE);
-	               		LayoutMain.setVisibility(View.GONE);
+	               		
 	               	 }
 		        }
 		        	
