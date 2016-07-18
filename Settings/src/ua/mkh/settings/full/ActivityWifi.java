@@ -4,8 +4,7 @@ package ua.mkh.settings.full;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.BroadcastReceiver;
@@ -13,6 +12,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.DhcpInfo;
@@ -22,6 +22,7 @@ import android.net.wifi.SupplicantState;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.ViewPager.LayoutParams;
@@ -106,7 +107,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	  ConnectivityManager myConnManager;
 	  NetworkInfo myNetworkInfo;
 	  WifiManager myWifiManager;
-	  
+	  final int PERMISSIONS_REQUEST_CODE_ACCESS_COARSE_LOCATION = 1001;
 	  int wifi_state = 0;
 	
 	    /* Called when the activity is first created. */
@@ -124,7 +125,8 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 			typefaceBold = Typeface.createFromAsset(getAssets(), bold);
 			typefaceThin = Typeface.createFromAsset(getAssets(), thin);
 			
-			 
+			
+			
 			
 			 myConnManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
 		     myNetworkInfo = myConnManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
@@ -220,7 +222,12 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 		       
 	    }
 	    
-	    public void info_wifi(int position, String name, String rssi, String mac, String cap, String rssilevel){
+	    
+	    
+	   
+
+
+		public void info_wifi(int position, String name, String rssi, String mac, String cap, String rssilevel){
 	    	final Dialog Activation = new Dialog(ActivityWifi.this,android.R.style.Theme_Translucent);
 	        Activation.requestWindowFeature(Window.FEATURE_NO_TITLE);
 	        Activation.setContentView(R.layout.dialog_inform);
@@ -1218,9 +1225,9 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 ////////////////////////////////////////////////////////////////////
 		        
 		       
-		     
 		      
-		        
+		       
+
 		        
 }
 

@@ -8,6 +8,7 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="24" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
 	<uses-permission android:name="android.permission.BLUETOOTH"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
@@ -39,6 +40,9 @@
     
      <uses-permission android:name="android.permission.SET_TIME"/>
      <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+     
+     <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
+     
  
     <application
         android:allowBackup="false"
@@ -137,7 +141,20 @@
           </intent-filter>
       </receiver>
       
-       
+       		<service android:name=".NotificationService">
+       		  
+       		</service>
+       		
+       		
+       		
+      
+       <service android:name=".MyAccessibilityService"
+    		android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+    	<intent-filter>
+        <action android:name="android.accessibilityservice.AccessibilityService" />
+    	</intent-filter>
+</service>
+       		
      
               <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
        		

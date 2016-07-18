@@ -160,6 +160,7 @@ public class SimpleGestureFilter extends SimpleOnGestureListener{
         static interface SimpleGestureListener{
          void onSwipe(int direction);
          void onDoubleTap();
+		void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults);
      }
       
     }

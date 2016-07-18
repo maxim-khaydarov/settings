@@ -65,6 +65,8 @@ public class ChooseWallpaper extends Activity implements OnClickListener, Simple
 			typefaceBold = Typeface.createFromAsset(getAssets(), bold);
 			
 			
+			
+			
 			mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 			detector = new SimpleGestureFilter(this,this);
 			

@@ -453,6 +453,8 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 		btn_sota = (Button) findViewById(R.id.ButtonSota);
 		btn_sota.setOnClickListener(this);
 		
+		startService(new Intent(this, NotificationService.class));
+		
 		btn_operator = (Button) findViewById(R.id.ButtonOperator);
 		btn_operator.setOnClickListener(this);
 		
