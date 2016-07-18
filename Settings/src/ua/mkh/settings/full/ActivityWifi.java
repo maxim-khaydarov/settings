@@ -1,21 +1,13 @@
 package ua.mkh.settings.full;
 
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
-import java.util.BitSet;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
-import com.google.android.gms.ads.formats.NativeCustomTemplateAd;
-import com.google.android.gms.ads.formats.NativeCustomTemplateAd.OnCustomClickListener;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -28,20 +20,16 @@ import android.net.NetworkInfo;
 import android.net.wifi.ScanResult;
 import android.net.wifi.SupplicantState;
 import android.net.wifi.WifiConfiguration;
-import android.net.wifi.WifiConfiguration.GroupCipher;
-import android.net.wifi.WifiConfiguration.KeyMgmt;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.ViewPager.LayoutParams;
 import android.text.Html;
-import android.text.InputType;
 import android.text.format.Formatter;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.MeasureSpec;
@@ -50,8 +38,6 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -62,9 +48,7 @@ import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TableLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ToggleButton;
-import android.widget.AdapterView.OnItemClickListener;
 
 import ua.mkh.settings.full.SimpleGestureFilter.SimpleGestureListener;
 
@@ -112,7 +96,6 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 	  Button buttonScan, info;
 	  int size = 0;
 	  List<ScanResult> results;
-	  private String m_Text = "";
 
 
 	  String ITEM_KEY = "key", WIFI_KEY = "wifi_key", RSSI_KEY = "rssi_key", MAC_KEY = "mac_key", CAP_KEY = "cap_key", RSSILEVEL_KEY;
@@ -293,9 +276,7 @@ public class ActivityWifi extends Activity implements OnClickListener, SimpleGes
 				Activation.show();
 	    }
 	    
-	    private void doIt2 (){
-	    	
-	    }
+	    
 	    private void doIt (final String name){
 	    	
 	    	LayoutMain.setVisibility(View.VISIBLE);
