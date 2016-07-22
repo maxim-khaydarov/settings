@@ -73,7 +73,7 @@ import android.widget.ToggleButton;
 
 
 
-public class MainActivity extends Activity implements OnClickListener, SearchView.OnQueryTextListener,
+public class MainActivity extends Activity implements View.OnClickListener, SearchView.OnQueryTextListener,
 SearchView.OnCloseListener, OnFocusChangeListener {
 	
 	
@@ -453,7 +453,7 @@ SearchView.OnCloseListener, OnFocusChangeListener {
 		btn_sota = (Button) findViewById(R.id.ButtonSota);
 		btn_sota.setOnClickListener(this);
 		
-		startService(new Intent(this, NotificationService.class));
+		//startService(new Intent(this, NotificationService.class));
 		
 		btn_operator = (Button) findViewById(R.id.ButtonOperator);
 		btn_operator.setOnClickListener(this);

@@ -21,9 +21,9 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import ua.mkh.settings.full.SimpleGestureFilter.SimpleGestureListener;
 
-public class ActivityWifiInfo extends Activity implements OnClickListener, SimpleGestureListener {
+
+public class ActivityWifiInfo extends Activity implements View.OnClickListener {
 
 	
 	
@@ -45,7 +45,6 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
 	   Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 	   
 	   SharedPreferences mSettings;
-	   private SimpleGestureFilter detector;
 	   
 	   TextView textStatus, txtip, txtdns, txtmask, txtmarsh, textView1, textView2;
 	   Button btn_back, foget, b1, b2, b3, Button01, Button02, Button03, Button04, b5, b6, b7;
@@ -69,7 +68,6 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
 			
 			mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 			
-			 detector = new SimpleGestureFilter(this,this);
 			 
 			 txtip = (TextView) findViewById(R.id.TextViewIp);
 			 txtmask = (TextView) findViewById(R.id.TextViewMask);
@@ -158,43 +156,6 @@ public class ActivityWifiInfo extends Activity implements OnClickListener, Simpl
 	    }
 	   
 	   
-	   
-	   @Override
-	    public boolean dispatchTouchEvent(MotionEvent me){
-	        // Call onTouchEvent of SimpleGestureFilter class
-	         this.detector.onTouchEvent(me);
-	       return super.dispatchTouchEvent(me);
-	    }
-	    @Override
-	     public void onSwipe(int direction) {
-	      String str = "";
-	      
-	      switch (direction) {
-	      
-	      case SimpleGestureFilter.SWIPE_RIGHT : 
-	    	  Intent intent18 = new Intent(this, ActivityWifi.class);
-	          	 startActivity(intent18);
-
-	    		overridePendingTransition(center_to_right, center_to_right2);
-	                                               break;
-	     // case SimpleGestureFilter.SWIPE_LEFT :
-	    	  //str = "Swipe Left";
-	    	 
-	                                                    // break;
-	      //case SimpleGestureFilter.SWIPE_DOWN :  str = "Swipe Down";
-	                                                    // break;
-	      //case SimpleGestureFilter.SWIPE_UP :    str = "Swipe Up";
-	                                                     //break;
-	      
-	      }
-	       //Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
-	     }
-	      
-	     @Override
-	     public void onDoubleTap() {
-	        //Toast.makeText(this, "Double Tap", Toast.LENGTH_SHORT).show();
-	     }
-	     
 	    protected void onResume() {
 	        super.onResume();
 	        

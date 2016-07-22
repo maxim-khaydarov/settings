@@ -1,7 +1,7 @@
 package ua.mkh.settings.full;
 
 
-import ua.mkh.settings.full.SimpleGestureFilter.SimpleGestureListener;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -32,7 +32,7 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-public class ActivityBrightness extends Activity implements OnClickListener, SimpleGestureListener{
+public class ActivityBrightness extends Activity implements View.OnClickListener{
 	
 	 private static final String SCREEN_BRIGHTNESS_MODE = "screen_brightness_mode";
 		private static final int SCREEN_BRIGHTNESS_MODE_MANUAL = 0;
@@ -41,7 +41,6 @@ public class ActivityBrightness extends Activity implements OnClickListener, Sim
 			
 		int OS = android.os.Build.VERSION.SDK_INT;
 		
-		private SimpleGestureFilter detector;
 		
 		SeekBar brightbar;
 		int brightness;
@@ -98,7 +97,6 @@ public class ActivityBrightness extends Activity implements OnClickListener, Sim
 		
 		mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 		
-		detector = new SimpleGestureFilter(this,this);
 		
 		
 		 textStatus.setText(R.string.button_brightness);
@@ -183,42 +181,6 @@ public class ActivityBrightness extends Activity implements OnClickListener, Sim
 	        });  
 	      	}
 	
-	@Override
-    public boolean dispatchTouchEvent(MotionEvent me){
-        // Call onTouchEvent of SimpleGestureFilter class
-         this.detector.onTouchEvent(me);
-       return super.dispatchTouchEvent(me);
-    }
-    @Override
-     public void onSwipe(int direction) {
-      String str = "";
-      
-      switch (direction) {
-      
-      case SimpleGestureFilter.SWIPE_RIGHT : 
-    	  Intent intent18 = new Intent(this, MainActivity.class);
-          	 startActivity(intent18);
-
-    		overridePendingTransition(center_to_right, center_to_right2);
-                                               break;
-     // case SimpleGestureFilter.SWIPE_LEFT :
-    	  //str = "Swipe Left";
-    	 
-                                                    // break;
-      //case SimpleGestureFilter.SWIPE_DOWN :  str = "Swipe Down";
-                                                    // break;
-      //case SimpleGestureFilter.SWIPE_UP :    str = "Swipe Up";
-                                                     //break;
-      
-      }
-       //Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
-     }
-      
-     @Override
-     public void onDoubleTap() {
-        //Toast.makeText(this, "Double Tap", Toast.LENGTH_SHORT).show();
-     }
-     
 	 protected void onResume() {
 	        super.onResume();
 	       ButtonBrtns();

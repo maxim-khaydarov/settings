@@ -1,7 +1,6 @@
 package ua.mkh.settings.full;
 
 
-import ua.mkh.settings.full.SimpleGestureFilter.SimpleGestureListener;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -20,7 +19,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-public class ActivityAllowDisturb extends Activity implements OnClickListener, SimpleGestureListener,  RadioGroup.OnCheckedChangeListener{
+public class ActivityAllowDisturb extends Activity implements View.OnClickListener,  RadioGroup.OnCheckedChangeListener{
 
 	 public static final String APP_PREFERENCES_ALLOW_CALL = "allow_call";
 	 
@@ -40,7 +39,6 @@ public class ActivityAllowDisturb extends Activity implements OnClickListener, S
 	   Button btn_back;
 	   TextView textStatus;
 	   
-	   private SimpleGestureFilter detector;
 	   private RadioButton everyone, noone, contacts;
 	
 	SharedPreferences mSettings;
@@ -65,7 +63,7 @@ public class ActivityAllowDisturb extends Activity implements OnClickListener, S
 		
 		mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 		
-		detector = new SimpleGestureFilter(this,this);
+		
 		
 		everyone=(RadioButton) findViewById(R.id.radio0);
 		noone=(RadioButton) findViewById(R.id.radio1);
@@ -112,41 +110,6 @@ public class ActivityAllowDisturb extends Activity implements OnClickListener, S
 		}
 	}
 	
-	@Override
-    public boolean dispatchTouchEvent(MotionEvent me){
-        // Call onTouchEvent of SimpleGestureFilter class
-         this.detector.onTouchEvent(me);
-       return super.dispatchTouchEvent(me);
-    }
-    @Override
-     public void onSwipe(int direction) {
-      String str = "";
-      
-      switch (direction) {
-      
-      case SimpleGestureFilter.SWIPE_RIGHT : 
-    	  Intent intent18 = new Intent(this, ActivityDisturb.class);
-          	 startActivity(intent18);
-
-    		overridePendingTransition(center_to_right, center_to_right2);
-                                               break;
-     // case SimpleGestureFilter.SWIPE_LEFT :
-    	  //str = "Swipe Left";
-    	 
-                                                    // break;
-      //case SimpleGestureFilter.SWIPE_DOWN :  str = "Swipe Down";
-                                                    // break;
-      //case SimpleGestureFilter.SWIPE_UP :    str = "Swipe Up";
-                                                     //break;
-      
-      }
-       //Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
-     }
-      
-     @Override
-     public void onDoubleTap() {
-        //Toast.makeText(this, "Double Tap", Toast.LENGTH_SHORT).show();
-     }
      
      public void onCheckedChanged(RadioGroup group, int checkedId) {
 	        switch (checkedId) {

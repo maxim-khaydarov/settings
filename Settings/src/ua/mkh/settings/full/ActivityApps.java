@@ -5,7 +5,6 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import ua.mkh.settings.full.SimpleGestureFilter.SimpleGestureListener;
 
 import android.app.ListActivity;
 import android.app.ProgressDialog;
@@ -38,7 +37,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar.LayoutParams;
  
-public class ActivityApps extends ListActivity implements  SimpleGestureListener{
+public class ActivityApps extends ListActivity {
     private PackageManager packageManager = null;
     private List<ApplicationInfo> applist = null;
     private ApplicationAdapterUsage listadaptor = null;
@@ -54,7 +53,6 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
 	   int center_to_left, center_to_left2;
 	   SharedPreferences mSettings;
 	   
-	   private SimpleGestureFilter detector;
 	   
 	   Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 	   
@@ -104,7 +102,7 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
 	      
 	      mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 
-	      detector = new SimpleGestureFilter(this,this);
+	      
 	      
  
         packageManager = getPackageManager();
@@ -184,42 +182,6 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
        
     }
     
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent me){
-        // Call onTouchEvent of SimpleGestureFilter class
-         this.detector.onTouchEvent(me);
-       return super.dispatchTouchEvent(me);
-    }
-    @Override
-     public void onSwipe(int direction) {
-      String str = "";
-      
-      switch (direction) {
-      
-      case SimpleGestureFilter.SWIPE_RIGHT : 
-    	  Intent intent18 = new Intent(this, ActivityUsage.class);
-          	 startActivity(intent18);
-
-    		overridePendingTransition(center_to_right, center_to_right2);
-                                               break;
-     // case SimpleGestureFilter.SWIPE_LEFT :
-    	  //str = "Swipe Left";
-    	 
-                                                    // break;
-      //case SimpleGestureFilter.SWIPE_DOWN :  str = "Swipe Down";
-                                                    // break;
-      //case SimpleGestureFilter.SWIPE_UP :    str = "Swipe Up";
-                                                     //break;
-      
-      }
-       //Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
-     }
-      /*
-     @Override
-     public void onDoubleTap() {
-        Toast.makeText(this, "Double Tap", Toast.LENGTH_SHORT).show();
-     }
- */
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
@@ -372,11 +334,7 @@ public class ActivityApps extends ListActivity implements  SimpleGestureListener
 		overridePendingTransition(center_to_right, center_to_right2);
    	 }
 
-	@Override
-	public void onDoubleTap() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	
 	public void memory (){
 		  

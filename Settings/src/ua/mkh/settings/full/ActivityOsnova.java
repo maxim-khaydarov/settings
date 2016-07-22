@@ -1,8 +1,6 @@
 package ua.mkh.settings.full;
 
 
-
-import ua.mkh.settings.full.SimpleGestureFilter.SimpleGestureListener;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.BroadcastReceiver;
@@ -38,7 +36,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 
-public class ActivityOsnova extends Activity implements OnClickListener, SimpleGestureListener{
+public class ActivityOsnova extends Activity implements View.OnClickListener{
 
 	Button btn_back, btn_info, Button02, Button01, Button03, Button04, Button05, Button06, Button07, Button08,
 	btn_setup_app, Button09, Button10, Button11, Button12, Button13, Button14;
@@ -66,7 +64,6 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 	int status = 0;
 	int OS = android.os.Build.VERSION.SDK_INT;
 	
-	 private SimpleGestureFilter detector;
 	
 	 Animation animationRotateDown, animationRotateUp;
 		
@@ -153,7 +150,6 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 			 
 			// btn_info = (Button)findViewById(R.id.Button04);
 			// btn_info.setOnClickListener(this);
-			 detector = new SimpleGestureFilter(this,this);
 			 
 			 
 			 tb_rotate = (ToggleButton)findViewById(R.id.rotatetoggle);
@@ -783,42 +779,6 @@ public class ActivityOsnova extends Activity implements OnClickListener, SimpleG
 	    
 	    
 	    
-
-	    @Override
-	    public boolean dispatchTouchEvent(MotionEvent me){
-	        // Call onTouchEvent of SimpleGestureFilter class
-	         this.detector.onTouchEvent(me);
-	       return super.dispatchTouchEvent(me);
-	    }
-	    @Override
-	     public void onSwipe(int direction) {
-	      String str = "";
-	      
-	      switch (direction) {
-	      
-	      case SimpleGestureFilter.SWIPE_RIGHT : 
-	    	  Intent intent18 = new Intent(this, MainActivity.class);
-	          	 startActivity(intent18);
-	          	overridePendingTransition(center_to_right, center_to_right2);
-	          	break;
-	      /*case SimpleGestureFilter.SWIPE_LEFT :  str = "Swipe Left";
-	                                                     break;
-	      case SimpleGestureFilter.SWIPE_DOWN :  str = "Swipe Down";
-	                                                     break;
-	      case SimpleGestureFilter.SWIPE_UP :    str = "Swipe Up";
-	                                                     break;
-	      */
-	      }
-	       //Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
-	     }
-	      
-	     @Override
-	     public void onDoubleTap() {
-	        //Toast.makeText(this, "Double Tap", Toast.LENGTH_SHORT).show();
-	     }
-	          
-	 
-	   
 	            
 	    @Override
 	    public boolean onKeyDown(int keycode, KeyEvent e) {

@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.Locale;
 
 import ua.mkh.settings.full.ActivityOboi.MyTask;
-import ua.mkh.settings.full.SimpleGestureFilter.SimpleGestureListener;
+
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -56,7 +56,7 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 
-public class setWallpaper extends Activity implements SimpleGestureListener{
+public class setWallpaper extends Activity  {
 
 	
 	ImageAdapter myImageAdapter;
@@ -67,7 +67,7 @@ public class setWallpaper extends Activity implements SimpleGestureListener{
 	
 	   SharedPreferences mSettings;
 	   
-	   private SimpleGestureFilter detector;
+	   
 	   
 	TextView textStatus;
 	Button btn_back;
@@ -114,7 +114,7 @@ public class setWallpaper extends Activity implements SimpleGestureListener{
 		
 		mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 		
-		detector = new SimpleGestureFilter(this,this);
+		
 
 		gridview = (GridView) findViewById(R.id.gridview);
 		imageAdapter = new ImageAdapter(this);
@@ -584,41 +584,6 @@ public void wall(final int promp){
 
 
 
-@Override
-public boolean dispatchTouchEvent(MotionEvent me){
-    // Call onTouchEvent of SimpleGestureFilter class
-     this.detector.onTouchEvent(me);
-   return super.dispatchTouchEvent(me);
-}
-@Override
- public void onSwipe(int direction) {
-  String str = "";
-  
-  switch (direction) {
-  
-  case SimpleGestureFilter.SWIPE_RIGHT : 
-	  Intent intent18 = new Intent(this, ChooseWallpaper.class);
-      	 startActivity(intent18);
-
-		overridePendingTransition(center_to_right, center_to_right2);
-                                           break;
- // case SimpleGestureFilter.SWIPE_LEFT :
-	  //str = "Swipe Left";
-	 
-                                                // break;
-  //case SimpleGestureFilter.SWIPE_DOWN :  str = "Swipe Down";
-                                                // break;
-  //case SimpleGestureFilter.SWIPE_UP :    str = "Swipe Up";
-                                                 //break;
-  
-  }
-   //Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
- }
-  
- @Override
- public void onDoubleTap() {
-    //Toast.makeText(this, "Double Tap", Toast.LENGTH_SHORT).show();
- }
 
 public void BackClick(View v)  
 {  

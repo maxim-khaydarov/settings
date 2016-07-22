@@ -3,7 +3,7 @@ package ua.mkh.settings.full;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import ua.mkh.settings.full.SimpleGestureFilter.SimpleGestureListener;
+
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -25,7 +25,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-public class ActivityVPN extends Activity implements OnClickListener, SimpleGestureListener {
+public class ActivityVPN extends Activity implements View.OnClickListener {
 
 	public static final String APP_PREFERENCES = "mysettings"; 
 	public static final String APP_PREFERENCES_text_size = "txt_size";
@@ -40,7 +40,6 @@ public class ActivityVPN extends Activity implements OnClickListener, SimpleGest
 	   
 	   
 	   SharedPreferences mSettings;
-	   private SimpleGestureFilter detector;
 	   
 	   Typeface typefaceRoman, typefaceMedium, typefaceBold, typefaceThin;
 	   
@@ -82,7 +81,6 @@ public class ActivityVPN extends Activity implements OnClickListener, SimpleGest
 			
 			mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 			
-			 detector = new SimpleGestureFilter(this,this);
 			 
 			 btn_back = (Button) findViewById(R.id.buttonBack);
 				btn_back.setText(R.string.app_name);
@@ -100,42 +98,6 @@ public class ActivityVPN extends Activity implements OnClickListener, SimpleGest
 				textView4.setTypeface(typefaceRoman);
 	    }
 	   
-	   @Override
-	    public boolean dispatchTouchEvent(MotionEvent me){
-	        // Call onTouchEvent of SimpleGestureFilter class
-	         this.detector.onTouchEvent(me);
-	       return super.dispatchTouchEvent(me);
-	    }
-	    @Override
-	     public void onSwipe(int direction) {
-	      String str = "";
-	      
-	      switch (direction) {
-	      
-	      case SimpleGestureFilter.SWIPE_RIGHT : 
-	    	  Intent intent18 = new Intent(this, MainActivity.class);
-	          	 startActivity(intent18);
-
-	    		overridePendingTransition(center_to_right, center_to_right2);
-	                                               break;
-	     // case SimpleGestureFilter.SWIPE_LEFT :
-	    	  //str = "Swipe Left";
-	    	 
-	                                                    // break;
-	      //case SimpleGestureFilter.SWIPE_DOWN :  str = "Swipe Down";
-	                                                    // break;
-	      //case SimpleGestureFilter.SWIPE_UP :    str = "Swipe Up";
-	                                                     //break;
-	      
-	      }
-	       //Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
-	     }
-	      
-	     @Override
-	     public void onDoubleTap() {
-	        //Toast.makeText(this, "Double Tap", Toast.LENGTH_SHORT).show();
-	     }
-	     
 	    protected void onResume() {
 	        super.onResume();
 	       

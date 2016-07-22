@@ -1,6 +1,6 @@
 package ua.mkh.settings.full;
 
-import ua.mkh.settings.full.SimpleGestureFilter.SimpleGestureListener;
+
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -29,7 +29,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-public class ActivityZvuki extends Activity implements OnClickListener, SimpleGestureListener{
+public class ActivityZvuki extends Activity implements OnClickListener{
 	private ToggleButton tb_d;
 	
 	TextView textView1, textView2, textView3, textView4, 
@@ -67,7 +67,6 @@ public class ActivityZvuki extends Activity implements OnClickListener, SimpleGe
 	   int center_to_left, center_to_left2;
 	   
 	   SharedPreferences mSettings;
-	   private SimpleGestureFilter detector;
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,7 +82,7 @@ public class ActivityZvuki extends Activity implements OnClickListener, SimpleGe
 		
 		mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 		
-		detector = new SimpleGestureFilter(this,this);
+		
 		
 		
 		textStatus  = (TextView)findViewById(R.id.textOk);
@@ -218,42 +217,6 @@ public class ActivityZvuki extends Activity implements OnClickListener, SimpleGe
 	          
 	}
 	        
-	        @Override
-		    public boolean dispatchTouchEvent(MotionEvent me){
-		        // Call onTouchEvent of SimpleGestureFilter class
-		         this.detector.onTouchEvent(me);
-		       return super.dispatchTouchEvent(me);
-		    }
-		    @Override
-		     public void onSwipe(int direction) {
-		      String str = "";
-		      
-		      switch (direction) {
-		      
-		      case SimpleGestureFilter.SWIPE_RIGHT : 
-		    	  Intent intent18 = new Intent(this, MainActivity.class);
-		          	 startActivity(intent18);
-
-		    		overridePendingTransition(center_to_right, center_to_right2);
-		                                               break;
-		     // case SimpleGestureFilter.SWIPE_LEFT :
-		    	  //str = "Swipe Left";
-		    	 
-		                                                    // break;
-		      //case SimpleGestureFilter.SWIPE_DOWN :  str = "Swipe Down";
-		                                                    // break;
-		      //case SimpleGestureFilter.SWIPE_UP :    str = "Swipe Up";
-		                                                     //break;
-		      
-		      }
-		       //Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
-		     }
-		      
-		     @Override
-		     public void onDoubleTap() {
-		        //Toast.makeText(this, "Double Tap", Toast.LENGTH_SHORT).show();
-		     }
-		     
 		    
 		     private void ringer(){
 		    	//ringtone
